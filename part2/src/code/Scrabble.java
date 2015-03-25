@@ -26,6 +26,7 @@ public class Scrabble {
 		_inventory = new Inventory();
 		_board = new Board();
 		_players = new ArrayList<Player>();
+		Frame frame = new Frame();
 	}
 	
 	/**
