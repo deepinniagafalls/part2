@@ -5,6 +5,7 @@ import javax.swing.*;
 
 public class Frame extends JFrame {
 	
+	
     private final int WIDTH = 600;
     private final int HEIGHT = 500;
 	
