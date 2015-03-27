@@ -8,8 +8,10 @@ public class Frame extends JFrame {
 	
     private final int WIDTH = 600;
     private final int HEIGHT = 500;
+    private Scrabble _s;
 	
-	public Frame(){
+	public Frame(Scrabble s){
+		_s = s;
 		JFrame mainframe = new JFrame();
 		setSize(WIDTH, HEIGHT);
 		mainframe.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
