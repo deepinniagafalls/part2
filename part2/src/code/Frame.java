@@ -1,5 +1,6 @@
 package code;
 import java.awt.Dimension;
+import java.awt.GridLayout;
 import java.util.ArrayList;
 
 import javax.swing.*;
@@ -17,11 +18,21 @@ public class Frame extends JFrame {
 	
 	public Frame(Scrabble s){
 		_s = s;
-		JFrame mainframe = new JFrame();
-		setSize(WIDTH, HEIGHT);
-		mainframe.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-		mainframe.pack();
-		setVisible(true);
+		JFrame frame = new JFrame();
+		
+		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		frame.setSize(WIDTH, HEIGHT);
+		
+		GridLayout grid = new GridLayout(20, 20, 0, 0);
+		frame.setLayout(grid);
+		
+		for(int i=0; i<400; i++){
+			frame.add(new JButton());
+		}
+
+		
+		
+		frame.setVisible(true);
 		
 	}
 	public void update(){
