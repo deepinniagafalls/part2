@@ -12,7 +12,7 @@ public class Scrabble {
 	/**
 	 * Stores players.
 	 */
-	private ArrayList<Player> _players;
+	private ArrayList<Player> _players = new ArrayList<Player>();
 	/**
 	 * tile board to be played on
 	 */
@@ -30,7 +30,7 @@ public class Scrabble {
 		_board = new Board();
 		_numberOfPlayers = 4;
 		
-		for (int i = 0; i < _numberOfPlayers; i++){
+		for(int i = 0; i < _numberOfPlayers; i++){
 			addNewPlayer();
 		}
 	}
