@@ -17,6 +17,11 @@ public class Frame extends JFrame {
 	private int _numberOfPlayers;
 	
 	public Frame(Scrabble s){
+        try {
+            UIManager.setLookAndFeel("com.sun.java.swing.plaf.nimbus.NimbusLookAndFeel");
+        } catch(Exception e) {
+            e.printStackTrace();
+        }
 		_s = s;
 		JFrame frame = new JFrame();
 		
