@@ -1,100 +1,75 @@
 package code;
 
 import java.util.ArrayList;
-import java.util.Collections;
-
-/**
- * An inventory holds 400 predetermined tiles. Upon creation, the tiles are shuffled.
- * It is possible to draw from the inventory until tiles run out, but it is not possible
- * to return a tile to the inventory. There should only be one Inventory
- * @author t020
- *
- */
-
-//If we're allowed, we should be using a static class or singleton pattern for things
-//like the Inventory and Board that there are always only one of. It's not too important
-//at the moment, though.
+import java.util.Random;
 
 public class Inventory {
 	
-	private ArrayList<Tile> _tiles;
+	/**
+	 * Stores the tiles that have yet to be drawn.
+	 */
+	private ArrayList<Tile> _tileBag;
 	
 	/**
-	 * Default constructor for an Inventory. Creates 400 tiles and shuffles them.
+	 * Class constructor.
 	 */
-	public Inventory()
-	{
-		_tiles = new ArrayList<Tile>();
-		
-		for(int i = 'A'; i <= 'Z'; i++)
-		{
-			switch(i)
-			{
-			case 'A':
-			case 'E':
-			case 'I':
-			case 'O':
-			case 'U':
-				for(int j = 0; j < 29; j++)
-				{
-					_tiles.add(new Tile((char) i));
+	public Inventory(){
+		_tileBag = new ArrayList<Tile>();
+		fillBag();
+	}
+	
+	/**
+	 * Fills the inventory of tiles with the correct number of tiles on creation.
+	 */
+	private void fillBag() {
+		for (int i = 'A'; i <= 'Z'; i = i + 1){
+			// Create 29 of each vowel with point value 1
+			if ((i == 'A')||(i == 'E')||(i == 'I')||(i == 'O')||(i =='U')){
+				for (int j = 0; j < 29; j++){
+					_tileBag.add(new Tile((char)i,1));
 				}
-				break;
-			case 'Y':
-				for(int j = 0; j < 15; j++)
-				{
-					_tiles.add(new Tile((char) i));
-				}
-				break;
-			default:
-				for(int j = 0; j < 12; j++)
-				{
-					_tiles.add(new Tile((char) i));
-				}
-				break;
 			}
-
+			// Create 15 y's with point value 2
+			else if (i == 'Y'){
+				for (int j = 0; j < 15; j++){
+					_tileBag.add(new Tile((char)i,2));
+				}
+			}
+			// Create 12 of every other letter with point value 5
+			else{
+				for (int j = 0; j < 12; j++){
+					_tileBag.add(new Tile((char)i,5));
+				}
+			}
 		}
-		
-		this.shuffle();
-	}
-	
-	/**
-	 * Size of the inventory
-	 * @return number of tiles remaining
-	 */
-	public int size()
-	{
-		return _tiles.size();
-	}
-	
-	/**
-	 * Grabs a tile from the bag.
-	 * @return a tile, if any remain; null is returned otherwise
-	 */
-	public Tile getTile()
-	{
-		if(this.hasTiles())
-			return _tiles.remove(0);
-		else
-			return null;
-	}
-	
-	/**
-	 * Shuffles the tiles in the Inventory
-	 */
-	public void shuffle()
-	{
-		Collections.shuffle(_tiles);
-	}
-	
-	/**
-	 * Checks to see if any tiles remain in the Inventory
-	 * @return true if any tiles remain
-	 */
-	public boolean hasTiles()
-	{
-		return _tiles.size() != 0;
 	}
 
+	/**
+	 * Pulls a single random tile from the inventory.
+	 * 
+	 * @return the random tile that was removed
+	 */
+	public Tile removeRandomTile(){
+		int randomIndex = new Random().nextInt(_tileBag.size());
+		return _tileBag.remove(randomIndex);
+	}
+	
+	/**
+	 * Returns number of tiles in the tile bag.
+	 * 
+	 * @return the size of the array list containing the tiles
+	 */
+	public int getSize(){
+		return _tileBag.size();
+	}
+	
+	/**
+	 * Returns the tile at a specific index.
+	 * 
+	 * @param i index of the tile bag array list
+	 * @return tile at index i
+	 */
+	public Tile getTile(int i){
+		return _tileBag.get(i);
+	}
 }

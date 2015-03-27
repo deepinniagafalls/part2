@@ -1,31 +1,29 @@
 package tests;
-import static org.junit.Assert.assertTrue;
+
 import org.junit.Test;
 
+import static org.junit.Assert.assertTrue;
+import code.Inventory;
+import code.Tile;
+
 public class TileTest {
-
-	@Test public void testTileValue1(){ testTileValue('a', 1); }
-	@Test public void testTileValue2(){ testTileValue('y',2); }
-	@Test public void testTileValue3(){ testTileValue('b', 5); }
-	@Test public void testTileValue4(){ testTileValue('!', 0); }
-
-	public void testTileValue(char letter, int expected)
-	{
-		code.Tile t = new code.Tile(letter);
+	
+	//test getChar method to return correct character of a tile
+	@Test
+	public void checkChar(){
+		char expected = 'W';
+		Tile t = new Tile('W',5);
+		char actual = t.getChar();
+		assertTrue("I expected the tile's letter to be "+expected+" but instead it is"+actual, expected==actual);
+	}
+	
+	//test getValue method to return value of a tile
+	@Test
+	public void checkValue(){
+		int expected = 5;
+		Tile t = new Tile('W',5);
 		int actual = t.getValue();
-		assertTrue("actual: " + actual + " expected: " + expected, expected == actual);
-	}//Test if letters return correct values 
-	
-	
-	@Test public void testTileLetter1(){ testTileLetter('a', 'A'); }
-	@Test public void testTileLetter2(){ testTileLetter('Y','Y'); }
-	@Test public void testTileLetter3(){ testTileLetter('b', 'B'); }
-	
-	public void testTileLetter(char letter, char expected)
-	{
-		code.Tile t = new code.Tile(letter);
-		char actual = t.getLetter();
-		assertTrue("actual: " + actual + " expected: " + expected, expected == actual);
-	}//Tests if Tile class has correct letter
-	
+		assertTrue("I expected the tile's letter to be "+expected+" but instead it is"+actual, expected==actual);
+	}
+
 }

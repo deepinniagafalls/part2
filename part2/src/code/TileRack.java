@@ -2,82 +2,68 @@ package code;
 
 import java.util.ArrayList;
 
-/**
- * A TileRack belongs to a player, and keeps track of up to 12 tiles.
- * @author t020
- *
- */
-public class TileRack 
-{
+public class TileRack {
+	
+	/**
+	 * Inventory to draw tiles from
+	 */
+	private Inventory _inv;
+	
+	/**
+	 * Stores the tiles that can be played.
+	 */
 	private ArrayList<Tile> _rack;
-	private Inventory _inventory;
 	
 	/**
-	 * Constructor for a TileRack
-	 * @param inventory The inventory the tile rack will draw from
+	 * Class cosntructor.
+	 * 
+	 * @param inv inventory to draw tiles from
 	 */
-	public TileRack(Inventory inventory)
-	{
+	public TileRack(Inventory inv){
+		_inv = inv;
 		_rack = new ArrayList<Tile>();
-		_inventory = inventory;
-		
+		fillRack();
 	}
 	
+	/**
+	 * Fills tile rack to maximum capacity of 12
+	 */
+	public void fillRack(){
+		while (_rack.size() < 12){
+			_rack.add(_inv.removeRandomTile());
+		}
+	}
 	
+	/**
+	 * Removes a tile from rack.
+	 * 
+	 * @param t tile to be removed from the rack
+	 * @return tile removed from the rack
+	 */
+	public Tile removeTile(Tile t){
+		Tile tileToRemove = t;
+		_rack.remove(t);
+		return tileToRemove;
+	}
+	
+	/**
+	 * Removes a tile from an index from rack
+	 * 
+	 * @param i index of tile to be removed
+	 * @return tile removed from the rack
+	 */
+	public Tile removeTile(int i){
+		Tile tileToRemove = _rack.get(i);
+		_rack.remove(i);
+		return tileToRemove;
+	}
 
 	/**
-	 * Removes a specified tile from the rack.
-	 * @param t the tile to be taken from the rack
-	 **/
-	public Tile takeTileFromRack(Tile t)
-	{
-		if(_rack.contains(t))
-			{
-				for(int i = 0; i < _rack.size(); i++)
-				{
-					if(t == null)
-					{
-						if(_rack.get(i) == null)
-						{
-							return _rack.remove(i);
-						}
-					}
-					else if(_rack.get(i).equals(t))
-					{
-						return _rack.remove(i);
-					}
-				}
-			}
-		
-		return null;
-	}
-	
-	/**
-	 * Places a tile back in the rack.
-	 * @param t the tile to be returned to the rack
+	 * Gets size of the tile rack
+	 * 
+	 * @return size of the tile rack
 	 */
-	public void returnTileToRack(Tile t)
-	{
-		_rack.add(t);
-	}
-	
-
-	/**
-	 * Adds a tile from the inventory to the rack.
-	 */
-	public void drawTile()
-	{
-		_rack.add(_inventory.getTile());
-	}
-	
-	/**
-	 * Accessor for the number of tiles in the rack. 
-	 * @return the current number of tiles in the tile rack.
-	 */
-	public int size()
-	{
+	public int getSize() {
 		return _rack.size();
 	}
-	
-
 }

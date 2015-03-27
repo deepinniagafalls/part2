@@ -1,42 +1,43 @@
 package tests;
-import static org.junit.Assert.assertTrue;
-
-import java.util.ArrayList;
 
 import org.junit.Test;
 
+import static org.junit.Assert.assertTrue;
 import code.Inventory;
 import code.Tile;
 import code.TileRack;
 
-public class TileRackTest 
-{
-	@Test
-	public void testIfAddedCorrectly()
-	{
-		Inventory inv = new Inventory();
-		TileRack tr = new TileRack(inv);
-		Tile t = new Tile('A');
-		tr.returnTileToRack(t);
-		
-		int actual = tr.size();
-		int expected = 1;
-		
-		assertTrue("actual: " + actual + " expected: " + expected, expected == actual);
-	}//Test if tiles are correctly added to the tile rack
-	
-	@Test
-	public void testIfRemovedCorrectly()
-	{
-		Inventory inv = new Inventory();
-		TileRack tr = new TileRack(inv);
-		tr.returnTileToRack(null);
-		tr.takeTileFromRack(null);
-		
-		int actual = tr.size();
-		int expected = 0;
-		
-		assertTrue("actual: " + actual + " expected: " + expected, expected == actual); 
-	}//Test if tiles are correctly removed from the tile rack
-}
+public class TileRackTest {
 
+	// Test maximum capacity of 12 for tile rack
+	@Test
+	public void capacityTest(){
+		Inventory inv = new Inventory();
+		TileRack rack = new TileRack(inv);
+		assertTrue("The tile rack should fill to a maximum size of 12 but I got " + rack.getSize(), rack.getSize() == 12);
+	}
+
+	// Test removing tiles
+	@Test
+	public void removeTest(){
+		Inventory inv = new Inventory();
+		TileRack rack = new TileRack(inv);
+		Tile t = rack.removeTile(0);
+		assertTrue("I removed one tile at index 0, now the rack size should be 11, but I got " + rack.getSize(), rack.getSize() == 11);
+	}
+
+	// Test adding tiles after removing tiles
+	@Test
+	public void addTest(){
+		Inventory inv = new Inventory();
+		TileRack rack = new TileRack(inv);
+		rack.removeTile(0);
+		rack.removeTile(1);
+		rack.removeTile(2);
+		rack.fillRack();
+		assertTrue("I removed 3 tiles, then filled the rack, it's size should be 12, but I got " + rack.getSize(), rack.getSize() == 12);
+	}
+
+
+
+}
