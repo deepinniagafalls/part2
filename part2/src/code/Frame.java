@@ -8,8 +8,8 @@ import javax.swing.*;
 public class Frame extends JFrame {
 	
 	
-    private final int WIDTH = 600;
-    private final int HEIGHT = 500;
+    private final int WIDTH = 800;
+    private final int HEIGHT = 800;
     private Scrabble _s;
     private Inventory _inv;
     private ArrayList<Player> _players;
@@ -18,25 +18,21 @@ public class Frame extends JFrame {
 	
 	public Frame(Scrabble s){
         try {
-            UIManager.setLookAndFeel("com.sun.java.swing.plaf.nimbus.NimbusLookAndFeel");
+            UIManager.setLookAndFeel("com.sun.java.swing.plaf.motif.MotifLookAndFeel");
         } catch(Exception e) {
             e.printStackTrace();
         }
 		_s = s;
-		JFrame frame = new JFrame();
+		JFrame frame = new JFrame("Scrabble");
 		
 		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		frame.setSize(WIDTH, HEIGHT);
-		
 		GridLayout grid = new GridLayout(20, 20, 0, 0);
 		frame.setLayout(grid);
 		
 		for(int i=0; i<400; i++){
 			frame.add(new JButton());
 		}
-
-		
-		
 		frame.setVisible(true);
 		
 	}
