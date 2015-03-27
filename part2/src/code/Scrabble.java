@@ -41,5 +41,17 @@ public class Scrabble {
 	private void addNewPlayer(){
 		_players.add(new Player(_inv));
 	}
+	public ArrayList<Player> getPlayer(){
+		return _players;
+	}
+	public int getNumofPlayers(){
+		return _numberOfPlayers;
+	}
+	public Board getBoard(){
+		return _board;
+	}
+	public Inventory getInv(){
+		return _inv;
+	}
 
 }
