@@ -7,10 +7,7 @@ import javax.swing.*;
 
 public class Frame extends JFrame {
 	
-	
-    private final int WIDTH = 800;
-    private final int HEIGHT = 800;
-    private Scrabble _s;
+	    private Scrabble _s;
     private Inventory _inv;
     private ArrayList<Player> _players;
 	private Board _board;
@@ -26,7 +23,7 @@ public class Frame extends JFrame {
 		JFrame frame = new JFrame("Scrabble");
 		
 		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-		frame.setSize(WIDTH, HEIGHT);
+		frame.setSize(800, 600);
 		GridLayout grid = new GridLayout(20, 20, 0, 0);
 		frame.setLayout(grid);
 		
