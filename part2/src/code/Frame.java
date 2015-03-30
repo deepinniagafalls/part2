@@ -23,7 +23,7 @@ public class Frame extends JFrame {
 		JFrame frame = new JFrame("Scrabble");
 		
 		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-		frame.setSize(800, 600);
+		frame.setSize(800, 800);
 		GridLayout grid = new GridLayout(20, 20, 0, 0);
 		frame.setLayout(grid);
 		
