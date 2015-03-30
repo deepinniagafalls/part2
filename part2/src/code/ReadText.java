@@ -9,7 +9,8 @@ public class ReadText {
 	ArrayList<String> _map = new ArrayList<String>();
 	
 	public ReadText(){
-		Scanner sc = new Scanner("//part2//src//code//util//words");
+		String fileName = "words.txt";
+		Scanner sc = new Scanner(fileName);
 		
 		while(sc.hasNext()){
 			String s = sc.next();
