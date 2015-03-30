@@ -1,8 +1,6 @@
 package code;
 
 import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.Map.Entry;
 import java.util.Scanner;
 
 
@@ -18,10 +16,7 @@ public class ReadText {
 			_map.add(s);
 		}
 	}
-	
-	public ArrayList<String> returnlist (){
-		return _map;
-	}
+
 	
 	public void access(int index){
 		System.out.println(_map.get(index));
