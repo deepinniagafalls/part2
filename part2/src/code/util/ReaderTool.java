@@ -3,9 +3,9 @@ package code.util;
 import java.io.BufferedReader;
 import java.util.ArrayList;
 
-public class Reader {
+public class ReaderTool {
 	private ArrayList<String> _words;
-	public Reader(){
+	public ReaderTool(){
 	_words = new ArrayList<String>();
     String  thisLine = null;
     try{
