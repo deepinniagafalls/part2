@@ -1,5 +1,13 @@
 package code.util;
 
-public class Reader {
+import java.util.ArrayList;
 
+public class Reader {
+	private ArrayList<String> _words = new ArrayList<String>();
+	public Reader(){
+		
+	}
+	public ArrayList<String> getWords(){
+		return _words;
+	}
 }
