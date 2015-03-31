@@ -8,6 +8,5 @@ public class Game {
 		
 		Scrabble scrabble = new Scrabble();
 		Frame f = new Frame(scrabble);
-		ArrayList<String> rt = new ReadText();
 	}
 }
