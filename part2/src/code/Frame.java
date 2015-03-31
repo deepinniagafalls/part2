@@ -7,7 +7,7 @@ import javax.swing.*;
 
 public class Frame extends JFrame {
 	
-	    private Scrabble _s;
+	private Scrabble _s;
     private Inventory _inv;
     private ArrayList<Player> _players;
 	private Board _board;
