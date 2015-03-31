@@ -27,7 +27,7 @@ public class ReaderToolTest {
 	@Test
 	public void test4() {
 		ReaderTool r = new ReaderTool();
-		assertTrue("skillet",r.getWords().contains("skillet"));
+		assertTrue("wan",r.getWords().contains("wan"));
 	}
 	@Test
 	public void test5() {

@@ -8,11 +8,11 @@ public class ReaderTool {
 	private ArrayList<String> _words;
 	public ReaderTool(){
 	_words = new ArrayList<String>();
-    String  thisLine = null;
+    String  _line = null;
     try{
        BufferedReader br = new BufferedReader(new FileReader("res/words.txt"));
-       while ((thisLine = br.readLine()) != null) {
-          _words.add(thisLine);
+       while ((_line = br.readLine()) != null) {
+          _words.add(_line);
        }       
     }
     catch(Exception e){
