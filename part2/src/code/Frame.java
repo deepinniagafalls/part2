@@ -28,7 +28,8 @@ public class Frame extends JFrame {
 		frame.setLayout(grid);
 		
 		for(int i=0; i<400; i++){
-			frame.add(new JButton());
+			JButton j = new TileSpace();
+			frame.add(j);
 		}
 		frame.setVisible(true);
 		

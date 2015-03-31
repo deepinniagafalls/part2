@@ -7,12 +7,15 @@ import javax.swing.JButton;
 
 public class TileSpace extends JButton implements ActionListener {
 
+	JButton _j;
 	
+	public TileSpace(){
+		_j = new TileSpace();
+	}
 	
 	@Override
 	public void actionPerformed(ActionEvent e) {
-		// TODO Auto-generated method stub
-		
+		_j.setText("A");
 	}
 
 }
