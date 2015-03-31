@@ -6,7 +6,7 @@ import java.awt.event.ActionListener;
 import javax.swing.JButton;
 
 public class TileSpace extends JButton implements ActionListener {
-
+	
 	private JButton _j;
 	
 	public TileSpace(){
