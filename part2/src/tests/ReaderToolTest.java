@@ -12,12 +12,12 @@ public class ReaderToolTest {
 	public void test() {
 		
 		ReaderTool r = new ReaderTool();
-		assertTrue("Bahama",r.getWords().contains("Bahama"));
+		assertTrue("ramshackle",r.getWords().contains("ramshackle"));
 	}
 	@Test
 	public void test2() {
 		ReaderTool r = new ReaderTool();
-		assertTrue("lavigne",r.getWords().contains("lavigne"));
+		assertTrue("aloft",r.getWords().contains("aloft"));
 	}
 	@Test
 	public void test3() {
