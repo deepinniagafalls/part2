@@ -8,8 +8,8 @@ public class Game {
 
 	public static void main(String[] args) {
 		
-		//Scrabble scrabble = new Scrabble();
-		//Frame f = new Frame(scrabble);
+		Scrabble scrabble = new Scrabble();
+		Frame f = new Frame(scrabble);
 		ReaderTool r = new ReaderTool();
 		System.out.println(r.getWords());
 	}
