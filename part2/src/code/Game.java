@@ -11,7 +11,5 @@ public class Game {
 		Scrabble scrabble = new Scrabble();
 		BoardFrame f = new BoardFrame(scrabble);
 		PlayerFrame tr = new PlayerFrame(scrabble);
-		ReaderTool r = new ReaderTool();
-		System.out.println(r.getWords());
 	}
 }
