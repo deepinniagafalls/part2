@@ -32,7 +32,7 @@ public class ReaderToolTest {
 	@Test
 	public void test5() {
 		ReaderTool r = new ReaderTool();
-		assertTrue("zygotes",r.getWords().contains("zygotes"));
+		assertTrue("thole",r.getWords().contains("thole"));
 	}
 
 }
