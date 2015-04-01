@@ -5,7 +5,7 @@ import java.util.ArrayList;
 
 import javax.swing.*;
 
-public class Frame extends JFrame {
+public class BoardFrame extends JFrame {
 	
 	private Scrabble _s;
     private Inventory _inv;
@@ -13,7 +13,7 @@ public class Frame extends JFrame {
 	private Board _board;
 	private int _numberOfPlayers;
 	
-	public Frame(Scrabble s){
+	public BoardFrame(Scrabble s){
         try {
             UIManager.setLookAndFeel("com.sun.java.swing.plaf.motif.MotifLookAndFeel");
         } catch(Exception e) {
