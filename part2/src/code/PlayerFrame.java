@@ -26,10 +26,10 @@ public class PlayerFrame {
 		
 		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		frame.setSize(200, 200);
-		GridLayout grid = new GridLayout(2, 2, 0, 0);
+		GridLayout grid = new GridLayout(7, 0, 0, 0);
 		frame.setLayout(grid);
 		
-		for(int i=0; i<4; i++){
+		for(int i=0; i<7; i++){
 			JButton j = new TileSpace();
 			frame.add(j);
 		}
