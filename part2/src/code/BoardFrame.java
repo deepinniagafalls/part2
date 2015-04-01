@@ -16,7 +16,7 @@ public class BoardFrame extends JFrame {
 	
 	public BoardFrame(Scrabble s){
         try {
-            UIManager.setLookAndFeel("javax.swing.plaf.metal");
+            UIManager.setLookAndFeel("com.sun.java.swing.plaf.motif.MotifLookAndFeel");
         } catch(Exception e) {
             e.printStackTrace();
         }
