@@ -30,7 +30,7 @@ public class PlayerFrame {
 		frame.setLayout(grid);
 		
 		for(int i=0; i<7; i++){
-			JButton j = new TileSpace();
+			JButton j = new TileSpace(); //Make this a PlayerSpace
 			frame.add(j);
 		}
 		frame.setVisible(true);

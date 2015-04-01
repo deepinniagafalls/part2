@@ -12,6 +12,7 @@ public class BoardFrame extends JFrame {
     private ArrayList<Player> _players;
 	private Board _board;
 	private int _numberOfPlayers;
+	private JButton[][] _boardOfButtons = new JButton[20][20];
 	
 	public BoardFrame(Scrabble s){
         try {
@@ -27,9 +28,12 @@ public class BoardFrame extends JFrame {
 		GridLayout grid = new GridLayout(20, 20, 0, 0);
 		frame.setLayout(grid);
 		
-		for(int i=0; i<400; i++){
-			JButton j = new TileSpace();
-			frame.add(j);
+		for(int row=0; row<20; row++){
+			for(int col=0; col<20; col++){
+				JButton j = new TileSpace(row, col);
+				_boardOfButtons[row][col] = j;
+				frame.add(j);
+			}
 		}
 		frame.setVisible(true);
 		
