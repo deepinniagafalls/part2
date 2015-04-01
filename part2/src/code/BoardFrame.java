@@ -14,13 +14,14 @@ public class BoardFrame extends JFrame {
 	private int _numberOfPlayers;
 	private JButton[][] _boardOfButtons = new JButton[20][20];
 	
-	public BoardFrame(Scrabble s){
+	public BoardFrame(Scrabble s, Board b){
         try {
             UIManager.setLookAndFeel("com.sun.java.swing.plaf.motif.MotifLookAndFeel");
         } catch(Exception e) {
             e.printStackTrace();
         }
 		_s = s;
+		_board = b;
 		JFrame frame = new JFrame("Scrabble");
 		
 		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
@@ -30,7 +31,7 @@ public class BoardFrame extends JFrame {
 		
 		for(int row=0; row<20; row++){
 			for(int col=0; col<20; col++){
-				JButton j = new TileSpace(row, col);
+				JButton j = new TileSpace(row, col, _board);
 				_boardOfButtons[row][col] = j;
 				frame.add(j);
 			}

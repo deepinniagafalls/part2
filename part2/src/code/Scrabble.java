@@ -5,6 +5,8 @@ import java.util.Random;
 
 public class Scrabble {
 	
+
+	
 	/**
 	 * Stores tiles.
 	 */
@@ -53,5 +55,4 @@ public class Scrabble {
 	public Inventory getInv(){
 		return _inv;
 	}
-
 }

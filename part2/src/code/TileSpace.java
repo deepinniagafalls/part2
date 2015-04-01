@@ -10,15 +10,21 @@ public class TileSpace extends JButton implements ActionListener {
 	private JButton _j;
 	private int _row;
 	private int _col;
+	private Board _b;
+	private Tile _t;
 	
-	public TileSpace(int x, int y){
+	public TileSpace(int x, int y, Board b){
 		_j = this;
 		_row = x;
 		_col = y;
+		_b = b;
+		_t = new Tile('A',1);
 		this.addActionListener(new ActionListener() {
 			
 			public void actionPerformed(ActionEvent e) {
-				_j.setText("A");
+				_b.addTile(_t,getRow(),getCol());
+				String temp = Character.toString(_t.getChar());
+				_j.setText(temp);
 			}
 		});
 	}

@@ -14,11 +14,11 @@ public class Tile {
 	/**
 	 * Class constructor.
 	 * 
-	 * @param c character of the tile
+	 * @param j character of the tile
 	 * @param i point value of the tile
 	 */
-	public Tile(char c, int i){
-		_letter = c;
+	public Tile(char j, int i){
+		_letter = j;
 		_pointValue = i;
 	}
 	
