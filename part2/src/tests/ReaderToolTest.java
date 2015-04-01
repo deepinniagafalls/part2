@@ -12,27 +12,27 @@ public class ReaderToolTest {
 	public void test() {
 		
 		ReaderTool r = new ReaderTool();
-		assertTrue("ramshackle",r.getWords().contains("ramshackle"));
+		assertTrue("RAMSHACKLE",r.getWords().contains("RAMSHACKLE"));
 	}
 	@Test
 	public void test2() {
 		ReaderTool r = new ReaderTool();
-		assertTrue("aloft",r.getWords().contains("aloft"));
+		assertTrue("ALOFT",r.getWords().contains("ALOFT"));
 	}
 	@Test
 	public void test3() {
 		ReaderTool r = new ReaderTool();
-		assertTrue("skillet",r.getWords().contains("skillet"));
+		assertTrue("SKILLET",r.getWords().contains("SKILLET"));
 	}
 	@Test
 	public void test4() {
 		ReaderTool r = new ReaderTool();
-		assertTrue("wan",r.getWords().contains("wan"));
+		assertTrue("WAN",r.getWords().contains("WAN"));
 	}
 	@Test
 	public void test5() {
 		ReaderTool r = new ReaderTool();
-		assertTrue("thole",r.getWords().contains("thole"));
+		assertTrue("THOLE",r.getWords().contains("THOLE"));
 	}
 
 }
