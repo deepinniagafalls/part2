@@ -17,7 +17,7 @@ public class PlayerFrame {
 	
 	public PlayerFrame(Scrabble s){
         try {
-            UIManager.setLookAndFeel("com.sun.java.swing.plaf.motif.MotifLookAndFeel");
+            UIManager.setLookAndFeel("javax.swing.plaf.metal");
         } catch(Exception e) {
             e.printStackTrace();
         }
