@@ -15,9 +15,7 @@ public class ReaderTool {
           _words.add(_line);
        }       
     }
-    catch(Exception e){
-       e.printStackTrace();
-    }
+    catch(Exception e){}
 	}
 	public ArrayList<String> getWords(){
 		return _words;

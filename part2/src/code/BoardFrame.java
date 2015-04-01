@@ -16,7 +16,7 @@ public class BoardFrame extends JFrame {
 	
 	public BoardFrame(Scrabble s, Board b){
         try {
-            UIManager.setLookAndFeel("com.sun.java.swing.plaf.motif.MotifLookAndFeel");
+            UIManager.setLookAndFeel("javax.swing.plaf.metal.MetalLookAndFeel");
         } catch(Exception e) {
             e.printStackTrace();
         }
@@ -25,7 +25,7 @@ public class BoardFrame extends JFrame {
 		JFrame frame = new JFrame("Scrabble");
 		
 		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-		frame.setSize(800, 800);
+		frame.setSize(870, 870);
 		GridLayout grid = new GridLayout(20, 20, 0, 0);
 		frame.setLayout(grid);
 		
