@@ -1,11 +1,11 @@
-package tests;
+package tests.base;
 
 import org.junit.Test;
 
 import static org.junit.Assert.assertTrue;
-import code.Inventory;
-import code.Tile;
-import code.TileRack;
+import code.base.Inventory;
+import code.base.Tile;
+import code.base.TileRack;
 
 public class TileRackTest {
 

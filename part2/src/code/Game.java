@@ -2,6 +2,7 @@ package code;
 
 import java.util.ArrayList;
 
+import code.base.Scrabble;
 import code.util.ReaderTool;
 
 public class Game {

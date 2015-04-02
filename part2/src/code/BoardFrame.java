@@ -5,6 +5,11 @@ import java.util.ArrayList;
 
 import javax.swing.*;
 
+import code.base.Board;
+import code.base.Inventory;
+import code.base.Player;
+import code.base.Scrabble;
+
 public class BoardFrame extends JFrame {
 	
 	private Scrabble _s;

@@ -5,6 +5,9 @@ import java.awt.event.ActionListener;
 
 import javax.swing.JButton;
 
+import code.base.Board;
+import code.base.Tile;
+
 public class TileSpace extends JButton implements ActionListener {
 	
 	private JButton _j;

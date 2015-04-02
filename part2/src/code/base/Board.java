@@ -1,4 +1,5 @@
-package code;
+package code.base;
+
 
 public class Board {
 

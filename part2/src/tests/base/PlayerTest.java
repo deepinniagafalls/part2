@@ -1,10 +1,10 @@
-package tests;
+package tests.base;
 
 import org.junit.Test;
 
 import static org.junit.Assert.assertTrue;
-import code.Inventory;
-import code.Player;
+import code.base.Inventory;
+import code.base.Player;
 
 public class PlayerTest {
 	//test that initial score at new game is 0

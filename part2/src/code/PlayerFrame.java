@@ -7,6 +7,11 @@ import javax.swing.JButton;
 import javax.swing.JFrame;
 import javax.swing.UIManager;
 
+import code.base.Board;
+import code.base.Inventory;
+import code.base.Player;
+import code.base.Scrabble;
+
 public class PlayerFrame {
 
 	private Scrabble _s;

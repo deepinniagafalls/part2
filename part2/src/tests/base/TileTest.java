@@ -1,10 +1,10 @@
-package tests;
+package tests.base;
 
 import org.junit.Test;
 
 import static org.junit.Assert.assertTrue;
-import code.Inventory;
-import code.Tile;
+import code.base.Inventory;
+import code.base.Tile;
 
 public class TileTest {
 	
