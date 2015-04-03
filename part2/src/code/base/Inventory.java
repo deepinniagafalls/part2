@@ -50,7 +50,7 @@ public class Inventory {
 	 * @return the random tile that was removed
 	 */
 	public Tile removeRandomTile(){
-		int randomIndex = new Random().nextInt(_tileBag.size());
+		int randomIndex = new Random().nextInt(_tileBag.size()-1);
 		return _tileBag.remove(randomIndex);
 	}
 	

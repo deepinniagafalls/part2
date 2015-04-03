@@ -18,8 +18,9 @@ public class BoardFrame extends JFrame {
 	private Board _board;
 	private int _numberOfPlayers;
 	private JButton[][] _boardOfButtons = new JButton[20][20];
+	Inventory _invent;
 	
-	public BoardFrame(Scrabble s, Board b){
+	public BoardFrame(Scrabble s, Board b, Inventory i){
         try {
             UIManager.setLookAndFeel("javax.swing.plaf.metal.MetalLookAndFeel");
         } catch(Exception e) {
@@ -27,6 +28,7 @@ public class BoardFrame extends JFrame {
         }
 		_s = s;
 		_board = b;
+		_invent = i; 
 		JFrame frame = new JFrame("Scrabble");
 		
 		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
@@ -36,7 +38,7 @@ public class BoardFrame extends JFrame {
 		
 		for(int row=0; row<20; row++){
 			for(int col=0; col<20; col++){
-				JButton j = new TileSpace(row, col, _board);
+				JButton j = new TileSpace(row, col, _board, _invent);
 				_boardOfButtons[row][col] = j;
 				frame.add(j);
 			}
