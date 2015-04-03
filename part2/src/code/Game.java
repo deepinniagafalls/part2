@@ -15,5 +15,6 @@ public class Game {
 		Board _board = scrabble.getBoard();
 		BoardFrame f = new BoardFrame(scrabble, _board , invent);
 		PlayerFrame tr = new PlayerFrame(scrabble);
+		FileChooser fc = new FileChooser();
 	}
 }

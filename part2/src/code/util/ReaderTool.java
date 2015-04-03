@@ -20,4 +20,8 @@ public class ReaderTool {
 	public ArrayList<String> getWords(){
 		return _words;
 	}
+	public boolean isThisAWord(String s){
+		return _words.contains(s);
+		
+	}
 }
