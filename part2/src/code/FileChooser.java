@@ -53,6 +53,7 @@ public class FileChooser extends JFrame {
 					filename.setText("You pressed cancel");
 					dir.setText("");
 				}
+				c.setVisible(true);
 		}
 	}
 
@@ -65,9 +66,8 @@ public class FileChooser extends JFrame {
 				dir.setText(c.getCurrentDirectory().toString());
 			}
 			if (rVal == JFileChooser.CANCEL_OPTION) {
-				filename.setText("You pressed cancel");
-				dir.setText("");
 			}
+			c.setVisible(true);
 		}
 	}
 
