@@ -11,6 +11,7 @@ import javax.swing.JFileChooser;
 import javax.swing.JFrame;
 import javax.swing.JPanel;
 import javax.swing.JTextField;
+import javax.swing.UIManager;
 
 public class FileChooser extends JFrame {
 	private JTextField filename = new JTextField(), dir = new JTextField();
@@ -18,6 +19,11 @@ public class FileChooser extends JFrame {
 	private JButton open = new JButton("Open"), save = new JButton("Save");
 
 	public FileChooser() {
+        try {
+            UIManager.setLookAndFeel("javax.swing.plaf.metal.MetalLookAndFeel");
+        } catch(Exception e) {
+            e.printStackTrace();
+        }
 		JPanel p = new JPanel();
 		open.addActionListener(new OpenL());
 		p.add(open);
