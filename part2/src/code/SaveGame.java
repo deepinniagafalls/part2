@@ -15,7 +15,7 @@ public class SaveGame {
 	public void Save(String s){
 		
 		String save = s;
-		save.concat("Scrabble.java");
+		save.concat("Game.java");
 		 try {
 		        ObjectOutputStream oos = new ObjectOutputStream(new FileOutputStream(save));
 		        oos.writeObject(oos);
@@ -26,7 +26,7 @@ public class SaveGame {
 	}
 	public void Load(String s){
 		
-	    if(s.contains("Scrabble.java")){
+	    if(s.contains("Gave.java")){
 	        try {
 	        	ObjectInputStream ois = new ObjectInputStream(new FileInputStream(s));
 	        	SaveGame sg = (SaveGame)ois.readObject();
