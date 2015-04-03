@@ -33,6 +33,10 @@ public class Player {
 	public int getScore(){
 		return _score;
 	}
+	
+	public TileRack getTileRack(){
+		return _rack;
+	}
 
 	/**
 	 * Adds the new points to the original score

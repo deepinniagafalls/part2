@@ -40,7 +40,7 @@ public class BoardFrame extends JFrame {
 		
 		for(int row=0; row<20; row++){
 			for(int col=0; col<20; col++){
-				JButton j = new TileSpace(row, col, _board, _invent);
+				JButton j = new TileSpace(row, col, _s);
 				_boardOfButtons[row][col] = j;
 				frame.add(j);
 			}
