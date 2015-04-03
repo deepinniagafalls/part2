@@ -35,18 +35,6 @@ public class TileRack {
 	}
 	
 	/**
-	 * Removes a tile from rack.
-	 * 
-	 * @param t tile to be removed from the rack
-	 * @return tile removed from the rack
-	 */
-	public Tile removeTile(Tile t){
-		Tile tileToRemove = t;
-		_rack.remove(t);
-		return tileToRemove;
-	}
-	
-	/**
 	 * Removes a tile from an index from rack
 	 * 
 	 * @param i index of tile to be removed
