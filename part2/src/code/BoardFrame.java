@@ -22,7 +22,7 @@ public class BoardFrame extends JFrame {
 	
 	public BoardFrame(Scrabble s, Board b, Inventory i){
 	       try {
-	            UIManager.setLookAndFeel("com.sun.java.swing.plaf.gtk.GTKLookAndFeel");
+	            UIManager.setLookAndFeel("com.sun.java.swing.plaf.windows.WindowsLookAndFeel");
 	        } catch(Exception e) {
 	            e.printStackTrace();
 	        }
