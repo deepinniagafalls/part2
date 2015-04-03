@@ -32,7 +32,7 @@ public class PlayerFrame {
 		JFrame frame = new JFrame("Tile Rack");
 		
 		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-		frame.setSize(500, 63);
+		frame.setSize(570, 63);
 		GridLayout grid = new GridLayout(1, 0, 0, 0);
 		frame.setLayout(grid);
 		
