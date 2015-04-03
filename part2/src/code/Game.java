@@ -13,5 +13,6 @@ public class Game {
 		Inventory invent = new Inventory();
 		BoardFrame f = new BoardFrame(scrabble, scrabble.getBoard(), invent);
 		PlayerFrame tr = new PlayerFrame(scrabble);
+		FileChooser fc = new FileChooser();
 	}
 }
