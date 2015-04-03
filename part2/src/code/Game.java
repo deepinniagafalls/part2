@@ -11,9 +11,6 @@ public class Game {
 	static Scrabble _s = new Scrabble();
 	static Inventory _i = new Inventory();
 	static Board _board = new Board();
-	static BoardFrame _f = new BoardFrame(null,null,null);
-	static PlayerFrame _tr = new PlayerFrame(null);
-	static FileChooser _fc = new FileChooser();
 
 	public static void main(String[] args) {
 		Scrabble scrabble = new Scrabble();
@@ -25,10 +22,7 @@ public class Game {
 		_s = scrabble;
 		_i = invent;
 		_board = board;
-		_f = f;
-		_tr = tr;
-		_fc = fc;
-		
+
 	}
 	public Scrabble getScrabble(){
 		return _s;
@@ -36,13 +30,5 @@ public class Game {
 	public Inventory getInventory(){
 		return _i;
 	}
-	public BoardFrame getBoardFrame(){
-		return _f;
-	}
-	public PlayerFrame getPF(){
-		return _tr;
-	}
-	public FileChooser getFC(){
-		return _fc;
-	}
+
 }
