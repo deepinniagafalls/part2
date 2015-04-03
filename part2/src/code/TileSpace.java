@@ -20,7 +20,7 @@ public class TileSpace extends JButton implements ActionListener {
 	private Board _b;
 	private Tile _t;
 	private Inventory _i;
-	ArrayList<Player> _players;
+	private ArrayList<Player> _players;
 	
 	public TileSpace(int x, int y, Scrabble s){
 		_j = this;

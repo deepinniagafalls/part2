@@ -37,7 +37,7 @@ public class PlayerFrame {
 		frame.setLayout(grid);
 		
 		for(int i=0; i<12; i++){
-			JButton j = new PlayerSpace(); //Make this a PlayerSpace
+			JButton j = new PlayerSpace(_s); //Make this a PlayerSpace
 			frame.add(j);
 		}
 		frame.setVisible(true);

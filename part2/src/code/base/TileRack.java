@@ -54,4 +54,8 @@ public class TileRack {
 	public int getSize() {
 		return _rack.size();
 	}
+	
+	public Tile getTile(int i){
+		return _rack.get(i);
+	}
 }
