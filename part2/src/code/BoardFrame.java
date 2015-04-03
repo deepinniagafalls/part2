@@ -21,11 +21,8 @@ public class BoardFrame extends JFrame {
 	Inventory _invent;
 	
 	public BoardFrame(Scrabble s, Board b, Inventory i){
-        try {
-            UIManager.setLookAndFeel("com.sun.java.swing.plaf.motif.MotifLookAndFeel");
-        } catch(Exception e) {
-            e.printStackTrace();
-        } 
+
+	
 		_s = s;
 		_board = b;
 		_invent = i; 

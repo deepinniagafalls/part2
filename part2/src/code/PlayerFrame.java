@@ -26,6 +26,12 @@ public class PlayerFrame {
         } catch(Exception e) {
             e.printStackTrace();
         }
+        try {
+            UIManager.setLookAndFeel("com.sun.java.swing.plaf.motif.MotifLookAndFeel");
+        } catch(Exception e) {
+            e.printStackTrace();
+        }
+        
 		_s = s;
 		JFrame frame = new JFrame("Tile Rack");
 		
