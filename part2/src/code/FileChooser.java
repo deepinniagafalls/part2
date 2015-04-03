@@ -1,8 +1,5 @@
 package code;
 
-
-
-
 import java.awt.BorderLayout;
 import java.awt.Container;
 import java.awt.GridLayout;
@@ -40,7 +37,6 @@ public class FileChooser extends JFrame {
 	class OpenL implements ActionListener {
 		public void actionPerformed(ActionEvent e) {
 			JFileChooser c = new JFileChooser();
-			// Demonstrate "Open" dialog:
 				int rVal = c.showOpenDialog(FileChooser.this);
 				if (rVal == JFileChooser.APPROVE_OPTION) {
 					filename.setText(c.getSelectedFile().getName());
@@ -56,7 +52,6 @@ public class FileChooser extends JFrame {
 	class SaveL implements ActionListener {
 		public void actionPerformed(ActionEvent e) {
 			JFileChooser c = new JFileChooser();
-			// Demonstrate "Save" dialog:
 			int rVal = c.showSaveDialog(FileChooser.this);
 			if (rVal == JFileChooser.APPROVE_OPTION) {
 				filename.setText(c.getSelectedFile().getName());

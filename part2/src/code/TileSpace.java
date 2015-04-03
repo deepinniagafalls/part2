@@ -27,8 +27,9 @@ public class TileSpace extends JButton implements ActionListener {
 		this.addActionListener(new ActionListener() {
 			
 			public void actionPerformed(ActionEvent e) {
-				_b.addTile(_i.removeRandomTile(),getRow(),getCol());
-				String temp = Character.toString(_t.getChar());
+				Tile t = _i.removeRandomTile();
+				_b.addTile(t,getRow(),getCol());
+				String temp = Character.toString(t.getChar());
 				_j.setText(temp);
 			}
 		});
