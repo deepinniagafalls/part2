@@ -22,7 +22,7 @@ public class PlayerFrame {
 	
 	public PlayerFrame(Scrabble s){
         try {
-            UIManager.setLookAndFeel("com.sun.java.swing.plaf.windows.WindowsLookAndFeel");
+            UIManager.setLookAndFeel(UIManager.getSystemLookAndFeelClassName());
         } catch(Exception e) {
             e.printStackTrace();
         }

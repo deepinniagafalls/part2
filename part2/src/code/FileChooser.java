@@ -14,7 +14,7 @@ import javax.swing.JTextField;
 import javax.swing.UIManager;
 
 public class FileChooser extends JFrame {
-	
+
 	/**
 	 * 
 	 */
@@ -26,7 +26,7 @@ public class FileChooser extends JFrame {
 
 	public FileChooser() {
         try {
-            UIManager.setLookAndFeel("com.sun.java.swing.plaf.motif.MotifLookAndFeel");
+            UIManager.setLookAndFeel(UIManager.getSystemLookAndFeelClassName());
         } catch(Exception e) {
             e.printStackTrace();
         }
