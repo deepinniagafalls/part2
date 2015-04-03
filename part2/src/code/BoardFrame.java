@@ -22,10 +22,10 @@ public class BoardFrame extends JFrame {
 	
 	public BoardFrame(Scrabble s, Board b, Inventory i){
         try {
-            UIManager.setLookAndFeel("javax.swing.plaf.metal.MetalLookAndFeel");
+            UIManager.setLookAndFeel("com.sun.java.swing.plaf.motif.MotifLookAndFeel");
         } catch(Exception e) {
             e.printStackTrace();
-        }
+        } 
 		_s = s;
 		_board = b;
 		_invent = i; 

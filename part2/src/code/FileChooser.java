@@ -20,7 +20,7 @@ public class FileChooser extends JFrame {
 
 	public FileChooser() {
         try {
-            UIManager.setLookAndFeel("javax.swing.plaf.metal.MetalLookAndFeel");
+            UIManager.setLookAndFeel("com.sun.java.swing.plaf.motif.MotifLookAndFeel");
         } catch(Exception e) {
             e.printStackTrace();
         }
