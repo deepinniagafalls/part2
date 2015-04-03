@@ -14,6 +14,12 @@ import javax.swing.JTextField;
 import javax.swing.UIManager;
 
 public class FileChooser extends JFrame {
+	
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
+
 	private JTextField filename = new JTextField(), dir = new JTextField();
 
 	private JButton open = new JButton("Open"), save = new JButton("Save");
@@ -25,14 +31,19 @@ public class FileChooser extends JFrame {
             e.printStackTrace();
         }
 		JPanel p = new JPanel();
+		
 		open.addActionListener(new OpenL());
 		p.add(open);
+		
 		save.addActionListener(new SaveL());
 		p.add(save);
+		
 		Container cp = getContentPane();
 		cp.add(p, BorderLayout.SOUTH);
+		
 		dir.setEditable(false);
 		filename.setEditable(false);
+		
 		p = new JPanel();
 		p.setLayout(new GridLayout(2, 1));
 		p.add(filename);
@@ -41,15 +52,17 @@ public class FileChooser extends JFrame {
 		p.setVisible(true);
 	}
 
-	class OpenL implements ActionListener {
+	public class OpenL implements ActionListener {
+		
 		public void actionPerformed(ActionEvent e) {
+			
 			JFileChooser c = new JFileChooser();
-				int rVal = c.showOpenDialog(FileChooser.this);
-				if (rVal == JFileChooser.APPROVE_OPTION) {
+				int value = c.showOpenDialog(FileChooser.this);
+				if (value == JFileChooser.APPROVE_OPTION) {
 					filename.setText(c.getSelectedFile().getName());
 					dir.setText(c.getCurrentDirectory().toString());
 				}
-				if (rVal == JFileChooser.CANCEL_OPTION) {
+				if (value == JFileChooser.CANCEL_OPTION) {
 					filename.setText("You pressed cancel");
 					dir.setText("");
 				}
@@ -57,15 +70,17 @@ public class FileChooser extends JFrame {
 		}
 	}
 
-	class SaveL implements ActionListener {
+	public class SaveL implements ActionListener {
+		
 		public void actionPerformed(ActionEvent e) {
+			
 			JFileChooser c = new JFileChooser();
-			int rVal = c.showSaveDialog(FileChooser.this);
-			if (rVal == JFileChooser.APPROVE_OPTION) {
+			int value = c.showSaveDialog(FileChooser.this);
+			if (value == JFileChooser.APPROVE_OPTION) {
 				filename.setText(c.getSelectedFile().getName());
 				dir.setText(c.getCurrentDirectory().toString());
 			}
-			if (rVal == JFileChooser.CANCEL_OPTION) {
+			if (value == JFileChooser.CANCEL_OPTION) {
 			}
 			c.setVisible(true);
 		}
