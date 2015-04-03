@@ -15,7 +15,7 @@ public class TileRack {
 	private ArrayList<Tile> _rack;
 	
 	/**
-	 * Class cosntructor.
+	 * Class constructor.
 	 * 
 	 * @param inv inventory to draw tiles from
 	 */
