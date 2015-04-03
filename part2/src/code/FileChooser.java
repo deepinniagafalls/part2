@@ -32,6 +32,7 @@ public class FileChooser extends JFrame {
 		p.add(filename);
 		p.add(dir);
 		cp.add(p, BorderLayout.NORTH);
+		p.setVisible(true);
 	}
 
 	class OpenL implements ActionListener {
