@@ -13,16 +13,18 @@ import code.base.Tile;
 public class PlayerSpace extends JButton implements ActionListener {
 	
 	private ArrayList<Player> _players;
+	private PlayerSpace _playerSpace;
 	
 	
 	public PlayerSpace(Scrabble s, int i){
 		_players = s.getPlayer();
 		this.setText(Character.toString(_players.get(0).getTileRack().getTile(i).getChar()));
+		_playerSpace = this;
 		
 		this.addActionListener(new ActionListener() {
 			
 				public void actionPerformed(ActionEvent e) {
-					//Tile t = _i.removeRandomTile();
+					_playerSpace.setText(""); //Should put this in actionPerformed TileSpace instead
 					
 				}
 			});
