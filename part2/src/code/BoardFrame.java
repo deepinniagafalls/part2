@@ -22,7 +22,7 @@ public class BoardFrame extends JFrame {
 	
 	public BoardFrame(Scrabble s, Board b, Inventory i){
 	       try {
-	            UIManager.setLookAndFeel(UIManager.getSystemLookAndFeelClassName());
+	            UIManager.setLookAndFeel(new javax.swing.plaf.metal.MetalLookAndFeel());
 	        } catch(Exception e) {
 	            e.printStackTrace();
 	        }

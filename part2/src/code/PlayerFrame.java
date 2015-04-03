@@ -21,11 +21,12 @@ public class PlayerFrame {
 	private int _numberOfPlayers;
 	
 	public PlayerFrame(Scrabble s){
-        try {
-            UIManager.setLookAndFeel(UIManager.getSystemLookAndFeelClassName());
-        } catch(Exception e) {
-            e.printStackTrace();
-        }
+	       try {
+	            UIManager.setLookAndFeel(new javax.swing.plaf.metal.MetalLookAndFeel());
+	        } catch(Exception e) {
+	            e.printStackTrace();
+	        }
+	        
         
 		_s = s;
 		JFrame frame = new JFrame("Tile Rack");

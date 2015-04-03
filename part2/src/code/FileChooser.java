@@ -25,11 +25,12 @@ public class FileChooser extends JFrame {
 	private JButton open = new JButton("Open"), save = new JButton("Save");
 
 	public FileChooser() {
-        try {
-            UIManager.setLookAndFeel(UIManager.getSystemLookAndFeelClassName());
-        } catch(Exception e) {
-            e.printStackTrace();
-        }
+	       try {
+	            UIManager.setLookAndFeel(new javax.swing.plaf.metal.MetalLookAndFeel());
+	        } catch(Exception e) {
+	            e.printStackTrace();
+	        }
+	        
 		JPanel p = new JPanel();
 		
 		open.addActionListener(new OpenL());
