@@ -7,7 +7,7 @@ public class Board {
 	 * 2-D array of tiles to store tiles.
 	 */
 	private Tile[][] _board;
-
+	private Tile _tempTile;
 	/**
 	 * Class constructor.
 	 */
@@ -50,4 +50,11 @@ public class Board {
 		return _board[x][y];
 	}
 
+	public void setTempTile(Tile t){
+		_tempTile = t;
+	}
+	
+	public Tile getTempTile(){
+		return _tempTile;
+	}
 }

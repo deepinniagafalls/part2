@@ -19,15 +19,17 @@ public class BoardFrame extends JFrame {
 	private int _numberOfPlayers;
 	private JButton[][] _boardOfButtons = new JButton[20][20];
 	Inventory _invent;
+	private PlayerFrame _pf;
 	
-	public BoardFrame(Scrabble s, Board b, Inventory i){
+	
+	public BoardFrame(Scrabble s, Board b, Inventory i, PlayerFrame pf){
 	       try {
 	            UIManager.setLookAndFeel(new javax.swing.plaf.metal.MetalLookAndFeel());
 	        } catch(Exception e) {
 	            e.printStackTrace();
 	        }
 	        
-	
+	    _pf = pf;
 		_s = s;
 		_board = b;
 		_invent = i; 
@@ -40,7 +42,7 @@ public class BoardFrame extends JFrame {
 		
 		for(int row=0; row<20; row++){
 			for(int col=0; col<20; col++){
-				JButton j = new TileSpace(row, col, _s);
+				JButton j = new TileSpace(row, col, _s, this);
 				_boardOfButtons[row][col] = j;
 				frame.add(j);
 			}
@@ -55,5 +57,8 @@ public class BoardFrame extends JFrame {
 		_numberOfPlayers = _s.getNumofPlayers();
 	}
 
+	public PlayerFrame getPlayerFrame(){
+		return _pf;
+	}
 }
 

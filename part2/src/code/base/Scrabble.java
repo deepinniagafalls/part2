@@ -30,7 +30,7 @@ public class Scrabble {
 	public Scrabble(){
 		_inv = new Inventory();
 		_board = new Board();
-		_numberOfPlayers = 4;
+		_numberOfPlayers = 2;
 		
 		for(int i = 0; i < _numberOfPlayers; i++){
 			addNewPlayer();
@@ -54,5 +54,8 @@ public class Scrabble {
 	}
 	public Inventory getInv(){
 		return _inv;
+	}
+	public Player returnPlayer(int playernumber){
+		return _players.get(playernumber);
 	}
 }
