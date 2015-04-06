@@ -40,10 +40,10 @@ public class Game {
 		}
 		//PlayerFrame tr = new PlayerFrame(scrabble, scrabble.returnPlayer(0).getTileRack());
 		//PlayerFrame tr2 = new PlayerFrame(scrabble,scrabble.returnPlayer(1).getTileRack());
-		BoardFrame f = new BoardFrame(scrabble, board , invent,_playerFrameList);
+		BoardFrame boardframe = new BoardFrame(scrabble, board , invent,_playerFrameList);
 		//System.out.println(scrabble.returnPlayer(1));
-		FileChooser fc = new FileChooser();
-		}
+		FileChooser fc = new FileChooser(scrabble, boardframe);
+	}
 	
 	public Game(){
 		
