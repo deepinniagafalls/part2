@@ -107,7 +107,7 @@ public class FileChooser extends JFrame {
 	public class PassT implements ActionListener {
 		
 		public void actionPerformed(ActionEvent e) {
-			JOptionPane.showMessageDialog(null, "You have passed your turn");
+			JOptionPane.showMessageDialog(null, "You have passed your turn", "Turn", JOptionPane.PLAIN_MESSAGE);
 	}
 	}
 
