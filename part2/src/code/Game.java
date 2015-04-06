@@ -24,11 +24,10 @@ public class Game {
 	private static ArrayList<PlayerFrame> _playerFrameList;
 	
 	public static void main(String[] args) throws ClassNotFoundException, InstantiationException, IllegalAccessException, UnsupportedLookAndFeelException {
-		System.out.println("How many players do you want? : ");
+		String p = JOptionPane.showInputDialog(null, "How many players do you want?");
+		_numberOfPlayers = Integer.parseInt(p);
 		Scanner sc = new Scanner(System.in);
-		_numberOfPlayers = sc.nextInt();
 		Scrabble scrabble = new Scrabble(_numberOfPlayers);
-		System.out.println(_numberOfPlayers);
 		Inventory invent = scrabble.getInv();
 		Board board = scrabble.getBoard();
 		_playerList = scrabble.getPlayers();
