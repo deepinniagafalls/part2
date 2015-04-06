@@ -3,6 +3,8 @@ package code.base;
 import java.util.ArrayList;
 import java.util.Random;
 
+import javax.swing.JOptionPane;
+
 public class Scrabble {
 	
 
@@ -35,6 +37,11 @@ public class Scrabble {
 		for(int i = 0; i < _numberOfPlayers; i++){
 			addNewPlayer();
 		}
+		try{}
+		catch(IllegalArgumentException e){
+			JOptionPane.showMessageDialog(null, "The maximum number of players is four");
+		}
+
 	}
 	
 	/**

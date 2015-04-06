@@ -41,8 +41,7 @@ public class Game {
 		BoardFrame f = new BoardFrame(scrabble, board , invent,_playerFrameList);
 		//System.out.println(scrabble.returnPlayer(1));
 		FileChooser fc = new FileChooser();
-		
-		
+
 	}
 	
 	public Game(){
