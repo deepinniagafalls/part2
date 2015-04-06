@@ -34,7 +34,7 @@ public class Game {
 		_playerList = scrabble.getPlayers();
 		_playerFrameList = new ArrayList<PlayerFrame>();
 		for(int i = 0; i < _numberOfPlayers; i++){
-			_playerFrameList.add(new PlayerFrame(scrabble, scrabble.returnPlayer(i).getTileRack()));
+			_playerFrameList.add(new PlayerFrame(scrabble, scrabble.returnPlayer(i).getTileRack(), i));
 		}
 		//PlayerFrame tr = new PlayerFrame(scrabble, scrabble.returnPlayer(0).getTileRack());
 		//PlayerFrame tr2 = new PlayerFrame(scrabble,scrabble.returnPlayer(1).getTileRack());

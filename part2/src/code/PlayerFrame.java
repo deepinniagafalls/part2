@@ -29,7 +29,7 @@ public class PlayerFrame {
 	/*
 	 * @param Scrabble s: is the instance of the scrabble game that will be passed into the player frame.
 	 */
-	public PlayerFrame(Scrabble s, TileRack tr){
+	public PlayerFrame(Scrabble s, TileRack tr, int index){
 	       try {
 	            UIManager.setLookAndFeel(new javax.swing.plaf.metal.MetalLookAndFeel());
 	        } catch(Exception e) {
@@ -53,6 +53,7 @@ public class PlayerFrame {
 			_boardOfButtons[row][i] = temp;
 			frame.add(temp);
 		}
+		frame.setTitle("Player " + index + "'s Tile Rack");
 		frame.setVisible(true);
 		
 	}
