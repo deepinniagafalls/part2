@@ -22,6 +22,7 @@ public class PlayerFrame {
 	private Board _board;
 	private int _numberOfPlayers;
 	private JButton[][] _boardOfButtons = new JButton[1][12];
+	private PlayerSpace[][] _boardOfPlayerSpaces = new PlayerSpace[1][12];
 	private TileRack _tr;
 	private PlayerFrame _pf;
 	private Tile _tileTemp;
@@ -51,6 +52,7 @@ public class PlayerFrame {
 		for(int i=0; i<12; i++){
 			PlayerSpace temp = new PlayerSpace(_s,i,_pf); //Make this a
 			_boardOfButtons[row][i] = temp;
+			_boardOfPlayerSpaces[row][i] = temp;
 			frame.add(temp);
 		}
 		frame.setTitle("Player " + index + "'s Tile Rack");
@@ -86,5 +88,8 @@ public class PlayerFrame {
 	public void setCurrent(PlayerSpace current){
 		_current = current;
 	}
+	
+	public PlayerSpace getPlayerSpace(int index){
+		return _boardOfPlayerSpaces[0][index];
+	}
 }
-
