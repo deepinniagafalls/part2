@@ -1,6 +1,7 @@
 package code;
 import java.awt.Dimension;
 import java.awt.GridLayout;
+import java.awt.event.ActionEvent;
 import java.util.ArrayList;
 
 import javax.swing.*;
@@ -33,8 +34,7 @@ public class BoardFrame extends JFrame {
 		_s = s;
 		_board = b;
 		_invent = i; 
-		JFrame frame = new JFrame("Scrabble");
-		
+		JFrame frame = new JFrame("Scrabble");		
 		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		frame.setSize(900, 900);
 		GridLayout grid = new GridLayout(20, 20, 0, 0);
