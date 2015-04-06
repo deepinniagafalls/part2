@@ -23,6 +23,7 @@ public class FileChooser extends JFrame {
 	private JTextField filename = new JTextField(), dir = new JTextField();
 
 	private JButton open = new JButton("Open"), save = new JButton("Save");
+	private JButton pass = new JButton("Pass");
 
 	public FileChooser() {
 	       try {
@@ -38,6 +39,8 @@ public class FileChooser extends JFrame {
 		
 		save.addActionListener(new SaveL());
 		p.add(save);
+		pass.addActionListener(new OpenL());
+		p.add(pass);
 		
 		Container cp = getContentPane();
 		cp.add(p, BorderLayout.SOUTH);
