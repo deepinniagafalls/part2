@@ -9,6 +9,7 @@ import java.awt.event.ActionListener;
 import javax.swing.JButton;
 import javax.swing.JFileChooser;
 import javax.swing.JFrame;
+import javax.swing.JOptionPane;
 import javax.swing.JPanel;
 import javax.swing.JTextField;
 import javax.swing.UIManager;
@@ -39,7 +40,7 @@ public class FileChooser extends JFrame {
 		
 		save.addActionListener(new SaveL());
 		p.add(save);
-		pass.addActionListener(new OpenL());
+		pass.addActionListener(new PassT());
 		p.add(pass);
 		
 		Container cp = getContentPane();
@@ -99,5 +100,12 @@ public class FileChooser extends JFrame {
 		frame.setSize(width, height);
 		frame.setVisible(true);
 	}
+	public class PassT implements ActionListener {
+		
+		public void actionPerformed(ActionEvent e) {
+			JOptionPane.showMessageDialog(null, "You have passed your turn");
+	}
+	}
+
 }
 
