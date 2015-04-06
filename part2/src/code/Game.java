@@ -28,7 +28,7 @@ public class Game {
 		String p = JOptionPane.showInputDialog(null, "How many players do you want?");
 		_numberOfPlayers = Integer.parseInt(p);
 		if(_numberOfPlayers > 12){
-		JOptionPane.showMessageDialog(null, "Error! The maximum number of players is four");
+		JOptionPane.showMessageDialog(null, "Error! The maximum number of players is four","ERROR",JOptionPane.ERROR_MESSAGE);
 		System.exit(0);
 		}
 		Scanner sc = new Scanner(System.in);
