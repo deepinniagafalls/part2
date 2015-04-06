@@ -79,7 +79,7 @@ public class PlayerFrame {
 		return _board;
 	}
 	
-	public PlayerSpace getCurrent(){
+	public PlayerSpace getCurrentSpace(){
 		return _current;
 	}
 	

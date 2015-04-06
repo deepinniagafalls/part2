@@ -46,8 +46,10 @@ public class TileSpace extends JButton implements ActionListener {
 				_j.setText(temp);
 				_b.setTempTile(null);
 				_t = _scrabble.getInv().removeRandomTile();
-				_bf.getPlayerFrame(0).getCurrent().setText(Character.toString(_t.getChar()));
-				_bf.getPlayerFrame(0).getCurrent().setCurrentTile(_t);
+				_bf.getPlayerFrame(0).getCurrentSpace().setText(Character.toString(_t.getChar()));
+				_bf.getPlayerFrame(0).getCurrentSpace().setCurrentTile(_t);
+
+				
 				}
 			}
 		});
