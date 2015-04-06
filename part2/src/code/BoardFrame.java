@@ -18,11 +18,11 @@ public class BoardFrame extends JFrame {
 	private Board _board;
 	private int _numberOfPlayers;
 	private JButton[][] _boardOfButtons = new JButton[20][20];
-	Inventory _invent;
-	private PlayerFrame _pf;
+	private Inventory _invent;
+	private ArrayList<PlayerFrame> _pf;
 	
 	
-	public BoardFrame(Scrabble s, Board b, Inventory i, PlayerFrame pf){
+	public BoardFrame(Scrabble s, Board b, Inventory i, ArrayList<PlayerFrame> pf){
 	       try {
 	            UIManager.setLookAndFeel(new javax.swing.plaf.metal.MetalLookAndFeel());
 	        } catch(Exception e) {
@@ -52,13 +52,13 @@ public class BoardFrame extends JFrame {
 	}
 	public void update(){
 		_inv = _s.getInv();
-		_players = _s.getPlayer();
+		_players = _s.getPlayers();
 		_board = _s.getBoard();
 		_numberOfPlayers = _s.getNumofPlayers();
 	}
 
-	public PlayerFrame getPlayerFrame(){
-		return _pf;
+	public PlayerFrame getPlayerFrame(int index){
+		return _pf.get(index);
 	}
 }
 

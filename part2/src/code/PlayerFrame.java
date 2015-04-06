@@ -61,7 +61,7 @@ public class PlayerFrame {
 	 */
 	public void update(){
 		_inv = _s.getInv();
-		_players = _s.getPlayer();
+		_players = _s.getPlayers();
 		_board = _s.getBoard();
 		_numberOfPlayers = _s.getNumofPlayers();
 	}

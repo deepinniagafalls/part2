@@ -27,10 +27,10 @@ public class Scrabble {
 	/**
 	 * Class constructor
 	 */
-	public Scrabble(){
+	public Scrabble(int numberOfPlayers){
 		_inv = new Inventory();
 		_board = new Board();
-		_numberOfPlayers = 2;
+		_numberOfPlayers = numberOfPlayers;
 		
 		for(int i = 0; i < _numberOfPlayers; i++){
 			addNewPlayer();
@@ -43,7 +43,7 @@ public class Scrabble {
 	private void addNewPlayer(){
 		_players.add(new Player(_inv));
 	}
-	public ArrayList<Player> getPlayer(){
+	public ArrayList<Player> getPlayers(){
 		return _players;
 	}
 	public int getNumofPlayers(){

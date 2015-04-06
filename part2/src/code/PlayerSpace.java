@@ -26,7 +26,7 @@ public class PlayerSpace extends JButton implements ActionListener {
 		_pf = pf;
 		_numberOfTile = i;
 		_scrabble = s;
-		_players = s.getPlayer();
+		_players = s.getPlayers();
 		_t = _scrabble.getInv().removeRandomTile();
 		this.setText(Character.toString(_t.getChar()));
 		_playerSpace = this;
