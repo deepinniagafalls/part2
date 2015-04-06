@@ -52,7 +52,7 @@ public class FileChooser extends JFrame {
 		dir.setEditable(false);
 		filename.setEditable(false);
 		//p.setLayout(new GridLayout(2, 1));
-		cp.add(p, BorderLayout.NORTH);
+		cp.add(p, BorderLayout.SOUTH);
 		
 		
 		frame.add(p);
