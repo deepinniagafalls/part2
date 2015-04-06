@@ -32,29 +32,33 @@ public class FileChooser extends JFrame {
 	        } catch(Exception e) {
 	            e.printStackTrace();
 	        }
-	        
+	       
+	    JFrame frame = new JFrame();   
 		JPanel p = new JPanel();
 		
-		open.addActionListener(new OpenL());
+		p.add(filename);
+		p.add(dir);
 		p.add(open);
-		
-		save.addActionListener(new SaveL());
 		p.add(save);
-		pass.addActionListener(new PassT());
 		p.add(pass);
+		open.addActionListener(new OpenL());
+		save.addActionListener(new SaveL());
+		pass.addActionListener(new PassT());
+		
 		
 		Container cp = getContentPane();
 		cp.add(p, BorderLayout.SOUTH);
 		
 		dir.setEditable(false);
 		filename.setEditable(false);
-		
-		p = new JPanel();
-		p.setLayout(new GridLayout(2, 1));
-		p.add(filename);
-		p.add(dir);
+		//p.setLayout(new GridLayout(2, 1));
 		cp.add(p, BorderLayout.NORTH);
+		
+		
+		frame.add(p);
 		p.setVisible(true);
+		frame.pack();
+		frame.setVisible(true);
 	}
 
 	public class OpenL implements ActionListener {
