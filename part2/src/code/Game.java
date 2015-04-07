@@ -57,7 +57,8 @@ public class Game {
 			return 0;
 		}
 		else{
-			return _currentTurn + 1;
+			_currentTurn = _currentTurn + 1;
+			return _currentTurn;
 		}
 	}
 	
