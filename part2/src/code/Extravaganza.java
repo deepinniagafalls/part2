@@ -93,7 +93,7 @@ public class Extravaganza extends JFrame {
 		public void actionPerformed(ActionEvent e) {
 			
 			JFileChooser c = new JFileChooser();
-			int value = c.showSaveDialog(FileChooser.this);
+			int value = c.showSaveDialog(Extravaganza.this);
 			if (value == JFileChooser.APPROVE_OPTION) {
 				filename.setText(c.getSelectedFile().getName());
 				dir.setText(c.getCurrentDirectory().toString());
