@@ -23,6 +23,7 @@ public class Game {
 	private static int _numberOfPlayers;
 	private static ArrayList<Player> _playerList;
 	private static ArrayList<PlayerFrame> _playerFrameList;
+	private static int _currentTurn;
 	
 	public static void main(String[] args) throws ClassNotFoundException, InstantiationException, IllegalAccessException, UnsupportedLookAndFeelException {
 		String p = JOptionPane.showInputDialog(null, "How many players do you want?","Number of Players",JOptionPane.QUESTION_MESSAGE);
@@ -30,7 +31,7 @@ public class Game {
 		if(_numberOfPlayers > 12){
 		JOptionPane.showMessageDialog(null, "Error! The maximum number of players is 12","ERROR",JOptionPane.ERROR_MESSAGE);
 		System.exit(0);}
-		
+		_currentTurn = 0;
 		Scrabble scrabble = new Scrabble(_numberOfPlayers);
 		Inventory invent = scrabble.getInv();
 		Board board = scrabble.getBoard();
