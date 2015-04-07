@@ -33,8 +33,8 @@ public class Game {
 	public Game(){
 		String p = JOptionPane.showInputDialog(null, "How many players do you want?","Number of Players",JOptionPane.QUESTION_MESSAGE);
 		_numberOfPlayers = Integer.parseInt(p);
-		if(_numberOfPlayers > 12){
-		JOptionPane.showMessageDialog(null, "Error! The maximum number of players is 12","ERROR",JOptionPane.ERROR_MESSAGE);
+		if(_numberOfPlayers > 4){
+		JOptionPane.showMessageDialog(null, "Error! The maximum number of players is 4","ERROR",JOptionPane.ERROR_MESSAGE);
 		System.exit(0);}
 		_currentTurn = 0;
 		Scrabble scrabble = new Scrabble(_numberOfPlayers);
