@@ -55,7 +55,7 @@ public class PlayerFrame {
 			_boardOfPlayerSpaces[row][i] = temp;
 			frame.add(temp);
 		}
-		frame.setTitle("Player " + index + "'s Tile Rack");
+		frame.setTitle("Player " + (index++) + "'s Tile Rack");
 		frame.setVisible(true);
 		
 	}
