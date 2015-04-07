@@ -114,6 +114,7 @@ public class FileChooser extends JFrame {
 			PlayerFrame temp = _bf.getPlayerFrame(0);
 			for(int i=0; i<12; i++){
 				if(temp.getPlayerSpace(i)==null){
+					System.out.println("oh, hello");
 					Tile t = _scrabble.getInv().removeRandomTile();
 					temp.getPlayerSpace(i).setText(Character.toString(t.getChar()));
 					temp.getPlayerSpace(i).setCurrentTile(t);
