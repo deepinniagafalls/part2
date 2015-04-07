@@ -17,7 +17,7 @@ import javax.swing.UIManager;
 import code.base.Scrabble;
 import code.base.Tile;
 
-public class FileChooser extends JFrame {
+public class Extravaganza extends JFrame {
 
 	/**
 	 * 
@@ -31,7 +31,7 @@ public class FileChooser extends JFrame {
 	private BoardFrame _bf;
 	private Scrabble _scrabble;
 
-	public FileChooser(Scrabble scrabble, BoardFrame bf) {
+	public Extravaganza(Scrabble scrabble, BoardFrame bf) {
 	       try {
 	            UIManager.setLookAndFeel(new javax.swing.plaf.metal.MetalLookAndFeel());
 	        } catch(Exception e) {
@@ -73,7 +73,7 @@ public class FileChooser extends JFrame {
 		public void actionPerformed(ActionEvent e) {
 			
 			JFileChooser c = new JFileChooser();
-				int value = c.showOpenDialog(FileChooser.this);
+				int value = c.showOpenDialog(Extravaganza.this);
 				if (value == JFileChooser.APPROVE_OPTION) {
 					filename.setText(c.getSelectedFile().getName());
 					dir.setText(c.getCurrentDirectory().toString());
