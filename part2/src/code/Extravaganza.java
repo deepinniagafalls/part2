@@ -47,8 +47,8 @@ public class Extravaganza extends JFrame {
 		_bf = bf;
 		_g = g;
 		
-		p.add(filename);
-		p.add(dir);
+		//p.add(filename);
+		//p.add(dir);
 		p.add(open);
 		p.add(save);
 		p.add(pass);
@@ -62,7 +62,7 @@ public class Extravaganza extends JFrame {
 		
 		dir.setEditable(false);
 		filename.setEditable(false);
-		//p.setLayout(new GridLayout(2, 1));
+		p.setLayout(new GridLayout(1, 2));
 		cp.add(p, BorderLayout.NORTH);
 		
 		
