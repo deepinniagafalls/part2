@@ -111,16 +111,16 @@ public class FileChooser extends JFrame {
 	public class PassT implements ActionListener {
 		
 		public void actionPerformed(ActionEvent e) {
+			JOptionPane.showMessageDialog(null, "You have passed your turn");
 			PlayerFrame temp = _bf.getPlayerFrame(0);
 			for(int i=0; i<12; i++){
-				if(temp.getPlayerSpace(i)==null){
-					System.out.println("oh, hello");
+				if(temp.getPlayerSpace(i).getTile()==null){
 					Tile t = _scrabble.getInv().removeRandomTile();
 					temp.getPlayerSpace(i).setText(Character.toString(t.getChar()));
 					temp.getPlayerSpace(i).setCurrentTile(t);
 				}
 			}
-			JOptionPane.showMessageDialog(null, "You have passed your turn");
+			
 	}
 	}
 
