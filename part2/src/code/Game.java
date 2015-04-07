@@ -44,7 +44,7 @@ public class Game {
 		//PlayerFrame tr2 = new PlayerFrame(scrabble,scrabble.returnPlayer(1).getTileRack());
 		BoardFrame boardframe = new BoardFrame(scrabble, board , invent,_playerFrameList);
 		//System.out.println(scrabble.returnPlayer(1));
-		Extravaganza fc = new Extravaganza(scrabble, boardframe);
+		Extravaganza fc = new Extravaganza(scrabble, boardframe, _currentTurn);
 	}
 	
 	public Game(){

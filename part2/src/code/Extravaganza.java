@@ -30,7 +30,7 @@ public class Extravaganza extends JFrame {
 	private JButton pass = new JButton("Pass");
 	private BoardFrame _bf;
 	private Scrabble _scrabble;
-	private int currentTurn;
+	private int _currentTurn;
 
 	public Extravaganza(Scrabble scrabble, BoardFrame bf, int currentTurn) {
 	       try {
