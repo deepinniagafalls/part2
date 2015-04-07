@@ -24,8 +24,13 @@ public class Game {
 	private static ArrayList<Player> _playerList;
 	private static ArrayList<PlayerFrame> _playerFrameList;
 	private static int _currentTurn;
+	private static Game _currentGame;
 	
 	public static void main(String[] args) throws ClassNotFoundException, InstantiationException, IllegalAccessException, UnsupportedLookAndFeelException {
+		_currentGame = new Game();
+	}
+	
+	public Game(){
 		String p = JOptionPane.showInputDialog(null, "How many players do you want?","Number of Players",JOptionPane.QUESTION_MESSAGE);
 		_numberOfPlayers = Integer.parseInt(p);
 		if(_numberOfPlayers > 12){
@@ -44,10 +49,24 @@ public class Game {
 		//PlayerFrame tr2 = new PlayerFrame(scrabble,scrabble.returnPlayer(1).getTileRack());
 		BoardFrame boardframe = new BoardFrame(scrabble, board , invent,_playerFrameList);
 		//System.out.println(scrabble.returnPlayer(1));
-		Extravaganza fc = new Extravaganza(scrabble, boardframe, _currentTurn, _numberOfPlayers);
+		Extravaganza fc = new Extravaganza(scrabble, boardframe, _currentGame);
 	}
 	
-	public Game(){
-		
+	public int incrementTurn(){
+		if(_currentTurn == 4){
+			return 0;
+		}
+		else{
+			return _currentTurn + 1;
+		}
 	}
+	
+	public Game getGame(){
+		return _currentGame;
+	}
+	
+	public int getCurrentTurn(){
+		return  _currentTurn;
+	}
+	
 }

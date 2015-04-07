@@ -32,9 +32,9 @@ public class Extravaganza extends JFrame {
 	private Scrabble _scrabble;
 	private int _currentTurn;
 	private int _numberOfPlayers;
-	private int 
+	private Game _g;
 
-	public Extravaganza(Scrabble scrabble, BoardFrame bf, int currentTurn, int numOfPlayers) {
+	public Extravaganza(Scrabble scrabble, BoardFrame bf, Game g) {
 	       try {
 	            UIManager.setLookAndFeel(new javax.swing.plaf.metal.MetalLookAndFeel());
 	        } catch(Exception e) {
@@ -45,8 +45,7 @@ public class Extravaganza extends JFrame {
 		JPanel p = new JPanel();
 		_scrabble = scrabble;
 		_bf = bf;
-		_currentTurn = currentTurn;
-		_numberOfPlayers = numOfPlayers;
+		_g = g;
 		
 		p.add(filename);
 		p.add(dir);
@@ -117,20 +116,19 @@ public class Extravaganza extends JFrame {
 		
 		public void actionPerformed(ActionEvent e) {
 			JOptionPane.showMessageDialog(null, "You have passed your turn");
-			PlayerFrame temp = _bf.getPlayerFrame(_currentTurn);
+			PlayerFrame temp = _bf.getPlayerFrame(_g.getCurrentTurn());
 			for(int i=0; i<12; i++){
 				if(temp.getPlayerSpace(i).getTile()==null){
 					Tile t = _scrabble.getInv().removeRandomTile();
 					temp.getPlayerSpace(i).setText(Character.toString(t.getChar()));
 					temp.getPlayerSpace(i).setCurrentTile(t);
+					_g.incrementTurn();
+					System.out.println(_g.getCurrentTurn());
 				}
 			}
 			
 	}
 	}
 	
-	public int incrementTurn(){
-		
-	}
 
 }
