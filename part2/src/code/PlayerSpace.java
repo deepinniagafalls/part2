@@ -60,6 +60,9 @@ public class PlayerSpace extends JButton implements ActionListener {
 		_t = t;
 	}
 	
+	public Tile getTile(){
+		return _t;
+	}
 	@Override
 	public void actionPerformed(ActionEvent arg0) {
 		// TODO Auto-generated method stub
