@@ -30,8 +30,9 @@ public class Extravaganza extends JFrame {
 	private JButton pass = new JButton("Pass");
 	private BoardFrame _bf;
 	private Scrabble _scrabble;
+	private int currentTurn;
 
-	public Extravaganza(Scrabble scrabble, BoardFrame bf) {
+	public Extravaganza(Scrabble scrabble, BoardFrame bf, int currentTurn) {
 	       try {
 	            UIManager.setLookAndFeel(new javax.swing.plaf.metal.MetalLookAndFeel());
 	        } catch(Exception e) {
@@ -42,6 +43,7 @@ public class Extravaganza extends JFrame {
 		JPanel p = new JPanel();
 		_scrabble = scrabble;
 		_bf = bf;
+		_currentTurn = currentTurn;
 		
 		p.add(filename);
 		p.add(dir);
@@ -112,7 +114,7 @@ public class Extravaganza extends JFrame {
 		
 		public void actionPerformed(ActionEvent e) {
 			JOptionPane.showMessageDialog(null, "You have passed your turn");
-			PlayerFrame temp = _bf.getPlayerFrame(0);
+			PlayerFrame temp = _bf.getPlayerFrame(_currentTurn);
 			for(int i=0; i<12; i++){
 				if(temp.getPlayerSpace(i).getTile()==null){
 					Tile t = _scrabble.getInv().removeRandomTile();
