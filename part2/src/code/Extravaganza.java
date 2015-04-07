@@ -9,6 +9,7 @@ import java.awt.event.ActionListener;
 import javax.swing.JButton;
 import javax.swing.JFileChooser;
 import javax.swing.JFrame;
+import javax.swing.JLabel;
 import javax.swing.JOptionPane;
 import javax.swing.JPanel;
 import javax.swing.JTextField;
@@ -55,14 +56,16 @@ public class Extravaganza extends JFrame {
 		open.addActionListener(new OpenL());
 		save.addActionListener(new SaveL());
 		pass.addActionListener(new PassT());
+		JLabel label1 = new JLabel("Turn:",null,JLabel.CENTER);
 		
 		
 		Container cp = getContentPane();
 		cp.add(p, BorderLayout.SOUTH);
+		p.add(label1);
 		
 		dir.setEditable(false);
 		filename.setEditable(false);
-		p.setLayout(new GridLayout(1, 2));
+		p.setLayout(new GridLayout(1, 3));
 		cp.add(p, BorderLayout.NORTH);
 		
 		
