@@ -31,8 +31,10 @@ public class Extravaganza extends JFrame {
 	private BoardFrame _bf;
 	private Scrabble _scrabble;
 	private int _currentTurn;
+	private int _numberOfPlayers;
+	private int 
 
-	public Extravaganza(Scrabble scrabble, BoardFrame bf, int currentTurn) {
+	public Extravaganza(Scrabble scrabble, BoardFrame bf, int currentTurn, int numOfPlayers) {
 	       try {
 	            UIManager.setLookAndFeel(new javax.swing.plaf.metal.MetalLookAndFeel());
 	        } catch(Exception e) {
@@ -44,6 +46,7 @@ public class Extravaganza extends JFrame {
 		_scrabble = scrabble;
 		_bf = bf;
 		_currentTurn = currentTurn;
+		_numberOfPlayers = numOfPlayers;
 		
 		p.add(filename);
 		p.add(dir);
@@ -124,6 +127,10 @@ public class Extravaganza extends JFrame {
 			}
 			
 	}
+	}
+	
+	public int incrementTurn(){
+		
 	}
 
 }
