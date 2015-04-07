@@ -58,7 +58,7 @@ public class Extravaganza extends JFrame {
 		open.addActionListener(new OpenL());
 		save.addActionListener(new SaveL());
 		pass.addActionListener(new PassT());
-		label1 = new JLabel("Turn: Player 1",null,JLabel.CENTER);
+		label1 = new JLabel("Turn: Player "+(_g.getCurrentTurn()+1),null,JLabel.CENTER);
 		
 		
 		Container cp = getContentPane();
@@ -133,6 +133,8 @@ public class Extravaganza extends JFrame {
 				}
 			_g.incrementTurn();
 			System.out.println(_g.getCurrentTurn());	
+			label1.setText("Turn: Player "+(_g.getCurrentTurn()+1));
+
 	}
 	}
 	
