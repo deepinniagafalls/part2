@@ -49,4 +49,10 @@ public class Game {
 	public Game(){
 		
 	}
+	
+	public int incrementTurn(){
+		int newTurn = 0;
+		
+		return newTurn;
+	}
 }
