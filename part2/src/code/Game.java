@@ -56,7 +56,8 @@ public class Game {
 	
 	public int incrementTurn(){
 		if(_currentTurn == _numberOfPlayers-1){
-			return 0;
+			_currentTurn = 0;
+			return _currentTurn;
 		}
 		else{
 			_currentTurn = _currentTurn + 1;
