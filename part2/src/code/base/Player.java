@@ -1,5 +1,8 @@
 package code.base;
 
+import java.awt.Color;
+import java.util.Random;
+
 
 public class Player {
 
@@ -14,6 +17,8 @@ public class Player {
 	private TileRack _rack;
 	//private Inventory _inv;
 	
+	private Color _myColor;
+	
 	/**
 	 * Class constructor.
 	 * 
@@ -23,6 +28,11 @@ public class Player {
 		_score = 0;
 		//_inv = inv;
 		_rack = new TileRack(inv);
+		Random rand = new Random();
+		float r = rand.nextFloat();
+		float g = rand.nextFloat();
+		float b = rand.nextFloat();
+		_myColor = new Color(r,g,b);
 	}
 	
 	/**
@@ -38,6 +48,10 @@ public class Player {
 		return _rack;
 	}
 
+	
+	public Color getColor(){
+		return _myColor;
+	}
 	/**
 	 * Adds the new points to the original score
 	 * 

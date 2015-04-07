@@ -1,5 +1,6 @@
 package code;
 
+import java.awt.Color;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.util.ArrayList;
@@ -45,9 +46,9 @@ public class TileSpace extends JButton implements ActionListener {
 				String temp = Character.toString(_t.getChar());
 				_j.setText(temp);
 				_b.setTempTile(null);
-				//_t = _scrabble.getInv().removeRandomTile();
-				//_bf.getPlayerFrame(0).getCurrent().setText(Character.toString(_t.getChar()));
-				//_bf.getPlayerFrame(0).getCurrent().setCurrentTile(_t);
+				//System.out.println(_bf.getGame().getCurrentTurn());
+				_j.setBackground(_bf.getScrabble().returnPlayer(_bf.getGame().getCurrentTurn()).getColor());
+				//_j.setBackground(Color.RED);
 				}
 			}
 		});

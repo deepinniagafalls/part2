@@ -23,14 +23,13 @@ public class Game {
 	private static int _numberOfPlayers;
 	private static ArrayList<Player> _playerList;
 	private static ArrayList<PlayerFrame> _playerFrameList;
-	private static int _currentTurn;
+	private static int _currentTurn = 0;
 	private static Game _currentGame;
 	
-	public static void main(String[] args) throws ClassNotFoundException, InstantiationException, IllegalAccessException, UnsupportedLookAndFeelException {
-		_currentGame = new Game();
-	}
+
 	
 	public Game(){
+		_currentGame = this;
 		String p = JOptionPane.showInputDialog(null, "How many players do you want?","Number of Players",JOptionPane.QUESTION_MESSAGE);
 		_numberOfPlayers = Integer.parseInt(p);
 		if(_numberOfPlayers > 4){
@@ -38,7 +37,6 @@ public class Game {
 		if(_numberOfPlayers < 2){
 			JOptionPane.showMessageDialog(null, "Error! The minimum number of players is 2","ERROR",JOptionPane.ERROR_MESSAGE);
 			System.exit(0);}
-		_currentTurn = 0;
 		Scrabble scrabble = new Scrabble(_numberOfPlayers);
 		Inventory invent = scrabble.getInv();
 		Board board = scrabble.getBoard();
@@ -49,7 +47,7 @@ public class Game {
 		}
 		//PlayerFrame tr = new PlayerFrame(scrabble, scrabble.returnPlayer(0).getTileRack());
 		//PlayerFrame tr2 = new PlayerFrame(scrabble,scrabble.returnPlayer(1).getTileRack());
-		BoardFrame boardframe = new BoardFrame(scrabble, board , invent,_playerFrameList);
+		BoardFrame boardframe = new BoardFrame(scrabble, board , invent,_playerFrameList, _currentGame, scrabble);
 		//System.out.println(scrabble.returnPlayer(1));
 		Extravaganza fc = new Extravaganza(scrabble, boardframe, this);
 	}
