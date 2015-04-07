@@ -123,7 +123,6 @@ public class Extravaganza extends JFrame {
 					temp.getPlayerSpace(i).setText(Character.toString(t.getChar()));
 					temp.getPlayerSpace(i).setCurrentTile(t);
 					_g.incrementTurn();
-					System.out.println(_g.getCurrentTurn());
 				}
 			}
 			
