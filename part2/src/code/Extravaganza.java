@@ -34,6 +34,8 @@ public class Extravaganza extends JFrame {
 	private int _currentTurn;
 	private int _numberOfPlayers;
 	private Game _g;
+	private int _c = 0;
+	private JLabel label1;
 
 	public Extravaganza(Scrabble scrabble, BoardFrame bf, Game g) {
 	       try {
@@ -56,7 +58,7 @@ public class Extravaganza extends JFrame {
 		open.addActionListener(new OpenL());
 		save.addActionListener(new SaveL());
 		pass.addActionListener(new PassT());
-		JLabel label1 = new JLabel("Turn:",null,JLabel.CENTER);
+		label1 = new JLabel("Turn: Player 1",null,JLabel.CENTER);
 		
 		
 		Container cp = getContentPane();
@@ -73,6 +75,7 @@ public class Extravaganza extends JFrame {
 		p.setVisible(true);
 		frame.pack();
 		frame.setVisible(true);
+		
 	}
 
 	public class OpenL implements ActionListener {
@@ -119,17 +122,17 @@ public class Extravaganza extends JFrame {
 		
 		public void actionPerformed(ActionEvent e) {
 			JOptionPane.showMessageDialog(null, "You have passed your turn");
+			label1.setText("Turn: Player "+(_g.getCurrentTurn()+1));
 			PlayerFrame temp = _bf.getPlayerFrame(_g.getCurrentTurn());
 			for(int i=0; i<12; i++){
 				if(temp.getPlayerSpace(i).getTile()==null){
 					Tile t = _scrabble.getInv().removeRandomTile();
 					temp.getPlayerSpace(i).setText(Character.toString(t.getChar()));
 					temp.getPlayerSpace(i).setCurrentTile(t);
-					_g.incrementTurn();
-					System.out.println(_g.getCurrentTurn());
 				}
-			}
-			
+				}
+			_g.incrementTurn();
+			System.out.println(_g.getCurrentTurn());	
 	}
 	}
 	
