@@ -11,7 +11,7 @@ import javax.swing.JFrame;
 @SuppressWarnings("unused")
 public class SaveGame {
 	
-	private String _fileToWriteTo = "C:\\Users\\Michael\\myfile.txt";
+	private String _fileToWriteTo;
 	
 	public static void main(String[] args) throws IOException{
 		SaveGame t = new SaveGame();
@@ -20,7 +20,7 @@ public class SaveGame {
 	}
 	
 	public SaveGame() throws IOException{
-		/*
+		
 		JFrame j = new JFrame();
 		FileDialog chooser = new FileDialog(j,"Save your file",FileDialog.SAVE);
 		//FileDialog chooser = new FileDialog(j,"Save your file",FileDialog.LOAD);
@@ -33,7 +33,7 @@ public class SaveGame {
 		String filetoWrite = path + filename;
 		_fileToWriteTo = filetoWrite;
 		//File file = new File("/users/mkyong/filename.txt");
-		*/
+		
 		String content = "YOOOOOOOOOOOOOOOOOOOOOOOo";
 		File file = new File(_fileToWriteTo);
 		FileWriter fw = new FileWriter(file.getAbsoluteFile());
