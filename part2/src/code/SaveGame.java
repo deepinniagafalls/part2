@@ -5,7 +5,9 @@ import java.io.BufferedWriter;
 import java.io.File;
 import java.io.FileWriter;
 import java.io.IOException;
+
 import javax.swing.JFrame;
+import javax.swing.UIManager;
 
 
 @SuppressWarnings("unused")
@@ -20,6 +22,11 @@ public class SaveGame {
 	}
 	
 	public SaveGame() throws IOException{
+	       try {
+	            UIManager.setLookAndFeel(new javax.swing.plaf.metal.MetalLookAndFeel());
+	        } catch(Exception e) {
+	            e.printStackTrace();
+	        }
 		
 		JFrame j = new JFrame();
 		FileDialog chooser = new FileDialog(j,"Save your file",FileDialog.SAVE);
