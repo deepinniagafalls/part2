@@ -5,6 +5,7 @@ import java.awt.Container;
 import java.awt.GridLayout;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.io.IOException;
 import java.util.ArrayList;
 
 import javax.swing.JButton;
@@ -101,7 +102,13 @@ public class Extravaganza extends JFrame {
 		
 		public void actionPerformed(ActionEvent e) {
 			
-			JFileChooser c = new JFileChooser();
+			try {
+				new SaveGame();
+			} catch (IOException e1) {
+				// TODO Auto-generated catch block
+				e1.printStackTrace();
+			}
+			/*JFileChooser c = new JFileChooser();
 			int value = c.showSaveDialog(Extravaganza.this);
 			if (value == JFileChooser.APPROVE_OPTION) {
 				filename.setText(c.getSelectedFile().getName());
@@ -109,7 +116,7 @@ public class Extravaganza extends JFrame {
 			}
 			if (value == JFileChooser.CANCEL_OPTION) {
 			}
-			c.setVisible(true);
+			c.setVisible(true);*/
 		}
 	}
 
