@@ -79,6 +79,10 @@ public class BoardFrame extends JFrame {
 		_currentWord = currentWord;
 	}
 	
+	public WordChecker getWordChecker(){
+		return _currentWord;
+	}
+	
 	public Board getBoard(){
 		return _board;
 	}
