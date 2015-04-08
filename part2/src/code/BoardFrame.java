@@ -18,7 +18,7 @@ public class BoardFrame extends JFrame {
     private ArrayList<Player> _players;
 	private Board _board;
 	private int _numberOfPlayers;
-	private JButton[][] _boardOfButtons = new JButton[20][20];
+	private TileSpace[][] _boardOfButtons = new TileSpace[20][20];
 	private Inventory _invent;
 	private ArrayList<PlayerFrame> _pf;
 	private Game _game;
@@ -48,7 +48,7 @@ public class BoardFrame extends JFrame {
 		
 		for(int row=0; row<20; row++){
 			for(int col=0; col<20; col++){
-				JButton j = new TileSpace(row, col, _s, _bf);
+				TileSpace j = new TileSpace(row, col, _s, _bf);
 				_boardOfButtons[row][col] = j;
 				frame.add(j);
 			}
@@ -85,6 +85,10 @@ public class BoardFrame extends JFrame {
 	
 	public Board getBoard(){
 		return _board;
+	}
+	
+	public TileSpace getTileSpace(int row, int col){
+		return _boardOfButtons[row][col];
 	}
 }
 
