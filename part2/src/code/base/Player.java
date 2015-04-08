@@ -28,12 +28,11 @@ public class Player {
 		_score = 0;
 		//_inv = inv;
 		_rack = new TileRack(inv);
-		Random rand = new Random();
-		float r = rand.nextFloat();
-		float g = rand.nextFloat();
-		float b = rand.nextFloat();
-		_myColor = new Color(r,g,b);
-	}
+		Random random = new Random();
+		final float hue = random.nextFloat();
+		final float saturation = 0.9f;//1.0 for brilliant, 0.0 for dull
+		final float luminance = 1.0f; //1.0 for brighter, 0.0 for black
+		_myColor = Color.getHSBColor(hue, saturation, luminance);	}
 	
 	/**
 	 * Gets the int value of the Player's score.
