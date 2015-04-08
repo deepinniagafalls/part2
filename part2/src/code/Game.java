@@ -29,6 +29,11 @@ public class Game {
 
 	
 	public Game(){
+	       try {
+	            UIManager.setLookAndFeel(new javax.swing.plaf.metal.MetalLookAndFeel());
+	        } catch(Exception e) {
+	            e.printStackTrace();
+	        }
 		_currentGame = this;
 		String p = JOptionPane.showInputDialog(null, "How many players do you want?","Number of Players",JOptionPane.QUESTION_MESSAGE);
 		_numberOfPlayers = Integer.parseInt(p);
