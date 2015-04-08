@@ -19,5 +19,9 @@ public class WordChecker {
 	public boolean isThisWord(String s){
 		return _r.isThisAWord(s);
 	}
+	
+	public void addWord(){
+		
+	}
 
 }
