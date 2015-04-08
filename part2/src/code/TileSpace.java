@@ -40,17 +40,20 @@ public class TileSpace extends JButton implements ActionListener {
 		this.addActionListener(new ActionListener() {
 			
 			public void actionPerformed(ActionEvent e) {
-				if(_b.getTempTile() != null && _b.getTile(_row, _col) == null){
-					_b.addTile(_b.getTempTile(),_row,_col);
-					_t = _b.getTile(_row,_col);
-					String temp = Character.toString(_t.getChar());
-					_myText = temp;
-					_j.setText(temp);
-					_b.setTempTile(null);
-					_j.setBackground(_bf.getScrabble().returnPlayer(_bf.getGame().getCurrentTurn()).getColor());
-				
-				}
 				System.out.println(_j.isAdjacent());
+				System.out.println(_scrabble.getIsVeryFirstTurn());
+				if(_j.isAdjacent() || _scrabble.getIsVeryFirstTurn()){
+					if(_b.getTempTile() != null && _b.getTile(_row, _col) == null){
+						_b.addTile(_b.getTempTile(),_row,_col);
+						_t = _b.getTile(_row,_col);
+						String temp = Character.toString(_t.getChar());
+						_myText = temp;
+						_j.setText(temp);
+						_b.setTempTile(null);
+						_j.setBackground(_bf.getScrabble().returnPlayer(_bf.getGame().getCurrentTurn()).getColor());
+					}
+				}
+				_scrabble.setIsVeryFirstTurn(false);
 			}
 		});
 	}

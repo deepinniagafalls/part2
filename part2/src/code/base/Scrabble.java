@@ -26,6 +26,9 @@ public class Scrabble {
 	 */
 	private int _numberOfPlayers;
 	
+	private boolean _isVeryFirstTurn = true;
+	
+	
 	/**
 	 * Class constructor
 	 */
@@ -64,5 +67,11 @@ public class Scrabble {
 	}
 	public Player returnPlayer(int playernumber){
 		return _players.get(playernumber);
+	}
+	public boolean getIsVeryFirstTurn(){
+		return _isVeryFirstTurn;
+	}
+	public void setIsVeryFirstTurn(boolean b){
+		_isVeryFirstTurn = b;
 	}
 }
