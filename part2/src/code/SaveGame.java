@@ -9,13 +9,18 @@ import java.io.IOException;
 import javax.swing.JFrame;
 
 import code.base.Board;
-
+import code.base.Player;
+import code.base.Scrabble;
+import code.base.TileRack;
+import code.base.Inventory;
 
 
 @SuppressWarnings("unused")
 public class SaveGame {
 	private Board _b;
 	private BoardFrame _bf;
+	private TileRack _tr;
+	private Scrabble _scrabble;
 	
 	private String _fileToWriteTo;
 	
@@ -25,9 +30,10 @@ public class SaveGame {
 		
 	//}
 	
-	public SaveGame(Board b, BoardFrame bf) throws IOException{
+	public SaveGame(Board b, BoardFrame bf, Scrabble scrabble) throws IOException{
 		_b = b;
 		_bf = bf;
+		_scrabble = scrabble;
 		JFrame jf = new JFrame();
 		FileDialog chooser = new FileDialog(jf,"Save your file",FileDialog.SAVE);
 		//FileDialog chooser = new FileDialog(j,"Save your file",FileDialog.LOAD);
@@ -46,6 +52,8 @@ public class SaveGame {
 		File file = new File(_fileToWriteTo);
 		FileWriter fw = new FileWriter(file.getAbsoluteFile());
 		BufferedWriter bw = new BufferedWriter(fw);
+		String content = "/part2/res/words.txt";
+		bw.write(content);
 		for(int i = 0; i<20; i = i + 1){
 			for(int j = 0; j<20; j = j +1){
 				if(_b.getTile(i, j) == null){
@@ -54,12 +62,22 @@ public class SaveGame {
 				else{
 					_b.getTile(i, j).getChar();
 					_bf.getTileSpace(i,j).getColor();
-					bw.write("[" + _b.getTile(i, j).getChar() + ", " + _bf.getTileSpace(i,j).getColor() + "]");
+					bw.write("[" + _b.getTile(i, j).getChar() +  ", " + _bf.getTileSpace(i,j).getColor() + "]");
 				}
 				
 			}
 		}
-		//bw.write(content);
+		for(int i = 0; i <_scrabble.getNumofPlayers(); i = i + 1 ){
+			Player p = _scrabble.returnPlayer(i);
+			p.getScore();
+			p.getColor();
+			bw.write("[" +p.getColor() + ", " + p.getScore() + "]");
+			
+		}
+		for(int i = 0; i < _scrabble.getInv().getSize(); i = i + 1 ){
+			bw.write("[" + _scrabble.getInv().getTile(i).getChar() + "]");
+		}
+		bw.write(content);
 		bw.close();
 		System.out.println("Done");
 		
