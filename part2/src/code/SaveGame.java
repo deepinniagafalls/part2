@@ -56,6 +56,16 @@ public class SaveGame {
 		String content = "/part2/res/words.txt";
 		bw.write(boardsize);
 		bw.write(content);
+		for(int i = 0; i <_scrabble.getNumofPlayers(); i = i + 1 ){
+			Player p = _scrabble.returnPlayer(i);
+			p.getScore();
+			p.getColor();
+			bw.write("[" +p.getColor() + ", " + p.getScore() + "]");
+			
+		}
+		for(int i = 0; i < _scrabble.getInv().getSize(); i = i + 1 ){
+			bw.write("[" + _scrabble.getInv().getTile(i).getChar() + "]");
+		}
 		for(int i = 0; i<20; i = i + 1){
 			for(int j = 0; j<20; j = j +1){
 				if(_b.getTile(i, j) == null){
@@ -69,21 +79,13 @@ public class SaveGame {
 				
 			}
 		}
-		for(int i = 0; i <_scrabble.getNumofPlayers(); i = i + 1 ){
-			Player p = _scrabble.returnPlayer(i);
-			p.getScore();
-			p.getColor();
-			bw.write("[" +p.getColor() + ", " + p.getScore() + "]");
-			
-		}
-		for(int i = 0; i < _scrabble.getInv().getSize(); i = i + 1 ){
-			bw.write("[" + _scrabble.getInv().getTile(i).getChar() + "]");
-		}
 		bw.write(content);
 		bw.close();
 		System.out.println("Done");
 		
 	}
+	
+	
 	
 	public void writeNewFile() throws IOException{
 		
