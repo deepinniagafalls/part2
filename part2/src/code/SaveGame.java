@@ -7,29 +7,28 @@ import java.io.FileWriter;
 import java.io.IOException;
 
 import javax.swing.JFrame;
-import javax.swing.UIManager;
+
+import code.base.Board;
+
 
 
 @SuppressWarnings("unused")
 public class SaveGame {
+	private Board _b;
 	
 	private String _fileToWriteTo;
 	
-	public static void main(String[] args) throws IOException{
+	//public static void main(String[] args) throws IOException{
+		//SaveGame t = new SaveGame();
+		//t.writeNewFile();
 		
-		SaveGame t = new SaveGame();
-		t.writeNewFile();
-		
-	}
+	//}
 	
-	public SaveGame() throws IOException{
-	       try {
-	            UIManager.setLookAndFeel(new javax.swing.plaf.metal.MetalLookAndFeel());
-	        } catch(Exception e) {
-	            e.printStackTrace();
-	        }
-		JFrame j = new JFrame();
-		FileDialog chooser = new FileDialog(j,"Save your file",FileDialog.SAVE);
+	public SaveGame(Board b) throws IOException{
+		_b = b;
+		
+		JFrame jf = new JFrame();
+		FileDialog chooser = new FileDialog(jf,"Save your file",FileDialog.SAVE);
 		//FileDialog chooser = new FileDialog(j,"Save your file",FileDialog.LOAD);
 		chooser.setDirectory("C:\\");
 		chooser.setFile("*.txt");
@@ -41,11 +40,23 @@ public class SaveGame {
 		_fileToWriteTo = filetoWrite;
 		//File file = new File("/users/mkyong/filename.txt");
 		
-		String content = "YOOOOOOOOOOOOOOOOOOOOOOOo";
+		//String content = "YOOOOOOOOOOOOOOOOOOOOOOOo";
 		File file = new File(_fileToWriteTo);
 		FileWriter fw = new FileWriter(file.getAbsoluteFile());
 		BufferedWriter bw = new BufferedWriter(fw);
-		bw.write(content);
+		for(int i = 0; i<20; i = i + 1){
+			for(int j = 0; j<20; j = j +1){
+				if(_b.getTile(i, j) == null){
+					bw.write("-");
+				}
+				else{
+					_b.getTile(i, j).getChar();
+					bw.write(_b.getTile(i, j).getChar());
+				}
+				
+			}
+		}
+		//bw.write(content);
 		bw.close();
 		System.out.println("Done");
 		
