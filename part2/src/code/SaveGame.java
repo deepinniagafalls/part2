@@ -1,41 +1,52 @@
 package code;
 
-import java.io.FileInputStream;
-import java.io.FileOutputStream;
-import java.io.ObjectInputStream;
-import java.io.ObjectOutputStream;
+import java.awt.FileDialog;
+import java.io.BufferedWriter;
+import java.io.File;
+import java.io.FileWriter;
+import java.io.IOException;
+import javax.swing.JFrame;
 
 
+@SuppressWarnings("unused")
 public class SaveGame {
 	
-	public static void main( String arg[]){
-		SaveGame s = new SaveGame();
-	}
-
-	public void Save(String s){
+	private String _fileToWriteTo;
+	
+	public static void main(String[] args) throws IOException{
+		SaveGame t = new SaveGame();
+		t.writeNewFile();
 		
-		String save = s;
-		save.concat("Game.java");
-		 try {
-		        ObjectOutputStream oos = new ObjectOutputStream(new FileOutputStream(save));
-		        oos.writeObject(oos);
-		        oos.close();
-		    } catch(Exception ex) {
-		        ex.printStackTrace();
-		    }
 	}
-	public void Load(String s){
+	
+	public SaveGame() throws IOException{
 		
-	    if(s.contains("Gave.java")){
-	        try {
-	        	ObjectInputStream ois = new ObjectInputStream(new FileInputStream(s));
-	        	SaveGame sg = (SaveGame)ois.readObject();
-	        	ois.close();
-	        } catch(Exception ex) {
-	            ex.printStackTrace();
-	        }
-	    }
+		JFrame j = new JFrame();
+		FileDialog chooser = new FileDialog(j,"Save your file",FileDialog.SAVE);
+		//FileDialog chooser = new FileDialog(j,"Save your file",FileDialog.LOAD);
+		chooser.setDirectory("C:\\");
+		chooser.setFile("*.txt");
+		chooser.setVisible(true);
+		String filename = chooser.getFile();
+		String path = chooser.getDirectory();
+		System.out.println(path);
+		String filetoWrite = path + filename;
+		_fileToWriteTo = filetoWrite;
+		//File file = new File("/users/mkyong/filename.txt");
+		
+		String content = "YOOOOOOOOOOOOOOOOOOOOOOOo";
+		File file = new File(_fileToWriteTo);
+		FileWriter fw = new FileWriter(file.getAbsoluteFile());
+		BufferedWriter bw = new BufferedWriter(fw);
+		bw.write(content);
+		bw.close();
+		System.out.println("Done");
+		
 	}
+	
+	public void writeNewFile() throws IOException{
+		
+		
+	}
+	
 }
-
-
