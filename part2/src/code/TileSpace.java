@@ -56,7 +56,7 @@ public class TileSpace extends JButton implements ActionListener {
 				}
 				else{
 					
-					_bf.getPlayerFrame(_bf.getGame().getCurrentTurn()).getCurrentSpace().setText(Character.toString(_bf.getPlayerFrame(_bf.getGame().getCurrentTurn()).getCurrentSpace().getTile().getChar()));
+					_bf.getPlayerFrame(_bf.getGame().getCurrentTurn()).getCurrentSpace().setText(Character.toString(_bf.getPlayerFrame(_bf.getGame().getCurrentTurn()).getCurrentSpace().getTile().getChar()) + ", " + _bf.getPlayerFrame(_bf.getGame().getCurrentTurn()).getCurrentSpace().getTile().getValue());
 				}
 				_scrabble.setIsVeryFirstTurn(false);
 			}
