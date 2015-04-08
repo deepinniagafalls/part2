@@ -36,7 +36,8 @@ public class Game {
 	        }
 		_currentGame = this;
 		String p = JOptionPane.showInputDialog(null, "How many players do you want?","Number of Players",JOptionPane.QUESTION_MESSAGE);
-		_numberOfPlayers = Integer.parseInt(p);
+		if(p != null){_numberOfPlayers = Integer.parseInt(p);}
+		else{JOptionPane.showMessageDialog(null, "Error! you clicked cancel","ERROR",JOptionPane.ERROR_MESSAGE);System.exit(0);}
 		if(_numberOfPlayers > 4){
 		JOptionPane.showMessageDialog(null, "Error! The maximum number of players is 4","ERROR",JOptionPane.ERROR_MESSAGE);System.exit(0);}
 		if(_numberOfPlayers < 2){

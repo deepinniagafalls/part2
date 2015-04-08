@@ -16,6 +16,7 @@ public class SaveGame {
 	private String _fileToWriteTo;
 	
 	public static void main(String[] args) throws IOException{
+		
 		SaveGame t = new SaveGame();
 		t.writeNewFile();
 		
