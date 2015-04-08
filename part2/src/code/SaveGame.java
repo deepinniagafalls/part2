@@ -27,7 +27,6 @@ public class SaveGame {
 	        } catch(Exception e) {
 	            e.printStackTrace();
 	        }
-		
 		JFrame j = new JFrame();
 		FileDialog chooser = new FileDialog(j,"Save your file",FileDialog.SAVE);
 		//FileDialog chooser = new FileDialog(j,"Save your file",FileDialog.LOAD);
