@@ -15,6 +15,7 @@ import code.base.Board;
 @SuppressWarnings("unused")
 public class SaveGame {
 	private Board _b;
+	private BoardFrame _bf;
 	
 	private String _fileToWriteTo;
 	
@@ -24,9 +25,9 @@ public class SaveGame {
 		
 	//}
 	
-	public SaveGame(Board b) throws IOException{
+	public SaveGame(Board b, BoardFrame bf) throws IOException{
 		_b = b;
-		
+		_bf = bf;
 		JFrame jf = new JFrame();
 		FileDialog chooser = new FileDialog(jf,"Save your file",FileDialog.SAVE);
 		//FileDialog chooser = new FileDialog(j,"Save your file",FileDialog.LOAD);
@@ -40,7 +41,8 @@ public class SaveGame {
 		_fileToWriteTo = filetoWrite;
 		//File file = new File("/users/mkyong/filename.txt");
 		
-		//String content = "YOOOOOOOOOOOOOOOOOOOOOOOo";
+		//order for writing: score 1, score 2 ...., directory, colors on the players w/ #
+		//Tiles in player's tile rack,...., inventory, board with tiles and player next to it
 		File file = new File(_fileToWriteTo);
 		FileWriter fw = new FileWriter(file.getAbsoluteFile());
 		BufferedWriter bw = new BufferedWriter(fw);
@@ -51,7 +53,8 @@ public class SaveGame {
 				}
 				else{
 					_b.getTile(i, j).getChar();
-					bw.write(_b.getTile(i, j).getChar());
+					_bf.getTileSpace(i,j).getColor();
+					bw.write("[" + _b.getTile(i, j).getChar() + ", " + _bf.getTileSpace(i,j).getColor() + "]");
 				}
 				
 			}
