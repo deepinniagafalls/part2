@@ -46,7 +46,7 @@ public class Game {
 
 		}
 		else if(_numberOfPlayers == 3){
-			String e1 = JOptionPane.showInputDialog(null, "Please enter player 1's name in?","Number",JOptionPane.QUESTION_MESSAGE);;
+			String e1 = JOptionPane.showInputDialog(null, "Please enter player 1's name in","Number",JOptionPane.QUESTION_MESSAGE);;
 			String e2 = JOptionPane.showInputDialog(null, "Please enter player 2's name in","Number",JOptionPane.QUESTION_MESSAGE);;
 			String e3 = JOptionPane.showInputDialog(null, "Please enter player 3's name in","Number",JOptionPane.QUESTION_MESSAGE);;
 			names.add(e1);
@@ -55,7 +55,7 @@ public class Game {
 			
 		}
 		else if(_numberOfPlayers == 4){
-			String e1 = JOptionPane.showInputDialog(null, "Please enter player 1's name in?","Number",JOptionPane.QUESTION_MESSAGE);;
+			String e1 = JOptionPane.showInputDialog(null, "Please enter player 1's name in","Number",JOptionPane.QUESTION_MESSAGE);;
 			String e2 = JOptionPane.showInputDialog(null, "Please enter player 2's name in","Number",JOptionPane.QUESTION_MESSAGE);;
 			String e3 = JOptionPane.showInputDialog(null, "Please enter player 3's name in","Number",JOptionPane.QUESTION_MESSAGE);;
 			String e4 = JOptionPane.showInputDialog(null, "Please enter player 4's name in","Number",JOptionPane.QUESTION_MESSAGE);;
