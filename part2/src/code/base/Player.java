@@ -30,8 +30,8 @@ public class Player {
 		_rack = new TileRack(inv);
 		Random random = new Random();
 		float hue = random.nextFloat();
-		float saturation = (random.nextFloat() * 1.0f) + 0.5f;
-		float luminance = (random.nextFloat() * 1.1f) + 0.6f; 
+		float saturation = (random.nextFloat() * 1.0f) + 0.6f;
+		float luminance = (random.nextFloat() * 1.1f) + 0.7f; 
 		_myColor = Color.getHSBColor(hue, saturation, luminance);	}
 	
 	/**
