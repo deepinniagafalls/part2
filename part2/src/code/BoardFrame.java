@@ -24,6 +24,7 @@ public class BoardFrame extends JFrame {
 	private Game _game;
 	private Scrabble _scrabble;
 	private BoardFrame _bf;
+	private WordChecker _currentWord;
 	
 	public BoardFrame(Scrabble s, Board b, Inventory i, ArrayList<PlayerFrame> pf, Game g, Scrabble scrabble){
 	       try {
@@ -74,5 +75,12 @@ public class BoardFrame extends JFrame {
 		return _scrabble;
 	}
 	
+	public void setWord(WordChecker currentWord){
+		_currentWord = currentWord;
+	}
+	
+	public Board getBoard(){
+		return _board;
+	}
 }
 

@@ -134,7 +134,7 @@ public class Extravaganza extends JFrame {
 			_g.incrementTurn();
 			System.out.println(_g.getCurrentTurn());	
 			label1.setText("Turn: Player "+(_g.getCurrentTurn()+1));
-
+			_bf.setWord(new WordChecker(_bf,_bf.getBoard()));
 	}
 	}
 	

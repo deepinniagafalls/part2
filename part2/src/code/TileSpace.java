@@ -40,15 +40,15 @@ public class TileSpace extends JButton implements ActionListener {
 			
 			public void actionPerformed(ActionEvent e) {
 				//Tile t = _i.removeRandomTile();
-				if(_b.getTempTile() != null){
-				_b.addTile(_b.getTempTile(),_row,_col);
-				_t = _b.getTile(_row,_col);
-				String temp = Character.toString(_t.getChar());
-				_j.setText(temp);
-				_b.setTempTile(null);
-				//System.out.println(_bf.getGame().getCurrentTurn());
-				_j.setBackground(_bf.getScrabble().returnPlayer(_bf.getGame().getCurrentTurn()).getColor());
-				//_j.setBackground(Color.RED);
+				if(_b.getTempTile() != null && _b.getTile(_row, _col) == null){
+					_b.addTile(_b.getTempTile(),_row,_col);
+					_t = _b.getTile(_row,_col);
+					String temp = Character.toString(_t.getChar());
+					_j.setText(temp);
+					_b.setTempTile(null);
+					//System.out.println(_bf.getGame().getCurrentTurn());
+					_j.setBackground(_bf.getScrabble().returnPlayer(_bf.getGame().getCurrentTurn()).getColor());
+				
 				}
 			}
 		});
