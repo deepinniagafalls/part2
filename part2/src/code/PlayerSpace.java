@@ -42,7 +42,7 @@ public class PlayerSpace extends JButton implements ActionListener {
 							_playerSpace.setText(""); 
 							_tempTH = _t;
 							_pf.getBoard().setTempTile(_tempTH);
-							_playerSpace.setCurrentTile(null);
+							_pf.setCurrent(_playerSpace);
 					}
 				}
 			});

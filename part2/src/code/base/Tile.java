@@ -31,6 +31,7 @@ public class Tile {
 		return _letter;
 	}
 	
+	
 	/**
 	 * Gets the point value of the tile.
 	 * 
