@@ -52,7 +52,9 @@ public class SaveGame {
 		File file = new File(_fileToWriteTo);
 		FileWriter fw = new FileWriter(file.getAbsoluteFile());
 		BufferedWriter bw = new BufferedWriter(fw);
+		String boardsize = "20 20";
 		String content = "/part2/res/words.txt";
+		bw.write(boardsize);
 		bw.write(content);
 		for(int i = 0; i<20; i = i + 1){
 			for(int j = 0; j<20; j = j +1){
