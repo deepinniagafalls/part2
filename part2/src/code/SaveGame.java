@@ -1,41 +1,25 @@
 package code;
 
-import java.io.FileInputStream;
-import java.io.FileOutputStream;
-import java.io.ObjectInputStream;
-import java.io.ObjectOutputStream;
+import java.awt.FileDialog;
+
+import javax.swing.JFrame;
 
 
+@SuppressWarnings("unused")
 public class SaveGame {
 	
-	public static void main( String arg[]){
-		SaveGame s = new SaveGame();
+	public static void main(String[] args){
+		SaveGame t = new SaveGame();
 	}
-
-	public void Save(String s){
-		
-		String save = s;
-		save.concat("Game.java");
-		 try {
-		        ObjectOutputStream oos = new ObjectOutputStream(new FileOutputStream(save));
-		        oos.writeObject(oos);
-		        oos.close();
-		    } catch(Exception ex) {
-		        ex.printStackTrace();
-		    }
-	}
-	public void Load(String s){
-		
-	    if(s.contains("Gave.java")){
-	        try {
-	        	ObjectInputStream ois = new ObjectInputStream(new FileInputStream(s));
-	        	SaveGame sg = (SaveGame)ois.readObject();
-	        	ois.close();
-	        } catch(Exception ex) {
-	            ex.printStackTrace();
-	        }
-	    }
+	
+	public SaveGame(){
+		JFrame j = new JFrame();
+		FileDialog chooser = new FileDialog(j);
+		chooser.setDirectory("C:\\");
+		chooser.setFile("*.txt");
+		chooser.setVisible(true);
+		String filename = chooser.getFile();
+		String path = chooser.getDirectory();
+		System.out.println(path);
 	}
 }
-
-
