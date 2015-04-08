@@ -103,7 +103,7 @@ public class Extravaganza extends JFrame {
 		public void actionPerformed(ActionEvent e) {
 			
 			try {
-				new SaveGame(_scrabble.getBoard());
+				new SaveGame(_scrabble.getBoard(), _bf);
 			} catch (IOException e1) {
 				// TODO Auto-generated catch block
 				e1.printStackTrace();

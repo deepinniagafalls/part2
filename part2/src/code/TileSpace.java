@@ -25,6 +25,7 @@ public class TileSpace extends JButton implements ActionListener {
 	private Scrabble _scrabble;
 	private BoardFrame _bf;
 	private String _myText;
+	private Color _color;
 	
 	
 	public TileSpace(int x, int y, Scrabble s, BoardFrame bf){
@@ -36,6 +37,7 @@ public class TileSpace extends JButton implements ActionListener {
 		_i = s.getInv();
 		_players = s.getPlayers();
 		_scrabble = s;
+		
 		
 		this.addActionListener(new ActionListener() {
 			
@@ -51,6 +53,7 @@ public class TileSpace extends JButton implements ActionListener {
 						_j.setText(temp);
 						_b.setTempTile(null);
 						_j.setBackground(_bf.getScrabble().returnPlayer(_bf.getGame().getCurrentTurn()).getColor());
+						_color = _bf.getScrabble().returnPlayer(_bf.getGame().getCurrentTurn()).getColor();
 					}
 				}
 				_scrabble.setIsVeryFirstTurn(false);
@@ -144,6 +147,8 @@ public class TileSpace extends JButton implements ActionListener {
 		return true;
 	}
 	
-	
+	public Color getColor(){
+		return _color;
+	}
 
 }
