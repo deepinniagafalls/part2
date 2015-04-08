@@ -46,7 +46,7 @@ public class TileSpace extends JButton implements ActionListener {
 					if(_b.getTempTile() != null && _b.getTile(_row, _col) == null){
 						_b.addTile(_b.getTempTile(),_row,_col);
 						_t = _b.getTile(_row,_col);
-						String temp = Character.toString(_t.getChar());
+						String temp = Character.toString(_t.getChar()) + ", " + _t.getValue();
 						_myText = temp;
 						_j.setText(temp);
 						_b.setTempTile(null);
