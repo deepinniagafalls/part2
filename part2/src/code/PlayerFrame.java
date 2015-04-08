@@ -27,10 +27,12 @@ public class PlayerFrame {
 	private PlayerFrame _pf;
 	private Tile _tileTemp;
 	private PlayerSpace _current;
+	private int _myTurnNumber;
+	private Game _currentGame;
 	/*
 	 * @param Scrabble s: is the instance of the scrabble game that will be passed into the player frame.
 	 */
-	public PlayerFrame(Scrabble s, TileRack tr, int index){
+	public PlayerFrame(Scrabble s, TileRack tr, int index, Game currentGame){
 	       try {
 	            UIManager.setLookAndFeel(new javax.swing.plaf.metal.MetalLookAndFeel());
 	        } catch(Exception e) {
@@ -41,6 +43,8 @@ public class PlayerFrame {
 		_s = s;
 		_pf = this;
 		_board = s.getBoard();
+		_myTurnNumber = index;
+		_currentGame = currentGame;
 		JFrame frame = new JFrame("Tile Rack");
 		
 		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
@@ -50,7 +54,7 @@ public class PlayerFrame {
 		int row = 0;
 		
 		for(int i=0; i<12; i++){
-			PlayerSpace temp = new PlayerSpace(_s,i,_pf); //Make this a
+			PlayerSpace temp = new PlayerSpace(_s,i,_pf,_currentGame); 
 			_boardOfButtons[row][i] = temp;
 			_boardOfPlayerSpaces[row][i] = temp;
 			frame.add(temp);
@@ -91,5 +95,9 @@ public class PlayerFrame {
 	
 	public PlayerSpace getPlayerSpace(int index){
 		return _boardOfPlayerSpaces[0][index];
+	}
+	
+	public int getMyTurnNumber(){
+		return _myTurnNumber;
 	}
 }

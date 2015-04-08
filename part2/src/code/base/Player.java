@@ -19,6 +19,7 @@ public class Player {
 	
 	private Color _myColor;
 	
+	
 	/**
 	 * Class constructor.
 	 * 
@@ -32,7 +33,8 @@ public class Player {
 		float hue = random.nextFloat();
 		float saturation = (random.nextFloat() * 1.0f) + 0.5f;
 		float luminance = (random.nextFloat() * 1.1f) + 0.6f; 
-		_myColor = Color.getHSBColor(hue, saturation, luminance);	}
+		_myColor = Color.getHSBColor(hue, saturation, luminance);					
+		}
 	
 	/**
 	 * Gets the int value of the Player's score.
@@ -63,4 +65,5 @@ public class Player {
 		_score = _score + i;
 		return _score;
 	}
+	
 }

@@ -19,14 +19,16 @@ public class PlayerSpace extends JButton implements ActionListener {
 	private PlayerFrame _pf;
 	private int _numberOfTile;
 	private Tile _tempTH;
+	private Game _currentGame;
 	/*
 	 * 
 	 */
-	public PlayerSpace(Scrabble s, int i, PlayerFrame pf){
+	public PlayerSpace(Scrabble s, int i, PlayerFrame pf, Game currentGame){
 		_pf = pf;
 		_numberOfTile = i;
 		_scrabble = s;
 		_players = s.getPlayers();
+		_currentGame = currentGame;
 		_t = _scrabble.getInv().removeRandomTile();
 		this.setText(Character.toString(_t.getChar()));
 		_playerSpace = this;
@@ -36,11 +38,12 @@ public class PlayerSpace extends JButton implements ActionListener {
 		this.addActionListener(new ActionListener() {
 			
 				public void actionPerformed(ActionEvent e) {
-						_playerSpace.setText(""); //Should put this in actionPerformed TileSpace instead
-						_tempTH = _t;
-						_pf.getBoard().setTempTile(_tempTH);
-						//_pf.setCurrent(_playerSpace);
-						_playerSpace.setCurrentTile(null);
+					if(_pf.getMyTurnNumber()==_currentGame.getCurrentTurn()){
+							_playerSpace.setText(""); 
+							_tempTH = _t;
+							_pf.getBoard().setTempTile(_tempTH);
+							_playerSpace.setCurrentTile(null);
+					}
 				}
 			});
 		}
