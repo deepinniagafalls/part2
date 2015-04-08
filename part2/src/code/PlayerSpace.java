@@ -38,6 +38,9 @@ public class PlayerSpace extends JButton implements ActionListener {
 		this.addActionListener(new ActionListener() {
 			
 				public void actionPerformed(ActionEvent e) {
+					if(_tempTH!=null){
+						Tile newerTemp = _t; //Need to fix this
+					}
 					if(_pf.getMyTurnNumber()==_currentGame.getCurrentTurn()){
 							_playerSpace.setText(""); 
 							_tempTH = _t;
