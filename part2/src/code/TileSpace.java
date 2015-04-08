@@ -78,7 +78,7 @@ public class TileSpace extends JButton implements ActionListener {
 	}
 	
 	public boolean isAdjacent(){
-		if(_row==0 && (_col!=0 || _col!=19)){
+		if(_row==0 && (_col!=0 && _col!=19)){
 			if(_bf.getTileSpace(_row+1,_col).getMyText()==null	&&	_bf.getTileSpace(19,_col).getMyText()==null	&&	_bf.getTileSpace(_row, _col+1).getMyText()==null 	&& _bf.getTileSpace(_row, _col-1).getMyText()==null){
 				return false;
 			}
@@ -86,7 +86,49 @@ public class TileSpace extends JButton implements ActionListener {
 		}
 		
 		if(_row==0 && _col==0){
-			if(_bf.getTileSpace(_row+1,_col).getMyText()==null	&&	_bf.getTileSpace(_row-1,_col).getMyText()==null	&&	_bf.getTileSpace(_row, _col+1).getMyText()==null 	&& _bf.getTileSpace(_row, _col-1).getMyText()==null){
+			if(_bf.getTileSpace(_row+1,_col).getMyText()==null	&&	_bf.getTileSpace(19,_col).getMyText()==null	&&	_bf.getTileSpace(_row, _col+1).getMyText()==null 	&& _bf.getTileSpace(_row, 19).getMyText()==null){
+				return false;
+			}
+			return true;
+		}
+		
+		if(_row==0 && _col==19){
+			if(_bf.getTileSpace(_row+1,_col).getMyText()==null	&&	_bf.getTileSpace(19,_col).getMyText()==null	&&	_bf.getTileSpace(_row, 0).getMyText()==null 	&& _bf.getTileSpace(_row, _col-1).getMyText()==null){
+				return false;
+			}
+			return true;
+		}
+		
+		if(_row==19 && (_col!=0 && _col!=19)){
+			if(_bf.getTileSpace(0,_col).getMyText()==null	&&	_bf.getTileSpace(_row-1,_col).getMyText()==null	&&	_bf.getTileSpace(_row, _col+1).getMyText()==null 	&& _bf.getTileSpace(_row, _col-1).getMyText()==null){
+				return false;
+			}
+			return true;
+		}
+		
+		if(_row==19 && _col==0){
+			if(_bf.getTileSpace(0,_col).getMyText()==null	&&	_bf.getTileSpace(19,_col).getMyText()==null	&&	_bf.getTileSpace(_row, _col+1).getMyText()==null 	&& _bf.getTileSpace(_row, 19).getMyText()==null){
+				return false;
+			}
+			return true;
+		}
+		
+		if(_row==19 && _col==19){
+			if(_bf.getTileSpace(0,_col).getMyText()==null	&&	_bf.getTileSpace(19,_col).getMyText()==null	&&	_bf.getTileSpace(_row, 0).getMyText()==null 	&& _bf.getTileSpace(_row, _col-1).getMyText()==null){
+				return false;
+			}
+			return true;
+		}
+		
+		if(_col==0 && (_row!=0 && _row!=19)){
+			if(_bf.getTileSpace(_row+1,_col).getMyText()==null	&&	_bf.getTileSpace(_row-1,_col).getMyText()==null	&&	_bf.getTileSpace(_row, _col+1).getMyText()==null 	&& _bf.getTileSpace(_row, 19).getMyText()==null){
+				return false;
+			}
+			return true;
+		}
+		
+		if(_col==19 && (_row!=0 && _row!=19)){
+			if(_bf.getTileSpace(_row+1,_col).getMyText()==null	&&	_bf.getTileSpace(_row-1,_col).getMyText()==null	&&	_bf.getTileSpace(_row, 0).getMyText()==null 	&& _bf.getTileSpace(_row, _col-1).getMyText()==null){
 				return false;
 			}
 			return true;
