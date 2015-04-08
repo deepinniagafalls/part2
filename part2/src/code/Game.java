@@ -37,19 +37,46 @@ public class Game {
 		if(_numberOfPlayers < 2){
 			JOptionPane.showMessageDialog(null, "Error! The minimum number of players is 2","ERROR",JOptionPane.ERROR_MESSAGE);
 			System.exit(0);}
+		ArrayList<String> names = new ArrayList<>();
+		if(_numberOfPlayers == 2){
+			String e1 = JOptionPane.showInputDialog(null, "Please enter player 1's name in","Name",JOptionPane.QUESTION_MESSAGE);;
+			String e2 = JOptionPane.showInputDialog(null, "Please enter player 2's name in","Name",JOptionPane.QUESTION_MESSAGE);;
+			names.add(e1);
+			names.add(e2);
+
+		}
+		else if(_numberOfPlayers == 3){
+			String e1 = JOptionPane.showInputDialog(null, "Please enter player 1's name in?","Number",JOptionPane.QUESTION_MESSAGE);;
+			String e2 = JOptionPane.showInputDialog(null, "Please enter player 2's name in","Number",JOptionPane.QUESTION_MESSAGE);;
+			String e3 = JOptionPane.showInputDialog(null, "Please enter player 3's name in","Number",JOptionPane.QUESTION_MESSAGE);;
+			names.add(e1);
+			names.add(e2);
+			names.add(e3);
+			
+		}
+		else if(_numberOfPlayers == 4){
+			String e1 = JOptionPane.showInputDialog(null, "Please enter player 1's name in?","Number",JOptionPane.QUESTION_MESSAGE);;
+			String e2 = JOptionPane.showInputDialog(null, "Please enter player 2's name in","Number",JOptionPane.QUESTION_MESSAGE);;
+			String e3 = JOptionPane.showInputDialog(null, "Please enter player 3's name in","Number",JOptionPane.QUESTION_MESSAGE);;
+			String e4 = JOptionPane.showInputDialog(null, "Please enter player 4's name in","Number",JOptionPane.QUESTION_MESSAGE);;
+			names.add(e1);
+			names.add(e2);
+			names.add(e3);
+			names.add(e4);
+		}
 		Scrabble scrabble = new Scrabble(_numberOfPlayers);
 		Inventory invent = scrabble.getInv();
 		Board board = scrabble.getBoard();
 		_playerList = scrabble.getPlayers();
 		_playerFrameList = new ArrayList<PlayerFrame>();
 		for(int i = 0; i < _numberOfPlayers; i++){
-			_playerFrameList.add(new PlayerFrame(scrabble, scrabble.returnPlayer(i).getTileRack(), i, _currentGame));
+			_playerFrameList.add(new PlayerFrame(scrabble, scrabble.returnPlayer(i).getTileRack(), i, _currentGame, names));
 		}
 		//PlayerFrame tr = new PlayerFrame(scrabble, scrabble.returnPlayer(0).getTileRack());
 		//PlayerFrame tr2 = new PlayerFrame(scrabble,scrabble.returnPlayer(1).getTileRack());
 		BoardFrame boardframe = new BoardFrame(scrabble, board , invent,_playerFrameList, _currentGame, scrabble);
 		//System.out.println(scrabble.returnPlayer(1));
-		Extravaganza fc = new Extravaganza(scrabble, boardframe, this);
+		Extravaganza fc = new Extravaganza(scrabble, boardframe, this, names);
 	}
 	
 	public int incrementTurn(){

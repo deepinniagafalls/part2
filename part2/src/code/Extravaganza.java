@@ -5,6 +5,7 @@ import java.awt.Container;
 import java.awt.GridLayout;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.util.ArrayList;
 
 import javax.swing.JButton;
 import javax.swing.JFileChooser;
@@ -37,7 +38,7 @@ public class Extravaganza extends JFrame {
 	private int _c = 0;
 	private JLabel label1;
 
-	public Extravaganza(Scrabble scrabble, BoardFrame bf, Game g) {
+	public Extravaganza(Scrabble scrabble, BoardFrame bf, Game g, ArrayList<String> name) {
 	       try {
 	            UIManager.setLookAndFeel(new javax.swing.plaf.metal.MetalLookAndFeel());
 	        } catch(Exception e) {
@@ -57,8 +58,8 @@ public class Extravaganza extends JFrame {
 		p.add(pass);
 		open.addActionListener(new OpenL());
 		save.addActionListener(new SaveL());
-		pass.addActionListener(new PassT());
-		label1 = new JLabel("Turn: Player "+(_g.getCurrentTurn()+1),null,JLabel.CENTER);
+		pass.addActionListener(new PassT(name));
+		label1 = new JLabel("Turn: " + name.get(0),null,JLabel.CENTER);
 		
 		
 		Container cp = getContentPane();
@@ -96,7 +97,7 @@ public class Extravaganza extends JFrame {
 		}
 	}
 
-	public class SaveL implements ActionListener {
+	private class SaveL implements ActionListener {
 		
 		public void actionPerformed(ActionEvent e) {
 			
@@ -112,17 +113,20 @@ public class Extravaganza extends JFrame {
 		}
 	}
 
-	public static void run(JFrame frame, int width, int height) {
+	private static void run(JFrame frame, int width, int height) {
 		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		frame.setSize(width, height);
 		frame.setVisible(true);
 	}
 	
-	public class PassT implements ActionListener {
+	private class PassT implements ActionListener {
+		private ArrayList<String> _name;
+		public PassT(ArrayList<String> name){
+			_name = name;
+		}
 		
 		public void actionPerformed(ActionEvent e) {
 			JOptionPane.showMessageDialog(null, "You have passed your turn");
-			label1.setText("Turn: Player "+(_g.getCurrentTurn()+1));
 			PlayerFrame temp = _bf.getPlayerFrame(_g.getCurrentTurn());
 			for(int i=0; i<12; i++){
 				if(temp.getPlayerSpace(i).getTile()==null){
@@ -133,7 +137,10 @@ public class Extravaganza extends JFrame {
 				}
 			_g.incrementTurn();
 			System.out.println(_g.getCurrentTurn());	
-			label1.setText("Turn: Player "+(_g.getCurrentTurn()+1));
+			if(_g.getCurrentTurn() == 0){label1.setText("Turn: "+ _name.get(0));}
+			if(_g.getCurrentTurn() == 1){label1.setText("Turn: "+ _name.get(1));}
+			if(_g.getCurrentTurn() == 2){label1.setText("Turn: "+ _name.get(2));}
+			if(_g.getCurrentTurn() == 3){label1.setText("Turn: "+ _name.get(3));}
 			_bf.setWord(new WordChecker(_bf,_bf.getBoard()));
 	}
 	}
