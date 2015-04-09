@@ -60,6 +60,7 @@ public class WordChecker {
 		int rowDifference = Math.abs(firstRow-lastRow);
 		int colDifference = Math.abs(firstCol-lastCol);
 		
+		//vertical word
 		if(rowDifference >= colDifference){
 			for(int i=0; i<rowDifference+1; i++){
 					wordForward = wordForward + _b.getTile(firstRow+i,firstCol).getChar();
@@ -74,19 +75,20 @@ public class WordChecker {
 			}
 			
 			int j = 1;
-			while(_b.getTile(firstRow+j,firstCol) != null){
-				wordForward = _b.getTile(firstRow+j,firstCol).getChar() + wordForward;
-				wordBackward = wordBackward + _b.getTile(firstRow+j,firstCol).getChar();
+			while(_b.getTile(lastRow+j,lastCol) != null){
+				wordForward = _b.getTile(lastRow+j,lastCol).getChar() + wordForward;
+				wordBackward = wordBackward + _b.getTile(lastRow+j,lastCol).getChar();
 				j = j + 1;
 			}
 			
 		}
-		
+		//horizontal word
 		else{
 			for(int i=0; i<colDifference+1; i++){
 					wordForward = wordForward + _b.getTile(firstRow,firstCol+i).getChar();
 					wordBackward = wordBackward + _b.getTile(firstRow,firstCol+i).getChar();
 			}
+			
 			int k = 1;
 			while(_b.getTile(firstRow,firstCol-k) != null){
 					wordForward = _b.getTile(firstRow,firstCol-k).getChar() + wordForward;
@@ -95,15 +97,13 @@ public class WordChecker {
 			}
 			
 			int j = 1;
-			while(_b.getTile(firstRow,firstCol+j) != null){
-				wordForward = _b.getTile(firstRow,firstCol+j).getChar() + wordForward;
-				wordBackward = wordBackward + _b.getTile(firstRow,firstCol+j).getChar();
+			while(_b.getTile(lastRow,lastCol+j) != null){
+				wordForward = _b.getTile(lastRow,lastCol+j).getChar() + wordForward;
+				wordBackward = wordBackward + _b.getTile(lastRow,lastCol+j).getChar();
 				j = j + 1;
 			}
 			
 		}
-		System.out.println(wordForward);
-		System.out.println(wordBackward);
 		
 		if(_r.isThisAWord(wordForward) || _r.isThisAWord(wordBackward)){
 			return wordForward;
