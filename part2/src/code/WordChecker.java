@@ -73,26 +73,26 @@ public class WordChecker {
 			}
 			
 			int k = 1;
-			while(_b.getTile(firstRow-k,firstCol) != null){
+			if(_b.getTile(firstRow-k,firstCol) != null){
 				if(forward == true){
 					word = _b.getTile(firstRow-k,firstCol).getChar() + word;
 				}
 				else{
 					word = word + _b.getTile(firstRow-k,firstCol).getChar();
 				}
-				k = k + 1;
+				//k = k + 1;
 			}
 			
 			
 			int j = 1;
-			while(_b.getTile(firstRow+j,firstCol) != null){
+			if(_b.getTile(firstRow+j,firstCol) != null){
 				if(forward == true){
 					word = _b.getTile(firstRow+j,firstCol).getChar() + word;
 				}
 				else{
 					word = word + _b.getTile(firstRow+j,firstCol).getChar();
 				}
-				j = j + 1;
+				//j = j + 1;
 			}
 			
 		}
