@@ -1,5 +1,6 @@
 package code;
 
+import java.awt.Color;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.util.ArrayList;
@@ -31,6 +32,7 @@ public class PlayerSpace extends JButton implements ActionListener {
 		_currentGame = currentGame;
 		_t = _scrabble.getInv().removeRandomTile();
 		this.setText(Character.toString(_t.getChar()) + ", " +_t.getValue());
+		this.setBackground(_scrabble.returnPlayer(_pf.getMyTurnNumber()).getColor());
 		_playerSpace = this;
 		_tempTH = null;
 		
