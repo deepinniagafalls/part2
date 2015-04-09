@@ -21,7 +21,7 @@ public class WordChecker {
 		_b = board;
 	}
 	
-	public boolean isThisWord(){
+	public String isThisWord(){
 		String word = "";
 		String wordForward = "";
 		String wordBackward = "";
@@ -67,17 +67,17 @@ public class WordChecker {
 			}
 			
 			int k = 1;
-			if(_b.getTile(firstRow-k,firstCol) != null){
+			while(_b.getTile(firstRow-k,firstCol) != null){
 					wordForward = _b.getTile(firstRow-k,firstCol).getChar() + wordForward;
 					wordBackward = wordBackward + _b.getTile(firstRow-k,firstCol).getChar();
-				//k = k + 1;
+				k = k + 1;
 			}
 			
 			int j = 1;
-			if(_b.getTile(firstRow+j,firstCol) != null){
+			while(_b.getTile(firstRow+j,firstCol) != null){
 				wordForward = _b.getTile(firstRow+j,firstCol).getChar() + wordForward;
 				wordBackward = wordBackward + _b.getTile(firstRow+j,firstCol).getChar();
-				//j = j + 1;
+				j = j + 1;
 			}
 			
 		}
@@ -88,23 +88,29 @@ public class WordChecker {
 					wordBackward = wordBackward + _b.getTile(firstRow,firstCol+i).getChar();
 			}
 			int k = 1;
-			if(_b.getTile(firstRow,firstCol-k) != null){
+			while(_b.getTile(firstRow,firstCol-k) != null){
 					wordForward = _b.getTile(firstRow,firstCol-k).getChar() + wordForward;
 					wordBackward = wordBackward + _b.getTile(firstRow,firstCol-k).getChar();
-				//k = k + 1;
+				k = k + 1;
 			}
 			
 			int j = 1;
-			if(_b.getTile(firstRow,firstCol+j) != null){
+			while(_b.getTile(firstRow,firstCol+j) != null){
 				wordForward = _b.getTile(firstRow,firstCol+j).getChar() + wordForward;
 				wordBackward = wordBackward + _b.getTile(firstRow,firstCol+j).getChar();
-				//j = j + 1;
+				j = j + 1;
 			}
 			
 		}
 		System.out.println(wordForward);
 		System.out.println(wordBackward);
-		return _r.isThisAWord(wordForward) || _r.isThisAWord(wordBackward);
+		
+		if(_r.isThisAWord(wordForward) || _r.isThisAWord(wordBackward)){
+			return wordForward;
+		}
+		else{
+			return null;
+		}
 		
 		
 		
