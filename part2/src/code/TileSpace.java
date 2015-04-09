@@ -53,6 +53,7 @@ public class TileSpace extends JButton implements ActionListener {
 							_b.setTempTile(null);
 							_j.setBackground(_bf.getScrabble().returnPlayer(_bf.getGame().getCurrentTurn()).getColor());
 							_color = _bf.getScrabble().returnPlayer(_bf.getGame().getCurrentTurn()).getColor();
+							_scrabble.setIsVeryFirstTurn(false);
 						}
 					}
 					else{
@@ -69,7 +70,7 @@ public class TileSpace extends JButton implements ActionListener {
 					tempSpace.setCurrentTile(_b.getTempTile());
 					_b.setTempTile(null);
 				}
-				_scrabble.setIsVeryFirstTurn(false);
+				//_scrabble.setIsVeryFirstTurn(false);
 			}
 		});
 	}
