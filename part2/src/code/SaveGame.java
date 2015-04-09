@@ -60,10 +60,14 @@ public class SaveGame {
 			Player p = _scrabble.returnPlayer(i);
 			p.getScore();
 			p.getColor();
+			PlayerFrame pf = _bf.getPlayerFrame(i);
+			bw.write("[" +p.getColor() + ", " + p.getScore() + "]");
+			bw.write("[");
 			for(int j = 0; j <12; j = j+1){
-			p.getTileRack().getTile(i).getChar();
-			bw.write("[" +p.getColor() + ", " + p.getScore() + ", " + p.getTileRack().getTile(i).getChar() + "]");
-		}
+				pf.getPlayerSpace(j).getTile().getChar();
+				bw.write( pf.getPlayerSpace(j).getTile().getChar());
+			}
+			bw.write("]");
 		}
 		for(int i = 0; i < _scrabble.getInv().getSize(); i = i + 1 ){
 			bw.write("[" + _scrabble.getInv().getTile(i).getChar() + "]");

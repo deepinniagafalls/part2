@@ -43,15 +43,23 @@ public class TileSpace extends JButton implements ActionListener {
 			
 			public void actionPerformed(ActionEvent e) {
 				if(_j.isAdjacent() || _scrabble.getIsVeryFirstTurn()){
-					if(_b.getTempTile() != null && _b.getTile(_row, _col) == null){
-						_b.addTile(_b.getTempTile(),_row,_col);
-						_t = _b.getTile(_row,_col);
-						String temp = Character.toString(_t.getChar()) + ", " + _t.getValue();
-						_myText = temp;
-						_j.setText(temp);
+					if(_j.getTile()==null){
+						if(_b.getTempTile() != null && _b.getTile(_row, _col) == null){
+							_b.addTile(_b.getTempTile(),_row,_col);
+							_t = _b.getTile(_row,_col);
+							String temp = Character.toString(_t.getChar()) + ", " + _t.getValue();
+							_myText = temp;
+							_j.setText(temp);
+							_b.setTempTile(null);
+							_j.setBackground(_bf.getScrabble().returnPlayer(_bf.getGame().getCurrentTurn()).getColor());
+							_color = _bf.getScrabble().returnPlayer(_bf.getGame().getCurrentTurn()).getColor();
+						}
+					}
+					else{
+						PlayerSpace tempSpace = _bf.getPlayerFrame(_bf.getGame().getCurrentTurn()).getCurrentSpace();
+						tempSpace.setText(Character.toString(tempSpace.getTempTile().getChar()) + ", " + tempSpace.getTempTile().getValue());
+						tempSpace.setCurrentTile(_b.getTempTile());
 						_b.setTempTile(null);
-						_j.setBackground(_bf.getScrabble().returnPlayer(_bf.getGame().getCurrentTurn()).getColor());
-						_color = _bf.getScrabble().returnPlayer(_bf.getGame().getCurrentTurn()).getColor();
 					}
 				}
 				else{
@@ -59,6 +67,7 @@ public class TileSpace extends JButton implements ActionListener {
 					PlayerSpace tempSpace = _bf.getPlayerFrame(_bf.getGame().getCurrentTurn()).getCurrentSpace();
 					tempSpace.setText(Character.toString(tempSpace.getTempTile().getChar()) + ", " + tempSpace.getTempTile().getValue());
 					tempSpace.setCurrentTile(_b.getTempTile());
+					_b.setTempTile(null);
 				}
 				_scrabble.setIsVeryFirstTurn(false);
 			}
