@@ -17,6 +17,7 @@ import javax.swing.JPanel;
 import javax.swing.JTextField;
 import javax.swing.UIManager;
 
+import code.base.Player;
 import code.base.Scrabble;
 import code.base.Tile;
 
@@ -162,11 +163,33 @@ public class Extravaganza extends JFrame {
 			if(_g.getCurrentTurn() == 2){label1.setText("Turn: "+ _name.get(2));}
 			if(_g.getCurrentTurn() == 3){label1.setText("Turn: "+ _name.get(3));}
 			System.out.println(_bf.getWordChecker().isThisWord());
+			if(_bf.getWordChecker().isThisWord()){
+				String wordToScore = _bf.getWordChecker().getWord();
+				int sum = 0;
+				for(int i=0; i<wordToScore.length();i++){
+					sum = sum + scoreHelper(wordToScore.charAt(i));
+				}
+				Player tempPlayer = _scrabble.getPlayers().get(_g.getCurrentTurn());
+				tempPlayer.addScore(tempPlayer.getScore(), sum);
+			}
 			WordChecker check = new WordChecker(_bf,_bf.getBoard());
 			_bf.setWord(check);
 			(_pf.get(tep)).update();
 			
 		}
+	}
+	
+	public int scoreHelper(char c){
+		if(c=='A' || c=='E' || c=='I' || c=='O' || c=='U'){
+			return 1;
+		}
+		if(c=='B' || c=='C' || c=='D' || c=='F' || c=='G' || c=='H' || c=='J' || c=='K' || c=='L' || c=='M' || c=='N' || c=='P' || c=='Q' || c=='R' || c=='S' || c=='T' || c=='V' || c=='W' || c=='X' || c=='Z'){
+			return 5;
+		}
+		if(c=='Y'){
+			return 2;
+		}
+		return 0;
 	}
 	
 

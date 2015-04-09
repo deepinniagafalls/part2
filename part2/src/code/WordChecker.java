@@ -233,5 +233,4 @@ public class WordChecker {
 		_colCoordinates.add(col);
 	}
 	
-
 }

@@ -34,7 +34,7 @@ public class PlayerFrame {
 	private PlayerSpace _current;
 	private int _myTurnNumber;
 	private Game _currentGame;
-	private JLabel _points = new JLabel("Ponints: 0000");
+	private JLabel _points = new JLabel("Points: 0000");
 
 	/*
 	 * @param Scrabble s: is the instance of the scrabble game that will be passed into the player frame.
