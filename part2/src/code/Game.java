@@ -1,5 +1,6 @@
 package code;
 
+import java.io.IOException;
 import java.util.ArrayList;
 import java.util.Scanner;
 
@@ -28,7 +29,7 @@ public class Game {
 	
 
 	
-	public Game(){
+	public Game() throws IOException{
 	       try {
 	            UIManager.setLookAndFeel(new javax.swing.plaf.metal.MetalLookAndFeel());
 	        } catch(Exception e) {

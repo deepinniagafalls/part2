@@ -39,8 +39,8 @@ public class Extravaganza extends JFrame {
 	private int _c = 0;
 	private JLabel label1;
 
-	public Extravaganza(Scrabble scrabble, BoardFrame bf, Game g, ArrayList<String> name) {
-	       try {
+	public Extravaganza(Scrabble scrabble, BoardFrame bf, Game g, ArrayList<String> name) throws IOException {
+	    /*   try {
 	            UIManager.setLookAndFeel(new javax.swing.plaf.metal.MetalLookAndFeel());
 	        } catch(Exception e) {
 	            e.printStackTrace();
@@ -77,6 +77,9 @@ public class Extravaganza extends JFrame {
 		p.setVisible(true);
 		frame.pack();
 		frame.setVisible(true);
+		*/
+		
+		new LoadGame(_scrabble, _scrabble.getBoard(), _bf);
 		
 	}
 
