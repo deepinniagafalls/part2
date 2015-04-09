@@ -163,8 +163,8 @@ public class Extravaganza extends JFrame {
 			if(_g.getCurrentTurn() == 2){label1.setText("Turn: "+ _name.get(2));}
 			if(_g.getCurrentTurn() == 3){label1.setText("Turn: "+ _name.get(3));}
 			System.out.println(_bf.getWordChecker().isThisWord());
-			if(_bf.getWordChecker().isThisWord()){
-				String wordToScore = _bf.getWordChecker().getWord();
+			if(_bf.getWordChecker().isThisWord()!=null){
+				String wordToScore = _bf.getWordChecker().isThisWord();
 				int sum = 0;
 				for(int i=0; i<wordToScore.length();i++){
 					sum = sum + scoreHelper(wordToScore.charAt(i));
