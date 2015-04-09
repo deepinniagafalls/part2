@@ -40,7 +40,7 @@ public class Extravaganza extends JFrame {
 	private JLabel label1;
 
 	public Extravaganza(Scrabble scrabble, BoardFrame bf, Game g, ArrayList<String> name) throws IOException {
-	    /*   try {
+	      try {
 	            UIManager.setLookAndFeel(new javax.swing.plaf.metal.MetalLookAndFeel());
 	        } catch(Exception e) {
 	            e.printStackTrace();
@@ -77,16 +77,16 @@ public class Extravaganza extends JFrame {
 		p.setVisible(true);
 		frame.pack();
 		frame.setVisible(true);
-		*/
 		
-		new LoadGame(_scrabble, _scrabble.getBoard(), _bf);
+		
+		
 		
 	}
 
 	public class OpenL implements ActionListener {
 		
 		public void actionPerformed(ActionEvent e) {
-			
+			/*
 			JFileChooser c = new JFileChooser();
 				int value = c.showOpenDialog(Extravaganza.this);
 				if (value == JFileChooser.APPROVE_OPTION) {
@@ -98,6 +98,14 @@ public class Extravaganza extends JFrame {
 					dir.setText("");
 				}
 				c.setVisible(true);
+				*/
+				
+				try {
+					new LoadGame(_scrabble, _scrabble.getBoard(), _bf);
+				} catch (IOException e1) {
+					// TODO Auto-generated catch block
+					e1.printStackTrace();
+				}
 		}
 	}
 
