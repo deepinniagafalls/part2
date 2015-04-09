@@ -23,7 +23,6 @@ public class LoadGame {
 	private BoardFrame _bf;
 	private TileRack _tr;
 	private Scrabble _scrabble;
-
 	private String _fileToRead;
 	
 	public LoadGame(Scrabble scrabble, Board b, BoardFrame bf) throws IOException{
@@ -45,6 +44,11 @@ public class LoadGame {
 	File file = new File(_fileToRead);
 	FileReader fw = new FileReader(file.getAbsoluteFile());
 	BufferedReader bw = new BufferedReader(fw);
-    System.out.println(bw.readLine());
+    String s = (bw.readLine());
+    String delims = "$";
+    String[] tokens = s.split(delims);
+    for (int i = 0; i < tokens.length; i++){
+        System.out.println(tokens[i]);
+    }
 	}
 }

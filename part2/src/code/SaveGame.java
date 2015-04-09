@@ -52,26 +52,40 @@ public class SaveGame {
 		File file = new File(_fileToWriteTo);
 		FileWriter fw = new FileWriter(file.getAbsoluteFile());
 		BufferedWriter bw = new BufferedWriter(fw);
+		
+		bw.write("$");
 		String boardsize = "20 20";
-		String content = "/part2/res/words.txt";
+
+		bw.write("$");
 		bw.write(boardsize);
+		
+		bw.write("$");
+		String content = "/part2/res/words.txt";
 		bw.write(content);
+		
 		for(int i = 0; i <_scrabble.getNumofPlayers(); i = i + 1 ){
 			Player p = _scrabble.returnPlayer(i);
 			p.getScore();
 			p.getColor();
 			PlayerFrame pf = _bf.getPlayerFrame(i);
 			bw.write("[" +p.getColor() + ", " + p.getScore() + "]");
+			
+			bw.write("$");
 			bw.write("[");
 			for(int j = 0; j <12; j = j+1){
 				pf.getPlayerSpace(j).getTile().getChar();
-				bw.write( pf.getPlayerSpace(j).getTile().getChar());
+				bw.write(pf.getPlayerSpace(j).getTile().getChar());
 			}
 			bw.write("]");
+			bw.write("$");
 		}
+		
+
 		for(int i = 0; i < _scrabble.getInv().getSize(); i = i + 1 ){
 			bw.write("[" + _scrabble.getInv().getTile(i).getChar() + "]");
 		}
+		bw.write("$");
+		
 		for(int i = 0; i<20; i = i + 1){
 			for(int j = 0; j<20; j = j +1){
 				if(_b.getTile(i, j) == null){
