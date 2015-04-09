@@ -142,8 +142,7 @@ public class Extravaganza extends JFrame {
 					temp.getPlayerSpace(i).setCurrentTile(t);
 				}
 				}
-			_g.incrementTurn();
-			System.out.println(_g.getCurrentTurn());	
+			_g.incrementTurn();	
 			if(_g.getCurrentTurn() == 0){label1.setText("Turn: "+ _name.get(0));}
 			if(_g.getCurrentTurn() == 1){label1.setText("Turn: "+ _name.get(1));}
 			if(_g.getCurrentTurn() == 2){label1.setText("Turn: "+ _name.get(2));}
