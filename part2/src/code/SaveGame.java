@@ -79,7 +79,6 @@ public class SaveGame {
 				
 			}
 		}
-		bw.write(content);
 		bw.close();
 		System.out.println("Done");
 		
