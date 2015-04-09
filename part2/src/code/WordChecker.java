@@ -23,6 +23,18 @@ public class WordChecker {
 	
 	public boolean isThisWord(){
 		String word = "";
+		boolean doesTheWordWrapAround = false;
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
 		int firstRow = _rowCoordinates.get(0);
 		int lastRow = _rowCoordinates.get(_rowCoordinates.size()-1);
 		int firstCol = _colCoordinates.get(0);
@@ -33,12 +45,12 @@ public class WordChecker {
 		
 		if(rowDifference >= colDifference){
 			for(int i=0; i<rowDifference+1; i++){
-				word = word + _b.getTile(_rowCoordinates.get(i),firstCol).getChar();
+				word = word + _b.getTile(firstRow+i,firstCol).getChar();
 			}
 		}
 		else{
 			for(int i=0; i<colDifference+1; i++){
-				word = word + _b.getTile(firstRow,_colCoordinates.get(i)).getChar();
+				word = word + _b.getTile(firstRow,firstCol+i).getChar();
 			}
 			
 		}
