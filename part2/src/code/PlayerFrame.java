@@ -52,6 +52,7 @@ public class PlayerFrame {
 		_board = s.getBoard();
 		_myTurnNumber = index;
 		_currentGame = currentGame;
+		_players = _s.getPlayers(); //Just added
 		JFrame frame = new JFrame("Tile Rack");
 		frame.add(_points);
 		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
@@ -77,11 +78,11 @@ public class PlayerFrame {
 	 * 
 	 */
 	public void update(){
-		_inv = _s.getInv();
-		_players = _s.getPlayers();
-		_board = _s.getBoard();
-		_numberOfPlayers = _s.getNumofPlayers();
-		_points.setText("Points: "+(_players.get(_myTurnNumber)).getScore());
+	//	_inv = _s.getInv();
+	//	_board = _s.getBoard();
+	//	_numberOfPlayers = _s.getNumofPlayers();
+	//	_points.setText("Points: "+(_players.get(_myTurnNumber)).getScore());
+		_points.setText("Points: "+(_players.get(_currentGame.getCurrentTurn())).getScore());
 	}
 
 	public Tile removeTileFromPlayerSpace(int index){

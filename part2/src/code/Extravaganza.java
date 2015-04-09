@@ -33,7 +33,6 @@ public class Extravaganza extends JFrame {
 	private JButton open = new JButton("Open"), save = new JButton("Save");
 	private JButton pass = new JButton("Pass");
 	private BoardFrame _bf;
-	private ArrayList<PlayerFrame> _pf;
 	private Scrabble _scrabble;
 	private int _currentTurn;
 	private int _numberOfPlayers;
@@ -47,7 +46,6 @@ public class Extravaganza extends JFrame {
 	        } catch(Exception e) {
 	            e.printStackTrace();
 	        }
-	      _pf = pf;
 	       
 	    JFrame frame = new JFrame();   
 		JPanel p = new JPanel();
@@ -170,11 +168,14 @@ public class Extravaganza extends JFrame {
 					sum = sum + scoreHelper(wordToScore.charAt(i));
 				}
 				Player tempPlayer = _scrabble.getPlayers().get(_g.getCurrentTurn());
+				System.out.println(sum);
+				System.out.println(tempPlayer.getScore());
 				tempPlayer.addScore(tempPlayer.getScore(), sum);
+				System.out.println(tempPlayer.getScore());
 			}
 			WordChecker check = new WordChecker(_bf,_bf.getBoard());
 			_bf.setWord(check);
-			(_pf.get(tep)).update();
+			_bf.getPlayerFrame(tep).update();
 			
 		}
 	}
