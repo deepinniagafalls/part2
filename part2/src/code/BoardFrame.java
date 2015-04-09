@@ -40,6 +40,7 @@ public class BoardFrame extends JFrame {
 		_game = g;
 		_scrabble = scrabble;
 		_bf = this;
+		_currentWord = new WordChecker(_bf,_bf.getBoard());
 		JFrame frame = new JFrame("Scrabble");		
 		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		frame.setSize(1100, 1100);

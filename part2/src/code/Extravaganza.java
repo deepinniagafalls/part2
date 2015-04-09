@@ -152,14 +152,17 @@ public class Extravaganza extends JFrame {
 					temp.getPlayerSpace(i).setText(Character.toString(t.getChar()) + ", " + t.getValue());
 					temp.getPlayerSpace(i).setCurrentTile(t);
 				}
-				}
+			}
 			_g.incrementTurn();	
 			if(_g.getCurrentTurn() == 0){label1.setText("Turn: "+ _name.get(0));}
 			if(_g.getCurrentTurn() == 1){label1.setText("Turn: "+ _name.get(1));}
 			if(_g.getCurrentTurn() == 2){label1.setText("Turn: "+ _name.get(2));}
 			if(_g.getCurrentTurn() == 3){label1.setText("Turn: "+ _name.get(3));}
-			_bf.setWord(new WordChecker(_bf,_bf.getBoard()));
-	}
+			System.out.println(_bf.getWordChecker().isThisWord());
+			WordChecker check = new WordChecker(_bf,_bf.getBoard());
+			_bf.setWord(check);
+			
+		}
 	}
 	
 
