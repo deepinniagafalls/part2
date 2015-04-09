@@ -1,5 +1,6 @@
 package code;
 
+import java.io.Console;
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.Scanner;
@@ -73,7 +74,7 @@ public class Game {
 			System.out.print("Please enter player 2's name in");
 			Scanner scanIn3 = new Scanner(System.in);
 		    String e2 = scanIn3.nextLine();
-			System.out.print("Please enter player 2's name in");
+			System.out.print("Please enter player 3's name in");
 			Scanner scanIn4 = new Scanner(System.in);
 		    String e3 = scanIn4.nextLine();
 			names.add(e1);
