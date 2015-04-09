@@ -116,7 +116,7 @@ public class Game {
 		//PlayerFrame tr2 = new PlayerFrame(scrabble,scrabble.returnPlayer(1).getTileRack());
 		BoardFrame boardframe = new BoardFrame(scrabble, board , invent,_playerFrameList, _currentGame, scrabble);
 		//System.out.println(scrabble.returnPlayer(1));
-		Extravaganza fc = new Extravaganza(scrabble, boardframe, this, names);
+		Extravaganza fc = new Extravaganza(scrabble, boardframe, this, names, _playerFrameList);
 	}
 	
 	public int incrementTurn(){

@@ -32,6 +32,7 @@ public class Extravaganza extends JFrame {
 	private JButton open = new JButton("Open"), save = new JButton("Save");
 	private JButton pass = new JButton("Pass");
 	private BoardFrame _bf;
+	private ArrayList<PlayerFrame> _pf;
 	private Scrabble _scrabble;
 	private int _currentTurn;
 	private int _numberOfPlayers;
@@ -39,12 +40,13 @@ public class Extravaganza extends JFrame {
 	private int _c = 0;
 	private JLabel label1;
 
-	public Extravaganza(Scrabble scrabble, BoardFrame bf, Game g, ArrayList<String> name) throws IOException {
+	public Extravaganza(Scrabble scrabble, BoardFrame bf, Game g, ArrayList<String> name, ArrayList<PlayerFrame> pf) throws IOException {
 	      try {
 	            UIManager.setLookAndFeel(new javax.swing.plaf.metal.MetalLookAndFeel());
 	        } catch(Exception e) {
 	            e.printStackTrace();
 	        }
+	      _pf = pf;
 	       
 	    JFrame frame = new JFrame();   
 		JPanel p = new JPanel();
@@ -145,6 +147,7 @@ public class Extravaganza extends JFrame {
 		
 		public void actionPerformed(ActionEvent e) {
 			JOptionPane.showMessageDialog(null, "You have passed your turn");
+			int tep = _g.getCurrentTurn();
 			PlayerFrame temp = _bf.getPlayerFrame(_g.getCurrentTurn());
 			for(int i=0; i<12; i++){
 				if(temp.getPlayerSpace(i).getTile()==null){
@@ -161,6 +164,7 @@ public class Extravaganza extends JFrame {
 			System.out.println(_bf.getWordChecker().isThisWord());
 			WordChecker check = new WordChecker(_bf,_bf.getBoard());
 			_bf.setWord(check);
+			(_pf.get(tep)).update();
 			
 		}
 	}

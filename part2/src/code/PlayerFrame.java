@@ -6,7 +6,9 @@ import java.util.ArrayList;
 
 import javax.swing.JButton;
 import javax.swing.JFrame;
+import javax.swing.JLabel;
 import javax.swing.UIManager;
+
 
 
 
@@ -32,6 +34,8 @@ public class PlayerFrame {
 	private PlayerSpace _current;
 	private int _myTurnNumber;
 	private Game _currentGame;
+	private JLabel _points = new JLabel("Ponints: 0000");
+
 	/*
 	 * @param Scrabble s: is the instance of the scrabble game that will be passed into the player frame.
 	 */
@@ -49,9 +53,9 @@ public class PlayerFrame {
 		_myTurnNumber = index;
 		_currentGame = currentGame;
 		JFrame frame = new JFrame("Tile Rack");
-		
+		frame.add(_points);
 		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-		frame.setSize(770, 103);
+		frame.setSize(1500, 103);
 		GridLayout grid = new GridLayout(1, 0, 0, 0);
 		frame.setLayout(grid);
 		int row = 0;
@@ -77,6 +81,7 @@ public class PlayerFrame {
 		_players = _s.getPlayers();
 		_board = _s.getBoard();
 		_numberOfPlayers = _s.getNumofPlayers();
+		_points.setText("Points: "+(_players.get(_myTurnNumber)).getScore());
 	}
 
 	public Tile removeTileFromPlayerSpace(int index){
