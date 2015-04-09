@@ -36,7 +36,10 @@ public class Game {
 	            e.printStackTrace();
 	        }
 		_currentGame = this;
-		String p = JOptionPane.showInputDialog(null, "How many players do you want?","Number of Players",JOptionPane.QUESTION_MESSAGE);
+		System.out.print("How many players do you want?");
+	       Scanner scanIn = new Scanner(System.in);
+	       String p = scanIn.nextLine();
+		// String p = JOptionPane.showInputDialog(null, "How many players do you want?","Number of Players",JOptionPane.QUESTION_MESSAGE);
 		if(p != null){_numberOfPlayers = Integer.parseInt(p);}
 		else{JOptionPane.showMessageDialog(null, "Error! you choose to cancel","ERROR",JOptionPane.ERROR_MESSAGE);System.exit(0);}
 		if(_numberOfPlayers > 4){
@@ -46,26 +49,55 @@ public class Game {
 			System.exit(0);}
 		ArrayList<String> names = new ArrayList<>();
 		if(_numberOfPlayers == 2){
-			String e1 = JOptionPane.showInputDialog(null, "Please enter player 1's name in","Name",JOptionPane.QUESTION_MESSAGE);;
-			String e2 = JOptionPane.showInputDialog(null, "Please enter player 2's name in","Name",JOptionPane.QUESTION_MESSAGE);;
+			//String e1 = JOptionPane.showInputDialog(null, "Please enter player 1's name in","Name",JOptionPane.QUESTION_MESSAGE);;
+			//String e2 = JOptionPane.showInputDialog(null, "Please enter player 2's name in","Name",JOptionPane.QUESTION_MESSAGE);;
+			System.out.print("Please enter player 1's name in");
+			Scanner scanIn2 = new Scanner(System.in);
+		    String e1 = scanIn2.nextLine();
+			System.out.print("Please enter player 2's name in");
+			Scanner scanIn3 = new Scanner(System.in);
+		    String e2 = scanIn3.nextLine();
+
+
 			names.add(e1);
 			names.add(e2);
 
 		}
 		else if(_numberOfPlayers == 3){
-			String e1 = JOptionPane.showInputDialog(null, "Please enter player 1's name in","Number",JOptionPane.QUESTION_MESSAGE);;
-			String e2 = JOptionPane.showInputDialog(null, "Please enter player 2's name in","Number",JOptionPane.QUESTION_MESSAGE);;
-			String e3 = JOptionPane.showInputDialog(null, "Please enter player 3's name in","Number",JOptionPane.QUESTION_MESSAGE);;
+			//String e1 = JOptionPane.showInputDialog(null, "Please enter player 1's name in","Number",JOptionPane.QUESTION_MESSAGE);;
+			//String e2 = JOptionPane.showInputDialog(null, "Please enter player 2's name in","Number",JOptionPane.QUESTION_MESSAGE);;
+			//String e3 = JOptionPane.showInputDialog(null, "Please enter player 3's name in","Number",JOptionPane.QUESTION_MESSAGE);;
+			System.out.print("Please enter player 1's name in");
+			Scanner scanIn2 = new Scanner(System.in);
+		    String e1 = scanIn2.nextLine();
+			System.out.print("Please enter player 2's name in");
+			Scanner scanIn3 = new Scanner(System.in);
+		    String e2 = scanIn3.nextLine();
+			System.out.print("Please enter player 2's name in");
+			Scanner scanIn4 = new Scanner(System.in);
+		    String e3 = scanIn4.nextLine();
 			names.add(e1);
 			names.add(e2);
 			names.add(e3);
 			
 		}
 		else if(_numberOfPlayers == 4){
-			String e1 = JOptionPane.showInputDialog(null, "Please enter player 1's name in","Number",JOptionPane.QUESTION_MESSAGE);;
-			String e2 = JOptionPane.showInputDialog(null, "Please enter player 2's name in","Number",JOptionPane.QUESTION_MESSAGE);;
-			String e3 = JOptionPane.showInputDialog(null, "Please enter player 3's name in","Number",JOptionPane.QUESTION_MESSAGE);;
-			String e4 = JOptionPane.showInputDialog(null, "Please enter player 4's name in","Number",JOptionPane.QUESTION_MESSAGE);;
+			System.out.print("Please enter player 1's name in");
+			Scanner scanIn2 = new Scanner(System.in);
+		    String e1 = scanIn2.nextLine();
+			System.out.print("Please enter player 2's name in");
+			Scanner scanIn3 = new Scanner(System.in);
+		    String e2 = scanIn3.nextLine();
+			System.out.print("Please enter player 3's name in");
+			Scanner scanIn4 = new Scanner(System.in);
+		    String e3 = scanIn4.nextLine();
+			System.out.print("Please enter player 4's name in");
+			Scanner scanIn5 = new Scanner(System.in);
+		    String e4 = scanIn5.nextLine();
+			//String e1 = JOptionPane.showInputDialog(null, "Please enter player 1's name in","Number",JOptionPane.QUESTION_MESSAGE);;
+			//String e2 = JOptionPane.showInputDialog(null, "Please enter player 2's name in","Number",JOptionPane.QUESTION_MESSAGE);;
+			//String e3 = JOptionPane.showInputDialog(null, "Please enter player 3's name in","Number",JOptionPane.QUESTION_MESSAGE);;
+			//String e4 = JOptionPane.showInputDialog(null, "Please enter player 4's name in","Number",JOptionPane.QUESTION_MESSAGE);;
 			names.add(e1);
 			names.add(e2);
 			names.add(e3);
