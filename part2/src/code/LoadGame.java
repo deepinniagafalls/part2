@@ -15,8 +15,6 @@ import code.base.Board;
 import code.base.Scrabble;
 import code.base.TileRack;
 
-
-
 public class LoadGame {
 	
 	private Board _b;
@@ -44,11 +42,14 @@ public class LoadGame {
 	File file = new File(_fileToRead);
 	FileReader fw = new FileReader(file.getAbsoluteFile());
 	BufferedReader bw = new BufferedReader(fw);
-    String s = (bw.readLine());
+    //String s = (bw.readLine());
+	String s = "asdf$sasdfljl$asdf$";
     String delims = "$";
     String[] tokens = s.split(delims);
+    
     for (int i = 0; i < tokens.length; i++){
-        System.out.println(tokens[i]);
+        System.out.println(tokens[1]);
     }
+    
 	}
 }

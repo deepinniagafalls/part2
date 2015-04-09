@@ -54,8 +54,7 @@ public class WordChecker {
 		
 		
 		
-		
-		
+		boolean forward = true;
 		
 		int rowDifference = Math.abs(firstRow-lastRow);
 		int colDifference = Math.abs(firstCol-lastCol);
@@ -64,11 +63,38 @@ public class WordChecker {
 			for(int i=0; i<rowDifference+1; i++){
 				if(firstRow<lastRow){
 					word = word + _b.getTile(firstRow+i,firstCol).getChar();
+					forward = true;
 				}
 				else{
 					word = word + _b.getTile(firstRow-i,firstCol).getChar();
+					forward = false;
 				}
+				System.out.println(word);
 			}
+			
+			int k = 1;
+			while(_b.getTile(firstRow-k,firstCol) != null){
+				if(forward == true){
+					word = _b.getTile(firstRow-k,firstCol).getChar() + word;
+				}
+				else{
+					word = word + _b.getTile(firstRow-k,firstCol).getChar();
+				}
+				k = k + 1;
+			}
+			
+			
+			int j = 1;
+			while(_b.getTile(firstRow+j,firstCol) != null){
+				if(forward == true){
+					word = _b.getTile(firstRow+j,firstCol).getChar() + word;
+				}
+				else{
+					word = word + _b.getTile(firstRow+j,firstCol).getChar();
+				}
+				j = j + 1;
+			}
+			
 		}
 		else{
 			for(int i=0; i<colDifference+1; i++){
