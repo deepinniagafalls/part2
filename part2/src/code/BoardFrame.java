@@ -42,7 +42,7 @@ public class BoardFrame extends JFrame {
 		_bf = this;
 		JFrame frame = new JFrame("Scrabble");		
 		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-		frame.setSize(900, 900);
+		frame.setSize(1100, 1100);
 		GridLayout grid = new GridLayout(20, 20, 0, 0);
 		frame.setLayout(grid);
 		
