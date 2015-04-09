@@ -138,7 +138,7 @@ public class Extravaganza extends JFrame {
 			for(int i=0; i<12; i++){
 				if(temp.getPlayerSpace(i).getTile()==null){
 					Tile t = _scrabble.getInv().removeRandomTile();
-					temp.getPlayerSpace(i).setText(Character.toString(t.getChar()));
+					temp.getPlayerSpace(i).setText(Character.toString(t.getChar()) + ", " + t.getValue());
 					temp.getPlayerSpace(i).setCurrentTile(t);
 				}
 				}

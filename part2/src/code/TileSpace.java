@@ -55,8 +55,10 @@ public class TileSpace extends JButton implements ActionListener {
 					}
 				}
 				else{
-					
-					_bf.getPlayerFrame(_bf.getGame().getCurrentTurn()).getCurrentSpace().setText(Character.toString(_bf.getPlayerFrame(_bf.getGame().getCurrentTurn()).getCurrentSpace().getTile().getChar()) + ", " + _bf.getPlayerFrame(_bf.getGame().getCurrentTurn()).getCurrentSpace().getTile().getValue());
+					//Chris changed 2 lines below to getTempTile instead of getTile
+					PlayerSpace tempSpace = _bf.getPlayerFrame(_bf.getGame().getCurrentTurn()).getCurrentSpace();
+					tempSpace.setText(Character.toString(tempSpace.getTempTile().getChar()) + ", " + tempSpace.getTempTile().getValue());
+					tempSpace.setCurrentTile(_b.getTempTile());
 				}
 				_scrabble.setIsVeryFirstTurn(false);
 			}

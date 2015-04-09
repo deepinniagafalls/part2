@@ -38,13 +38,14 @@ public class PlayerSpace extends JButton implements ActionListener {
 		this.addActionListener(new ActionListener() {
 			
 				public void actionPerformed(ActionEvent e) {
-					if(_tempTH!=null){
-						Tile newerTemp = _t; //Need to fix this
-					}
+				//	if(_tempTH!=null){
+					//	Tile newerTemp = _t; //Need to fix this
+					//}
 					if(_pf.getMyTurnNumber()==_currentGame.getCurrentTurn()){
 							_playerSpace.setText(""); 
 							_tempTH = _t;
 							_pf.getBoard().setTempTile(_tempTH);
+							_playerSpace.setCurrentTile(null);
 							_pf.setCurrent(_playerSpace);
 					}
 				}
@@ -58,7 +59,7 @@ public class PlayerSpace extends JButton implements ActionListener {
 	}
 	
 	
-	public Tile returnTempTile(){
+	public Tile getTempTile(){
 		return _tempTH;
 	}
 	
