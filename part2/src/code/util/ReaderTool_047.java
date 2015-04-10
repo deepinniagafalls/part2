@@ -6,11 +6,11 @@ import java.util.ArrayList;
 
 public class ReaderTool_047 {
 	private ArrayList<String> _words;
-	public ReaderTool_047(){
+	public ReaderTool_047(String path){
 	_words = new ArrayList<String>();
     String  _line = null;
     try{
-       BufferedReader br = new BufferedReader(new FileReader("res/words.txt"));
+       BufferedReader br = new BufferedReader(new FileReader(path));
        while ((_line = br.readLine()) != null) {
           _words.add(_line);
        }       
