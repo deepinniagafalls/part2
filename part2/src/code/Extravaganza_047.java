@@ -144,9 +144,11 @@ public class Extravaganza_047 extends JFrame {
 		private String _path = "";
 		public PassT(ArrayList<String> name, String path){
 			_name = name;
-			_path = path;
 		}
 		
+		public PassT(String path){
+			_path = path;
+		}
 		public void actionPerformed(ActionEvent e) {
 			String wordToScore = _bf.getWordChecker().isThisWord();
 			if(_bf.getWordChecker().isZero()){
