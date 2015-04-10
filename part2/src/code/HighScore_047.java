@@ -24,7 +24,7 @@ public class HighScore_047 {
 		_words = new ArrayList<String>();
 	    String  _line = null;
 	    try{
-	       BufferedReader br = new BufferedReader(new FileReader("res/words.txt"));
+	       BufferedReader br = new BufferedReader(new FileReader("Documents/words.txt"));
 	       while ((_line = br.readLine()) != null) {
 	          _words.add(_line);
 	       }       
@@ -33,9 +33,19 @@ public class HighScore_047 {
 	    	
 		// Save current high score with the past one
 	    int pn = p.size();
-		PrintWriter writer = new PrintWriter("res/save.txt", "UTF-8");
+		PrintWriter writer = new PrintWriter("Documents/save.txt", "UTF-8");
 		switch (pn){
 		case 2:
+			if(p.get(0).getScore() > p.get(1).getScore()){
+				writer.println(p.get(0).getName()+": "+p.get(0).getScore());
+				writer.println(p.get(1).getName()+": "+p.get(1).getScore());
+				writer.close();
+			}
+			else{
+				writer.println(p.get(1).getName()+": "+p.get(0).getScore());
+				writer.println(p.get(0).getName()+": "+p.get(1).getScore());
+				writer.close();
+			}
 			break;
 		case 3:
 			break;
