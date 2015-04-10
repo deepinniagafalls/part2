@@ -180,4 +180,8 @@ public class Game {
 		return  _currentTurn;
 	}
 	
+	public int getNumOfPlayers(){
+		return _numberOfPlayers;
+	}
+	
 }

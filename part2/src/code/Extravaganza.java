@@ -39,6 +39,7 @@ public class Extravaganza extends JFrame {
 	private Game _g;
 	private int _c = 0;
 	private JLabel label1;
+	private boolean _isPlayerFrameStillEmpty = false;
 
 	public Extravaganza(Scrabble scrabble, BoardFrame bf, Game g, ArrayList<String> name, ArrayList<PlayerFrame> pf) throws IOException {
 	      try {
@@ -162,12 +163,20 @@ public class Extravaganza extends JFrame {
 			JOptionPane.showMessageDialog(null, "You have passed your turn");
 			int tep = _g.getCurrentTurn();
 			PlayerFrame temp = _bf.getPlayerFrame(_g.getCurrentTurn());
-			for(int i=0; i<12; i++){
+			for(int i=0; i<12; i++){ //Refills empty PlayerSpaces in the PlayerFrame
 				if(temp.getPlayerSpace(i).getTile()==null){
 					Tile t = _scrabble.getInv().removeRandomTile();
 					temp.getPlayerSpace(i).setText(Character.toString(t.getChar()) + ", " + t.getValue());
 					temp.getPlayerSpace(i).setCurrentTile(t);
 				}
+			}
+			for(int i=0; i<12; i++){
+				if(temp.getPlayerSpace(i).getTile()==null){
+					_isPlayerFrameStillEmpty = true;
+				}
+			}
+			if(_isPlayerFrameStillEmpty){ //Terminates the game
+				
 			}
 			_g.incrementTurn();	
 			if(_g.getCurrentTurn() == 0){label1.setText("Turn: "+ _name.get(0));}
