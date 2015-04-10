@@ -12,19 +12,101 @@ import code.base.Inventory;
 import code.base.Player;
 import code.base.Scrabble;
 import code.base.Tile;
-
+/**
+ * @author tylerdie (Tyler Dietrich)
+ * @author ceelman (Chris Elman)
+ * @author jaeheun (Jason Kim)
+ * @author mjszymko (Michael Szymkowski)
+ * @date 2015-APRIL-10
+ */
 public class TileSpace extends JButton implements ActionListener {
-	
+	/**
+	 * @author tylerdie (Tyler Dietrich)
+	 * @author ceelman (Chris Elman)
+	 * @author jaeheun (Jason Kim)
+	 * @author mjszymko (Michael Szymkowski)
+	 * @date 2015-APRIL-10
+	 */
 	private TileSpace _j;
+	/**
+	 * @author tylerdie (Tyler Dietrich)
+	 * @author ceelman (Chris Elman)
+	 * @author jaeheun (Jason Kim)
+	 * @author mjszymko (Michael Szymkowski)
+	 * @date 2015-APRIL-10
+	 */
 	private int _row;
+	/**
+	 * @author tylerdie (Tyler Dietrich)
+	 * @author ceelman (Chris Elman)
+	 * @author jaeheun (Jason Kim)
+	 * @author mjszymko (Michael Szymkowski)
+	 * @date 2015-APRIL-10
+	 */
 	private int _col;
+	/**
+	 * @author tylerdie (Tyler Dietrich)
+	 * @author ceelman (Chris Elman)
+	 * @author jaeheun (Jason Kim)
+	 * @author mjszymko (Michael Szymkowski)
+	 * @date 2015-APRIL-10
+	 */
 	private Board _b;
+	/**
+	 * @author tylerdie (Tyler Dietrich)
+	 * @author ceelman (Chris Elman)
+	 * @author jaeheun (Jason Kim)
+	 * @author mjszymko (Michael Szymkowski)
+	 * @date 2015-APRIL-10
+	 */
 	private Tile _t;
+	/**
+	 * @author tylerdie (Tyler Dietrich)
+	 * @author ceelman (Chris Elman)
+	 * @author jaeheun (Jason Kim)
+	 * @author mjszymko (Michael Szymkowski)
+	 * @date 2015-APRIL-10
+	 */
 	private Inventory _i;
+	/**
+	 * @author tylerdie (Tyler Dietrich)
+	 * @author ceelman (Chris Elman)
+	 * @author jaeheun (Jason Kim)
+	 * @author mjszymko (Michael Szymkowski)
+	 * @date 2015-APRIL-10
+	 */
 	private ArrayList<Player> _players;
+	/**
+	 * @author tylerdie (Tyler Dietrich)
+	 * @author ceelman (Chris Elman)
+	 * @author jaeheun (Jason Kim)
+	 * @author mjszymko (Michael Szymkowski)
+	 * @date 2015-APRIL-10
+	 */
 	private Scrabble _scrabble;
+	/**
+	 * @author tylerdie (Tyler Dietrich)
+	 * @author ceelman (Chris Elman)
+	 * @author jaeheun (Jason Kim)
+	 * @author mjszymko (Michael Szymkowski)
+	 * @date 2015-APRIL-10
+	 */
 	private BoardFrame _bf;
+	/**
+	 * @author tylerdie (Tyler Dietrich)
+	 * @author ceelman (Chris Elman)
+	 * @author jaeheun (Jason Kim)
+	 * @author mjszymko (Michael Szymkowski)
+	 * @date 2015-APRIL-10
+	 */
 	private String _myText;
+	/**
+	 * @author tylerdie (Tyler Dietrich)
+	 * @author ceelman (Chris Elman)
+	 * @author jaeheun (Jason Kim)
+	 * @author mjszymko (Michael Szymkowski)
+	 * @date 2015-APRIL-10
+	 */
 	private Color _color;
 	
 	/**
@@ -46,7 +128,13 @@ public class TileSpace extends JButton implements ActionListener {
 		
 		
 		this.addActionListener(new ActionListener() {
-			
+			/**
+			 * @author tylerdie (Tyler Dietrich)
+			 * @author ceelman (Chris Elman)
+			 * @author jaeheun (Jason Kim)
+			 * @author mjszymko (Michael Szymkowski)
+			 * @date 2015-APRIL-10
+			 */
 			public void actionPerformed(ActionEvent e) {
 				if(_j.isAdjacent() || _scrabble.getIsVeryFirstTurn()){
 					if(_j.getTile()==null){
@@ -83,32 +171,65 @@ public class TileSpace extends JButton implements ActionListener {
 			}
 		});
 	}
-	
+	/**
+	 * @author tylerdie (Tyler Dietrich)
+	 * @author ceelman (Chris Elman)
+	 * @author jaeheun (Jason Kim)
+	 * @author mjszymko (Michael Szymkowski)
+	 * @date 2015-APRIL-10
+	 */
 	public int getRow(){
 		return _row;
 	}
-	
+	/**
+	 * @author tylerdie (Tyler Dietrich)
+	 * @author ceelman (Chris Elman)
+	 * @author jaeheun (Jason Kim)
+	 * @author mjszymko (Michael Szymkowski)
+	 * @date 2015-APRIL-10
+	 */
 	public int getCol(){
 		return _col;
 	}
-	
+	/**
+	 * @author tylerdie (Tyler Dietrich)
+	 * @author ceelman (Chris Elman)
+	 * @author jaeheun (Jason Kim)
+	 * @author mjszymko (Michael Szymkowski)
+	 * @date 2015-APRIL-10
+	 */
 	public Tile getTile(){
 		return _t;
 	}
-	
+	/**
+	 * @author tylerdie (Tyler Dietrich)
+	 * @author ceelman (Chris Elman)
+	 * @author jaeheun (Jason Kim)
+	 * @author mjszymko (Michael Szymkowski)
+	 * @date 2015-APRIL-10
+	 */
 	public String getMyText(){
 		return _myText;
 	}
 	
-
+	/**
+	 * @author tylerdie (Tyler Dietrich)
+	 * @author ceelman (Chris Elman)
+	 * @author jaeheun (Jason Kim)
+	 * @author mjszymko (Michael Szymkowski)
+	 * @date 2015-APRIL-10
+	 */
 	@Override
 	public void actionPerformed(ActionEvent arg0) {
 		// TODO Auto-generated method stub
 		
 	}
 	/**
-	 * 
-	 * @return: return whether a tilespacce has others adjacent to it
+	 * @author tylerdie (Tyler Dietrich)
+	 * @author ceelman (Chris Elman)
+	 * @author jaeheun (Jason Kim)
+	 * @author mjszymko (Michael Szymkowski)
+	 * @date 2015-APRIL-10
 	 */
 	public boolean isAdjacent(){
 		if(_row==0 && (_col!=0 && _col!=19)){
@@ -173,7 +294,13 @@ public class TileSpace extends JButton implements ActionListener {
 		}
 		return true;
 	}
-	
+	/**
+	 * @author tylerdie (Tyler Dietrich)
+	 * @author ceelman (Chris Elman)
+	 * @author jaeheun (Jason Kim)
+	 * @author mjszymko (Michael Szymkowski)
+	 * @date 2015-APRIL-10
+	 */
 	public Color getColor(){
 		return _color;
 	}

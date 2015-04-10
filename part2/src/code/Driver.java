@@ -4,8 +4,12 @@ import java.io.IOException;
 
 import javax.swing.UnsupportedLookAndFeelException;
 
-/*
- * This class has a main method which instantiates the game class
+/**
+ * @author tylerdie (Tyler Dietrich)
+ * @author ceelman (Chris Elman)
+ * @author jaeheun (Jason Kim)
+ * @author mjszymko (Michael Szymkowski)
+ * @date 2015-APRIL-10
  */
 
 public class Driver {

@@ -1,5 +1,6 @@
 package code;
 import java.awt.Dimension;
+
 import java.awt.GridLayout;
 import java.awt.event.ActionEvent;
 import java.util.ArrayList;
@@ -11,20 +12,118 @@ import code.base.Inventory;
 import code.base.Player;
 import code.base.Scrabble;
 
+/**
+ * @author tylerdie (Tyler Dietrich)
+ * @author ceelman (Chris Elman)
+ * @author jaeheun (Jason Kim)
+ * @author mjszymko (Michael Szymkowski)
+ * @date 2015-APRIL-10
+ */
+
 public class BoardFrame extends JFrame {
-	
+	/**
+	 * @author tylerdie (Tyler Dietrich)
+	 * @author ceelman (Chris Elman)
+	 * @author jaeheun (Jason Kim)
+	 * @author mjszymko (Michael Szymkowski)
+	 * @date 2015-APRIL-10
+	 */
 	private Scrabble _s;
+	/**
+	 * @author tylerdie (Tyler Dietrich)
+	 * @author ceelman (Chris Elman)
+	 * @author jaeheun (Jason Kim)
+	 * @author mjszymko (Michael Szymkowski)
+	 * @date 2015-APRIL-10
+	 */
     private Inventory _inv;
+    /**
+     * @author tylerdie (Tyler Dietrich)
+     * @author ceelman (Chris Elman)
+     * @author jaeheun (Jason Kim)
+     * @author mjszymko (Michael Szymkowski)
+     * @date 2015-APRIL-10
+     */
     private ArrayList<Player> _players;
+    /**
+     * @author tylerdie (Tyler Dietrich)
+     * @author ceelman (Chris Elman)
+     * @author jaeheun (Jason Kim)
+     * @author mjszymko (Michael Szymkowski)
+     * @date 2015-APRIL-10
+     */
 	private Board _board;
+	/**
+	 * @author tylerdie (Tyler Dietrich)
+	 * @author ceelman (Chris Elman)
+	 * @author jaeheun (Jason Kim)
+	 * @author mjszymko (Michael Szymkowski)
+	 * @date 2015-APRIL-10
+	 */
 	private int _numberOfPlayers;
+	/**
+	 * @author tylerdie (Tyler Dietrich)
+	 * @author ceelman (Chris Elman)
+	 * @author jaeheun (Jason Kim)
+	 * @author mjszymko (Michael Szymkowski)
+	 * @date 2015-APRIL-10
+	 */
 	private TileSpace[][] _boardOfButtons = new TileSpace[20][20];
+	/**
+	 * @author tylerdie (Tyler Dietrich)
+	 * @author ceelman (Chris Elman)
+	 * @author jaeheun (Jason Kim)
+	 * @author mjszymko (Michael Szymkowski)
+	 * @date 2015-APRIL-10
+	 */
 	private Inventory _invent;
+	/**
+	 * @author tylerdie (Tyler Dietrich)
+	 * @author ceelman (Chris Elman)
+	 * @author jaeheun (Jason Kim)
+	 * @author mjszymko (Michael Szymkowski)
+	 * @date 2015-APRIL-10
+	 */
 	private ArrayList<PlayerFrame> _pf;
+	/**
+	 * @author tylerdie (Tyler Dietrich)
+	 * @author ceelman (Chris Elman)
+	 * @author jaeheun (Jason Kim)
+	 * @author mjszymko (Michael Szymkowski)
+	 * @date 2015-APRIL-10
+	 */
 	private Game _game;
+	/**
+	 * @author tylerdie (Tyler Dietrich)
+	 * @author ceelman (Chris Elman)
+	 * @author jaeheun (Jason Kim)
+	 * @author mjszymko (Michael Szymkowski)
+	 * @date 2015-APRIL-10
+	 */
 	private Scrabble _scrabble;
+	/**
+	 * @author tylerdie (Tyler Dietrich)
+	 * @author ceelman (Chris Elman)
+	 * @author jaeheun (Jason Kim)
+	 * @author mjszymko (Michael Szymkowski)
+	 * @date 2015-APRIL-10
+	 */
 	private BoardFrame _bf;
+	/**
+	 * @author tylerdie (Tyler Dietrich)
+	 * @author ceelman (Chris Elman)
+	 * @author jaeheun (Jason Kim)
+	 * @author mjszymko (Michael Szymkowski)
+	 * @date 2015-APRIL-10
+	 */
 	private WordChecker _currentWord;
+	/**
+	 * @author tylerdie (Tyler Dietrich)
+	 * @author ceelman (Chris Elman)
+	 * @author jaeheun (Jason Kim)
+	 * @author mjszymko (Michael Szymkowski)
+	 * @date 2015-APRIL-10
+	 */
 	
 	public BoardFrame(Scrabble s, Board b, Inventory i, ArrayList<PlayerFrame> pf, Game g, Scrabble scrabble){
 	       try {
@@ -57,6 +156,14 @@ public class BoardFrame extends JFrame {
 		frame.setVisible(true);
 		
 	}
+	
+	/**
+	 * @author tylerdie (Tyler Dietrich)
+	 * @author ceelman (Chris Elman)
+	 * @author jaeheun (Jason Kim)
+	 * @author mjszymko (Michael Szymkowski)
+	 * @date 2015-APRIL-10
+	 */
 	public void update(){
 		_inv = _s.getInv();
 		_players = _s.getPlayers();
@@ -65,53 +172,73 @@ public class BoardFrame extends JFrame {
 	}
 
 	/**
-	 * 
-	 * @param index: is the number of the player frame that we want to select
-	 * @return: returns the player frame specified by the index
+	 * @author tylerdie (Tyler Dietrich)
+	 * @author ceelman (Chris Elman)
+	 * @author jaeheun (Jason Kim)
+	 * @author mjszymko (Michael Szymkowski)
+	 * @date 2015-APRIL-10
 	 */
 	public PlayerFrame getPlayerFrame(int index){
 		return _pf.get(index);
 	}
 	/**
-	 * 
-	 * @return the reference to the current game
+	 * @author tylerdie (Tyler Dietrich)
+	 * @author ceelman (Chris Elman)
+	 * @author jaeheun (Jason Kim)
+	 * @author mjszymko (Michael Szymkowski)
+	 * @date 2015-APRIL-10
 	 */
 	public Game getGame(){
 		return _game;
 	}
 	/**
-	 * 
-	 * @return accessor method to the current scrabble game
+	 * @author tylerdie (Tyler Dietrich)
+	 * @author ceelman (Chris Elman)
+	 * @author jaeheun (Jason Kim)
+	 * @author mjszymko (Michael Szymkowski)
+	 * @date 2015-APRIL-10
 	 */
 	public Scrabble getScrabble(){
 		return _scrabble;
 	}
 	/**
-	 * 
-	 * @param currentWord: this input is the word checker in use
-	 * this is a mutator method
-	 * 
+	 * @author tylerdie (Tyler Dietrich)
+	 * @author ceelman (Chris Elman)
+	 * @author jaeheun (Jason Kim)
+	 * @author mjszymko (Michael Szymkowski)
+	 * @date 2015-APRIL-10
 	 */
 	public void setWord(WordChecker currentWord){
 		_currentWord = currentWord;
 	}
+	/**
+	 * @author tylerdie (Tyler Dietrich)
+	 * @author ceelman (Chris Elman)
+	 * @author jaeheun (Jason Kim)
+	 * @author mjszymko (Michael Szymkowski)
+	 * @date 2015-APRIL-10
+	 */
 	
 	public WordChecker getWordChecker(){
 		return _currentWord;
 	}
 	
 	/**
-	 * 
-	 * @return: a reference to the current board
+	 * @author tylerdie (Tyler Dietrich)
+	 * @author ceelman (Chris Elman)
+	 * @author jaeheun (Jason Kim)
+	 * @author mjszymko (Michael Szymkowski)
+	 * @date 2015-APRIL-10
 	 */
 	public Board getBoard(){
 		return _board;
 	}
 	/**
-	 * 
-	 * @param row: row index of the 
-	 * @param col
-	 * @return
+	 * @author tylerdie (Tyler Dietrich)
+	 * @author ceelman (Chris Elman)
+	 * @author jaeheun (Jason Kim)
+	 * @author mjszymko (Michael Szymkowski)
+	 * @date 2015-APRIL-10
 	 */
 	public TileSpace getTileSpace(int row, int col){
 		return _boardOfButtons[row][col];

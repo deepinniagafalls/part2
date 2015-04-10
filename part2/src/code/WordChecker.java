@@ -8,19 +8,68 @@ import javax.swing.JButton;
 import code.base.Board;
 import code.base.Tile;
 import code.util.ReaderTool;
-
+/**
+ * @author tylerdie (Tyler Dietrich)
+ * @author ceelman (Chris Elman)
+ * @author jaeheun (Jason Kim)
+ * @author mjszymko (Michael Szymkowski)
+ * @date 2015-APRIL-10
+ */
 public class WordChecker {
-	
+	/**
+	 * @author tylerdie (Tyler Dietrich)
+	 * @author ceelman (Chris Elman)
+	 * @author jaeheun (Jason Kim)
+	 * @author mjszymko (Michael Szymkowski)
+	 * @date 2015-APRIL-10
+	 */
 	private ReaderTool _r = new ReaderTool();
+	/**
+	 * @author tylerdie (Tyler Dietrich)
+	 * @author ceelman (Chris Elman)
+	 * @author jaeheun (Jason Kim)
+	 * @author mjszymko (Michael Szymkowski)
+	 * @date 2015-APRIL-10
+	 */
 	private ArrayList<Integer>	_rowCoordinates;
+	/**
+	 * @author tylerdie (Tyler Dietrich)
+	 * @author ceelman (Chris Elman)
+	 * @author jaeheun (Jason Kim)
+	 * @author mjszymko (Michael Szymkowski)
+	 * @date 2015-APRIL-10
+	 */
 	private ArrayList<Integer> _colCoordinates;
+	/**
+	 * @author tylerdie (Tyler Dietrich)
+	 * @author ceelman (Chris Elman)
+	 * @author jaeheun (Jason Kim)
+	 * @author mjszymko (Michael Szymkowski)
+	 * @date 2015-APRIL-10
+	 */
 	private ArrayList<Tile> _tilesPlaced;
+	/**
+	 * @author tylerdie (Tyler Dietrich)
+	 * @author ceelman (Chris Elman)
+	 * @author jaeheun (Jason Kim)
+	 * @author mjszymko (Michael Szymkowski)
+	 * @date 2015-APRIL-10
+	 */
 	private BoardFrame _bf;
+	/**
+	 * @author tylerdie (Tyler Dietrich)
+	 * @author ceelman (Chris Elman)
+	 * @author jaeheun (Jason Kim)
+	 * @author mjszymko (Michael Szymkowski)
+	 * @date 2015-APRIL-10
+	 */
 	private Board _b;
 	/**
-	 * 
-	 * @param boardframe: 
-	 * @param board:
+	 * @author tylerdie (Tyler Dietrich)
+	 * @author ceelman (Chris Elman)
+	 * @author jaeheun (Jason Kim)
+	 * @author mjszymko (Michael Szymkowski)
+	 * @date 2015-APRIL-10
 	 */
 	public WordChecker(BoardFrame boardframe, Board board){
 		_rowCoordinates = new ArrayList<Integer>();
@@ -29,7 +78,13 @@ public class WordChecker {
 		_b = board;
 		_tilesPlaced = new ArrayList<Tile>();
 	}
-	
+	/**
+	 * @author tylerdie (Tyler Dietrich)
+	 * @author ceelman (Chris Elman)
+	 * @author jaeheun (Jason Kim)
+	 * @author mjszymko (Michael Szymkowski)
+	 * @date 2015-APRIL-10
+	 */
 	public String isThisWord(){
 		if (isZero()){
 			return null;
@@ -294,27 +349,57 @@ public class WordChecker {
 		System.out.println(word);
 		return _r.isThisAWord(word);  */
 	}
-	
+	/**
+	 * @author tylerdie (Tyler Dietrich)
+	 * @author ceelman (Chris Elman)
+	 * @author jaeheun (Jason Kim)
+	 * @author mjszymko (Michael Szymkowski)
+	 * @date 2015-APRIL-10
+	 */
 	public boolean isWordForward(){
 		return true;
 	}
-	
+	/**
+	 * @author tylerdie (Tyler Dietrich)
+	 * @author ceelman (Chris Elman)
+	 * @author jaeheun (Jason Kim)
+	 * @author mjszymko (Michael Szymkowski)
+	 * @date 2015-APRIL-10
+	 */
 	public boolean isWordBackWard(){
 		return false;
 	}
-	
+	/**
+	 * @author tylerdie (Tyler Dietrich)
+	 * @author ceelman (Chris Elman)
+	 * @author jaeheun (Jason Kim)
+	 * @author mjszymko (Michael Szymkowski)
+	 * @date 2015-APRIL-10
+	 */
 	public void addLetter(int row, int col){
 		_rowCoordinates.add(row);
 		_colCoordinates.add(col);
 		_tilesPlaced.add(_b.getTile(row,col));
 	}
-	
+	/**
+	 * @author tylerdie (Tyler Dietrich)
+	 * @author ceelman (Chris Elman)
+	 * @author jaeheun (Jason Kim)
+	 * @author mjszymko (Michael Szymkowski)
+	 * @date 2015-APRIL-10
+	 */
 	public void clear(){
 		_rowCoordinates = new ArrayList<Integer>();
 		_colCoordinates = new ArrayList<Integer>();
 		_tilesPlaced = new ArrayList<Tile>();
 	}
-	
+	/**
+	 * @author tylerdie (Tyler Dietrich)
+	 * @author ceelman (Chris Elman)
+	 * @author jaeheun (Jason Kim)
+	 * @author mjszymko (Michael Szymkowski)
+	 * @date 2015-APRIL-10
+	 */
 	public boolean isZero(){
 		return _rowCoordinates.size() == 0;
 	}

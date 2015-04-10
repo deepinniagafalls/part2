@@ -15,14 +15,54 @@ import code.base.Scrabble;
 import code.base.TileRack;
 import code.base.Inventory;
 
-
+/**
+ * @author tylerdie (Tyler Dietrich)
+ * @author ceelman (Chris Elman)
+ * @author jaeheun (Jason Kim)
+ * @author mjszymko (Michael Szymkowski)
+ * @date 2015-APRIL-10
+ */
 @SuppressWarnings("unused")
 public class SaveGame {
+	/**
+	 * @author tylerdie (Tyler Dietrich)
+	 * @author ceelman (Chris Elman)
+	 * @author jaeheun (Jason Kim)
+	 * @author mjszymko (Michael Szymkowski)
+	 * @date 2015-APRIL-10
+	 */
 	private Board _b;
+	/**
+	 * @author tylerdie (Tyler Dietrich)
+	 * @author ceelman (Chris Elman)
+	 * @author jaeheun (Jason Kim)
+	 * @author mjszymko (Michael Szymkowski)
+	 * @date 2015-APRIL-10
+	 */
 	private BoardFrame _bf;
+	/**
+	 * @author tylerdie (Tyler Dietrich)
+	 * @author ceelman (Chris Elman)
+	 * @author jaeheun (Jason Kim)
+	 * @author mjszymko (Michael Szymkowski)
+	 * @date 2015-APRIL-10
+	 */
 	private TileRack _tr;
+	/**
+	 * @author tylerdie (Tyler Dietrich)
+	 * @author ceelman (Chris Elman)
+	 * @author jaeheun (Jason Kim)
+	 * @author mjszymko (Michael Szymkowski)
+	 * @date 2015-APRIL-10
+	 */
 	private Scrabble _scrabble;
-	
+	/**
+	 * @author tylerdie (Tyler Dietrich)
+	 * @author ceelman (Chris Elman)
+	 * @author jaeheun (Jason Kim)
+	 * @author mjszymko (Michael Szymkowski)
+	 * @date 2015-APRIL-10
+	 */
 	private String _fileToWriteTo;
 	
 	//public static void main(String[] args) throws IOException{
@@ -30,7 +70,13 @@ public class SaveGame {
 		//t.writeNewFile();
 		
 	//}
-	
+	/**
+	 * @author tylerdie (Tyler Dietrich)
+	 * @author ceelman (Chris Elman)
+	 * @author jaeheun (Jason Kim)
+	 * @author mjszymko (Michael Szymkowski)
+	 * @date 2015-APRIL-10
+	 */
 	public SaveGame(Board b, BoardFrame bf, Scrabble scrabble) throws IOException{
 		_b = b;
 		_bf = bf;
@@ -111,7 +157,13 @@ public class SaveGame {
 	}
 	
 	
-	
+	/**
+	 * @author tylerdie (Tyler Dietrich)
+	 * @author ceelman (Chris Elman)
+	 * @author jaeheun (Jason Kim)
+	 * @author mjszymko (Michael Szymkowski)
+	 * @date 2015-APRIL-10
+	 */
 	public void writeNewFile() throws IOException{
 		
 		
