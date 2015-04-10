@@ -41,7 +41,7 @@ public class PlayerFrame {
 	 */
 	public PlayerFrame(Scrabble s, TileRack tr, int index, Game currentGame, ArrayList<String> name){
 	       try {
-	            UIManager.setLookAndFeel(new javax.swing.plaf.metal.MetalLookAndFeel());
+	            UIManager.setLookAndFeel(new com.sun.java.swing.plaf.motif.MotifLookAndFeel());
 	        } catch(Exception e) {
 	            e.printStackTrace();
 	        }

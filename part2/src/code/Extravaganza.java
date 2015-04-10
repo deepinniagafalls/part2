@@ -42,7 +42,7 @@ public class Extravaganza extends JFrame {
 
 	public Extravaganza(Scrabble scrabble, BoardFrame bf, Game g, ArrayList<String> name, ArrayList<PlayerFrame> pf) throws IOException {
 	      try {
-	            UIManager.setLookAndFeel(new javax.swing.plaf.metal.MetalLookAndFeel());
+	            UIManager.setLookAndFeel(new com.sun.java.swing.plaf.motif.MotifLookAndFeel());
 	        } catch(Exception e) {
 	            e.printStackTrace();
 	        }

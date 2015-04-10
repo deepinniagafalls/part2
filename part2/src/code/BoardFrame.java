@@ -28,7 +28,7 @@ public class BoardFrame extends JFrame {
 	
 	public BoardFrame(Scrabble s, Board b, Inventory i, ArrayList<PlayerFrame> pf, Game g, Scrabble scrabble){
 	       try {
-	            UIManager.setLookAndFeel(new javax.swing.plaf.metal.MetalLookAndFeel());
+	            UIManager.setLookAndFeel(new com.sun.java.swing.plaf.motif.MotifLookAndFeel());
 	        } catch(Exception e) {
 	            e.printStackTrace();
 	        }
