@@ -11,9 +11,9 @@ import java.io.IOException;
 
 import javax.swing.JFrame;
 
-import code.base.Board;
-import code.base.Scrabble;
-import code.base.TileRack;
+import code.base.Board_024;
+import code.base.Scrabble_024;
+import code.base.TileRack_024;
 /**
  * @author tylerdie (Tyler Dietrich)
  * @author ceelman (Chris Elman)
@@ -21,7 +21,7 @@ import code.base.TileRack;
  * @author mjszymko (Michael Szymkowski)
  * @date 2015-APRIL-10
  */
-public class LoadGame {
+public class LoadGame_047 {
 	/**
 	 * @author tylerdie (Tyler Dietrich)
 	 * @author ceelman (Chris Elman)
@@ -30,7 +30,7 @@ public class LoadGame {
 	 * @date 2015-APRIL-10
 	 * Instance variable that holds reference to the Board class
 	 */
-	private Board _b;
+	private Board_024 _b;
 	/**
 	 * @author tylerdie (Tyler Dietrich)
 	 * @author ceelman (Chris Elman)
@@ -39,7 +39,7 @@ public class LoadGame {
 	 * @date 2015-APRIL-10
 	 * Instance variable that holds reference to the BoardFrame class
 	 */
-	private BoardFrame _bf;
+	private BoardFrame_047 _bf;
 	/**
 	 * @author tylerdie (Tyler Dietrich)
 	 * @author ceelman (Chris Elman)
@@ -48,7 +48,7 @@ public class LoadGame {
 	 * @date 2015-APRIL-10
 	 * Instance variable that holds reference to the TileRack class
 	 */
-	private TileRack _tr;
+	private TileRack_024 _tr;
 	/**
 	 * @author tylerdie (Tyler Dietrich)
 	 * @author ceelman (Chris Elman)
@@ -57,7 +57,7 @@ public class LoadGame {
 	 * @date 2015-APRIL-10
 	 * Instance variable that holds reference to the Scrabble class
 	 */
-	private Scrabble _scrabble;
+	private Scrabble_024 _scrabble;
 	/**
 	 * @author tylerdie (Tyler Dietrich)
 	 * @author ceelman (Chris Elman)
@@ -80,7 +80,7 @@ public class LoadGame {
 	 * @param Reference to the BoardFrame class
 	 * @throws IOException
 	 */
-	public LoadGame(Scrabble scrabble, Board b, BoardFrame bf) throws IOException{
+	public LoadGame_047(Scrabble_024 scrabble, Board_024 b, BoardFrame_047 bf) throws IOException{
 	_b = b;
 	_bf = bf;
 	_scrabble = scrabble;

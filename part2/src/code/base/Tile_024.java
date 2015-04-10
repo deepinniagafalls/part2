@@ -1,6 +1,6 @@
 package code.base;
 
-public class Tile {
+public class Tile_024 {
 
 	/**
 	 * Stores the character of the tile.
@@ -17,7 +17,7 @@ public class Tile {
 	 * @param j character of the tile
 	 * @param i point value of the tile
 	 */
-	public Tile(char j, int i){
+	public Tile_024(char j, int i){
 		_letter = j;
 		_pointValue = i;
 	}

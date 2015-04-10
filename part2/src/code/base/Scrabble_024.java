@@ -5,24 +5,24 @@ import java.util.Random;
 
 import javax.swing.JOptionPane;
 
-import code.Game;
+import code.Game_047;
 
-public class Scrabble {
+public class Scrabble_024 {
 	
 
 	
 	/**
 	 * Stores tiles.
 	 */
-	private Inventory _inv;
+	private Inventory_024 _inv;
 	/**
 	 * Stores players.
 	 */
-	private ArrayList<Player> _players = new ArrayList<Player>();
+	private ArrayList<Player_024_047> _players = new ArrayList<Player_024_047>();
 	/**
 	 * tile board to be played on
 	 */
-	private Board _board;
+	private Board_024 _board;
 	/**
 	 * Number of players
 	 */
@@ -30,15 +30,15 @@ public class Scrabble {
 	
 	private boolean _isVeryFirstTurn = true;
 	
-	private Game _g;
+	private Game_047 _g;
 	
 	
 	/**
 	 * Class constructor
 	 */
-	public Scrabble(int numberOfPlayers, Game g){
-		_inv = new Inventory();
-		_board = new Board();
+	public Scrabble_024(int numberOfPlayers, Game_047 g){
+		_inv = new Inventory_024();
+		_board = new Board_024();
 		_numberOfPlayers = numberOfPlayers;
 		_g = g;
 		
@@ -56,21 +56,21 @@ public class Scrabble {
 	 * Adds a new player to the game.
 	 */
 	private void addNewPlayer(int index){
-		_players.add(new Player(_inv, _g.getName(index)));
+		_players.add(new Player_024_047(_inv, _g.getName(index)));
 	}
-	public ArrayList<Player> getPlayers(){
+	public ArrayList<Player_024_047> getPlayers(){
 		return _players;
 	}
 	public int getNumofPlayers(){
 		return _numberOfPlayers;
 	}
-	public Board getBoard(){
+	public Board_024 getBoard(){
 		return _board;
 	}
-	public Inventory getInv(){
+	public Inventory_024 getInv(){
 		return _inv;
 	}
-	public Player returnPlayer(int playernumber){
+	public Player_024_047 returnPlayer(int playernumber){
 		return _players.get(playernumber);
 	}
 	public boolean getIsVeryFirstTurn(){

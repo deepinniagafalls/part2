@@ -17,11 +17,11 @@ import javax.swing.JPanel;
 import javax.swing.JTextField;
 import javax.swing.UIManager;
 
-import code.base.Player;
-import code.base.Scrabble;
-import code.base.Tile;
+import code.base.Player_024_047;
+import code.base.Scrabble_024;
+import code.base.Tile_024;
 
-public class Extravaganza extends JFrame {
+public class Extravaganza_047 extends JFrame {
 
 	/**
 	 * @param _currentTurn keeps the turn as an int form
@@ -32,16 +32,16 @@ public class Extravaganza extends JFrame {
 
 	private JButton open = new JButton("Open"), save = new JButton("Save");
 	private JButton pass = new JButton("Pass");
-	private BoardFrame _bf;
-	private Scrabble _scrabble;
+	private BoardFrame_047 _bf;
+	private Scrabble_024 _scrabble;
 	private int _currentTurn;
 	private int _numberOfPlayers;
-	private Game _g;
+	private Game_047 _g;
 	private int _c = 0;
 	private JLabel label1;
 	private boolean _isPlayerFrameStillEmpty = false;
 
-	public Extravaganza(Scrabble scrabble, BoardFrame bf, Game g, ArrayList<String> name, ArrayList<PlayerFrame> pf) throws IOException {
+	public Extravaganza_047(Scrabble_024 scrabble, BoardFrame_047 bf, Game_047 g, ArrayList<String> name, ArrayList<PlayerFrame_047> pf) throws IOException {
 	      try {
 	            UIManager.setLookAndFeel(new com.sun.java.swing.plaf.motif.MotifLookAndFeel());
 	        } catch(Exception e) {
@@ -99,11 +99,11 @@ public class Extravaganza extends JFrame {
 					filename.setText("You pressed cancel");
 					dir.setText("");
 				}
-				c.setVisible(true); */
-				
+				c.setVisible(true);
+				*/
 				
 				try {
-					new LoadGame(_scrabble, _scrabble.getBoard(), _bf);
+					new LoadGame_047(_scrabble, _scrabble.getBoard(), _bf);
 				} catch (IOException e1) {
 					// TODO Auto-generated catch block
 					e1.printStackTrace();
@@ -116,7 +116,7 @@ public class Extravaganza extends JFrame {
 		public void actionPerformed(ActionEvent e) {
 			
 			try {
-				new SaveGame(_scrabble.getBoard(), _bf, _scrabble);
+				new SaveGame_047(_scrabble.getBoard(), _bf, _scrabble);
 			} catch (IOException e1) {
 				// TODO Auto-generated catch block
 				e1.printStackTrace();
@@ -162,10 +162,10 @@ public class Extravaganza extends JFrame {
 			
 			JOptionPane.showMessageDialog(null, "You have passed your turn");
 			int tep = _g.getCurrentTurn();
-			PlayerFrame temp = _bf.getPlayerFrame(_g.getCurrentTurn());
+			PlayerFrame_047 temp = _bf.getPlayerFrame(_g.getCurrentTurn());
 			for(int i=0; i<12; i++){ //Refills empty PlayerSpaces in the PlayerFrame
 				if(temp.getPlayerSpace(i).getTile()==null){
-					Tile t = _scrabble.getInv().removeRandomTile();
+					Tile_024 t = _scrabble.getInv().removeRandomTile();
 					temp.getPlayerSpace(i).setText(Character.toString(t.getChar()) + ", " + t.getValue());
 					temp.getPlayerSpace(i).setCurrentTile(t);
 				}
@@ -190,13 +190,13 @@ public class Extravaganza extends JFrame {
 				for(int i=0; i<wordToScore.length();i++){
 					sum = sum + scoreHelper(wordToScore.charAt(i));
 				}
-				Player tempPlayer = _scrabble.getPlayers().get(_g.getCurrentTurn());
+				Player_024_047 tempPlayer = _scrabble.getPlayers().get(_g.getCurrentTurn());
 				System.out.println(sum);
 				System.out.println(tempPlayer.getScore());
 				tempPlayer.addScore(tempPlayer.getScore(), sum);
 				System.out.println(tempPlayer.getScore());
 			}
-			WordChecker check = new WordChecker(_bf,_bf.getBoard());
+			WordChecker_047 check = new WordChecker_047(_bf,_bf.getBoard());
 			_bf.setWord(check);
 			_bf.getPlayerFrame(tep).update();
 			

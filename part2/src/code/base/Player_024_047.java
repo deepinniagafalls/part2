@@ -4,7 +4,7 @@ import java.awt.Color;
 import java.util.Random;
 
 
-public class Player {
+public class Player_024_047 {
 
 	/**
 	 * Records the score.
@@ -14,7 +14,7 @@ public class Player {
 	/**
 	 * Allows the Player to access the Tiles on its own TileRack.
 	 */
-	private TileRack _rack;
+	private TileRack_024 _rack;
 	//private Inventory _inv;
 	
 	private Color _myColor;
@@ -27,10 +27,10 @@ public class Player {
 	 * 
 	 * @param inv can draw Tiles from the Inventory
 	 */
-	public Player(Inventory inv, String name){
+	public Player_024_047(Inventory_024 inv, String name){
 		_score = 0;
 		//_inv = inv;
-		_rack = new TileRack(inv);
+		_rack = new TileRack_024(inv);
 		Random random = new Random();
 		float hue = random.nextFloat();
 		float saturation = (random.nextFloat() * 1.0f) + 0.6f;
@@ -47,7 +47,7 @@ public class Player {
 		return _score;
 	}
 	
-	public TileRack getTileRack(){
+	public TileRack_024 getTileRack(){
 		return _rack;
 	}
 

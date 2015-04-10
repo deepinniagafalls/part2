@@ -9,11 +9,11 @@ import java.io.IOException;
 import javax.swing.JFrame;
 import javax.swing.UIManager;
 
-import code.base.Board;
-import code.base.Player;
-import code.base.Scrabble;
-import code.base.TileRack;
-import code.base.Inventory;
+import code.base.Board_024;
+import code.base.Player_024_047;
+import code.base.Scrabble_024;
+import code.base.TileRack_024;
+import code.base.Inventory_024;
 
 /**
  * @author tylerdie (Tyler Dietrich)
@@ -23,45 +23,50 @@ import code.base.Inventory;
  * @date 2015-APRIL-10
  */
 @SuppressWarnings("unused")
-public class SaveGame {
+public class SaveGame_047 {
 	/**
 	 * @author tylerdie (Tyler Dietrich)
 	 * @author ceelman (Chris Elman)
 	 * @author jaeheun (Jason Kim)
 	 * @author mjszymko (Michael Szymkowski)
 	 * @date 2015-APRIL-10
+	 * Instance variable that holds reference to the Board class
 	 */
-	private Board _b;
+	private Board_024 _b;
 	/**
 	 * @author tylerdie (Tyler Dietrich)
 	 * @author ceelman (Chris Elman)
 	 * @author jaeheun (Jason Kim)
 	 * @author mjszymko (Michael Szymkowski)
 	 * @date 2015-APRIL-10
+	 * Instance variable that holds reference to the BoardFrame class
 	 */
-	private BoardFrame _bf;
+	private BoardFrame_047 _bf;
 	/**
 	 * @author tylerdie (Tyler Dietrich)
 	 * @author ceelman (Chris Elman)
 	 * @author jaeheun (Jason Kim)
 	 * @author mjszymko (Michael Szymkowski)
 	 * @date 2015-APRIL-10
+	 * Instance variable that holds reference to the TileRack class
 	 */
-	private TileRack _tr;
+	private TileRack_024 _tr;
 	/**
 	 * @author tylerdie (Tyler Dietrich)
 	 * @author ceelman (Chris Elman)
 	 * @author jaeheun (Jason Kim)
 	 * @author mjszymko (Michael Szymkowski)
 	 * @date 2015-APRIL-10
+	 * Instance variable that holds reference to the Scrabble class
 	 */
-	private Scrabble _scrabble;
+	private Scrabble_024 _scrabble;
 	/**
 	 * @author tylerdie (Tyler Dietrich)
 	 * @author ceelman (Chris Elman)
 	 * @author jaeheun (Jason Kim)
 	 * @author mjszymko (Michael Szymkowski)
 	 * @date 2015-APRIL-10
+	 * Instance variable that holds reference to a specidif file to write to
 	 */
 	private String _fileToWriteTo;
 	
@@ -76,8 +81,13 @@ public class SaveGame {
 	 * @author jaeheun (Jason Kim)
 	 * @author mjszymko (Michael Szymkowski)
 	 * @date 2015-APRIL-10
+	 * Constructor for the SaveGame class
+	 * @param Reference to the Board class
+	 * @param Reference to the BoardFrame class
+	 * @param Reference to the Scrabble class
+	 * @throws Throws IOException
 	 */
-	public SaveGame(Board b, BoardFrame bf, Scrabble scrabble) throws IOException{
+	public SaveGame_047(Board_024 b, BoardFrame_047 bf, Scrabble_024 scrabble) throws IOException{
 		_b = b;
 		_bf = bf;
 		_scrabble = scrabble;
@@ -112,10 +122,10 @@ public class SaveGame {
 		bw.write("%");
 		
 		for(int i = 0; i <_scrabble.getNumofPlayers(); i = i + 1 ){
-			Player p = _scrabble.returnPlayer(i);
+			Player_024_047 p = _scrabble.returnPlayer(i);
 			p.getScore();
 			p.getColor();
-			PlayerFrame pf = _bf.getPlayerFrame(i);
+			PlayerFrame_047 pf = _bf.getPlayerFrame(i);
 			bw.write("[" +p.getColor() + ", " + p.getScore() + "]");
 			
 			bw.write("%");
@@ -163,6 +173,7 @@ public class SaveGame {
 	 * @author jaeheun (Jason Kim)
 	 * @author mjszymko (Michael Szymkowski)
 	 * @date 2015-APRIL-10
+	 * Method that writes to a file
 	 */
 	public void writeNewFile() throws IOException{
 		

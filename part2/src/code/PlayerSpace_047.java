@@ -7,9 +7,9 @@ import java.util.ArrayList;
 
 import javax.swing.JButton;
 
-import code.base.Player;
-import code.base.Scrabble;
-import code.base.Tile;
+import code.base.Player_024_047;
+import code.base.Scrabble_024;
+import code.base.Tile_024;
 /**
  * @author tylerdie (Tyler Dietrich)
  * @author ceelman (Chris Elman)
@@ -17,53 +17,59 @@ import code.base.Tile;
  * @author mjszymko (Michael Szymkowski)
  * @date 2015-APRIL-10
  */
-public class PlayerSpace extends JButton implements ActionListener {
+public class PlayerSpace_047 extends JButton implements ActionListener {
 	/**
 	 * @author tylerdie (Tyler Dietrich)
 	 * @author ceelman (Chris Elman)
 	 * @author jaeheun (Jason Kim)
 	 * @author mjszymko (Michael Szymkowski)
 	 * @date 2015-APRIL-10
+	 * Instance variable that holds reference to the ArrayList of Players
 	 */
-	private ArrayList<Player> _players;
+	private ArrayList<Player_024_047> _players;
 	/**
 	 * @author tylerdie (Tyler Dietrich)
 	 * @author ceelman (Chris Elman)
 	 * @author jaeheun (Jason Kim)
 	 * @author mjszymko (Michael Szymkowski)
 	 * @date 2015-APRIL-10
+	 * Instance variable that holds reference to the PlayerSpace class
 	 */
-	private PlayerSpace _playerSpace;
+	private PlayerSpace_047 _playerSpace;
 	/**
 	 * @author tylerdie (Tyler Dietrich)
 	 * @author ceelman (Chris Elman)
 	 * @author jaeheun (Jason Kim)
 	 * @author mjszymko (Michael Szymkowski)
 	 * @date 2015-APRIL-10
+	 * Instance variable that holds reference to the Scrabble
 	 */
-	private Scrabble _scrabble;
+	private Scrabble_024 _scrabble;
 	/**
 	 * @author tylerdie (Tyler Dietrich)
 	 * @author ceelman (Chris Elman)
 	 * @author jaeheun (Jason Kim)
 	 * @author mjszymko (Michael Szymkowski)
 	 * @date 2015-APRIL-10
+	 * Instance variable that holds reference to the Tile class
 	 */
-	private Tile _t;
+	private Tile_024 _t;
 	/**
 	 * @author tylerdie (Tyler Dietrich)
 	 * @author ceelman (Chris Elman)
 	 * @author jaeheun (Jason Kim)
 	 * @author mjszymko (Michael Szymkowski)
 	 * @date 2015-APRIL-10
+	 * Instance variable that holds reference to the PlayerFrame class
 	 */
-	private PlayerFrame _pf;
+	private PlayerFrame_047 _pf;
 	/**
 	 * @author tylerdie (Tyler Dietrich)
 	 * @author ceelman (Chris Elman)
 	 * @author jaeheun (Jason Kim)
 	 * @author mjszymko (Michael Szymkowski)
 	 * @date 2015-APRIL-10
+	 * Instance variable that holds reference to the number of tiles a player has
 	 */
 	private int _numberOfTile;
 	/**
@@ -72,24 +78,31 @@ public class PlayerSpace extends JButton implements ActionListener {
 	 * @author jaeheun (Jason Kim)
 	 * @author mjszymko (Michael Szymkowski)
 	 * @date 2015-APRIL-10
+	 * Instance variable that holds reference to a temporary tile
 	 */
-	private Tile _tempTH;
+	private Tile_024 _tempTH;
 	/**
 	 * @author tylerdie (Tyler Dietrich)
 	 * @author ceelman (Chris Elman)
 	 * @author jaeheun (Jason Kim)
 	 * @author mjszymko (Michael Szymkowski)
 	 * @date 2015-APRIL-10
+	 * Instance variable that holds reference to the Game class
 	 */
-	private Game _currentGame;
+	private Game_047 _currentGame;
 	/**
 	 * @author tylerdie (Tyler Dietrich)
 	 * @author ceelman (Chris Elman)
 	 * @author jaeheun (Jason Kim)
 	 * @author mjszymko (Michael Szymkowski)
 	 * @date 2015-APRIL-10
+	 * Constructor for the PlayerSpace class
+	 * @param Reference to the Scrabble class
+	 * @param Reference to an int number
+	 * @param Reference to the PlayerFrame class
+	 * @param Reference to the Game class
 	 */
-	public PlayerSpace(Scrabble s, int i, PlayerFrame pf, Game currentGame){
+	public PlayerSpace_047(Scrabble_024 s, int i, PlayerFrame_047 pf, Game_047 currentGame){
 		_pf = pf;
 		_numberOfTile = i;
 		_scrabble = s;
@@ -109,6 +122,7 @@ public class PlayerSpace extends JButton implements ActionListener {
 			 * @author jaeheun (Jason Kim)
 			 * @author mjszymko (Michael Szymkowski)
 			 * @date 2015-APRIL-10
+			 * Method that performs the actions for the PlayerSpace class
 			 */
 				public void actionPerformed(ActionEvent e) {
 				//	if(_tempTH!=null){
@@ -116,7 +130,7 @@ public class PlayerSpace extends JButton implements ActionListener {
 					//}
 					if(_pf.getMyTurnNumber()==_currentGame.getCurrentTurn()){
 						if(_pf.getBoard().getTempTile()!=null){
-							Tile temp = _pf.getBoard().getTempTile();
+							Tile_024 temp = _pf.getBoard().getTempTile();
 							for(int i=0; i<12; i++){
 								if(_pf.getPlayerSpace(i).getTile() == null){
 									_pf.getPlayerSpace(i).setCurrentTile(_playerSpace.getTile());
@@ -147,6 +161,8 @@ public class PlayerSpace extends JButton implements ActionListener {
 	 * @author jaeheun (Jason Kim)
 	 * @author mjszymko (Michael Szymkowski)
 	 * @date 2015-APRIL-10
+	 * Method that gets the number of tiles the player has
+	 * @return Returns the number of tiles
 	 */
 	
 	public int getNumber(){
@@ -158,9 +174,11 @@ public class PlayerSpace extends JButton implements ActionListener {
 	 * @author jaeheun (Jason Kim)
 	 * @author mjszymko (Michael Szymkowski)
 	 * @date 2015-APRIL-10
+	 * Method that gets a temporary tile
+	 * @return Returns a temporary tile
 	 */
 	
-	public Tile getTempTile(){
+	public Tile_024 getTempTile(){
 		return _tempTH;
 	}
 	/**
@@ -169,8 +187,10 @@ public class PlayerSpace extends JButton implements ActionListener {
 	 * @author jaeheun (Jason Kim)
 	 * @author mjszymko (Michael Szymkowski)
 	 * @date 2015-APRIL-10
+	 * Method that sets a current tile
+	 * @param Reference to a specific tile
 	 */
-	public void setCurrentTile(Tile t){
+	public void setCurrentTile(Tile_024 t){
 		_t = t;
 	}
 	/**
@@ -179,8 +199,10 @@ public class PlayerSpace extends JButton implements ActionListener {
 	 * @author jaeheun (Jason Kim)
 	 * @author mjszymko (Michael Szymkowski)
 	 * @date 2015-APRIL-10
+	 * Method that gets the specific tile
+	 * @return Returns the tile
 	 */
-	public Tile getTile(){
+	public Tile_024 getTile(){
 		return _t;
 	}
 	/**
@@ -189,6 +211,7 @@ public class PlayerSpace extends JButton implements ActionListener {
 	 * @author jaeheun (Jason Kim)
 	 * @author mjszymko (Michael Szymkowski)
 	 * @date 2015-APRIL-10
+	 * Method that performs an action
 	 */
 	@Override
 	public void actionPerformed(ActionEvent arg0) {
