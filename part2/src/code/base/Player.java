@@ -19,13 +19,15 @@ public class Player {
 	
 	private Color _myColor;
 	
+	private String _myName;
+	
 	
 	/**
 	 * Class constructor.
 	 * 
 	 * @param inv can draw Tiles from the Inventory
 	 */
-	public Player(Inventory inv){
+	public Player(Inventory inv, String name){
 		_score = 0;
 		//_inv = inv;
 		_rack = new TileRack(inv);
@@ -34,6 +36,7 @@ public class Player {
 		float saturation = (random.nextFloat() * 1.0f) + 0.6f;
 		float luminance = (random.nextFloat() * 1.1f) + 0.7f; 
 		_myColor = Color.getHSBColor(hue, saturation, luminance);
+		_myName = name;
 	}
 	/**
 	 * Gets the int value of the Player's score.
@@ -63,6 +66,10 @@ public class Player {
 		_score = score;
 		_score = _score + i;
 		return _score;
+	}
+	
+	public String getName(){
+		return _myName;
 	}
 	
 }

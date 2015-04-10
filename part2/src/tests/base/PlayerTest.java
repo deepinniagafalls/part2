@@ -3,6 +3,7 @@ package tests.base;
 import org.junit.Test;
 
 import static org.junit.Assert.assertTrue;
+import code.Game;
 import code.base.Inventory;
 import code.base.Player;
 
@@ -13,7 +14,7 @@ public class PlayerTest {
 	
     private void testInitialScore(int expected) {
     	Inventory i = new Inventory();
-        Player p = new Player(i);
+        Player p = new Player(i,"Test1");
         int actual = p.getScore();
         
         assertTrue("I tested whether or not the Player's score was"+expected+"and it should have returned"+actual, actual==expected);
@@ -27,7 +28,7 @@ public class PlayerTest {
 	
     private void testAddScore(int original, int add, int total) {
     	Inventory i = new Inventory();
-        Player p = new Player(i);
+        Player p = new Player(i,"Test2");
         int actual = p.addScore(original, add);
         
         assertTrue("I tested whether or not the Player's score was"+total+"after adding"+original+"and"+add+"and it should have returned"+actual, actual==total);

@@ -92,6 +92,9 @@ public class Game {
 	 * @param String for the player names
 	 * @throws IOEception
 	 */
+	
+	private ArrayList<String> _names = new ArrayList<>();
+	
 	public Game(String s) throws IOException{
 	       try {
 	            UIManager.setLookAndFeel(new javax.swing.plaf.metal.MetalLookAndFeel());
@@ -103,7 +106,7 @@ public class Game {
 	       String e3 = "";
 	       String e4 = "";
 	       String p = "";
-	       ArrayList<String> names = new ArrayList<>();
+	      // ArrayList<String> names = new ArrayList<>();
 		_currentGame = this;
 		if(s == "CUI"){
 		System.out.print("How many players do you want? ");
@@ -125,8 +128,8 @@ public class Game {
 		    e2 = scanIn3.nextLine();
 
 
-			names.add(e1);
-			names.add(e2);
+			_names.add(e1);
+			_names.add(e2);
 
 		}
 		else if(_numberOfPlayers == 3){
@@ -142,9 +145,9 @@ public class Game {
 			System.out.print("Please enter player 3's name in: ");
 			Scanner scanIn4 = new Scanner(System.in);
 		    e3 = scanIn4.nextLine();
-			names.add(e1);
-			names.add(e2);
-			names.add(e3);
+			_names.add(e1);
+			_names.add(e2);
+			_names.add(e3);
 			
 		}
 		else if(_numberOfPlayers == 4){
@@ -160,10 +163,10 @@ public class Game {
 			System.out.print("Please enter player 4's name in: ");
 			Scanner scanIn5 = new Scanner(System.in);
 		    e4 = scanIn5.nextLine();
-			names.add(e1);
-			names.add(e2);
-			names.add(e3);
-			names.add(e4);
+			_names.add(e1);
+			_names.add(e2);
+			_names.add(e3);
+			_names.add(e4);
 			
 		}
 		}
@@ -179,38 +182,38 @@ public class Game {
 		if(_numberOfPlayers == 2){
 		e1 = JOptionPane.showInputDialog(null, "Please enter player 1's name in","Number",JOptionPane.QUESTION_MESSAGE);;
 		e2 = JOptionPane.showInputDialog(null, "Please enter player 2's name in","Number",JOptionPane.QUESTION_MESSAGE);;
-		names.add(e1);
-		names.add(e2);
+		_names.add(e1);
+		_names.add(e2);
 		}
 		else if(_numberOfPlayers == 3){
 		e1 = JOptionPane.showInputDialog(null, "Please enter player 1's name in","Number",JOptionPane.QUESTION_MESSAGE);;
 		e2 = JOptionPane.showInputDialog(null, "Please enter player 2's name in","Number",JOptionPane.QUESTION_MESSAGE);;
 		e3 = JOptionPane.showInputDialog(null, "Please enter player 3's name in","Number",JOptionPane.QUESTION_MESSAGE);;
-		names.add(e1);
-		names.add(e2);
-		names.add(e3);
+		_names.add(e1);
+		_names.add(e2);
+		_names.add(e3);
 		}
 		else if(_numberOfPlayers == 4){
 		e1 = JOptionPane.showInputDialog(null, "Please enter player 1's name in","Number",JOptionPane.QUESTION_MESSAGE);;
 		e2 = JOptionPane.showInputDialog(null, "Please enter player 2's name in","Number",JOptionPane.QUESTION_MESSAGE);;
 		e3 = JOptionPane.showInputDialog(null, "Please enter player 3's name in","Number",JOptionPane.QUESTION_MESSAGE);;
 		e4 = JOptionPane.showInputDialog(null, "Please enter player 4's name in","Number",JOptionPane.QUESTION_MESSAGE);;
-		names.add(e1);
-		names.add(e2);
-		names.add(e3);
-		names.add(e4);
+		_names.add(e1);
+		_names.add(e2);
+		_names.add(e3);
+		_names.add(e4);
 		}
 		}
-		Scrabble scrabble = new Scrabble(_numberOfPlayers);
+		Scrabble scrabble = new Scrabble(_numberOfPlayers, this);
 		Inventory invent = scrabble.getInv();
 		Board board = scrabble.getBoard();
 		_playerList = scrabble.getPlayers();
 		_playerFrameList = new ArrayList<PlayerFrame>();
 		for(int i = 0; i < _numberOfPlayers; i++){
-			_playerFrameList.add(new PlayerFrame(scrabble, scrabble.returnPlayer(i).getTileRack(), i, _currentGame, names));
+			_playerFrameList.add(new PlayerFrame(scrabble, scrabble.returnPlayer(i).getTileRack(), i, _currentGame, _names));
 		}
 		BoardFrame boardframe = new BoardFrame(scrabble, board , invent,_playerFrameList, _currentGame, scrabble);
-		Extravaganza fc = new Extravaganza(scrabble, boardframe, this, names, _playerFrameList);
+		Extravaganza fc = new Extravaganza(scrabble, boardframe, this, _names, _playerFrameList);
 	}
 	
 	/**
@@ -262,4 +265,23 @@ public class Game {
 		return _numberOfPlayers;
 	}
 	
+	public String getName(int index){
+		return _names.get(index);
+	}
+	
+	public Player getPlayer(int index){
+		return _playerList.get(index);
+	}
+	
+	public void printOutWinner(){
+		String winner = _playerList.get(0).getName();
+		int highest = _playerList.get(0).getScore();
+		for(int i=0; i<_numberOfPlayers; i++){
+			if(_playerList.get(i).getScore()<highest){
+				winner = _playerList.get(i).getName();
+				highest = _playerList.get(i).getScore();
+			}
+		}
+		System.out.println("The game is over, " + winner + " is the winner!");
+	}
 }

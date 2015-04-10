@@ -90,7 +90,7 @@ public class WordChecker {
 		if (isZero()){
 			_numberOfPassesInARow = _numberOfPassesInARow + 1;
 			if(_numberOfPassesInARow==_bf.getGame().getNumOfPlayers()){ //Terminates game
-				System.out.println("GAME OVER Man!");
+				_bf.getGame().printOutWinner();
 				System.exit(0);
 			}
 			return null;

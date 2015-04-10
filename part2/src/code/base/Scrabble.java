@@ -5,6 +5,8 @@ import java.util.Random;
 
 import javax.swing.JOptionPane;
 
+import code.Game;
+
 public class Scrabble {
 	
 
@@ -28,17 +30,20 @@ public class Scrabble {
 	
 	private boolean _isVeryFirstTurn = true;
 	
+	private Game _g;
+	
 	
 	/**
 	 * Class constructor
 	 */
-	public Scrabble(int numberOfPlayers){
+	public Scrabble(int numberOfPlayers, Game g){
 		_inv = new Inventory();
 		_board = new Board();
 		_numberOfPlayers = numberOfPlayers;
+		_g = g;
 		
 		for(int i = 0; i < _numberOfPlayers; i++){
-			addNewPlayer();
+			addNewPlayer(i);
 		}
 		try{}
 		catch(IllegalArgumentException e){
@@ -50,8 +55,8 @@ public class Scrabble {
 	/**
 	 * Adds a new player to the game.
 	 */
-	private void addNewPlayer(){
-		_players.add(new Player(_inv));
+	private void addNewPlayer(int index){
+		_players.add(new Player(_inv, _g.getName(index)));
 	}
 	public ArrayList<Player> getPlayers(){
 		return _players;
