@@ -145,6 +145,7 @@ public class Extravaganza extends JFrame {
 		}
 		
 		public void actionPerformed(ActionEvent e) {
+			String wordToScore = _bf.getWordChecker().isThisWord();
 			if(_bf.getWordChecker().isZero()){
 				_g.incrementTurn();	
 				if(_g.getCurrentTurn() == 0){label1.setText("Turn: "+ _name.get(0));}
@@ -152,7 +153,7 @@ public class Extravaganza extends JFrame {
 				if(_g.getCurrentTurn() == 2){label1.setText("Turn: "+ _name.get(2));}
 				if(_g.getCurrentTurn() == 3){label1.setText("Turn: "+ _name.get(3));}
 			}
-			else if(_bf.getWordChecker().isThisWord()==null){
+			else if(wordToScore == null){
 				
 			}
 			
@@ -173,9 +174,9 @@ public class Extravaganza extends JFrame {
 			if(_g.getCurrentTurn() == 1){label1.setText("Turn: "+ _name.get(1));}
 			if(_g.getCurrentTurn() == 2){label1.setText("Turn: "+ _name.get(2));}
 			if(_g.getCurrentTurn() == 3){label1.setText("Turn: "+ _name.get(3));}
-			System.out.println(_bf.getWordChecker().isThisWord());
-			if(_bf.getWordChecker().isThisWord()!=null){
-				String wordToScore = _bf.getWordChecker().isThisWord();
+			
+			
+			if(wordToScore != null){
 				int sum = 0;
 				for(int i=0; i<wordToScore.length();i++){
 					sum = sum + scoreHelper(wordToScore.charAt(i));
@@ -191,6 +192,7 @@ public class Extravaganza extends JFrame {
 			_bf.getPlayerFrame(tep).update();
 			
 			}
+			_bf.getWordChecker().clear();
 		}
 	}
 	

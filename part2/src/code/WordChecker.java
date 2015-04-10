@@ -3,6 +3,8 @@ package code;
 
 import java.util.ArrayList;
 
+import javax.swing.JButton;
+
 import code.base.Board;
 import code.base.Tile;
 import code.util.ReaderTool;
@@ -25,6 +27,10 @@ public class WordChecker {
 	}
 	
 	public String isThisWord(){
+		if(isZero()){
+			return null;
+		}
+		else{
 		String word = "";
 		String wordForward = "";
 		String wordBackward = "";
@@ -108,24 +114,30 @@ public class WordChecker {
 			
 		}
 		
+		
+		
 		if(_r.isThisAWord(wordForward) || _r.isThisAWord(wordBackward)){
-			clear();
 			return wordForward;
 		}
 		else{
+			
 			PlayerFrame current = _bf.getPlayerFrame(_bf.getGame().getCurrentTurn());
+			int counter = 0;
 			for(int i = 0; i < 12; i ++){
-				if(current.getPlayerSpace(i) == null){
-					current.getPlayerSpace(i).setCurrentTile(_tilesPlaced.get(i));
-					current.getPlayerSpace(i).setText(Character.toString(_tilesPlaced.get(i).getChar()));
+				if(current.getPlayerSpace(i).getTile() == null){
+					System.out.println(i);
+					current.getPlayerSpace(i).setCurrentTile(_tilesPlaced.get(counter));
+					current.getPlayerSpace(i).setText(Character.toString(_tilesPlaced.get(counter).getChar()) + "," + _tilesPlaced.get(counter).getValue());
+					counter = counter + 1;
 				}
 			}
 			for(int i = 0; i < _rowCoordinates.size(); i ++){
 				_bf.getTileSpace(_rowCoordinates.get(i), _colCoordinates.get(i)).setText("");
+				_bf.getTileSpace(_rowCoordinates.get(i), _colCoordinates.get(i)).setBackground(new JButton().getBackground());
 				_b.removeTile(_rowCoordinates.get(i), _colCoordinates.get(i));
 			}
-			clear();
 			return null;
+		}
 		}
 		
 		
