@@ -145,6 +145,19 @@ public class Extravaganza extends JFrame {
 		}
 		
 		public void actionPerformed(ActionEvent e) {
+			if(_bf.getWordChecker().isZero()){
+				_g.incrementTurn();	
+				if(_g.getCurrentTurn() == 0){label1.setText("Turn: "+ _name.get(0));}
+				if(_g.getCurrentTurn() == 1){label1.setText("Turn: "+ _name.get(1));}
+				if(_g.getCurrentTurn() == 2){label1.setText("Turn: "+ _name.get(2));}
+				if(_g.getCurrentTurn() == 3){label1.setText("Turn: "+ _name.get(3));}
+			}
+			else if(_bf.getWordChecker().isThisWord()==null){
+				
+			}
+			
+			else{
+			
 			JOptionPane.showMessageDialog(null, "You have passed your turn");
 			int tep = _g.getCurrentTurn();
 			PlayerFrame temp = _bf.getPlayerFrame(_g.getCurrentTurn());
@@ -177,6 +190,7 @@ public class Extravaganza extends JFrame {
 			_bf.setWord(check);
 			_bf.getPlayerFrame(tep).update();
 			
+			}
 		}
 	}
 	

@@ -109,6 +109,7 @@ public class WordChecker {
 		}
 		
 		if(_r.isThisAWord(wordForward) || _r.isThisAWord(wordBackward)){
+			clear();
 			return wordForward;
 		}
 		else{
@@ -123,6 +124,7 @@ public class WordChecker {
 				_bf.getTileSpace(_rowCoordinates.get(i), _colCoordinates.get(i)).setText("");
 				_b.removeTile(_rowCoordinates.get(i), _colCoordinates.get(i));
 			}
+			clear();
 			return null;
 		}
 		
@@ -248,4 +250,13 @@ public class WordChecker {
 		_tilesPlaced.add(_b.getTile(row,col));
 	}
 	
+	public void clear(){
+		_rowCoordinates = new ArrayList<Integer>();
+		_colCoordinates = new ArrayList<Integer>();
+		_tilesPlaced = new ArrayList<Tile>();
+	}
+	
+	public boolean isZero(){
+		return _rowCoordinates.size() == 0;
+	}
 }
