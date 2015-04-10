@@ -10,7 +10,7 @@ import javax.swing.JButton;
 import code.base.Board_024;
 import code.base.Inventory_024;
 import code.base.Player_024_047;
-import code.base.Scrabble_024;
+import code.base.Scrabble_024_047;
 import code.base.Tile_024;
 /**
  * @author tylerdie (Tyler Dietrich)
@@ -91,7 +91,7 @@ public class TileSpace_047 extends JButton implements ActionListener {
 	 * @date 2015-APRIL-10
 	 * Instance variable that holds reference to the Scrabble class
 	 */
-	private Scrabble_024 _scrabble;
+	private Scrabble_024_047 _scrabble;
 	/**
 	 * @author tylerdie (Tyler Dietrich)
 	 * @author ceelman (Chris Elman)
@@ -132,7 +132,7 @@ public class TileSpace_047 extends JButton implements ActionListener {
 	 * @param s: the reference to the scrabble game
 	 * @param bf: the reference to the current boardframe
 	 */
-	public TileSpace_047(int x, int y, Scrabble_024 s, BoardFrame_047 bf){
+	public TileSpace_047(int x, int y, Scrabble_024_047 s, BoardFrame_047 bf){
 		_j = this;
 		_bf = bf;
 		_row = x;

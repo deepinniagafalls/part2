@@ -12,7 +12,7 @@ import java.io.IOException;
 import javax.swing.JFrame;
 
 import code.base.Board_024;
-import code.base.Scrabble_024;
+import code.base.Scrabble_024_047;
 import code.base.TileRack_024;
 /**
  * @author tylerdie (Tyler Dietrich)
@@ -57,7 +57,7 @@ public class LoadGame_047 {
 	 * @date 2015-APRIL-10
 	 * Instance variable that holds reference to the Scrabble class
 	 */
-	private Scrabble_024 _scrabble;
+	private Scrabble_024_047 _scrabble;
 	/**
 	 * @author tylerdie (Tyler Dietrich)
 	 * @author ceelman (Chris Elman)
@@ -80,7 +80,7 @@ public class LoadGame_047 {
 	 * @param Reference to the BoardFrame class
 	 * @throws IOException
 	 */
-	public LoadGame_047(Scrabble_024 scrabble, Board_024 b, BoardFrame_047 bf) throws IOException{
+	public LoadGame_047(Scrabble_024_047 scrabble, Board_024 b, BoardFrame_047 bf) throws IOException{
 	_b = b;
 	_bf = bf;
 	_scrabble = scrabble;

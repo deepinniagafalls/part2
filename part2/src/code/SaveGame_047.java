@@ -11,7 +11,7 @@ import javax.swing.UIManager;
 
 import code.base.Board_024;
 import code.base.Player_024_047;
-import code.base.Scrabble_024;
+import code.base.Scrabble_024_047;
 import code.base.TileRack_024;
 import code.base.Inventory_024;
 
@@ -59,7 +59,7 @@ public class SaveGame_047 {
 	 * @date 2015-APRIL-10
 	 * Instance variable that holds reference to the Scrabble class
 	 */
-	private Scrabble_024 _scrabble;
+	private Scrabble_024_047 _scrabble;
 	/**
 	 * @author tylerdie (Tyler Dietrich)
 	 * @author ceelman (Chris Elman)
@@ -87,7 +87,7 @@ public class SaveGame_047 {
 	 * @param Reference to the Scrabble class
 	 * @throws Throws IOException
 	 */
-	public SaveGame_047(Board_024 b, BoardFrame_047 bf, Scrabble_024 scrabble) throws IOException{
+	public SaveGame_047(Board_024 b, BoardFrame_047 bf, Scrabble_024_047 scrabble) throws IOException{
 		_b = b;
 		_bf = bf;
 		_scrabble = scrabble;

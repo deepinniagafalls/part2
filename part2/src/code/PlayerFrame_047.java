@@ -15,7 +15,7 @@ import javax.swing.UIManager;
 import code.base.Board_024;
 import code.base.Inventory_024;
 import code.base.Player_024_047;
-import code.base.Scrabble_024;
+import code.base.Scrabble_024_047;
 import code.base.Tile_024;
 import code.base.TileRack_024;
 /**
@@ -34,7 +34,7 @@ public class PlayerFrame_047 {
 	 * @date 2015-APRIL-10
 	 * Instance variable that holds reference to the Scrabble class
 	 */
-	private Scrabble_024 _s;
+	private Scrabble_024_047 _s;
 	/**
 	 * @author tylerdie (Tyler Dietrich)
 	 * @author ceelman (Chris Elman)
@@ -166,7 +166,7 @@ public class PlayerFrame_047 {
 	 * @param Reference to hte current game
 	 * @param reference to the names of the players
 	 */
-	public PlayerFrame_047(Scrabble_024 s, TileRack_024 tr, int index, Game_047 currentGame, ArrayList<String> name){
+	public PlayerFrame_047(Scrabble_024_047 s, TileRack_024 tr, int index, Game_047 currentGame, ArrayList<String> name){
 	       try {
 	            UIManager.setLookAndFeel(new com.sun.java.swing.plaf.motif.MotifLookAndFeel());
 	        } catch(Exception e) {
