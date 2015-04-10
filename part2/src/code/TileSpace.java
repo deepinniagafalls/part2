@@ -91,6 +91,7 @@ public class TileSpace extends JButton implements ActionListener {
 	public String getMyText(){
 		return _myText;
 	}
+	
 
 	@Override
 	public void actionPerformed(ActionEvent arg0) {
