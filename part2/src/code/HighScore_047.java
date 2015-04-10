@@ -27,7 +27,10 @@ public class HighScore_047 {
 	       BufferedReader br = new BufferedReader(new FileReader("Documents/words.txt"));
 	       while ((_line = br.readLine()) != null) {
 	          _words.add(_line);
-	       }       
+	       }
+	       for(int i = 0; i < _words.size(); i++){
+	    	   
+	       }
 	    }
 	    catch(Exception e){}
 	    	

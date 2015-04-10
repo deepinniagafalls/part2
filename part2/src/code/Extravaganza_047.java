@@ -21,6 +21,13 @@ import code.base.Player_024_047;
 import code.base.Scrabble_024_047;
 import code.base.Tile_024;
 
+/**
+ * @author tylerdie (Tyler Dietrich)
+ * @author ceelman (Chris Elman)
+ * @author jaeheunk (Jason(Jaeheun) Kim)
+ * @author mjszymko (Michael Szymkowski)
+ * @date 2015-APRIL-10
+ */
 public class Extravaganza_047 extends JFrame {
 
 	/**
