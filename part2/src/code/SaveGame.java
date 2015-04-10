@@ -30,6 +30,7 @@ public class SaveGame {
 	 * @author jaeheun (Jason Kim)
 	 * @author mjszymko (Michael Szymkowski)
 	 * @date 2015-APRIL-10
+	 * Instance variable that holds reference to the Board class
 	 */
 	private Board _b;
 	/**
@@ -38,6 +39,7 @@ public class SaveGame {
 	 * @author jaeheun (Jason Kim)
 	 * @author mjszymko (Michael Szymkowski)
 	 * @date 2015-APRIL-10
+	 * Instance variable that holds reference to the BoardFrame class
 	 */
 	private BoardFrame _bf;
 	/**
@@ -46,6 +48,7 @@ public class SaveGame {
 	 * @author jaeheun (Jason Kim)
 	 * @author mjszymko (Michael Szymkowski)
 	 * @date 2015-APRIL-10
+	 * Instance variable that holds reference to the TileRack class
 	 */
 	private TileRack _tr;
 	/**
@@ -54,6 +57,7 @@ public class SaveGame {
 	 * @author jaeheun (Jason Kim)
 	 * @author mjszymko (Michael Szymkowski)
 	 * @date 2015-APRIL-10
+	 * Instance variable that holds reference to the Scrabble class
 	 */
 	private Scrabble _scrabble;
 	/**
@@ -62,6 +66,7 @@ public class SaveGame {
 	 * @author jaeheun (Jason Kim)
 	 * @author mjszymko (Michael Szymkowski)
 	 * @date 2015-APRIL-10
+	 * Instance variable that holds reference to a specidif file to write to
 	 */
 	private String _fileToWriteTo;
 	
@@ -76,6 +81,11 @@ public class SaveGame {
 	 * @author jaeheun (Jason Kim)
 	 * @author mjszymko (Michael Szymkowski)
 	 * @date 2015-APRIL-10
+	 * Constructor for the SaveGame class
+	 * @param Reference to the Board class
+	 * @param Reference to the BoardFrame class
+	 * @param Reference to the Scrabble class
+	 * @throws Throws IOException
 	 */
 	public SaveGame(Board b, BoardFrame bf, Scrabble scrabble) throws IOException{
 		_b = b;
@@ -163,6 +173,7 @@ public class SaveGame {
 	 * @author jaeheun (Jason Kim)
 	 * @author mjszymko (Michael Szymkowski)
 	 * @date 2015-APRIL-10
+	 * Method that writes to a file
 	 */
 	public void writeNewFile() throws IOException{
 		
