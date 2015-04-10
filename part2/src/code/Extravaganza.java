@@ -24,7 +24,7 @@ import code.base.Tile;
 public class Extravaganza extends JFrame {
 
 	/**
-	 * 
+	 * @param _currentTurn keeps the turn as an int form
 	 */
 	private static final long serialVersionUID = 1L;
 
