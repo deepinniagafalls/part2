@@ -11,11 +11,13 @@ import javax.swing.JLabel;
 import code.base.Player;
 
 public class HighScore {
-	JFrame _a = new JFrame("High Score");
 	ArrayList<Player> _p;
 	public HighScore(){
 	}
 	public void endGame(ArrayList<Player> p) throws FileNotFoundException, UnsupportedEncodingException{
+		// Load previous high score
+		
+		// Save current high score with the past one
 		PrintWriter writer = new PrintWriter("the-file-name.txt", "UTF-8");
 		writer.println("The first line");
 		writer.println("The second line");
