@@ -1,0 +1,35 @@
+Group meeting on 3/25/15:
+
+We finalized our decision to select Stage1 Candidate D as our starting point for Stage 2. As a group, we set up accounts on github.com to more easily share and collaborate on code writing together. We discussed the order in which we want to tackle the tasks outlined in the Stage 2 description. We also discussed algorithms for searching through the dictionary file.
+
+The meeting lasted approximately 1 hour.
+
+Group meeting on 3/27/15:
+
+It turns out our finalized decision to use Stage 1 Candidate D was not so final after all, because today we switched to Stage 1 Candidate E. We spent the first part of the meeting trying to fix a null pointer exception being thrown by the Scrabble class when the program was executed. We eventually solved the issue. Then we wrote the code for creating a JFrame with a 20 x 20 button layout.
+
+The meeting lasted approximately 1.5 hours.
+
+Group meeting on 4/1/15
+
+We successfully created a file that will serve as the dictionary for our Scrabble game. We worked more on getting the GUI functional and added an interface for the Player's TileRack. We were able to get the JButtons in the JFrame to display text when they are clicked. We will eventually get the text to display the corresponding letter of the Tiles placed in the board.
+
+The meeting lasted approximately 1 hour.
+
+Group meeting on 4/7/15
+
+We fully implemented the GUI for each of the Player's Tile Racks. We also added a window that gives the user the option of saving or restoring a game as well as passing turn. We added a window at the beginning of the game that asks the user how many players to create. We also worked on fixing the functionality of removing a tile from the Tile Rack, placing it in the Board, and then refilling the corresponding Tile Rack.
+
+The meeting lasted approximately 2 hours.
+
+Group Meeting on 4/9/15
+
+What we accomplished today:
+-Created a method called isAdjacent() that is responsible for restraining the user to only playing tiles off of pre-existing words on the board/boardframe. 
+-Added functionality for rearranging Tiles in a Player's TileRack. 
+-Added a class called WordChecker that has functionality for determining if a user spelled a valid word on his or her turn or not.
+-If user does not spell a valid word, added feature that the user's tiles are removed from the board and replaced back in his/her TileRack
+-If user does spell a valid word, added method that updates Player's score and accurately displays the new user score in the GUI
+-We worked on our user guide document
+
+The meeting lasted approximately 11 hours

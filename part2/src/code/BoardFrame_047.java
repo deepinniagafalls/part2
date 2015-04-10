@@ -18,8 +18,8 @@ import code.base.Scrabble_024_047;
  * @author jaeheun (Jason Kim)
  * @author mjszymko (Michael Szymkowski)
  * @date 2015-APRIL-10
+ * This class is the graphical representation of the Board class. Contains a 20x20 grid of TileSpaces.
  */
-
 public class BoardFrame_047 extends JFrame {
 	/**
 	 * @author tylerdie (Tyler Dietrich)
@@ -142,6 +142,7 @@ public class BoardFrame_047 extends JFrame {
 	 * @param BoardFrame_047 now has access to the ArrayList of type PlayerFrame
 	 * @param BoardFrame_047 now has access to the Game class
 	 * @param BoardFrame_047 now has access to the Scrabble class
+	 * BoardFrame constructor. Assigns values to instance variables.
 	 */
 	
 	public BoardFrame_047(Scrabble_024_047 s, Board_024 b, Inventory_024 i, ArrayList<PlayerFrame_047> pf, Game_047 g, Scrabble_024_047 scrabble, String path){

@@ -24,6 +24,7 @@ import java.util.Scanner.*;
  * @author jaeheun (Jason Kim)
  * @author mjszymko (Michael Szymkowski)
  * @date 2015-APRIL-10
+ * Game class is responsible for instantiating all of the elements for the graphic user interface (GUI).
  */
 public class Game_047 {
 	/**
@@ -285,6 +286,10 @@ public class Game_047 {
 	
 	public Player_024_047 getPlayer(int index){
 		return _playerList.get(index);
+	}
+	
+	public ArrayList<Player_024_047> getPlayerList(){
+		return _playerList;
 	}
 	
 	public void printOutWinner(){
