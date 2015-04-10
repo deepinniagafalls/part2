@@ -176,7 +176,7 @@ public class Extravaganza extends JFrame {
 				}
 			}
 			if(_isPlayerFrameStillEmpty){ //Terminates the game
-				
+				System.exit(0);
 			}
 			_g.incrementTurn();	
 			if(_g.getCurrentTurn() == 0){label1.setText("Turn: "+ _name.get(0));}

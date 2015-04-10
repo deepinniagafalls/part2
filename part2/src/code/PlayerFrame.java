@@ -300,4 +300,5 @@ public class PlayerFrame {
 	public int getMyTurnNumber(){
 		return _myTurnNumber;
 	}
+	
 }
