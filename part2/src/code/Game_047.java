@@ -106,9 +106,16 @@ public class Game_047 {
 	       String e3 = "";
 	       String e4 = "";
 	       String p = "";
+	       String path = "";
 	      // ArrayList<String> names = new ArrayList<>();
 		_currentGame = this;
 		if(s == "CUI"){
+			System.out.print("Please type in the path of the dictionary file. Type default instead to use the dictionary that is already provided with the code");
+		       Scanner ps = new Scanner(System.in);
+		       path = ps.nextLine();
+		       if(path == "default"){
+		    	   path = "res/words.txt";
+		       }
 		System.out.print("How many players do you want? ");
 	       Scanner scanIn = new Scanner(System.in);
 	       p = scanIn.nextLine();
@@ -171,6 +178,8 @@ public class Game_047 {
 		}
 		}
 		else if(s != "CUI"){
+		path = JOptionPane.showInputDialog(null, "Please type in the path of the dictionary file. Type default instead to use the dictionary that is already provided with the code","PATH",JOptionPane.QUESTION_MESSAGE);
+		if(path == "default"){ path = "res/words.txt";}
 		p = JOptionPane.showInputDialog(null, "How many players do you want?","Number of Players",JOptionPane.QUESTION_MESSAGE);
 		if(p != null){_numberOfPlayers = Integer.parseInt(p);}
 		else{JOptionPane.showMessageDialog(null, "Error! you choose to cancel","ERROR",JOptionPane.ERROR_MESSAGE);System.exit(0);}
@@ -212,8 +221,8 @@ public class Game_047 {
 		for(int i = 0; i < _numberOfPlayers; i++){
 			_playerFrameList.add(new PlayerFrame_047(scrabble, scrabble.returnPlayer(i).getTileRack(), i, _currentGame, _names));
 		}
-		BoardFrame_047 boardframe = new BoardFrame_047(scrabble, board , invent,_playerFrameList, _currentGame, scrabble);
-		Extravaganza_047 fc = new Extravaganza_047(scrabble, boardframe, this, _names, _playerFrameList);
+		BoardFrame_047 boardframe = new BoardFrame_047(scrabble, board , invent,_playerFrameList, _currentGame, scrabble, path);
+		Extravaganza_047 fc = new Extravaganza_047(scrabble, boardframe, this, _names, _playerFrameList, path);
 	}
 	
 	/**

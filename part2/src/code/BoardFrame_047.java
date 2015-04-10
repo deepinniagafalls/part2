@@ -144,7 +144,7 @@ public class BoardFrame_047 extends JFrame {
 	 * @param BoardFrame_047 now has access to the Scrabble class
 	 */
 	
-	public BoardFrame_047(Scrabble_024 s, Board_024 b, Inventory_024 i, ArrayList<PlayerFrame_047> pf, Game_047 g, Scrabble_024 scrabble){
+	public BoardFrame_047(Scrabble_024 s, Board_024 b, Inventory_024 i, ArrayList<PlayerFrame_047> pf, Game_047 g, Scrabble_024 scrabble, String path){
 	       try {
 	            UIManager.setLookAndFeel(new com.sun.java.swing.plaf.motif.MotifLookAndFeel());
 	        } catch(Exception e) {
@@ -158,7 +158,7 @@ public class BoardFrame_047 extends JFrame {
 		_game = g;
 		_scrabble = scrabble;
 		_bf = this;
-		_currentWord = new WordChecker_047(_bf,_bf.getBoard());
+		_currentWord = new WordChecker_047(_bf,_bf.getBoard(), path);
 		JFrame frame = new JFrame("Scrabble");		
 		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		frame.setSize(1100, 1100);
