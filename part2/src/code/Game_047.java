@@ -110,11 +110,11 @@ public class Game_047 {
 	      // ArrayList<String> names = new ArrayList<>();
 		_currentGame = this;
 		if(s == "CUI"){
-			System.out.print("Please type in the path of the dictionary file. Type default instead to use the dictionary that is already provided with the code");
+			System.out.print("Please type in the path of the dictionary file. Type default instead to use the dictionary that is already provided with the code: ");
 		       Scanner ps = new Scanner(System.in);
 		       path = ps.nextLine();
 		       if(path == "default"){
-		    	   path = "res/words.txt";
+		    	   path = "Documents/words.txt";
 		       }
 		System.out.print("How many players do you want? ");
 	       Scanner scanIn = new Scanner(System.in);
