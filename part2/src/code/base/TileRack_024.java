@@ -2,26 +2,26 @@ package code.base;
 
 import java.util.ArrayList;
 
-public class TileRack {
+public class TileRack_024 {
 	
 	/**
 	 * Inventory to draw tiles from
 	 */
-	private Inventory _inv;
+	private Inventory_024 _inv;
 	
 	/**
 	 * Stores the tiles that can be played.
 	 */
-	private ArrayList<Tile> _rack;
+	private ArrayList<Tile_024> _rack;
 	
 	/**
 	 * Class constructor.
 	 * 
 	 * @param inv inventory to draw tiles from
 	 */
-	public TileRack(Inventory inv){
+	public TileRack_024(Inventory_024 inv){
 		_inv = inv;
-		_rack = new ArrayList<Tile>();
+		_rack = new ArrayList<Tile_024>();
 		fillRack();
 	}
 	
@@ -40,8 +40,8 @@ public class TileRack {
 	 * @param i index of tile to be removed
 	 * @return tile removed from the rack
 	 */
-	public Tile removeTile(int i){
-		Tile tileToRemove = _rack.get(i);
+	public Tile_024 removeTile(int i){
+		Tile_024 tileToRemove = _rack.get(i);
 		_rack.remove(i);
 		return tileToRemove;
 	}
@@ -55,7 +55,7 @@ public class TileRack {
 		return _rack.size();
 	}
 	
-	public Tile getTile(int i){
+	public Tile_024 getTile(int i){
 		return _rack.get(i);
 	}
 }

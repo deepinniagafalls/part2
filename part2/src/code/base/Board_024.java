@@ -1,18 +1,18 @@
 package code.base;
 
 
-public class Board {
+public class Board_024 {
 
 	/**
 	 * 2-D array of tiles to store tiles.
 	 */
-	private Tile[][] _board;
-	private Tile _tempTile;
+	private Tile_024[][] _board;
+	private Tile_024 _tempTile;
 	/**
 	 * Class constructor.
 	 */
-	public Board(){
-		_board = new Tile[20][20];
+	public Board_024(){
+		_board = new Tile_024[20][20];
 	}
 
 	/**
@@ -22,7 +22,7 @@ public class Board {
 	 * @param x	the x-coordinate of the placement location
 	 * @param y the y-coordinate of the placement location
 	 */
-	public void addTile(Tile t, int x, int y){
+	public void addTile(Tile_024 t, int x, int y){
 		_board[x][y] = t;
 	}
 
@@ -33,8 +33,8 @@ public class Board {
 	 * @param y the y-coordinate of the tile to be removed
 	 * @return
 	 */
-	public Tile removeTile(int x, int y){
-		Tile temp = _board[x][y];
+	public Tile_024 removeTile(int x, int y){
+		Tile_024 temp = _board[x][y];
 		_board[x][y] = null;
 		return temp;
 	}
@@ -46,15 +46,15 @@ public class Board {
 	 * @param y the y-coordinate of the position
 	 * @return
 	 */
-	public Tile getTile(int x, int y){
+	public Tile_024 getTile(int x, int y){
 		return _board[x][y];
 	}
 
-	public void setTempTile(Tile t){
+	public void setTempTile(Tile_024 t){
 		_tempTile = t;
 	}
 	
-	public Tile getTempTile(){
+	public Tile_024 getTempTile(){
 		return _tempTile;
 	}
 }

@@ -7,10 +7,10 @@ import java.util.ArrayList;
 
 import javax.swing.*;
 
-import code.base.Board;
-import code.base.Inventory;
-import code.base.Player;
-import code.base.Scrabble;
+import code.base.Board_024;
+import code.base.Inventory_024;
+import code.base.Player_024;
+import code.base.Scrabble_024;
 
 /**
  * @author tylerdie (Tyler Dietrich)
@@ -20,7 +20,7 @@ import code.base.Scrabble;
  * @date 2015-APRIL-10
  */
 
-public class BoardFrame extends JFrame {
+public class BoardFrame_047 extends JFrame {
 	/**
 	 * @author tylerdie (Tyler Dietrich)
 	 * @author ceelman (Chris Elman)
@@ -29,7 +29,7 @@ public class BoardFrame extends JFrame {
 	 * @date 2015-APRIL-10
 	 * Instance variable that hold reference to the Scrabble class
 	 */
-	private Scrabble _s;
+	private Scrabble_024 _s;
 	/**
 	 * @author tylerdie (Tyler Dietrich)
 	 * @author ceelman (Chris Elman)
@@ -38,7 +38,7 @@ public class BoardFrame extends JFrame {
 	 * @date 2015-APRIL-10
 	 * Instance variable that holds reference to the Inventory class
 	 */
-    private Inventory _inv;
+    private Inventory_024 _inv;
     /**
      * @author tylerdie (Tyler Dietrich)
      * @author ceelman (Chris Elman)
@@ -47,7 +47,7 @@ public class BoardFrame extends JFrame {
      * @date 2015-APRIL-10
      * Instance variable that holds reference to the ArrayList of players
      */
-    private ArrayList<Player> _players;
+    private ArrayList<Player_024> _players;
     /**
      * @author tylerdie (Tyler Dietrich)
      * @author ceelman (Chris Elman)
@@ -56,7 +56,7 @@ public class BoardFrame extends JFrame {
      * @date 2015-APRIL-10
      * Instance variable that holds reference to the Board class
      */
-	private Board _board;
+	private Board_024 _board;
 	/**
 	 * @author tylerdie (Tyler Dietrich)
 	 * @author ceelman (Chris Elman)
@@ -74,7 +74,7 @@ public class BoardFrame extends JFrame {
 	 * @date 2015-APRIL-10
 	 * Instance variable that holds reference to the buttons on the Board in a 20x20 Frame
 	 */
-	private TileSpace[][] _boardOfButtons = new TileSpace[20][20];
+	private TileSpace_047[][] _boardOfButtons = new TileSpace_047[20][20];
 	/**
 	 * @author tylerdie (Tyler Dietrich)
 	 * @author ceelman (Chris Elman)
@@ -83,7 +83,7 @@ public class BoardFrame extends JFrame {
 	 * @date 2015-APRIL-10
 	 * Instance variable that holds reference to the Inventory class
 	 */
-	private Inventory _invent;
+	private Inventory_024 _invent;
 	/**
 	 * @author tylerdie (Tyler Dietrich)
 	 * @author ceelman (Chris Elman)
@@ -92,7 +92,7 @@ public class BoardFrame extends JFrame {
 	 * @date 2015-APRIL-10
 	 * Instance variable that holds reference to the ArrayList of type PlayerFrame
 	 */
-	private ArrayList<PlayerFrame> _pf;
+	private ArrayList<PlayerFrame_047> _pf;
 	/**
 	 * @author tylerdie (Tyler Dietrich)
 	 * @author ceelman (Chris Elman)
@@ -101,7 +101,7 @@ public class BoardFrame extends JFrame {
 	 * @date 2015-APRIL-10
 	 * Instance variable that holds reference to the Game class
 	 */
-	private Game _game;
+	private Game_047 _game;
 	/**
 	 * @author tylerdie (Tyler Dietrich)
 	 * @author ceelman (Chris Elman)
@@ -110,7 +110,7 @@ public class BoardFrame extends JFrame {
 	 * @date 2015-APRIL-10
 	 * Instance variable that holds reference to the Scrabble class
 	 */
-	private Scrabble _scrabble;
+	private Scrabble_024 _scrabble;
 	/**
 	 * @author tylerdie (Tyler Dietrich)
 	 * @author ceelman (Chris Elman)
@@ -119,7 +119,7 @@ public class BoardFrame extends JFrame {
 	 * @date 2015-APRIL-10
 	 * Instance variable that holds reference to the BoardFrame class
 	 */
-	private BoardFrame _bf;
+	private BoardFrame_047 _bf;
 	/**
 	 * @author tylerdie (Tyler Dietrich)
 	 * @author ceelman (Chris Elman)
@@ -128,7 +128,7 @@ public class BoardFrame extends JFrame {
 	 * @date 2015-APRIL-10
 	 * Instance variable that holds reference to the WordChecker class
 	 */
-	private WordChecker _currentWord;
+	private WordChecker_047 _currentWord;
 	/**
 	 * @author tylerdie (Tyler Dietrich)
 	 * @author ceelman (Chris Elman)
@@ -136,15 +136,15 @@ public class BoardFrame extends JFrame {
 	 * @author mjszymko (Michael Szymkowski)
 	 * @date 2015-APRIL-10
 	 * Constructor for the BoardFrame class that implements parts of the GUI
-	 * @param BoardFrame can now have access to Scrabble class
-	 * @param BoardFrame now how access to the Board class
-	 * @param BoardFrame now has access to the Tiles in the Inventory
-	 * @param BoardFrame now has access to the ArrayList of type PlayerFrame
-	 * @param BoardFrame now has access to the Game class
-	 * @param BoardFrame now has access to the Scrabble class
+	 * @param BoardFrame_047 can now have access to Scrabble class
+	 * @param BoardFrame_047 now how access to the Board class
+	 * @param BoardFrame_047 now has access to the Tiles in the Inventory
+	 * @param BoardFrame_047 now has access to the ArrayList of type PlayerFrame
+	 * @param BoardFrame_047 now has access to the Game class
+	 * @param BoardFrame_047 now has access to the Scrabble class
 	 */
 	
-	public BoardFrame(Scrabble s, Board b, Inventory i, ArrayList<PlayerFrame> pf, Game g, Scrabble scrabble){
+	public BoardFrame_047(Scrabble_024 s, Board_024 b, Inventory_024 i, ArrayList<PlayerFrame_047> pf, Game_047 g, Scrabble_024 scrabble){
 	       try {
 	            UIManager.setLookAndFeel(new com.sun.java.swing.plaf.motif.MotifLookAndFeel());
 	        } catch(Exception e) {
@@ -158,7 +158,7 @@ public class BoardFrame extends JFrame {
 		_game = g;
 		_scrabble = scrabble;
 		_bf = this;
-		_currentWord = new WordChecker(_bf,_bf.getBoard());
+		_currentWord = new WordChecker_047(_bf,_bf.getBoard());
 		JFrame frame = new JFrame("Scrabble");		
 		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		frame.setSize(1100, 1100);
@@ -167,7 +167,7 @@ public class BoardFrame extends JFrame {
 		
 		for(int row=0; row<20; row++){
 			for(int col=0; col<20; col++){
-				TileSpace j = new TileSpace(row, col, _s, _bf);
+				TileSpace_047 j = new TileSpace_047(row, col, _s, _bf);
 				_boardOfButtons[row][col] = j;
 				frame.add(j);
 			}
@@ -200,7 +200,7 @@ public class BoardFrame extends JFrame {
 	 * Method to access the indec of the PlayerFrame class
 	 * @return The index of the PlayerFrame
 	 */
-	public PlayerFrame getPlayerFrame(int index){
+	public PlayerFrame_047 getPlayerFrame(int index){
 		return _pf.get(index);
 	}
 	/**
@@ -212,7 +212,7 @@ public class BoardFrame extends JFrame {
 	 * Method to get the content of the Game class
 	 * @return Returns the properties of the Game class
 	 */
-	public Game getGame(){
+	public Game_047 getGame(){
 		return _game;
 	}
 	/**
@@ -224,7 +224,7 @@ public class BoardFrame extends JFrame {
 	 * Method that gets the content from the Scrabble class
 	 * @return Returns the content from the Scrabble class
 	 */
-	public Scrabble getScrabble(){
+	public Scrabble_024 getScrabble(){
 		return _scrabble;
 	}
 	/**
@@ -235,7 +235,7 @@ public class BoardFrame extends JFrame {
 	 * @date 2015-APRIL-10
 	 * Method that sets the word from the WordChecker class to a temporary value
 	 */
-	public void setWord(WordChecker currentWord){
+	public void setWord(WordChecker_047 currentWord){
 		_currentWord = currentWord;
 	}
 	/**
@@ -248,7 +248,7 @@ public class BoardFrame extends JFrame {
 	 * @return Returns the contents of the Words from the WordChecker class
 	 */
 	
-	public WordChecker getWordChecker(){
+	public WordChecker_047 getWordChecker(){
 		return _currentWord;
 	}
 	
@@ -261,7 +261,7 @@ public class BoardFrame extends JFrame {
 	 * Method that gets the contents from the Board Class
 	 * @return Returns the contents of the Board class
 	 */
-	public Board getBoard(){
+	public Board_024 getBoard(){
 		return _board;
 	}
 	/**
@@ -275,7 +275,7 @@ public class BoardFrame extends JFrame {
 	 * @param Int number to a specific spot in column
 	 * @return Returns the buttons on the board at a specific location
 	 */
-	public TileSpace getTileSpace(int row, int col){
+	public TileSpace_047 getTileSpace(int row, int col){
 		return _boardOfButtons[row][col];
 	}
 }

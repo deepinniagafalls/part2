@@ -13,8 +13,8 @@ import javax.swing.UnsupportedLookAndFeelException;
  * Driver class with the main method that runs the game
  */
 
-public class Driver {
+public class Driver_047 {
 	public static void main(String[] args) throws ClassNotFoundException, InstantiationException, IllegalAccessException, UnsupportedLookAndFeelException, IOException {
-		Game g = new Game("CUI");
+		Game_047 g = new Game_047("CUI");
 	}
 }

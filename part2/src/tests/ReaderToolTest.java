@@ -4,34 +4,34 @@ import static org.junit.Assert.*;
 
 import org.junit.Test;
 
-import code.util.ReaderTool;
+import code.util.ReaderTool_047;
 
 public class ReaderToolTest {
 
 	@Test
 	public void test() {
 		
-		ReaderTool r = new ReaderTool();
+		ReaderTool_047 r = new ReaderTool_047();
 		assertTrue("RAMSHACKLE",r.getWords().contains("RAMSHACKLE"));
 	}
 	@Test
 	public void test2() {
-		ReaderTool r = new ReaderTool();
+		ReaderTool_047 r = new ReaderTool_047();
 		assertTrue("ALOFT",r.getWords().contains("ALOFT"));
 	}
 	@Test
 	public void test3() {
-		ReaderTool r = new ReaderTool();
+		ReaderTool_047 r = new ReaderTool_047();
 		assertTrue("SKILLET",r.getWords().contains("SKILLET"));
 	}
 	@Test
 	public void test4() {
-		ReaderTool r = new ReaderTool();
+		ReaderTool_047 r = new ReaderTool_047();
 		assertTrue("WAN",r.getWords().contains("WAN"));
 	}
 	@Test
 	public void test5() {
-		ReaderTool r = new ReaderTool();
+		ReaderTool_047 r = new ReaderTool_047();
 		assertTrue("THOLE",r.getWords().contains("THOLE"));
 	}
 

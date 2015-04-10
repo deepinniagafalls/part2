@@ -11,14 +11,14 @@ import javax.swing.JFrame;
 import javax.swing.JLabel;
 import javax.swing.JOptionPane;
 
-import code.base.Player;
+import code.base.Player_024;
 
-public class HighScore {
-	ArrayList<Player> _p;
+public class HighScore_047 {
+	ArrayList<Player_024> _p;
 	ArrayList<String> _words;
-	public HighScore(){
+	public HighScore_047(){
 	}
-	public void endGame(ArrayList<Player> p) throws FileNotFoundException, UnsupportedEncodingException{
+	public void endGame(ArrayList<Player_024> p) throws FileNotFoundException, UnsupportedEncodingException{
 		// Load previous high score
 		JOptionPane.showMessageDialog(null, "The game has ended");
 		_words = new ArrayList<String>();

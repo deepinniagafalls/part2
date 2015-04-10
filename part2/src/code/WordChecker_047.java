@@ -5,9 +5,9 @@ import java.util.ArrayList;
 
 import javax.swing.JButton;
 
-import code.base.Board;
-import code.base.Tile;
-import code.util.ReaderTool;
+import code.base.Board_024;
+import code.base.Tile_024;
+import code.util.ReaderTool_047;
 /**
  * @author tylerdie (Tyler Dietrich)
  * @author ceelman (Chris Elman)
@@ -15,7 +15,7 @@ import code.util.ReaderTool;
  * @author mjszymko (Michael Szymkowski)
  * @date 2015-APRIL-10
  */
-public class WordChecker {
+public class WordChecker_047 {
 	/**
 	 * @author tylerdie (Tyler Dietrich)
 	 * @author ceelman (Chris Elman)
@@ -24,7 +24,7 @@ public class WordChecker {
 	 * @date 2015-APRIL-10
 	 * Instance variable that holds reference to a new ReaderTool
 	 */
-	private ReaderTool _r = new ReaderTool();
+	private ReaderTool_047 _r = new ReaderTool_047();
 	/**
 	 * @author tylerdie (Tyler Dietrich)
 	 * @author ceelman (Chris Elman)
@@ -51,7 +51,7 @@ public class WordChecker {
 	 * @date 2015-APRIL-10
 	 * Instance variable that holds reference to an ArrayList of tiles placed
 	 */
-	private ArrayList<Tile> _tilesPlaced;
+	private ArrayList<Tile_024> _tilesPlaced;
 	/**
 	 * @author tylerdie (Tyler Dietrich)
 	 * @author ceelman (Chris Elman)
@@ -60,7 +60,7 @@ public class WordChecker {
 	 * @date 2015-APRIL-10
 	 * Instance variable that holds reference to the BoardFrame class
 	 */
-	private BoardFrame _bf;
+	private BoardFrame_047 _bf;
 	/**
 	 * @author tylerdie (Tyler Dietrich)
 	 * @author ceelman (Chris Elman)
@@ -69,7 +69,7 @@ public class WordChecker {
 	 * @date 2015-APRIL-10
 	 * Instance variable that holds reference to the Board class
 	 */
-	private Board _b;
+	private Board_024 _b;
 	/**
 	 * @author tylerdie (Tyler Dietrich)
 	 * @author ceelman (Chris Elman)
@@ -89,12 +89,12 @@ public class WordChecker {
 	 * @param boardframe Holds Reference to the BoardFrame class
 	 * @param board Holds reference to the Board class
 	 */
-	public WordChecker(BoardFrame boardframe, Board board){
+	public WordChecker_047(BoardFrame_047 boardframe, Board_024 board){
 		_rowCoordinates = new ArrayList<Integer>();
 		_colCoordinates = new ArrayList<Integer>();
 		_bf = boardframe;
 		_b = board;
-		_tilesPlaced = new ArrayList<Tile>();
+		_tilesPlaced = new ArrayList<Tile_024>();
 	}
 	/**
 	 * @author tylerdie (Tyler Dietrich)
@@ -248,7 +248,7 @@ public class WordChecker {
 		}
 		else{
 			
-			PlayerFrame current = _bf.getPlayerFrame(_bf.getGame().getCurrentTurn());
+			PlayerFrame_047 current = _bf.getPlayerFrame(_bf.getGame().getCurrentTurn());
 			int counter = 0;
 			for(int i = 0; i < 12; i ++){
 				if(current.getPlayerSpace(i).getTile() == null){
@@ -424,7 +424,7 @@ public class WordChecker {
 	public void clear(){
 		_rowCoordinates = new ArrayList<Integer>();
 		_colCoordinates = new ArrayList<Integer>();
-		_tilesPlaced = new ArrayList<Tile>();
+		_tilesPlaced = new ArrayList<Tile_024>();
 	}
 	/**
 	 * @author tylerdie (Tyler Dietrich)

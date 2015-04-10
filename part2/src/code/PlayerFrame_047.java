@@ -12,12 +12,12 @@ import javax.swing.UIManager;
 
 
 
-import code.base.Board;
-import code.base.Inventory;
-import code.base.Player;
-import code.base.Scrabble;
-import code.base.Tile;
-import code.base.TileRack;
+import code.base.Board_024;
+import code.base.Inventory_024;
+import code.base.Player_024;
+import code.base.Scrabble_024;
+import code.base.Tile_024;
+import code.base.TileRack_024;
 /**
  * @author tylerdie (Tyler Dietrich)
  * @author ceelman (Chris Elman)
@@ -25,7 +25,7 @@ import code.base.TileRack;
  * @author mjszymko (Michael Szymkowski)
  * @date 2015-APRIL-10
  */
-public class PlayerFrame {
+public class PlayerFrame_047 {
 	/**
 	 * @author tylerdie (Tyler Dietrich)
 	 * @author ceelman (Chris Elman)
@@ -34,7 +34,7 @@ public class PlayerFrame {
 	 * @date 2015-APRIL-10
 	 * Instance variable that holds reference to the Scrabble class
 	 */
-	private Scrabble _s;
+	private Scrabble_024 _s;
 	/**
 	 * @author tylerdie (Tyler Dietrich)
 	 * @author ceelman (Chris Elman)
@@ -43,7 +43,7 @@ public class PlayerFrame {
 	 * @date 2015-APRIL-10
 	 * Instance variable that holds reference to the Inventory class
 	 */
-    private Inventory _inv;
+    private Inventory_024 _inv;
     /**
      * @author tylerdie (Tyler Dietrich)
      * @author ceelman (Chris Elman)
@@ -52,7 +52,7 @@ public class PlayerFrame {
      * @date 2015-APRIL-10
      * Instance variable that holds reference to the ArrayList of type players
      */
-    private ArrayList<Player> _players;
+    private ArrayList<Player_024> _players;
     /**
      * @author tylerdie (Tyler Dietrich)
      * @author ceelman (Chris Elman)
@@ -61,7 +61,7 @@ public class PlayerFrame {
      * @date 2015-APRIL-10
      * Instance variable that holds reference to the Board class
      */
-	private Board _board;
+	private Board_024 _board;
 	/**
 	 * @author tylerdie (Tyler Dietrich)
 	 * @author ceelman (Chris Elman)
@@ -88,7 +88,7 @@ public class PlayerFrame {
 	 * @date 2015-APRIL-10
 	 * Instance variable that holds reference to the board of player spaces
 	 */
-	private PlayerSpace[][] _boardOfPlayerSpaces = new PlayerSpace[1][12];
+	private PlayerSpace_047[][] _boardOfPlayerSpaces = new PlayerSpace_047[1][12];
 	/**
 	 * @author tylerdie (Tyler Dietrich)
 	 * @author ceelman (Chris Elman)
@@ -97,7 +97,7 @@ public class PlayerFrame {
 	 * @date 2015-APRIL-10
 	 * Instance variable that holds reference to the TileRack class
 	 */
-	private TileRack _tr;
+	private TileRack_024 _tr;
 	/**
 	 * @author tylerdie (Tyler Dietrich)
 	 * @author ceelman (Chris Elman)
@@ -106,7 +106,7 @@ public class PlayerFrame {
 	 * @date 2015-APRIL-10
 	 * Instance variable that holds reference to the PlayerFrame class
 	 */
-	private PlayerFrame _pf;
+	private PlayerFrame_047 _pf;
 	/**
 	 * @author tylerdie (Tyler Dietrich)
 	 * @author ceelman (Chris Elman)
@@ -115,7 +115,7 @@ public class PlayerFrame {
 	 * @date 2015-APRIL-10
 	 * Instance variable that holds reference to the Tile class
 	 */
-	private Tile _tileTemp;
+	private Tile_024 _tileTemp;
 	/**
 	 * @author tylerdie (Tyler Dietrich)
 	 * @author ceelman (Chris Elman)
@@ -124,7 +124,7 @@ public class PlayerFrame {
 	 * @date 2015-APRIL-10
 	 * Instance variable that holds reference to the PlayerScape class
 	 */
-	private PlayerSpace _current;
+	private PlayerSpace_047 _current;
 	/**
 	 * @author tylerdie (Tyler Dietrich)
 	 * @author ceelman (Chris Elman)
@@ -142,7 +142,7 @@ public class PlayerFrame {
 	 * @date 2015-APRIL-10
 	 * Instance variable that holds reference to the current state of the game
 	 */
-	private Game _currentGame;
+	private Game_047 _currentGame;
 	/**
 	 * @author tylerdie (Tyler Dietrich)
 	 * @author ceelman (Chris Elman)
@@ -166,7 +166,7 @@ public class PlayerFrame {
 	 * @param Reference to hte current game
 	 * @param reference to the names of the players
 	 */
-	public PlayerFrame(Scrabble s, TileRack tr, int index, Game currentGame, ArrayList<String> name){
+	public PlayerFrame_047(Scrabble_024 s, TileRack_024 tr, int index, Game_047 currentGame, ArrayList<String> name){
 	       try {
 	            UIManager.setLookAndFeel(new com.sun.java.swing.plaf.motif.MotifLookAndFeel());
 	        } catch(Exception e) {
@@ -189,7 +189,7 @@ public class PlayerFrame {
 		int row = 0;
 		
 		for(int i=0; i<12; i++){
-			PlayerSpace temp = new PlayerSpace(_s,i,_pf,_currentGame); 
+			PlayerSpace_047 temp = new PlayerSpace_047(_s,i,_pf,_currentGame); 
 			_boardOfButtons[row][i] = temp;
 			_boardOfPlayerSpaces[row][i] = temp;
 			frame.add(temp);
@@ -225,7 +225,7 @@ public class PlayerFrame {
 	 * Method that removes tiles from a players space
 	 * @return Null
 	 */
-	public Tile removeTileFromPlayerSpace(int index){
+	public Tile_024 removeTileFromPlayerSpace(int index){
 		return null;
 	}
 	/**
@@ -236,7 +236,7 @@ public class PlayerFrame {
 	 * @date 2015-APRIL-10
 	 * Method that sets a tile to a temporary value
 	 */
-	public void setTempTile(Tile t){
+	public void setTempTile(Tile_024 t){
 		_tileTemp = t;
 	}
 	/**
@@ -248,7 +248,7 @@ public class PlayerFrame {
 	 * Method that gets the content of the Board class
 	 * @return The content of the Board class
 	 */
-	public Board getBoard(){
+	public Board_024 getBoard(){
 		return _board;
 	}
 	/**
@@ -260,7 +260,7 @@ public class PlayerFrame {
 	 * Method that gets the current space of where the player is playing
 	 * @return Returns that space
 	 */
-	public PlayerSpace getCurrentSpace(){
+	public PlayerSpace_047 getCurrentSpace(){
 		return _current;
 	}
 	/**
@@ -272,7 +272,7 @@ public class PlayerFrame {
 	 * Method that sets the current player scape to some value
 	 * @param Holds value to the current space
 	 */
-	public void setCurrent(PlayerSpace current){
+	public void setCurrent(PlayerSpace_047 current){
 		_current = current;
 	}
 	/**
@@ -285,7 +285,7 @@ public class PlayerFrame {
 	 * @param holds value to a certain int value
 	 * @return Returns the players values for their board
 	 */
-	public PlayerSpace getPlayerSpace(int index){
+	public PlayerSpace_047 getPlayerSpace(int index){
 		return _boardOfPlayerSpaces[0][index];
 	}
 	/**

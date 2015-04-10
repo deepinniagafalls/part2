@@ -4,9 +4,9 @@ import java.io.BufferedReader;
 import java.io.FileReader;
 import java.util.ArrayList;
 
-public class ReaderTool {
+public class ReaderTool_047 {
 	private ArrayList<String> _words;
-	public ReaderTool(){
+	public ReaderTool_047(){
 	_words = new ArrayList<String>();
     String  _line = null;
     try{

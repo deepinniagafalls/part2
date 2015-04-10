@@ -9,12 +9,12 @@ import javax.swing.JOptionPane;
 import javax.swing.UIManager;
 import javax.swing.UnsupportedLookAndFeelException;
 
-import code.base.Board;
-import code.base.Inventory;
-import code.base.Player;
-import code.base.Scrabble;
-import code.base.Tile;
-import code.util.ReaderTool;
+import code.base.Board_024;
+import code.base.Inventory_024;
+import code.base.Player_024;
+import code.base.Scrabble_024;
+import code.base.Tile_024;
+import code.util.ReaderTool_047;
 
 import java.util.Scanner.*;
 
@@ -25,7 +25,7 @@ import java.util.Scanner.*;
  * @author mjszymko (Michael Szymkowski)
  * @date 2015-APRIL-10
  */
-public class Game {
+public class Game_047 {
 	/**
 	 * @author tylerdie (Tyler Dietrich)
 	 * @author ceelman (Chris Elman)
@@ -34,7 +34,7 @@ public class Game {
 	 * @date 2015-APRIL-10
 	 * Instance variable that holds reference to the Tile class
 	 */
-	Tile _t;
+	Tile_024 _t;
 	/**
 	 * @author tylerdie (Tyler Dietrich)
 	 * @author ceelman (Chris Elman)
@@ -52,7 +52,7 @@ public class Game {
 	 * @date 2015-APRIL-10
 	 * Instance variable that holds reference to the Scrabble class
 	 */
-	private static ArrayList<Player> _playerList;
+	private static ArrayList<Player_024> _playerList;
 	/**
 	 * @author tylerdie (Tyler Dietrich)
 	 * @author ceelman (Chris Elman)
@@ -61,7 +61,7 @@ public class Game {
 	 * @date 2015-APRIL-10
 	 * Instance variable that holds reference to the players in the game
 	 */
-	private static ArrayList<PlayerFrame> _playerFrameList;
+	private static ArrayList<PlayerFrame_047> _playerFrameList;
 	/**
 	 * @author tylerdie (Tyler Dietrich)
 	 * @author ceelman (Chris Elman)
@@ -79,7 +79,7 @@ public class Game {
 	 * @date 2015-APRIL-10
 	 * Instance variable that holds reference to the current turn
 	 */
-	private static Game _currentGame;
+	private static Game_047 _currentGame;
 	
 
 	/**
@@ -95,7 +95,7 @@ public class Game {
 	
 	private ArrayList<String> _names = new ArrayList<>();
 	
-	public Game(String s) throws IOException{
+	public Game_047(String s) throws IOException{
 	       try {
 	            UIManager.setLookAndFeel(new javax.swing.plaf.metal.MetalLookAndFeel());
 	        } catch(Exception e) {
@@ -204,16 +204,16 @@ public class Game {
 		_names.add(e4);
 		}
 		}
-		Scrabble scrabble = new Scrabble(_numberOfPlayers, this);
-		Inventory invent = scrabble.getInv();
-		Board board = scrabble.getBoard();
+		Scrabble_024 scrabble = new Scrabble_024(_numberOfPlayers, this);
+		Inventory_024 invent = scrabble.getInv();
+		Board_024 board = scrabble.getBoard();
 		_playerList = scrabble.getPlayers();
-		_playerFrameList = new ArrayList<PlayerFrame>();
+		_playerFrameList = new ArrayList<PlayerFrame_047>();
 		for(int i = 0; i < _numberOfPlayers; i++){
-			_playerFrameList.add(new PlayerFrame(scrabble, scrabble.returnPlayer(i).getTileRack(), i, _currentGame, _names));
+			_playerFrameList.add(new PlayerFrame_047(scrabble, scrabble.returnPlayer(i).getTileRack(), i, _currentGame, _names));
 		}
-		BoardFrame boardframe = new BoardFrame(scrabble, board , invent,_playerFrameList, _currentGame, scrabble);
-		Extravaganza fc = new Extravaganza(scrabble, boardframe, this, _names, _playerFrameList);
+		BoardFrame_047 boardframe = new BoardFrame_047(scrabble, board , invent,_playerFrameList, _currentGame, scrabble);
+		Extravaganza_047 fc = new Extravaganza_047(scrabble, boardframe, this, _names, _playerFrameList);
 	}
 	
 	/**
@@ -245,7 +245,7 @@ public class Game {
 	 * Method that obtains the contents of the Game class
 	 * @return Returns the current game
 	 */
-	public Game getGame(){
+	public Game_047 getGame(){
 		return _currentGame;
 	}
 	/**
@@ -269,7 +269,7 @@ public class Game {
 		return _names.get(index);
 	}
 	
-	public Player getPlayer(int index){
+	public Player_024 getPlayer(int index){
 		return _playerList.get(index);
 	}
 	

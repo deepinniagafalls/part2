@@ -7,11 +7,11 @@ import java.util.ArrayList;
 
 import javax.swing.JButton;
 
-import code.base.Board;
-import code.base.Inventory;
-import code.base.Player;
-import code.base.Scrabble;
-import code.base.Tile;
+import code.base.Board_024;
+import code.base.Inventory_024;
+import code.base.Player_024;
+import code.base.Scrabble_024;
+import code.base.Tile_024;
 /**
  * @author tylerdie (Tyler Dietrich)
  * @author ceelman (Chris Elman)
@@ -19,7 +19,7 @@ import code.base.Tile;
  * @author mjszymko (Michael Szymkowski)
  * @date 2015-APRIL-10
  */
-public class TileSpace extends JButton implements ActionListener {
+public class TileSpace_047 extends JButton implements ActionListener {
 	/**
 	 * @author tylerdie (Tyler Dietrich)
 	 * @author ceelman (Chris Elman)
@@ -28,7 +28,7 @@ public class TileSpace extends JButton implements ActionListener {
 	 * @date 2015-APRIL-10
 	 * Instance variable that holds reference to the TileSpace class
 	 */
-	private TileSpace _j;
+	private TileSpace_047 _j;
 	/**
 	 * @author tylerdie (Tyler Dietrich)
 	 * @author ceelman (Chris Elman)
@@ -55,7 +55,7 @@ public class TileSpace extends JButton implements ActionListener {
 	 * @date 2015-APRIL-10
 	 * Instance variable that holds reference to the Board class
 	 */
-	private Board _b;
+	private Board_024 _b;
 	/**
 	 * @author tylerdie (Tyler Dietrich)
 	 * @author ceelman (Chris Elman)
@@ -64,7 +64,7 @@ public class TileSpace extends JButton implements ActionListener {
 	 * @date 2015-APRIL-10
 	 * Instance variable that holds reference to the Tile class
 	 */
-	private Tile _t;
+	private Tile_024 _t;
 	/**
 	 * @author tylerdie (Tyler Dietrich)
 	 * @author ceelman (Chris Elman)
@@ -73,7 +73,7 @@ public class TileSpace extends JButton implements ActionListener {
 	 * @date 2015-APRIL-10
 	 * Instance variable that holds reference to the Inventory class
 	 */
-	private Inventory _i;
+	private Inventory_024 _i;
 	/**
 	 * @author tylerdie (Tyler Dietrich)
 	 * @author ceelman (Chris Elman)
@@ -82,7 +82,7 @@ public class TileSpace extends JButton implements ActionListener {
 	 * @date 2015-APRIL-10
 	 * Instance variable that holds reference to the ArrayList of Players
 	 */
-	private ArrayList<Player> _players;
+	private ArrayList<Player_024> _players;
 	/**
 	 * @author tylerdie (Tyler Dietrich)
 	 * @author ceelman (Chris Elman)
@@ -91,7 +91,7 @@ public class TileSpace extends JButton implements ActionListener {
 	 * @date 2015-APRIL-10
 	 * Instance variable that holds reference to the Scrabble class
 	 */
-	private Scrabble _scrabble;
+	private Scrabble_024 _scrabble;
 	/**
 	 * @author tylerdie (Tyler Dietrich)
 	 * @author ceelman (Chris Elman)
@@ -100,7 +100,7 @@ public class TileSpace extends JButton implements ActionListener {
 	 * @date 2015-APRIL-10
 	 * Instance variable that holds reference to the BoardFrame class
 	 */
-	private BoardFrame _bf;
+	private BoardFrame_047 _bf;
 	/**
 	 * @author tylerdie (Tyler Dietrich)
 	 * @author ceelman (Chris Elman)
@@ -132,7 +132,7 @@ public class TileSpace extends JButton implements ActionListener {
 	 * @param s: the reference to the scrabble game
 	 * @param bf: the reference to the current boardframe
 	 */
-	public TileSpace(int x, int y, Scrabble s, BoardFrame bf){
+	public TileSpace_047(int x, int y, Scrabble_024 s, BoardFrame_047 bf){
 		_j = this;
 		_bf = bf;
 		_row = x;
@@ -170,7 +170,7 @@ public class TileSpace extends JButton implements ActionListener {
 						}
 					}
 					else{
-						PlayerSpace tempSpace = _bf.getPlayerFrame(_bf.getGame().getCurrentTurn()).getCurrentSpace();
+						PlayerSpace_047 tempSpace = _bf.getPlayerFrame(_bf.getGame().getCurrentTurn()).getCurrentSpace();
 						tempSpace.setText(Character.toString(tempSpace.getTempTile().getChar()) + ", " + tempSpace.getTempTile().getValue());
 						tempSpace.setCurrentTile(_b.getTempTile());
 						_b.setTempTile(null);
@@ -178,7 +178,7 @@ public class TileSpace extends JButton implements ActionListener {
 				}
 				else{
 					//Chris changed 2 lines below to getTempTile instead of getTile
-					PlayerSpace tempSpace = _bf.getPlayerFrame(_bf.getGame().getCurrentTurn()).getCurrentSpace();
+					PlayerSpace_047 tempSpace = _bf.getPlayerFrame(_bf.getGame().getCurrentTurn()).getCurrentSpace();
 					tempSpace.setText(Character.toString(tempSpace.getTempTile().getChar()) + ", " + tempSpace.getTempTile().getValue());
 					tempSpace.setCurrentTile(_b.getTempTile());
 					_b.setTempTile(null);
@@ -220,7 +220,7 @@ public class TileSpace extends JButton implements ActionListener {
 	 * Method that gets a specific tile
 	 * @return Returns a specific tile
 	 */
-	public Tile getTile(){
+	public Tile_024 getTile(){
 		return _t;
 	}
 	/**
