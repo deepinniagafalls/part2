@@ -154,6 +154,14 @@ public class Extravaganza_047 extends JFrame {
 		public PassT(String path){
 			_path = path;
 		}
+		/**
+		 * @author tylerdie (Tyler Dietrich)
+		 * @author ceelman (Chris Elman)
+		 * @author jaeheunk (Jason(Jaeheun) Kim)
+		 * @author mjszymko (Michael Szymkowski)
+		 * @date 2015-APRIL-10
+		 * Method that performs a certain action when an action is performed.
+		 */
 		public void actionPerformed(ActionEvent e) {
 			String wordToScore = _bf.getWordChecker().isThisWord();
 			if(_bf.getWordChecker().isZero()){
@@ -218,6 +226,7 @@ public class Extravaganza_047 extends JFrame {
 	 * @author mjszymko (Michael Szymkowski)
 	 * @date 2015-APRIL-10
 	 * @return Returns an int value for a char that the method is getting
+	 * This method returns a score value of type int according to a letter of type Char
 	 */
 	public int scoreHelper(char c){
 		if(c=='A' || c=='E' || c=='I' || c=='O' || c=='U'){
