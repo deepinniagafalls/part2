@@ -29,7 +29,11 @@ public class Game {
 	private static Game _currentGame;
 	
 
-	
+	/**
+	 * 
+	 * @param s
+	 * @throws IOException
+	 */
 	public Game(String s) throws IOException{
 	       try {
 	            UIManager.setLookAndFeel(new javax.swing.plaf.metal.MetalLookAndFeel());
@@ -161,11 +165,17 @@ public class Game {
 			return _currentTurn;
 		}
 	}
-	
+	/**
+	 * 
+	 * @return: accessor method for the current game
+	 */
 	public Game getGame(){
 		return _currentGame;
 	}
-	
+	/**
+	 * 
+	 * @return: the integer corresponding to the current player's turn
+	 */
 	public int getCurrentTurn(){
 		return  _currentTurn;
 	}

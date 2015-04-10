@@ -27,7 +27,13 @@ public class TileSpace extends JButton implements ActionListener {
 	private String _myText;
 	private Color _color;
 	
-	
+	/**
+	 * 
+	 * @param x: the x-coordinate of the tilespace
+	 * @param y: the y-coordinate of the tilespace
+	 * @param s: the reference to the scrabble game
+	 * @param bf: the reference to the current boardframe
+	 */
 	public TileSpace(int x, int y, Scrabble s, BoardFrame bf){
 		_j = this;
 		_bf = bf;
@@ -100,7 +106,10 @@ public class TileSpace extends JButton implements ActionListener {
 		// TODO Auto-generated method stub
 		
 	}
-	
+	/**
+	 * 
+	 * @return: return whether a tilespacce has others adjacent to it
+	 */
 	public boolean isAdjacent(){
 		if(_row==0 && (_col!=0 && _col!=19)){
 			if(_bf.getTileSpace(_row+1,_col).getMyText()==null	&&	_bf.getTileSpace(19,_col).getMyText()==null	&&	_bf.getTileSpace(_row, _col+1).getMyText()==null 	&& _bf.getTileSpace(_row, _col-1).getMyText()==null){

@@ -23,6 +23,13 @@ public class LoadGame {
 	private Scrabble _scrabble;
 	private String _fileToRead;
 	
+	/**
+	 * 
+	 * @param scrabble: reference to the current scrabble game
+	 * @param b: reference to the current board
+	 * @param bf: reference to the current boardframe
+	 * @throws IOException
+	 */
 	public LoadGame(Scrabble scrabble, Board b, BoardFrame bf) throws IOException{
 	_b = b;
 	_bf = bf;
@@ -42,13 +49,13 @@ public class LoadGame {
 	File file = new File(_fileToRead);
 	FileReader fw = new FileReader(file.getAbsoluteFile());
 	BufferedReader bw = new BufferedReader(fw);
-    //String s = (bw.readLine());
-	String s = "asdf$sasdfljl$asdf$";
-    String delims = "$";
+    String s = (bw.readLine());
+	//String s = "asdf%sasdfljl%asdf%";
+    String delims = "%";
     String[] tokens = s.split(delims);
     
     for (int i = 0; i < tokens.length; i++){
-        System.out.println(tokens[1]);
+        System.out.println(tokens[i]);
     }
     
 	}

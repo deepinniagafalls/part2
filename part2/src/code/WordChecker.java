@@ -17,7 +17,11 @@ public class WordChecker {
 	private ArrayList<Tile> _tilesPlaced;
 	private BoardFrame _bf;
 	private Board _b;
-	
+	/**
+	 * 
+	 * @param boardframe: 
+	 * @param board:
+	 */
 	public WordChecker(BoardFrame boardframe, Board board){
 		_rowCoordinates = new ArrayList<Integer>();
 		_colCoordinates = new ArrayList<Integer>();
@@ -27,7 +31,7 @@ public class WordChecker {
 	}
 	
 	public String isThisWord(){
-		if(isZero()){
+		if (isZero()){
 			return null;
 		}
 		else{
