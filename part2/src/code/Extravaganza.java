@@ -99,8 +99,8 @@ public class Extravaganza extends JFrame {
 					filename.setText("You pressed cancel");
 					dir.setText("");
 				}
-				c.setVisible(true);
-				*/
+				c.setVisible(true); */
+				
 				
 				try {
 					new LoadGame(_scrabble, _scrabble.getBoard(), _bf);
