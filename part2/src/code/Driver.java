@@ -10,6 +10,7 @@ import javax.swing.UnsupportedLookAndFeelException;
  * @author jaeheun (Jason Kim)
  * @author mjszymko (Michael Szymkowski)
  * @date 2015-APRIL-10
+ * Driver class with the main method that runs the game
  */
 
 public class Driver {

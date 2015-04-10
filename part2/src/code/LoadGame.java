@@ -14,13 +14,58 @@ import javax.swing.JFrame;
 import code.base.Board;
 import code.base.Scrabble;
 import code.base.TileRack;
-
+/**
+ * @author tylerdie (Tyler Dietrich)
+ * @author ceelman (Chris Elman)
+ * @author jaeheun (Jason Kim)
+ * @author mjszymko (Michael Szymkowski)
+ * @date 2015-APRIL-10
+ */
 public class LoadGame {
-	
+	/**
+	 * @author tylerdie (Tyler Dietrich)
+	 * @author ceelman (Chris Elman)
+	 * @author jaeheun (Jason Kim)
+	 * @author mjszymko (Michael Szymkowski)
+	 * @date 2015-APRIL-10
+	 * Instance variable that holds reference to the Board class
+	 */
 	private Board _b;
+	/**
+	 * @author tylerdie (Tyler Dietrich)
+	 * @author ceelman (Chris Elman)
+	 * @author jaeheun (Jason Kim)
+	 * @author mjszymko (Michael Szymkowski)
+	 * @date 2015-APRIL-10
+	 * Instance variable that holds reference to the BoardFrame class
+	 */
 	private BoardFrame _bf;
+	/**
+	 * @author tylerdie (Tyler Dietrich)
+	 * @author ceelman (Chris Elman)
+	 * @author jaeheun (Jason Kim)
+	 * @author mjszymko (Michael Szymkowski)
+	 * @date 2015-APRIL-10
+	 * Instance variable that holds reference to the TileRack class
+	 */
 	private TileRack _tr;
+	/**
+	 * @author tylerdie (Tyler Dietrich)
+	 * @author ceelman (Chris Elman)
+	 * @author jaeheun (Jason Kim)
+	 * @author mjszymko (Michael Szymkowski)
+	 * @date 2015-APRIL-10
+	 * Instance variable that holds reference to the Scrabble class
+	 */
 	private Scrabble _scrabble;
+	/**
+	 * @author tylerdie (Tyler Dietrich)
+	 * @author ceelman (Chris Elman)
+	 * @author jaeheun (Jason Kim)
+	 * @author mjszymko (Michael Szymkowski)
+	 * @date 2015-APRIL-10
+	 * Instance variable that holds reference to the String reading files
+	 */
 	private String _fileToRead;
 	
 	/**
@@ -29,6 +74,11 @@ public class LoadGame {
 	 * @author jaeheun (Jason Kim)
 	 * @author mjszymko (Michael Szymkowski)
 	 * @date 2015-APRIL-10
+	 * Constructor for the LoadGame class
+	 * @param Reference to the Scrabble class
+	 * @param Reference to the Board class
+	 * @param Reference to the BoardFrame class
+	 * @throws IOException
 	 */
 	public LoadGame(Scrabble scrabble, Board b, BoardFrame bf) throws IOException{
 	_b = b;
