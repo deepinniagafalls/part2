@@ -110,10 +110,11 @@ public class Game_047 {
 	      // ArrayList<String> names = new ArrayList<>();
 		_currentGame = this;
 		if(s == "CUI"){
-			System.out.print("Please type in the path of the dictionary file. Type default instead to use the dictionary that is already provided with the code: ");
+			System.out.print("Please type in the path of the dictionary file. Press Enter instead to use the dictionary that is already provided with the code: ");
 		       Scanner ps = new Scanner(System.in);
 		       path = ps.nextLine();
-		       if(path == "default"){
+		       Integer pl = path.length();
+		       if(pl == 0){
 		    	   path = "Documents/words.txt";
 		       }
 		System.out.print("How many players do you want? ");
@@ -179,7 +180,11 @@ public class Game_047 {
 		}
 		else if(s != "CUI"){
 		path = JOptionPane.showInputDialog(null, "Please type in the path of the dictionary file. Type default instead to use the dictionary that is already provided with the code","PATH",JOptionPane.QUESTION_MESSAGE);
-		if(path == "default"){ path = "res/words.txt";}
+		
+	       Integer pl = path.length();
+	       if(pl == 0){
+	    	   path = "Documents/words.txt";
+	       }
 		p = JOptionPane.showInputDialog(null, "How many players do you want?","Number of Players",JOptionPane.QUESTION_MESSAGE);
 		if(p != null){_numberOfPlayers = Integer.parseInt(p);}
 		else{JOptionPane.showMessageDialog(null, "Error! you choose to cancel","ERROR",JOptionPane.ERROR_MESSAGE);System.exit(0);}
