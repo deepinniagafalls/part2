@@ -64,6 +64,7 @@ public class WordChecker {
 	 * @date 2015-APRIL-10
 	 */
 	private Board _b;
+	private int _numberOfPassesInARow = 0;
 	/**
 	 * @author tylerdie (Tyler Dietrich)
 	 * @author ceelman (Chris Elman)
@@ -87,9 +88,15 @@ public class WordChecker {
 	 */
 	public String isThisWord(){
 		if (isZero()){
+			_numberOfPassesInARow = _numberOfPassesInARow + 1;
+			if(_numberOfPassesInARow==_bf.getGame().getNumOfPlayers()){ //Terminates game
+				System.out.println("GAME OVER Man!");
+				System.exit(0);
+			}
 			return null;
 		}
 		else{
+		_numberOfPassesInARow = 0;
 		String word = "";
 		String wordForward = "";
 		String wordBackward = "";
@@ -240,7 +247,7 @@ public class WordChecker {
 			}
 			return null;
 		}
-		}
+	}
 		
 		
 		
