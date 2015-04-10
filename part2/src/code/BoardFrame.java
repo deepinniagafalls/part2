@@ -64,18 +64,34 @@ public class BoardFrame extends JFrame {
 		_numberOfPlayers = _s.getNumofPlayers();
 	}
 
+	/**
+	 * 
+	 * @param index: is the number of the player frame that we want to select
+	 * @return: returns the player frame specified by the index
+	 */
 	public PlayerFrame getPlayerFrame(int index){
 		return _pf.get(index);
 	}
-	
+	/**
+	 * 
+	 * @return the reference to the current game
+	 */
 	public Game getGame(){
 		return _game;
 	}
-	
+	/**
+	 * 
+	 * @return accessor method to the current scrabble game
+	 */
 	public Scrabble getScrabble(){
 		return _scrabble;
 	}
-	
+	/**
+	 * 
+	 * @param currentWord: this input is the word checker in use
+	 * this is a mutator method
+	 * 
+	 */
 	public void setWord(WordChecker currentWord){
 		_currentWord = currentWord;
 	}
@@ -84,10 +100,19 @@ public class BoardFrame extends JFrame {
 		return _currentWord;
 	}
 	
+	/**
+	 * 
+	 * @return: a reference to the current board
+	 */
 	public Board getBoard(){
 		return _board;
 	}
-	
+	/**
+	 * 
+	 * @param row: row index of the 
+	 * @param col
+	 * @return
+	 */
 	public TileSpace getTileSpace(int row, int col){
 		return _boardOfButtons[row][col];
 	}

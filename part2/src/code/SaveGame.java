@@ -63,6 +63,7 @@ public class SaveGame {
 		bw.write("%");
 		String content = "/part2/res/words.txt";
 		bw.write(content);
+		bw.write("%");
 		
 		for(int i = 0; i <_scrabble.getNumofPlayers(); i = i + 1 ){
 			Player p = _scrabble.returnPlayer(i);
@@ -81,7 +82,11 @@ public class SaveGame {
 			bw.write("%");
 		}
 		
-
+		int turn = _bf.getGame().getCurrentTurn();
+		
+		bw.write(" " + turn);
+		bw.write("%");
+		
 		for(int i = 0; i < _scrabble.getInv().getSize(); i = i + 1 ){
 			bw.write("[" + _scrabble.getInv().getTile(i).getChar() + "]");
 		}

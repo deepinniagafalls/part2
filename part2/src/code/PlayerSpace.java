@@ -38,7 +38,9 @@ public class PlayerSpace extends JButton implements ActionListener {
 		
 		
 		this.addActionListener(new ActionListener() {
-			
+			/**
+			 * method to be called when the playerspace is clicked
+			 */
 				public void actionPerformed(ActionEvent e) {
 				//	if(_tempTH!=null){
 					//	Tile newerTemp = _t; //Need to fix this

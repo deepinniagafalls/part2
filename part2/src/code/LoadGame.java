@@ -23,6 +23,13 @@ public class LoadGame {
 	private Scrabble _scrabble;
 	private String _fileToRead;
 	
+	/**
+	 * 
+	 * @param scrabble: reference to the current scrabble game
+	 * @param b: reference to the current board
+	 * @param bf: reference to the current boardframe
+	 * @throws IOException
+	 */
 	public LoadGame(Scrabble scrabble, Board b, BoardFrame bf) throws IOException{
 	_b = b;
 	_bf = bf;
