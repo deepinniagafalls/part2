@@ -18,7 +18,7 @@ import javax.swing.JTextField;
 import javax.swing.UIManager;
 
 import code.base.Player_024_047;
-import code.base.Scrabble_024;
+import code.base.Scrabble_024_047;
 import code.base.Tile_024;
 
 public class Extravaganza_047 extends JFrame {
@@ -33,7 +33,7 @@ public class Extravaganza_047 extends JFrame {
 	private JButton open = new JButton("Open"), save = new JButton("Save");
 	private JButton pass = new JButton("Pass");
 	private BoardFrame_047 _bf;
-	private Scrabble_024 _scrabble;
+	private Scrabble_024_047 _scrabble;
 	private int _currentTurn;
 	private int _numberOfPlayers;
 	private Game_047 _g;
@@ -41,7 +41,7 @@ public class Extravaganza_047 extends JFrame {
 	private JLabel label1;
 	private boolean _isPlayerFrameStillEmpty = false;
 
-	public Extravaganza_047(Scrabble_024 scrabble, BoardFrame_047 bf, Game_047 g, ArrayList<String> name, ArrayList<PlayerFrame_047> pf, String path) throws IOException {
+	public Extravaganza_047(Scrabble_024_047 scrabble, BoardFrame_047 bf, Game_047 g, ArrayList<String> name, ArrayList<PlayerFrame_047> pf, String path) throws IOException {
 	      try {
 	            UIManager.setLookAndFeel(new com.sun.java.swing.plaf.motif.MotifLookAndFeel());
 	        } catch(Exception e) {

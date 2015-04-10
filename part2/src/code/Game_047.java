@@ -12,7 +12,7 @@ import javax.swing.UnsupportedLookAndFeelException;
 import code.base.Board_024;
 import code.base.Inventory_024;
 import code.base.Player_024_047;
-import code.base.Scrabble_024;
+import code.base.Scrabble_024_047;
 import code.base.Tile_024;
 import code.util.ReaderTool_047;
 
@@ -213,7 +213,7 @@ public class Game_047 {
 		_names.add(e4);
 		}
 		}
-		Scrabble_024 scrabble = new Scrabble_024(_numberOfPlayers, this);
+		Scrabble_024_047 scrabble = new Scrabble_024_047(_numberOfPlayers, this);
 		Inventory_024 invent = scrabble.getInv();
 		Board_024 board = scrabble.getBoard();
 		_playerList = scrabble.getPlayers();

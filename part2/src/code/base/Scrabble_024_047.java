@@ -7,7 +7,7 @@ import javax.swing.JOptionPane;
 
 import code.Game_047;
 
-public class Scrabble_024 {
+public class Scrabble_024_047 {
 	
 
 	
@@ -36,7 +36,7 @@ public class Scrabble_024 {
 	/**
 	 * Class constructor
 	 */
-	public Scrabble_024(int numberOfPlayers, Game_047 g){
+	public Scrabble_024_047(int numberOfPlayers, Game_047 g){
 		_inv = new Inventory_024();
 		_board = new Board_024();
 		_numberOfPlayers = numberOfPlayers;

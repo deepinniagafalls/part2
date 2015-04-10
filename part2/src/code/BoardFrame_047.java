@@ -10,7 +10,7 @@ import javax.swing.*;
 import code.base.Board_024;
 import code.base.Inventory_024;
 import code.base.Player_024_047;
-import code.base.Scrabble_024;
+import code.base.Scrabble_024_047;
 
 /**
  * @author tylerdie (Tyler Dietrich)
@@ -29,7 +29,7 @@ public class BoardFrame_047 extends JFrame {
 	 * @date 2015-APRIL-10
 	 * Instance variable that hold reference to the Scrabble class
 	 */
-	private Scrabble_024 _s;
+	private Scrabble_024_047 _s;
 	/**
 	 * @author tylerdie (Tyler Dietrich)
 	 * @author ceelman (Chris Elman)
@@ -110,7 +110,7 @@ public class BoardFrame_047 extends JFrame {
 	 * @date 2015-APRIL-10
 	 * Instance variable that holds reference to the Scrabble class
 	 */
-	private Scrabble_024 _scrabble;
+	private Scrabble_024_047 _scrabble;
 	/**
 	 * @author tylerdie (Tyler Dietrich)
 	 * @author ceelman (Chris Elman)
@@ -144,7 +144,7 @@ public class BoardFrame_047 extends JFrame {
 	 * @param BoardFrame_047 now has access to the Scrabble class
 	 */
 	
-	public BoardFrame_047(Scrabble_024 s, Board_024 b, Inventory_024 i, ArrayList<PlayerFrame_047> pf, Game_047 g, Scrabble_024 scrabble, String path){
+	public BoardFrame_047(Scrabble_024_047 s, Board_024 b, Inventory_024 i, ArrayList<PlayerFrame_047> pf, Game_047 g, Scrabble_024_047 scrabble, String path){
 	       try {
 	            UIManager.setLookAndFeel(new com.sun.java.swing.plaf.motif.MotifLookAndFeel());
 	        } catch(Exception e) {
@@ -224,7 +224,7 @@ public class BoardFrame_047 extends JFrame {
 	 * Method that gets the content from the Scrabble class
 	 * @return Returns the content from the Scrabble class
 	 */
-	public Scrabble_024 getScrabble(){
+	public Scrabble_024_047 getScrabble(){
 		return _scrabble;
 	}
 	/**

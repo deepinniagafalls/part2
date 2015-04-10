@@ -8,7 +8,7 @@ import java.util.ArrayList;
 import javax.swing.JButton;
 
 import code.base.Player_024_047;
-import code.base.Scrabble_024;
+import code.base.Scrabble_024_047;
 import code.base.Tile_024;
 /**
  * @author tylerdie (Tyler Dietrich)
@@ -44,7 +44,7 @@ public class PlayerSpace_047 extends JButton implements ActionListener {
 	 * @date 2015-APRIL-10
 	 * Instance variable that holds reference to the Scrabble
 	 */
-	private Scrabble_024 _scrabble;
+	private Scrabble_024_047 _scrabble;
 	/**
 	 * @author tylerdie (Tyler Dietrich)
 	 * @author ceelman (Chris Elman)
@@ -102,7 +102,7 @@ public class PlayerSpace_047 extends JButton implements ActionListener {
 	 * @param Reference to the PlayerFrame class
 	 * @param Reference to the Game class
 	 */
-	public PlayerSpace_047(Scrabble_024 s, int i, PlayerFrame_047 pf, Game_047 currentGame){
+	public PlayerSpace_047(Scrabble_024_047 s, int i, PlayerFrame_047 pf, Game_047 currentGame){
 		_pf = pf;
 		_numberOfTile = i;
 		_scrabble = s;
