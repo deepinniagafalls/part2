@@ -195,10 +195,7 @@ public class Extravaganza_047 extends JFrame {
 					sum = sum + scoreHelper(wordToScore.charAt(i));
 				}
 				Player_024_047 tempPlayer = _scrabble.getPlayers().get(_g.getCurrentTurn());
-				System.out.println(sum);
-				System.out.println(tempPlayer.getScore());
 				tempPlayer.addScore(tempPlayer.getScore(), sum);
-				System.out.println(tempPlayer.getScore());
 			}
 			WordChecker_047 check = new WordChecker_047(_bf,_bf.getBoard(),_path);
 			_bf.setWord(check);
