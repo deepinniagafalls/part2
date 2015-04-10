@@ -30,9 +30,7 @@ import code.base.Tile_024;
  */
 public class Extravaganza_047 extends JFrame {
 
-	/**
-	 * @param _currentTurn keeps the turn as an int form
-	 */
+
 	private static final long serialVersionUID = 1L;
 
 	private JTextField filename = new JTextField(), dir = new JTextField();
@@ -213,6 +211,14 @@ public class Extravaganza_047 extends JFrame {
 		}
 	}
 	
+	/**
+	 * @author tylerdie (Tyler Dietrich)
+	 * @author ceelman (Chris Elman)
+	 * @author jaeheunk (Jason(Jaeheun) Kim)
+	 * @author mjszymko (Michael Szymkowski)
+	 * @date 2015-APRIL-10
+	 * @return Returns an int value for a char that the method is getting
+	 */
 	public int scoreHelper(char c){
 		if(c=='A' || c=='E' || c=='I' || c=='O' || c=='U'){
 			return 1;
