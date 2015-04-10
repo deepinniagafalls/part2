@@ -22,6 +22,7 @@ public class WordChecker {
 	 * @author jaeheun (Jason Kim)
 	 * @author mjszymko (Michael Szymkowski)
 	 * @date 2015-APRIL-10
+	 * Instance variable that holds reference to a new ReaderTool
 	 */
 	private ReaderTool _r = new ReaderTool();
 	/**
@@ -30,6 +31,7 @@ public class WordChecker {
 	 * @author jaeheun (Jason Kim)
 	 * @author mjszymko (Michael Szymkowski)
 	 * @date 2015-APRIL-10
+	 * Instance variable that holds reference to the coordinates of a row
 	 */
 	private ArrayList<Integer>	_rowCoordinates;
 	/**
@@ -38,6 +40,7 @@ public class WordChecker {
 	 * @author jaeheun (Jason Kim)
 	 * @author mjszymko (Michael Szymkowski)
 	 * @date 2015-APRIL-10
+	 * Instance variable that holds reference to the coordinates of a column
 	 */
 	private ArrayList<Integer> _colCoordinates;
 	/**
@@ -46,6 +49,7 @@ public class WordChecker {
 	 * @author jaeheun (Jason Kim)
 	 * @author mjszymko (Michael Szymkowski)
 	 * @date 2015-APRIL-10
+	 * Instance variable that holds reference to an ArrayList of tiles placed
 	 */
 	private ArrayList<Tile> _tilesPlaced;
 	/**
@@ -54,6 +58,7 @@ public class WordChecker {
 	 * @author jaeheun (Jason Kim)
 	 * @author mjszymko (Michael Szymkowski)
 	 * @date 2015-APRIL-10
+	 * Instance variable that holds reference to the BoardFrame class
 	 */
 	private BoardFrame _bf;
 	/**
@@ -62,8 +67,17 @@ public class WordChecker {
 	 * @author jaeheun (Jason Kim)
 	 * @author mjszymko (Michael Szymkowski)
 	 * @date 2015-APRIL-10
+	 * Instance variable that holds reference to the Board class
 	 */
 	private Board _b;
+	/**
+	 * @author tylerdie (Tyler Dietrich)
+	 * @author ceelman (Chris Elman)
+	 * @author jaeheun (Jason Kim)
+	 * @author mjszymko (Michael Szymkowski)
+	 * @date 2015-APRIL-10
+	 * Instance variable that holds reference to the number of passes in a row
+	 */
 	private int _numberOfPassesInARow = 0;
 	/**
 	 * @author tylerdie (Tyler Dietrich)
@@ -71,6 +85,9 @@ public class WordChecker {
 	 * @author jaeheun (Jason Kim)
 	 * @author mjszymko (Michael Szymkowski)
 	 * @date 2015-APRIL-10
+	 * Constructor for the WordChecker class that checks if a wrd is valid
+	 * @param boardframe Holds Reference to the BoardFrame class
+	 * @param board Holds reference to the Board class
 	 */
 	public WordChecker(BoardFrame boardframe, Board board){
 		_rowCoordinates = new ArrayList<Integer>();
@@ -85,6 +102,7 @@ public class WordChecker {
 	 * @author jaeheun (Jason Kim)
 	 * @author mjszymko (Michael Szymkowski)
 	 * @date 2015-APRIL-10
+	 * Method that determines if a word is playable
 	 */
 	public String isThisWord(){
 		if (isZero()){
@@ -362,6 +380,8 @@ public class WordChecker {
 	 * @author jaeheun (Jason Kim)
 	 * @author mjszymko (Michael Szymkowski)
 	 * @date 2015-APRIL-10
+	 * Boolean method that determins if a word is forward
+	 * @return Returns true a word is playable forward
 	 */
 	public boolean isWordForward(){
 		return true;
@@ -372,6 +392,8 @@ public class WordChecker {
 	 * @author jaeheun (Jason Kim)
 	 * @author mjszymko (Michael Szymkowski)
 	 * @date 2015-APRIL-10
+	 * Boolean method that determins if a word is backwards
+	 * @return Returns false a word is playable backwards
 	 */
 	public boolean isWordBackWard(){
 		return false;
@@ -382,6 +404,9 @@ public class WordChecker {
 	 * @author jaeheun (Jason Kim)
 	 * @author mjszymko (Michael Szymkowski)
 	 * @date 2015-APRIL-10
+	 * Method that adds letters to a specific coordinate
+	 * @param row Holds reference t a specific row
+	 * @param col Holds reference to a specific column
 	 */
 	public void addLetter(int row, int col){
 		_rowCoordinates.add(row);
@@ -394,6 +419,7 @@ public class WordChecker {
 	 * @author jaeheun (Jason Kim)
 	 * @author mjszymko (Michael Szymkowski)
 	 * @date 2015-APRIL-10
+	 * Method that clears the space
 	 */
 	public void clear(){
 		_rowCoordinates = new ArrayList<Integer>();
@@ -406,6 +432,8 @@ public class WordChecker {
 	 * @author jaeheun (Jason Kim)
 	 * @author mjszymko (Michael Szymkowski)
 	 * @date 2015-APRIL-10
+	 * Method that returns if a row coordinate is zero
+	 * @return A row coordinate that equals zero
 	 */
 	public boolean isZero(){
 		return _rowCoordinates.size() == 0;

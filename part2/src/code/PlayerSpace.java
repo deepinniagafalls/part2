@@ -24,6 +24,7 @@ public class PlayerSpace extends JButton implements ActionListener {
 	 * @author jaeheun (Jason Kim)
 	 * @author mjszymko (Michael Szymkowski)
 	 * @date 2015-APRIL-10
+	 * Instance variable that holds reference to the ArrayList of Players
 	 */
 	private ArrayList<Player> _players;
 	/**
@@ -32,6 +33,7 @@ public class PlayerSpace extends JButton implements ActionListener {
 	 * @author jaeheun (Jason Kim)
 	 * @author mjszymko (Michael Szymkowski)
 	 * @date 2015-APRIL-10
+	 * Instance variable that holds reference to the PlayerSpace class
 	 */
 	private PlayerSpace _playerSpace;
 	/**
@@ -40,6 +42,7 @@ public class PlayerSpace extends JButton implements ActionListener {
 	 * @author jaeheun (Jason Kim)
 	 * @author mjszymko (Michael Szymkowski)
 	 * @date 2015-APRIL-10
+	 * Instance variable that holds reference to the Scrabble
 	 */
 	private Scrabble _scrabble;
 	/**
@@ -48,6 +51,7 @@ public class PlayerSpace extends JButton implements ActionListener {
 	 * @author jaeheun (Jason Kim)
 	 * @author mjszymko (Michael Szymkowski)
 	 * @date 2015-APRIL-10
+	 * Instance variable that holds reference to the Tile class
 	 */
 	private Tile _t;
 	/**
@@ -56,6 +60,7 @@ public class PlayerSpace extends JButton implements ActionListener {
 	 * @author jaeheun (Jason Kim)
 	 * @author mjszymko (Michael Szymkowski)
 	 * @date 2015-APRIL-10
+	 * Instance variable that holds reference to the PlayerFrame class
 	 */
 	private PlayerFrame _pf;
 	/**
@@ -64,6 +69,7 @@ public class PlayerSpace extends JButton implements ActionListener {
 	 * @author jaeheun (Jason Kim)
 	 * @author mjszymko (Michael Szymkowski)
 	 * @date 2015-APRIL-10
+	 * Instance variable that holds reference to the number of tiles a player has
 	 */
 	private int _numberOfTile;
 	/**
@@ -72,6 +78,7 @@ public class PlayerSpace extends JButton implements ActionListener {
 	 * @author jaeheun (Jason Kim)
 	 * @author mjszymko (Michael Szymkowski)
 	 * @date 2015-APRIL-10
+	 * Instance variable that holds reference to a temporary tile
 	 */
 	private Tile _tempTH;
 	/**
@@ -80,6 +87,7 @@ public class PlayerSpace extends JButton implements ActionListener {
 	 * @author jaeheun (Jason Kim)
 	 * @author mjszymko (Michael Szymkowski)
 	 * @date 2015-APRIL-10
+	 * Instance variable that holds reference to the Game class
 	 */
 	private Game _currentGame;
 	/**
@@ -88,6 +96,11 @@ public class PlayerSpace extends JButton implements ActionListener {
 	 * @author jaeheun (Jason Kim)
 	 * @author mjszymko (Michael Szymkowski)
 	 * @date 2015-APRIL-10
+	 * Constructor for the PlayerSpace class
+	 * @param Reference to the Scrabble class
+	 * @param Reference to an int number
+	 * @param Reference to the PlayerFrame class
+	 * @param Reference to the Game class
 	 */
 	public PlayerSpace(Scrabble s, int i, PlayerFrame pf, Game currentGame){
 		_pf = pf;
@@ -109,6 +122,7 @@ public class PlayerSpace extends JButton implements ActionListener {
 			 * @author jaeheun (Jason Kim)
 			 * @author mjszymko (Michael Szymkowski)
 			 * @date 2015-APRIL-10
+			 * Method that performs the actions for the PlayerSpace class
 			 */
 				public void actionPerformed(ActionEvent e) {
 				//	if(_tempTH!=null){
@@ -147,6 +161,8 @@ public class PlayerSpace extends JButton implements ActionListener {
 	 * @author jaeheun (Jason Kim)
 	 * @author mjszymko (Michael Szymkowski)
 	 * @date 2015-APRIL-10
+	 * Method that gets the number of tiles the player has
+	 * @return Returns the number of tiles
 	 */
 	
 	public int getNumber(){
@@ -158,6 +174,8 @@ public class PlayerSpace extends JButton implements ActionListener {
 	 * @author jaeheun (Jason Kim)
 	 * @author mjszymko (Michael Szymkowski)
 	 * @date 2015-APRIL-10
+	 * Method that gets a temporary tile
+	 * @return Returns a temporary tile
 	 */
 	
 	public Tile getTempTile(){
@@ -169,6 +187,8 @@ public class PlayerSpace extends JButton implements ActionListener {
 	 * @author jaeheun (Jason Kim)
 	 * @author mjszymko (Michael Szymkowski)
 	 * @date 2015-APRIL-10
+	 * Method that sets a current tile
+	 * @param Reference to a specific tile
 	 */
 	public void setCurrentTile(Tile t){
 		_t = t;
@@ -179,6 +199,8 @@ public class PlayerSpace extends JButton implements ActionListener {
 	 * @author jaeheun (Jason Kim)
 	 * @author mjszymko (Michael Szymkowski)
 	 * @date 2015-APRIL-10
+	 * Method that gets the specific tile
+	 * @return Returns the tile
 	 */
 	public Tile getTile(){
 		return _t;
@@ -189,6 +211,7 @@ public class PlayerSpace extends JButton implements ActionListener {
 	 * @author jaeheun (Jason Kim)
 	 * @author mjszymko (Michael Szymkowski)
 	 * @date 2015-APRIL-10
+	 * Method that performs an action
 	 */
 	@Override
 	public void actionPerformed(ActionEvent arg0) {

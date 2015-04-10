@@ -32,6 +32,7 @@ public class PlayerFrame {
 	 * @author jaeheun (Jason Kim)
 	 * @author mjszymko (Michael Szymkowski)
 	 * @date 2015-APRIL-10
+	 * Instance variable that holds reference to the Scrabble class
 	 */
 	private Scrabble _s;
 	/**
@@ -40,6 +41,7 @@ public class PlayerFrame {
 	 * @author jaeheun (Jason Kim)
 	 * @author mjszymko (Michael Szymkowski)
 	 * @date 2015-APRIL-10
+	 * Instance variable that holds reference to the Inventory class
 	 */
     private Inventory _inv;
     /**
@@ -48,6 +50,7 @@ public class PlayerFrame {
      * @author jaeheun (Jason Kim)
      * @author mjszymko (Michael Szymkowski)
      * @date 2015-APRIL-10
+     * Instance variable that holds reference to the ArrayList of type players
      */
     private ArrayList<Player> _players;
     /**
@@ -56,6 +59,7 @@ public class PlayerFrame {
      * @author jaeheun (Jason Kim)
      * @author mjszymko (Michael Szymkowski)
      * @date 2015-APRIL-10
+     * Instance variable that holds reference to the Board class
      */
 	private Board _board;
 	/**
@@ -64,6 +68,7 @@ public class PlayerFrame {
 	 * @author jaeheun (Jason Kim)
 	 * @author mjszymko (Michael Szymkowski)
 	 * @date 2015-APRIL-10
+	 * Instance variable that holds reference to the number of players in the game
 	 */
 	private int _numberOfPlayers;
 	/**
@@ -72,6 +77,7 @@ public class PlayerFrame {
 	 * @author jaeheun (Jason Kim)
 	 * @author mjszymko (Michael Szymkowski)
 	 * @date 2015-APRIL-10
+	 * Instance variable that holds reference to the board of buttons
 	 */
 	private JButton[][] _boardOfButtons = new JButton[1][12];
 	/**
@@ -80,6 +86,7 @@ public class PlayerFrame {
 	 * @author jaeheun (Jason Kim)
 	 * @author mjszymko (Michael Szymkowski)
 	 * @date 2015-APRIL-10
+	 * Instance variable that holds reference to the board of player spaces
 	 */
 	private PlayerSpace[][] _boardOfPlayerSpaces = new PlayerSpace[1][12];
 	/**
@@ -88,6 +95,7 @@ public class PlayerFrame {
 	 * @author jaeheun (Jason Kim)
 	 * @author mjszymko (Michael Szymkowski)
 	 * @date 2015-APRIL-10
+	 * Instance variable that holds reference to the TileRack class
 	 */
 	private TileRack _tr;
 	/**
@@ -96,6 +104,7 @@ public class PlayerFrame {
 	 * @author jaeheun (Jason Kim)
 	 * @author mjszymko (Michael Szymkowski)
 	 * @date 2015-APRIL-10
+	 * Instance variable that holds reference to the PlayerFrame class
 	 */
 	private PlayerFrame _pf;
 	/**
@@ -104,6 +113,7 @@ public class PlayerFrame {
 	 * @author jaeheun (Jason Kim)
 	 * @author mjszymko (Michael Szymkowski)
 	 * @date 2015-APRIL-10
+	 * Instance variable that holds reference to the Tile class
 	 */
 	private Tile _tileTemp;
 	/**
@@ -112,6 +122,7 @@ public class PlayerFrame {
 	 * @author jaeheun (Jason Kim)
 	 * @author mjszymko (Michael Szymkowski)
 	 * @date 2015-APRIL-10
+	 * Instance variable that holds reference to the PlayerScape class
 	 */
 	private PlayerSpace _current;
 	/**
@@ -120,6 +131,7 @@ public class PlayerFrame {
 	 * @author jaeheun (Jason Kim)
 	 * @author mjszymko (Michael Szymkowski)
 	 * @date 2015-APRIL-10
+	 * Instance variable that holds reference to the turn of the player
 	 */
 	private int _myTurnNumber;
 	/**
@@ -128,6 +140,7 @@ public class PlayerFrame {
 	 * @author jaeheun (Jason Kim)
 	 * @author mjszymko (Michael Szymkowski)
 	 * @date 2015-APRIL-10
+	 * Instance variable that holds reference to the current state of the game
 	 */
 	private Game _currentGame;
 	/**
@@ -136,6 +149,7 @@ public class PlayerFrame {
 	 * @author jaeheun (Jason Kim)
 	 * @author mjszymko (Michael Szymkowski)
 	 * @date 2015-APRIL-10
+	 * Instance variable that holds reference to the points that the players begins with
 	 */
 	private JLabel _points = new JLabel("Points: 0000");
 
@@ -145,6 +159,12 @@ public class PlayerFrame {
 	 * @author jaeheun (Jason Kim)
 	 * @author mjszymko (Michael Szymkowski)
 	 * @date 2015-APRIL-10
+	 * Constructor for the PlayerFrame class that holds parts of the GUI
+	 * @param Reference to the Scrabble class
+	 * @param Reference to the TileRack class
+	 * @param Reference to the int index
+	 * @param Reference to hte current game
+	 * @param reference to the names of the players
 	 */
 	public PlayerFrame(Scrabble s, TileRack tr, int index, Game currentGame, ArrayList<String> name){
 	       try {
@@ -187,6 +207,7 @@ public class PlayerFrame {
 	 * @author jaeheun (Jason Kim)
 	 * @author mjszymko (Michael Szymkowski)
 	 * @date 2015-APRIL-10
+	 * Method that updates the class
 	 */
 	public void update(){
 	//	_inv = _s.getInv();
@@ -201,6 +222,8 @@ public class PlayerFrame {
 	 * @author jaeheun (Jason Kim)
 	 * @author mjszymko (Michael Szymkowski)
 	 * @date 2015-APRIL-10
+	 * Method that removes tiles from a players space
+	 * @return Null
 	 */
 	public Tile removeTileFromPlayerSpace(int index){
 		return null;
@@ -211,6 +234,7 @@ public class PlayerFrame {
 	 * @author jaeheun (Jason Kim)
 	 * @author mjszymko (Michael Szymkowski)
 	 * @date 2015-APRIL-10
+	 * Method that sets a tile to a temporary value
 	 */
 	public void setTempTile(Tile t){
 		_tileTemp = t;
@@ -221,6 +245,8 @@ public class PlayerFrame {
 	 * @author jaeheun (Jason Kim)
 	 * @author mjszymko (Michael Szymkowski)
 	 * @date 2015-APRIL-10
+	 * Method that gets the content of the Board class
+	 * @return The content of the Board class
 	 */
 	public Board getBoard(){
 		return _board;
@@ -231,6 +257,8 @@ public class PlayerFrame {
 	 * @author jaeheun (Jason Kim)
 	 * @author mjszymko (Michael Szymkowski)
 	 * @date 2015-APRIL-10
+	 * Method that gets the current space of where the player is playing
+	 * @return Returns that space
 	 */
 	public PlayerSpace getCurrentSpace(){
 		return _current;
@@ -241,6 +269,8 @@ public class PlayerFrame {
 	 * @author jaeheun (Jason Kim)
 	 * @author mjszymko (Michael Szymkowski)
 	 * @date 2015-APRIL-10
+	 * Method that sets the current player scape to some value
+	 * @param Holds value to the current space
 	 */
 	public void setCurrent(PlayerSpace current){
 		_current = current;
@@ -251,6 +281,9 @@ public class PlayerFrame {
 	 * @author jaeheun (Jason Kim)
 	 * @author mjszymko (Michael Szymkowski)
 	 * @date 2015-APRIL-10
+	 * Method that gets a players space
+	 * @param holds value to a certain int value
+	 * @return Returns the players values for their board
 	 */
 	public PlayerSpace getPlayerSpace(int index){
 		return _boardOfPlayerSpaces[0][index];
@@ -261,6 +294,8 @@ public class PlayerFrame {
 	 * @author jaeheun (Jason Kim)
 	 * @author mjszymko (Michael Szymkowski)
 	 * @date 2015-APRIL-10
+	 * Method that gets the players turn number
+	 * @return Returns the players turn number
 	 */
 	public int getMyTurnNumber(){
 		return _myTurnNumber;
