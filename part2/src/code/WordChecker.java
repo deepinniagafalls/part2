@@ -43,7 +43,7 @@ public class WordChecker {
 		int lastCol = _colCoordinates.get(_colCoordinates.size()-1);
 		
 		
-		//finds the first row
+		//finds the first row and last row
 		for(int i=1; i<_rowCoordinates.size();i++){
 			if(firstRow>_rowCoordinates.get(i)){
 				firstRow = _rowCoordinates.get(i);
@@ -53,7 +53,7 @@ public class WordChecker {
 			}
 		}
 		
-		//Finds the first column
+		//Finds the first column and last column
 		for(int i=1; i<_colCoordinates.size();i++){
 			if(firstCol>_colCoordinates.get(i)){
 				firstCol = _colCoordinates.get(i);
@@ -102,7 +102,7 @@ public class WordChecker {
 			while(_b.getTile(firstRow,firstCol-k) != null){
 					wordForward = _b.getTile(firstRow,firstCol-k).getChar() + wordForward;
 					wordBackward = wordBackward + _b.getTile(firstRow,firstCol-k).getChar();
-				k = k + 1;
+					k = k + 1;
 			}
 			
 			int j = 1;
@@ -113,10 +113,53 @@ public class WordChecker {
 			}
 			
 		}
-		
-		
+
 		
 		if(_r.isThisAWord(wordForward) || _r.isThisAWord(wordBackward)){
+			//begin here
+			//vertical word
+			if(rowDifference >= colDifference){
+				for(int i=0; i<rowDifference+1; i++){
+						_bf.getTileSpace(firstRow+i, firstCol).setBackground(_bf.getScrabble().returnPlayer(_bf.getGame().getCurrentTurn()).getColor());
+				}
+				
+				int k = 1;
+				while(_b.getTile(firstRow-k,firstCol) != null){
+						_bf.getTileSpace(firstRow-k, firstCol).setBackground(_bf.getScrabble().returnPlayer(_bf.getGame().getCurrentTurn()).getColor());
+						k = k + 1;
+				}
+				
+				int j = 1;
+				while(_b.getTile(lastRow+j,lastCol) != null){
+					_bf.getTileSpace(lastRow+j, lastCol).setBackground(_bf.getScrabble().returnPlayer(_bf.getGame().getCurrentTurn()).getColor());
+					j = j + 1;
+				}
+				
+			}
+			//horizontal word
+			else{
+				for(int i=0; i<colDifference+1; i++){
+						_bf.getTileSpace(firstRow, firstCol+i).setBackground(_bf.getScrabble().returnPlayer(_bf.getGame().getCurrentTurn()).getColor());
+				}
+				
+				int k = 1;
+				while(_b.getTile(firstRow,firstCol-k) != null){
+						_bf.getTileSpace(firstRow, firstCol-k).setBackground(_bf.getScrabble().returnPlayer(_bf.getGame().getCurrentTurn()).getColor());
+						k = k + 1;
+				}
+				
+				int j = 1;
+				while(_b.getTile(lastRow,lastCol+j) != null){
+					wordForward = _b.getTile(lastRow,lastCol+j).getChar() + wordForward;
+					wordBackward = wordBackward + _b.getTile(lastRow,lastCol+j).getChar();
+					_bf.getTileSpace(lastRow, lastCol+j).setBackground(_bf.getScrabble().returnPlayer(_bf.getGame().getCurrentTurn()).getColor());
+					j = j + 1;
+				}
+				
+			}
+			
+			//end here
+			
 			return wordForward;
 		}
 		else{
