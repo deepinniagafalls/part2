@@ -4,6 +4,7 @@ package code;
 import java.util.ArrayList;
 
 import code.base.Board;
+import code.base.Tile;
 import code.util.ReaderTool;
 
 public class WordChecker {
@@ -11,7 +12,7 @@ public class WordChecker {
 	private ReaderTool _r = new ReaderTool();
 	private ArrayList<Integer>	_rowCoordinates;
 	private ArrayList<Integer> _colCoordinates;
-	
+	private ArrayList<Tile> _tilesPlaced;
 	private BoardFrame _bf;
 	private Board _b;
 	
@@ -20,6 +21,7 @@ public class WordChecker {
 		_colCoordinates = new ArrayList<Integer>();
 		_bf = boardframe;
 		_b = board;
+		_tilesPlaced = new ArrayList<Tile>();
 	}
 	
 	public String isThisWord(){
@@ -33,6 +35,7 @@ public class WordChecker {
 		int lastRow = _rowCoordinates.get(_rowCoordinates.size()-1);
 		int firstCol = _colCoordinates.get(0);
 		int lastCol = _colCoordinates.get(_colCoordinates.size()-1);
+		
 		
 		//finds the first row
 		for(int i=1; i<_rowCoordinates.size();i++){
@@ -109,6 +112,17 @@ public class WordChecker {
 			return wordForward;
 		}
 		else{
+			PlayerFrame current = _bf.getPlayerFrame(_bf.getGame().getCurrentTurn());
+			for(int i = 0; i < 12; i ++){
+				if(current.getPlayerSpace(i) == null){
+					current.getPlayerSpace(i).setCurrentTile(_tilesPlaced.get(i));
+					current.getPlayerSpace(i).setText(Character.toString(_tilesPlaced.get(i).getChar()));
+				}
+			}
+			for(int i = 0; i < _rowCoordinates.size(); i ++){
+				_bf.getTileSpace(_rowCoordinates.get(i), _colCoordinates.get(i)).setText("");
+				_b.removeTile(_rowCoordinates.get(i), _colCoordinates.get(i));
+			}
 			return null;
 		}
 		
@@ -231,6 +245,7 @@ public class WordChecker {
 	public void addLetter(int row, int col){
 		_rowCoordinates.add(row);
 		_colCoordinates.add(col);
+		_tilesPlaced.add(_b.getTile(row,col));
 	}
 	
 }
