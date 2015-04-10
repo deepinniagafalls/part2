@@ -32,6 +32,7 @@ public class Game {
 	 * @author jaeheun (Jason Kim)
 	 * @author mjszymko (Michael Szymkowski)
 	 * @date 2015-APRIL-10
+	 * Instance variable that holds reference to the Tile class
 	 */
 	Tile _t;
 	/**
@@ -40,6 +41,7 @@ public class Game {
 	 * @author jaeheun (Jason Kim)
 	 * @author mjszymko (Michael Szymkowski)
 	 * @date 2015-APRIL-10
+	 * Instance variable that holds reference to the number of players
 	 */
 	private static int _numberOfPlayers;
 	/**
@@ -48,6 +50,7 @@ public class Game {
 	 * @author jaeheun (Jason Kim)
 	 * @author mjszymko (Michael Szymkowski)
 	 * @date 2015-APRIL-10
+	 * Instance variable that holds reference to the Scrabble class
 	 */
 	private static ArrayList<Player> _playerList;
 	/**
@@ -56,6 +59,7 @@ public class Game {
 	 * @author jaeheun (Jason Kim)
 	 * @author mjszymko (Michael Szymkowski)
 	 * @date 2015-APRIL-10
+	 * Instance variable that holds reference to the players in the game
 	 */
 	private static ArrayList<PlayerFrame> _playerFrameList;
 	/**
@@ -64,6 +68,7 @@ public class Game {
 	 * @author jaeheun (Jason Kim)
 	 * @author mjszymko (Michael Szymkowski)
 	 * @date 2015-APRIL-10
+	 * Instance variable that holds reference to the PlayerFrame class
 	 */
 	private static int _currentTurn = 0;
 	/**
@@ -72,6 +77,7 @@ public class Game {
 	 * @author jaeheun (Jason Kim)
 	 * @author mjszymko (Michael Szymkowski)
 	 * @date 2015-APRIL-10
+	 * Instance variable that holds reference to the current turn
 	 */
 	private static Game _currentGame;
 	
@@ -82,6 +88,9 @@ public class Game {
 	 * @author jaeheun (Jason Kim)
 	 * @author mjszymko (Michael Szymkowski)
 	 * @date 2015-APRIL-10
+	 * Constructor for the Game class
+	 * @param String for the player names
+	 * @throws IOEception
 	 */
 	public Game(String s) throws IOException{
 	       try {
@@ -210,6 +219,8 @@ public class Game {
 	 * @author jaeheun (Jason Kim)
 	 * @author mjszymko (Michael Szymkowski)
 	 * @date 2015-APRIL-10
+	 * Method that controls the turns for the game
+	 * @return returns the current turn in the game
 	 */
 	
 	public int incrementTurn(){
@@ -228,6 +239,8 @@ public class Game {
 	 * @author jaeheun (Jason Kim)
 	 * @author mjszymko (Michael Szymkowski)
 	 * @date 2015-APRIL-10
+	 * Method that obtains the contents of the Game class
+	 * @return Returns the current game
 	 */
 	public Game getGame(){
 		return _currentGame;
@@ -238,6 +251,8 @@ public class Game {
 	 * @author jaeheun (Jason Kim)
 	 * @author mjszymko (Michael Szymkowski)
 	 * @date 2015-APRIL-10
+	 * Method that obtains the current turn
+	 * @return Returns the current turn
 	 */
 	public int getCurrentTurn(){
 		return  _currentTurn;

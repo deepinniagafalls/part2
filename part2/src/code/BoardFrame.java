@@ -27,6 +27,7 @@ public class BoardFrame extends JFrame {
 	 * @author jaeheun (Jason Kim)
 	 * @author mjszymko (Michael Szymkowski)
 	 * @date 2015-APRIL-10
+	 * Instance variable that hold reference to the Scrabble class
 	 */
 	private Scrabble _s;
 	/**
@@ -35,6 +36,7 @@ public class BoardFrame extends JFrame {
 	 * @author jaeheun (Jason Kim)
 	 * @author mjszymko (Michael Szymkowski)
 	 * @date 2015-APRIL-10
+	 * Instance variable that holds reference to the Inventory class
 	 */
     private Inventory _inv;
     /**
@@ -43,6 +45,7 @@ public class BoardFrame extends JFrame {
      * @author jaeheun (Jason Kim)
      * @author mjszymko (Michael Szymkowski)
      * @date 2015-APRIL-10
+     * Instance variable that holds reference to the ArrayList of players
      */
     private ArrayList<Player> _players;
     /**
@@ -51,6 +54,7 @@ public class BoardFrame extends JFrame {
      * @author jaeheun (Jason Kim)
      * @author mjszymko (Michael Szymkowski)
      * @date 2015-APRIL-10
+     * Instance variable that holds reference to the Board class
      */
 	private Board _board;
 	/**
@@ -59,6 +63,7 @@ public class BoardFrame extends JFrame {
 	 * @author jaeheun (Jason Kim)
 	 * @author mjszymko (Michael Szymkowski)
 	 * @date 2015-APRIL-10
+	 * Instance variable that holds reference to the int Number of players
 	 */
 	private int _numberOfPlayers;
 	/**
@@ -67,6 +72,7 @@ public class BoardFrame extends JFrame {
 	 * @author jaeheun (Jason Kim)
 	 * @author mjszymko (Michael Szymkowski)
 	 * @date 2015-APRIL-10
+	 * Instance variable that holds reference to the buttons on the Board in a 20x20 Frame
 	 */
 	private TileSpace[][] _boardOfButtons = new TileSpace[20][20];
 	/**
@@ -75,6 +81,7 @@ public class BoardFrame extends JFrame {
 	 * @author jaeheun (Jason Kim)
 	 * @author mjszymko (Michael Szymkowski)
 	 * @date 2015-APRIL-10
+	 * Instance variable that holds reference to the Inventory class
 	 */
 	private Inventory _invent;
 	/**
@@ -83,6 +90,7 @@ public class BoardFrame extends JFrame {
 	 * @author jaeheun (Jason Kim)
 	 * @author mjszymko (Michael Szymkowski)
 	 * @date 2015-APRIL-10
+	 * Instance variable that holds reference to the ArrayList of type PlayerFrame
 	 */
 	private ArrayList<PlayerFrame> _pf;
 	/**
@@ -91,6 +99,7 @@ public class BoardFrame extends JFrame {
 	 * @author jaeheun (Jason Kim)
 	 * @author mjszymko (Michael Szymkowski)
 	 * @date 2015-APRIL-10
+	 * Instance variable that holds reference to the Game class
 	 */
 	private Game _game;
 	/**
@@ -99,6 +108,7 @@ public class BoardFrame extends JFrame {
 	 * @author jaeheun (Jason Kim)
 	 * @author mjszymko (Michael Szymkowski)
 	 * @date 2015-APRIL-10
+	 * Instance variable that holds reference to the Scrabble class
 	 */
 	private Scrabble _scrabble;
 	/**
@@ -107,6 +117,7 @@ public class BoardFrame extends JFrame {
 	 * @author jaeheun (Jason Kim)
 	 * @author mjszymko (Michael Szymkowski)
 	 * @date 2015-APRIL-10
+	 * Instance variable that holds reference to the BoardFrame class
 	 */
 	private BoardFrame _bf;
 	/**
@@ -115,6 +126,7 @@ public class BoardFrame extends JFrame {
 	 * @author jaeheun (Jason Kim)
 	 * @author mjszymko (Michael Szymkowski)
 	 * @date 2015-APRIL-10
+	 * Instance variable that holds reference to the WordChecker class
 	 */
 	private WordChecker _currentWord;
 	/**
@@ -123,6 +135,13 @@ public class BoardFrame extends JFrame {
 	 * @author jaeheun (Jason Kim)
 	 * @author mjszymko (Michael Szymkowski)
 	 * @date 2015-APRIL-10
+	 * Constructor for the BoardFrame class that implements parts of the GUI
+	 * @param BoardFrame can now have access to Scrabble class
+	 * @param BoardFrame now how access to the Board class
+	 * @param BoardFrame now has access to the Tiles in the Inventory
+	 * @param BoardFrame now has access to the ArrayList of type PlayerFrame
+	 * @param BoardFrame now has access to the Game class
+	 * @param BoardFrame now has access to the Scrabble class
 	 */
 	
 	public BoardFrame(Scrabble s, Board b, Inventory i, ArrayList<PlayerFrame> pf, Game g, Scrabble scrabble){
@@ -163,6 +182,7 @@ public class BoardFrame extends JFrame {
 	 * @author jaeheun (Jason Kim)
 	 * @author mjszymko (Michael Szymkowski)
 	 * @date 2015-APRIL-10
+	 * Method to update the class accordingly
 	 */
 	public void update(){
 		_inv = _s.getInv();
@@ -177,6 +197,8 @@ public class BoardFrame extends JFrame {
 	 * @author jaeheun (Jason Kim)
 	 * @author mjszymko (Michael Szymkowski)
 	 * @date 2015-APRIL-10
+	 * Method to access the indec of the PlayerFrame class
+	 * @return The index of the PlayerFrame
 	 */
 	public PlayerFrame getPlayerFrame(int index){
 		return _pf.get(index);
@@ -187,6 +209,8 @@ public class BoardFrame extends JFrame {
 	 * @author jaeheun (Jason Kim)
 	 * @author mjszymko (Michael Szymkowski)
 	 * @date 2015-APRIL-10
+	 * Method to get the content of the Game class
+	 * @return Returns the properties of the Game class
 	 */
 	public Game getGame(){
 		return _game;
@@ -197,6 +221,8 @@ public class BoardFrame extends JFrame {
 	 * @author jaeheun (Jason Kim)
 	 * @author mjszymko (Michael Szymkowski)
 	 * @date 2015-APRIL-10
+	 * Method that gets the content from the Scrabble class
+	 * @return Returns the content from the Scrabble class
 	 */
 	public Scrabble getScrabble(){
 		return _scrabble;
@@ -207,6 +233,7 @@ public class BoardFrame extends JFrame {
 	 * @author jaeheun (Jason Kim)
 	 * @author mjszymko (Michael Szymkowski)
 	 * @date 2015-APRIL-10
+	 * Method that sets the word from the WordChecker class to a temporary value
 	 */
 	public void setWord(WordChecker currentWord){
 		_currentWord = currentWord;
@@ -217,6 +244,8 @@ public class BoardFrame extends JFrame {
 	 * @author jaeheun (Jason Kim)
 	 * @author mjszymko (Michael Szymkowski)
 	 * @date 2015-APRIL-10
+	 * Method that obtains the words from the WordChecker Class
+	 * @return Returns the contents of the Words from the WordChecker class
 	 */
 	
 	public WordChecker getWordChecker(){
@@ -229,6 +258,8 @@ public class BoardFrame extends JFrame {
 	 * @author jaeheun (Jason Kim)
 	 * @author mjszymko (Michael Szymkowski)
 	 * @date 2015-APRIL-10
+	 * Method that gets the contents from the Board Class
+	 * @return Returns the contents of the Board class
 	 */
 	public Board getBoard(){
 		return _board;
@@ -239,6 +270,10 @@ public class BoardFrame extends JFrame {
 	 * @author jaeheun (Jason Kim)
 	 * @author mjszymko (Michael Szymkowski)
 	 * @date 2015-APRIL-10
+	 * Method that gets the specific TileSpace  in a specific row and column
+	 * @param Int number to a specific spot in a row
+	 * @param Int number to a specific spot in column
+	 * @return Returns the buttons on the board at a specific location
 	 */
 	public TileSpace getTileSpace(int row, int col){
 		return _boardOfButtons[row][col];
