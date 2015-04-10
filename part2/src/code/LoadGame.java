@@ -42,13 +42,13 @@ public class LoadGame {
 	File file = new File(_fileToRead);
 	FileReader fw = new FileReader(file.getAbsoluteFile());
 	BufferedReader bw = new BufferedReader(fw);
-    //String s = (bw.readLine());
-	String s = "asdf$sasdfljl$asdf$";
-    String delims = "$";
+    String s = (bw.readLine());
+	//String s = "asdf%sasdfljl%asdf%";
+    String delims = "%";
     String[] tokens = s.split(delims);
     
     for (int i = 0; i < tokens.length; i++){
-        System.out.println(tokens[1]);
+        System.out.println(tokens[i]);
     }
     
 	}

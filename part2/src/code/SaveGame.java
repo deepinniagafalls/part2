@@ -53,13 +53,13 @@ public class SaveGame {
 		FileWriter fw = new FileWriter(file.getAbsoluteFile());
 		BufferedWriter bw = new BufferedWriter(fw);
 		
-		bw.write("$");
+		bw.write("%");
 		String boardsize = "20 20";
 
-		bw.write("$");
+		bw.write("%");
 		bw.write(boardsize);
 		
-		bw.write("$");
+		bw.write("%");
 		String content = "/part2/res/words.txt";
 		bw.write(content);
 		
@@ -70,21 +70,21 @@ public class SaveGame {
 			PlayerFrame pf = _bf.getPlayerFrame(i);
 			bw.write("[" +p.getColor() + ", " + p.getScore() + "]");
 			
-			bw.write("$");
+			bw.write("%");
 			bw.write("[");
 			for(int j = 0; j <12; j = j+1){
 				pf.getPlayerSpace(j).getTile().getChar();
 				bw.write(pf.getPlayerSpace(j).getTile().getChar());
 			}
 			bw.write("]");
-			bw.write("$");
+			bw.write("%");
 		}
 		
 
 		for(int i = 0; i < _scrabble.getInv().getSize(); i = i + 1 ){
 			bw.write("[" + _scrabble.getInv().getTile(i).getChar() + "]");
 		}
-		bw.write("$");
+		bw.write("%");
 		
 		for(int i = 0; i<20; i = i + 1){
 			for(int j = 0; j<20; j = j +1){
