@@ -10,7 +10,7 @@ public class ReaderTool_047 {
 	_words = new ArrayList<String>();
     String  _line = null;
     try{
-       BufferedReader br = new BufferedReader(new FileReader(path));
+       BufferedReader br = new BufferedReader(new FileReader("Documents/words.txt"));
        while ((_line = br.readLine()) != null) {
           _words.add(_line);
        }       
