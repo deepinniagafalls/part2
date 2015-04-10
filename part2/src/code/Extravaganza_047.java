@@ -41,7 +41,7 @@ public class Extravaganza_047 extends JFrame {
 	private JLabel label1;
 	private boolean _isPlayerFrameStillEmpty = false;
 
-	public Extravaganza_047(Scrabble_024 scrabble, BoardFrame_047 bf, Game_047 g, ArrayList<String> name, ArrayList<PlayerFrame_047> pf) throws IOException {
+	public Extravaganza_047(Scrabble_024 scrabble, BoardFrame_047 bf, Game_047 g, ArrayList<String> name, ArrayList<PlayerFrame_047> pf, String path) throws IOException {
 	      try {
 	            UIManager.setLookAndFeel(new com.sun.java.swing.plaf.motif.MotifLookAndFeel());
 	        } catch(Exception e) {
@@ -61,7 +61,7 @@ public class Extravaganza_047 extends JFrame {
 		p.add(pass);
 		open.addActionListener(new OpenL());
 		save.addActionListener(new SaveL());
-		pass.addActionListener(new PassT(name));
+		pass.addActionListener(new PassT(name, path));
 		label1 = new JLabel("Turn: " + name.get(0),null,JLabel.CENTER);
 		
 		
@@ -141,8 +141,10 @@ public class Extravaganza_047 extends JFrame {
 	
 	private class PassT implements ActionListener {
 		private ArrayList<String> _name;
-		public PassT(ArrayList<String> name){
+		private String _path = "";
+		public PassT(ArrayList<String> name, String path){
 			_name = name;
+			_path = path;
 		}
 		
 		public void actionPerformed(ActionEvent e) {
@@ -196,7 +198,7 @@ public class Extravaganza_047 extends JFrame {
 				tempPlayer.addScore(tempPlayer.getScore(), sum);
 				System.out.println(tempPlayer.getScore());
 			}
-			WordChecker_047 check = new WordChecker_047(_bf,_bf.getBoard());
+			WordChecker_047 check = new WordChecker_047(_bf,_bf.getBoard(),_path);
 			_bf.setWord(check);
 			_bf.getPlayerFrame(tep).update();
 			

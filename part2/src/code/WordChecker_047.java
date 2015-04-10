@@ -24,7 +24,7 @@ public class WordChecker_047 {
 	 * @date 2015-APRIL-10
 	 * Instance variable that holds reference to a new ReaderTool
 	 */
-	private ReaderTool_047 _r = new ReaderTool_047();
+	private ReaderTool_047 _r;
 	/**
 	 * @author tylerdie (Tyler Dietrich)
 	 * @author ceelman (Chris Elman)
@@ -89,7 +89,8 @@ public class WordChecker_047 {
 	 * @param boardframe Holds Reference to the BoardFrame class
 	 * @param board Holds reference to the Board class
 	 */
-	public WordChecker_047(BoardFrame_047 boardframe, Board_024 board){
+	public WordChecker_047(BoardFrame_047 boardframe, Board_024 board, String path){
+		_r = new ReaderTool_047(path);
 		_rowCoordinates = new ArrayList<Integer>();
 		_colCoordinates = new ArrayList<Integer>();
 		_bf = boardframe;

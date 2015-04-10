@@ -34,6 +34,14 @@ public class HighScore_047 {
 		// Save current high score with the past one
 	    int pn = p.size();
 		PrintWriter writer = new PrintWriter("res/save.txt", "UTF-8");
+		switch (pn){
+		case 2:
+			break;
+		case 3:
+			break;
+		case 4:
+			break;
+		}
 		writer.println("The first line");
 		writer.println("The second line");
 		writer.close();
