@@ -18,7 +18,7 @@ public class HighScore {
 		// Load previous high score
 		
 		// Save current high score with the past one
-		PrintWriter writer = new PrintWriter("the-file-name.txt", "UTF-8");
+		PrintWriter writer = new PrintWriter("res/save.txt", "UTF-8");
 		writer.println("The first line");
 		writer.println("The second line");
 		writer.close();
