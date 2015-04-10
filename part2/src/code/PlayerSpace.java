@@ -44,11 +44,27 @@ public class PlayerSpace extends JButton implements ActionListener {
 					//	Tile newerTemp = _t; //Need to fix this
 					//}
 					if(_pf.getMyTurnNumber()==_currentGame.getCurrentTurn()){
+						if(_pf.getBoard().getTempTile()!=null){
+							Tile temp = _pf.getBoard().getTempTile();
+							for(int i=0; i<12; i++){
+								if(_pf.getPlayerSpace(i).getTile() == null){
+									_pf.getPlayerSpace(i).setCurrentTile(_playerSpace.getTile());
+									_pf.getPlayerSpace(i).setText(Character.toString(_playerSpace.getTile().getChar()) + "," + _playerSpace.getTile().getValue());
+								}
+							}
+							_playerSpace.setCurrentTile(temp);
+							_playerSpace.setText(Character.toString(temp.getChar()) + "," + temp.getValue()); 
+							_pf.getBoard().setTempTile(null);
+						}
+						else{
+						//new stuff by Chris for switching above^^^
 							_playerSpace.setText(""); 
 							_tempTH = _t;
 							_pf.getBoard().setTempTile(_tempTH);
 							_playerSpace.setCurrentTile(null);
 							_pf.setCurrent(_playerSpace);
+						}
+							
 					}
 				}
 			});
