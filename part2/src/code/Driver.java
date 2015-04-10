@@ -6,6 +6,6 @@ import javax.swing.UnsupportedLookAndFeelException;
 
 public class Driver {
 	public static void main(String[] args) throws ClassNotFoundException, InstantiationException, IllegalAccessException, UnsupportedLookAndFeelException, IOException {
-		Game g = new Game();
+		Game g = new Game("CUI");
 	}
 }

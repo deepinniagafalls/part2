@@ -30,17 +30,23 @@ public class Game {
 	
 
 	
-	public Game() throws IOException{
+	public Game(String s) throws IOException{
 	       try {
 	            UIManager.setLookAndFeel(new javax.swing.plaf.metal.MetalLookAndFeel());
 	        } catch(Exception e) {
 	            e.printStackTrace();
 	        }
+	       String e1 = "";
+	       String e2 = "";
+	       String e3 = "";
+	       String e4 = "";
+	       String p = "";
+	       ArrayList<String> names = new ArrayList<>();
 		_currentGame = this;
+		if(s == "CUI"){
 		System.out.print("How many players do you want? ");
 	       Scanner scanIn = new Scanner(System.in);
-	       String p = scanIn.nextLine();
-		// String p = JOptionPane.showInputDialog(null, "How many players do you want?","Number of Players",JOptionPane.QUESTION_MESSAGE);
+	       p = scanIn.nextLine();
 		if(p != null){_numberOfPlayers = Integer.parseInt(p);}
 		else{JOptionPane.showMessageDialog(null, "Error! you choose to cancel","ERROR",JOptionPane.ERROR_MESSAGE);System.exit(0);}
 		if(_numberOfPlayers > 4){
@@ -48,16 +54,13 @@ public class Game {
 		if(_numberOfPlayers < 2){
 			JOptionPane.showMessageDialog(null, "Error! The minimum number of players is 2","ERROR",JOptionPane.ERROR_MESSAGE);
 			System.exit(0);}
-		ArrayList<String> names = new ArrayList<>();
 		if(_numberOfPlayers == 2){
-			//String e1 = JOptionPane.showInputDialog(null, "Please enter player 1's name in","Name",JOptionPane.QUESTION_MESSAGE);;
-			//String e2 = JOptionPane.showInputDialog(null, "Please enter player 2's name in","Name",JOptionPane.QUESTION_MESSAGE);;
 			System.out.print("Please enter player 1's name in: ");
 			Scanner scanIn2 = new Scanner(System.in);
-		    String e1 = scanIn2.nextLine();
+		    e1 = scanIn2.nextLine();
 			System.out.print("Please enter player 2's name in: ");
 			Scanner scanIn3 = new Scanner(System.in);
-		    String e2 = scanIn3.nextLine();
+		    e2 = scanIn3.nextLine();
 
 
 			names.add(e1);
@@ -70,13 +73,13 @@ public class Game {
 			//String e3 = JOptionPane.showInputDialog(null, "Please enter player 3's name in","Number",JOptionPane.QUESTION_MESSAGE);;
 			System.out.print("Please enter player 1's name in: ");
 			Scanner scanIn2 = new Scanner(System.in);
-		    String e1 = scanIn2.nextLine();
+		    e1 = scanIn2.nextLine();
 			System.out.print("Please enter player 2's name in: ");
 			Scanner scanIn3 = new Scanner(System.in);
-		    String e2 = scanIn3.nextLine();
+		    e2 = scanIn3.nextLine();
 			System.out.print("Please enter player 3's name in: ");
 			Scanner scanIn4 = new Scanner(System.in);
-		    String e3 = scanIn4.nextLine();
+		    e3 = scanIn4.nextLine();
 			names.add(e1);
 			names.add(e2);
 			names.add(e3);
@@ -85,24 +88,56 @@ public class Game {
 		else if(_numberOfPlayers == 4){
 			System.out.print("Please enter player 1's name in: ");
 			Scanner scanIn2 = new Scanner(System.in);
-		    String e1 = scanIn2.nextLine();
+		    e1 = scanIn2.nextLine();
 			System.out.print("Please enter player 2's name in: ");
 			Scanner scanIn3 = new Scanner(System.in);
-		    String e2 = scanIn3.nextLine();
+		    e2 = scanIn3.nextLine();
 			System.out.print("Please enter player 3's name in: ");
 			Scanner scanIn4 = new Scanner(System.in);
-		    String e3 = scanIn4.nextLine();
+		    e3 = scanIn4.nextLine();
 			System.out.print("Please enter player 4's name in: ");
 			Scanner scanIn5 = new Scanner(System.in);
-		    String e4 = scanIn5.nextLine();
-			//String e1 = JOptionPane.showInputDialog(null, "Please enter player 1's name in","Number",JOptionPane.QUESTION_MESSAGE);;
-			//String e2 = JOptionPane.showInputDialog(null, "Please enter player 2's name in","Number",JOptionPane.QUESTION_MESSAGE);;
-			//String e3 = JOptionPane.showInputDialog(null, "Please enter player 3's name in","Number",JOptionPane.QUESTION_MESSAGE);;
-			//String e4 = JOptionPane.showInputDialog(null, "Please enter player 4's name in","Number",JOptionPane.QUESTION_MESSAGE);;
+		    e4 = scanIn5.nextLine();
 			names.add(e1);
 			names.add(e2);
 			names.add(e3);
 			names.add(e4);
+			
+		}
+		}
+		else if(s != "CUI"){
+		p = JOptionPane.showInputDialog(null, "How many players do you want?","Number of Players",JOptionPane.QUESTION_MESSAGE);
+		if(p != null){_numberOfPlayers = Integer.parseInt(p);}
+		else{JOptionPane.showMessageDialog(null, "Error! you choose to cancel","ERROR",JOptionPane.ERROR_MESSAGE);System.exit(0);}
+		if(_numberOfPlayers > 4){
+		JOptionPane.showMessageDialog(null, "Error! The maximum number of players is 4","ERROR",JOptionPane.ERROR_MESSAGE);System.exit(0);}
+		if(_numberOfPlayers < 2){
+			JOptionPane.showMessageDialog(null, "Error! The minimum number of players is 2","ERROR",JOptionPane.ERROR_MESSAGE);
+			System.exit(0);}
+		if(_numberOfPlayers == 2){
+		e1 = JOptionPane.showInputDialog(null, "Please enter player 1's name in","Number",JOptionPane.QUESTION_MESSAGE);;
+		e2 = JOptionPane.showInputDialog(null, "Please enter player 2's name in","Number",JOptionPane.QUESTION_MESSAGE);;
+		names.add(e1);
+		names.add(e2);
+		}
+		else if(_numberOfPlayers == 3){
+		e1 = JOptionPane.showInputDialog(null, "Please enter player 1's name in","Number",JOptionPane.QUESTION_MESSAGE);;
+		e2 = JOptionPane.showInputDialog(null, "Please enter player 2's name in","Number",JOptionPane.QUESTION_MESSAGE);;
+		e3 = JOptionPane.showInputDialog(null, "Please enter player 3's name in","Number",JOptionPane.QUESTION_MESSAGE);;
+		names.add(e1);
+		names.add(e2);
+		names.add(e3);
+		}
+		else if(_numberOfPlayers == 4){
+		e1 = JOptionPane.showInputDialog(null, "Please enter player 1's name in","Number",JOptionPane.QUESTION_MESSAGE);;
+		e2 = JOptionPane.showInputDialog(null, "Please enter player 2's name in","Number",JOptionPane.QUESTION_MESSAGE);;
+		e3 = JOptionPane.showInputDialog(null, "Please enter player 3's name in","Number",JOptionPane.QUESTION_MESSAGE);;
+		e4 = JOptionPane.showInputDialog(null, "Please enter player 4's name in","Number",JOptionPane.QUESTION_MESSAGE);;
+		names.add(e1);
+		names.add(e2);
+		names.add(e3);
+		names.add(e4);
+		}
 		}
 		Scrabble scrabble = new Scrabble(_numberOfPlayers);
 		Inventory invent = scrabble.getInv();
@@ -112,10 +147,7 @@ public class Game {
 		for(int i = 0; i < _numberOfPlayers; i++){
 			_playerFrameList.add(new PlayerFrame(scrabble, scrabble.returnPlayer(i).getTileRack(), i, _currentGame, names));
 		}
-		//PlayerFrame tr = new PlayerFrame(scrabble, scrabble.returnPlayer(0).getTileRack());
-		//PlayerFrame tr2 = new PlayerFrame(scrabble,scrabble.returnPlayer(1).getTileRack());
 		BoardFrame boardframe = new BoardFrame(scrabble, board , invent,_playerFrameList, _currentGame, scrabble);
-		//System.out.println(scrabble.returnPlayer(1));
 		Extravaganza fc = new Extravaganza(scrabble, boardframe, this, names, _playerFrameList);
 	}
 	
