@@ -4,7 +4,7 @@ import java.awt.Color;
 import java.util.Random;
 
 
-public class Player_024 {
+public class Player_024_047 {
 
 	/**
 	 * Records the score.
@@ -27,7 +27,7 @@ public class Player_024 {
 	 * 
 	 * @param inv can draw Tiles from the Inventory
 	 */
-	public Player_024(Inventory_024 inv, String name){
+	public Player_024_047(Inventory_024 inv, String name){
 		_score = 0;
 		//_inv = inv;
 		_rack = new TileRack_024(inv);

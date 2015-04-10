@@ -9,7 +9,7 @@ import javax.swing.*;
 
 import code.base.Board_024;
 import code.base.Inventory_024;
-import code.base.Player_024;
+import code.base.Player_024_047;
 import code.base.Scrabble_024;
 
 /**
@@ -47,7 +47,7 @@ public class BoardFrame_047 extends JFrame {
      * @date 2015-APRIL-10
      * Instance variable that holds reference to the ArrayList of players
      */
-    private ArrayList<Player_024> _players;
+    private ArrayList<Player_024_047> _players;
     /**
      * @author tylerdie (Tyler Dietrich)
      * @author ceelman (Chris Elman)

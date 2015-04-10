@@ -17,7 +17,7 @@ import javax.swing.JPanel;
 import javax.swing.JTextField;
 import javax.swing.UIManager;
 
-import code.base.Player_024;
+import code.base.Player_024_047;
 import code.base.Scrabble_024;
 import code.base.Tile_024;
 
@@ -192,7 +192,7 @@ public class Extravaganza_047 extends JFrame {
 				for(int i=0; i<wordToScore.length();i++){
 					sum = sum + scoreHelper(wordToScore.charAt(i));
 				}
-				Player_024 tempPlayer = _scrabble.getPlayers().get(_g.getCurrentTurn());
+				Player_024_047 tempPlayer = _scrabble.getPlayers().get(_g.getCurrentTurn());
 				System.out.println(sum);
 				System.out.println(tempPlayer.getScore());
 				tempPlayer.addScore(tempPlayer.getScore(), sum);

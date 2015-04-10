@@ -5,7 +5,7 @@ import org.junit.Test;
 import static org.junit.Assert.assertTrue;
 import code.Game_047;
 import code.base.Inventory_024;
-import code.base.Player_024;
+import code.base.Player_024_047;
 
 public class PlayerTest {
 	//test that initial score at new game is 0
@@ -14,7 +14,7 @@ public class PlayerTest {
 	
     private void testInitialScore(int expected) {
     	Inventory_024 i = new Inventory_024();
-        Player_024 p = new Player_024(i,"Test1");
+        Player_024_047 p = new Player_024_047(i,"Test1");
         int actual = p.getScore();
         
         assertTrue("I tested whether or not the Player's score was"+expected+"and it should have returned"+actual, actual==expected);
@@ -28,7 +28,7 @@ public class PlayerTest {
 	
     private void testAddScore(int original, int add, int total) {
     	Inventory_024 i = new Inventory_024();
-        Player_024 p = new Player_024(i,"Test2");
+        Player_024_047 p = new Player_024_047(i,"Test2");
         int actual = p.addScore(original, add);
         
         assertTrue("I tested whether or not the Player's score was"+total+"after adding"+original+"and"+add+"and it should have returned"+actual, actual==total);

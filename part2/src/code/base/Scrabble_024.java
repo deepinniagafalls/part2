@@ -18,7 +18,7 @@ public class Scrabble_024 {
 	/**
 	 * Stores players.
 	 */
-	private ArrayList<Player_024> _players = new ArrayList<Player_024>();
+	private ArrayList<Player_024_047> _players = new ArrayList<Player_024_047>();
 	/**
 	 * tile board to be played on
 	 */
@@ -56,9 +56,9 @@ public class Scrabble_024 {
 	 * Adds a new player to the game.
 	 */
 	private void addNewPlayer(int index){
-		_players.add(new Player_024(_inv, _g.getName(index)));
+		_players.add(new Player_024_047(_inv, _g.getName(index)));
 	}
-	public ArrayList<Player_024> getPlayers(){
+	public ArrayList<Player_024_047> getPlayers(){
 		return _players;
 	}
 	public int getNumofPlayers(){
@@ -70,7 +70,7 @@ public class Scrabble_024 {
 	public Inventory_024 getInv(){
 		return _inv;
 	}
-	public Player_024 returnPlayer(int playernumber){
+	public Player_024_047 returnPlayer(int playernumber){
 		return _players.get(playernumber);
 	}
 	public boolean getIsVeryFirstTurn(){

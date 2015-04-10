@@ -10,7 +10,7 @@ import javax.swing.JFrame;
 import javax.swing.UIManager;
 
 import code.base.Board_024;
-import code.base.Player_024;
+import code.base.Player_024_047;
 import code.base.Scrabble_024;
 import code.base.TileRack_024;
 import code.base.Inventory_024;
@@ -122,7 +122,7 @@ public class SaveGame_047 {
 		bw.write("%");
 		
 		for(int i = 0; i <_scrabble.getNumofPlayers(); i = i + 1 ){
-			Player_024 p = _scrabble.returnPlayer(i);
+			Player_024_047 p = _scrabble.returnPlayer(i);
 			p.getScore();
 			p.getColor();
 			PlayerFrame_047 pf = _bf.getPlayerFrame(i);

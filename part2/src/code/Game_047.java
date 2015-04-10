@@ -11,7 +11,7 @@ import javax.swing.UnsupportedLookAndFeelException;
 
 import code.base.Board_024;
 import code.base.Inventory_024;
-import code.base.Player_024;
+import code.base.Player_024_047;
 import code.base.Scrabble_024;
 import code.base.Tile_024;
 import code.util.ReaderTool_047;
@@ -52,7 +52,7 @@ public class Game_047 {
 	 * @date 2015-APRIL-10
 	 * Instance variable that holds reference to the Scrabble class
 	 */
-	private static ArrayList<Player_024> _playerList;
+	private static ArrayList<Player_024_047> _playerList;
 	/**
 	 * @author tylerdie (Tyler Dietrich)
 	 * @author ceelman (Chris Elman)
@@ -278,7 +278,7 @@ public class Game_047 {
 		return _names.get(index);
 	}
 	
-	public Player_024 getPlayer(int index){
+	public Player_024_047 getPlayer(int index){
 		return _playerList.get(index);
 	}
 	

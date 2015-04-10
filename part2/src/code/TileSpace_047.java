@@ -9,7 +9,7 @@ import javax.swing.JButton;
 
 import code.base.Board_024;
 import code.base.Inventory_024;
-import code.base.Player_024;
+import code.base.Player_024_047;
 import code.base.Scrabble_024;
 import code.base.Tile_024;
 /**
@@ -82,7 +82,7 @@ public class TileSpace_047 extends JButton implements ActionListener {
 	 * @date 2015-APRIL-10
 	 * Instance variable that holds reference to the ArrayList of Players
 	 */
-	private ArrayList<Player_024> _players;
+	private ArrayList<Player_024_047> _players;
 	/**
 	 * @author tylerdie (Tyler Dietrich)
 	 * @author ceelman (Chris Elman)
