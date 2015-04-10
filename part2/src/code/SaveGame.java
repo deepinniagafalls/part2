@@ -7,6 +7,7 @@ import java.io.FileWriter;
 import java.io.IOException;
 
 import javax.swing.JFrame;
+import javax.swing.UIManager;
 
 import code.base.Board;
 import code.base.Player;
