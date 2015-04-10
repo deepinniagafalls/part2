@@ -11,6 +11,7 @@ public class WordChecker {
 	private ReaderTool _r = new ReaderTool();
 	private ArrayList<Integer>	_rowCoordinates;
 	private ArrayList<Integer> _colCoordinates;
+	
 	private BoardFrame _bf;
 	private Board _b;
 	
@@ -52,7 +53,6 @@ public class WordChecker {
 				lastCol = _colCoordinates.get(i);
 			}
 		}
-		
 		
 		
 		boolean forward = true;
@@ -111,12 +111,6 @@ public class WordChecker {
 		else{
 			return null;
 		}
-		
-		
-		
-		
-		
-		
 		
 		
 		
