@@ -24,11 +24,11 @@ public class LoadGame {
 	private String _fileToRead;
 	
 	/**
-	 * 
-	 * @param scrabble: reference to the current scrabble game
-	 * @param b: reference to the current board
-	 * @param bf: reference to the current boardframe
-	 * @throws IOException
+	 * @author tylerdie (Tyler Dietrich)
+	 * @author ceelman (Chris Elman)
+	 * @author jaeheun (Jason Kim)
+	 * @author mjszymko (Michael Szymkowski)
+	 * @date 2015-APRIL-10
 	 */
 	public LoadGame(Scrabble scrabble, Board b, BoardFrame bf) throws IOException{
 	_b = b;
