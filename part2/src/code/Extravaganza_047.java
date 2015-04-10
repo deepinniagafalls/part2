@@ -36,8 +36,7 @@ public class Extravaganza_047 extends JFrame {
 	 * @author jaeheunk (Jason(Jaeheun) Kim)
 	 * @author mjszymko (Michael Szymkowski)
 	 * @date 2015-APRIL-10
-	 * @return Returns an int value for a char that the method is getting
-	 * This method returns a score value of type int according to a letter of type Char
+	 * Stores serial version
 	 */
 	private static final long serialVersionUID = 1L;
 	/**
@@ -46,8 +45,7 @@ public class Extravaganza_047 extends JFrame {
 	 * @author jaeheunk (Jason(Jaeheun) Kim)
 	 * @author mjszymko (Michael Szymkowski)
 	 * @date 2015-APRIL-10
-	 * @return Returns an int value for a char that the method is getting
-	 * This method returns a score value of type int according to a letter of type Char
+	 * stores dir path
 	 */
 	private JTextField filename = new JTextField(), dir = new JTextField();
 	/**
@@ -55,9 +53,7 @@ public class Extravaganza_047 extends JFrame {
 	 * @author ceelman (Chris Elman)
 	 * @author jaeheunk (Jason(Jaeheun) Kim)
 	 * @author mjszymko (Michael Szymkowski)
-	 * @date 2015-APRIL-10
-	 * @return Returns an int value for a char that the method is getting
-	 * This method returns a score value of type int according to a letter of type Char
+	 * Button for players to choose a directory to load
 	 */
 	private JButton open = new JButton("Open"), save = new JButton("Save");
 	/**
@@ -66,8 +62,7 @@ public class Extravaganza_047 extends JFrame {
 	 * @author jaeheunk (Jason(Jaeheun) Kim)
 	 * @author mjszymko (Michael Szymkowski)
 	 * @date 2015-APRIL-10
-	 * @return Returns an int value for a char that the method is getting
-	 * This method returns a score value of type int according to a letter of type Char
+	 * Button for players to pass their turn
 	 */
 	private JButton pass = new JButton("Pass");
 	/**
@@ -76,8 +71,7 @@ public class Extravaganza_047 extends JFrame {
 	 * @author jaeheunk (Jason(Jaeheun) Kim)
 	 * @author mjszymko (Michael Szymkowski)
 	 * @date 2015-APRIL-10
-	 * @return Returns an int value for a char that the method is getting
-	 * This method returns a score value of type int according to a letter of type Char
+	 * Holds a reference to a BoardFrame where tiles will be placed on
 	 */
 	private BoardFrame_047 _bf;
 	/**
@@ -86,8 +80,7 @@ public class Extravaganza_047 extends JFrame {
 	 * @author jaeheunk (Jason(Jaeheun) Kim)
 	 * @author mjszymko (Michael Szymkowski)
 	 * @date 2015-APRIL-10
-	 * @return Returns an int value for a char that the method is getting
-	 * This method returns a score value of type int according to a letter of type Char
+	 * Holds a reference to the Scrabble class where many classes are instantiated.
 	 */
 	private Scrabble_024_047 _scrabble;
 	/**
@@ -96,9 +89,8 @@ public class Extravaganza_047 extends JFrame {
 	 * @author jaeheunk (Jason(Jaeheun) Kim)
 	 * @author mjszymko (Michael Szymkowski)
 	 * @date 2015-APRIL-10
-	 * @return Returns an int value for a char that the method is getting
-	 * This method returns a score value of type int according to a letter of type Char
-	 */
+	 * An int value that indicates turns
+	 /
 	private int _currentTurn;
 	/**
 	 * @author tylerdie (Tyler Dietrich)
@@ -106,9 +98,8 @@ public class Extravaganza_047 extends JFrame {
 	 * @author jaeheunk (Jason(Jaeheun) Kim)
 	 * @author mjszymko (Michael Szymkowski)
 	 * @date 2015-APRIL-10
-	 * @return Returns an int value for a char that the method is getting
-	 * This method returns a score value of type int according to a letter of type Char
-	 */
+	 * An int value that indicates how many players are playing the game
+	 * /
 	private int _numberOfPlayers;
 	/**
 	 * @author tylerdie (Tyler Dietrich)
@@ -116,8 +107,7 @@ public class Extravaganza_047 extends JFrame {
 	 * @author jaeheunk (Jason(Jaeheun) Kim)
 	 * @author mjszymko (Michael Szymkowski)
 	 * @date 2015-APRIL-10
-	 * @return Returns an int value for a char that the method is getting
-	 * This method returns a score value of type int according to a letter of type Char
+	 * Hold a referenceto the Game class where we get inputs from players
 	 */
 	private Game_047 _g;
 	/**
@@ -126,8 +116,7 @@ public class Extravaganza_047 extends JFrame {
 	 * @author jaeheunk (Jason(Jaeheun) Kim)
 	 * @author mjszymko (Michael Szymkowski)
 	 * @date 2015-APRIL-10
-	 * @return Returns an int value for a char that the method is getting
-	 * This method returns a score value of type int according to a letter of type Char
+	 * An int value that is used for counting
 	 */
 	private int _c = 0;
 	/**
@@ -136,8 +125,7 @@ public class Extravaganza_047 extends JFrame {
 	 * @author jaeheunk (Jason(Jaeheun) Kim)
 	 * @author mjszymko (Michael Szymkowski)
 	 * @date 2015-APRIL-10
-	 * @return Returns an int value for a char that the method is getting
-	 * This method returns a score value of type int according to a letter of type Char
+	 * Label that hold String value to show on the GUI screen for players
 	 */
 	private JLabel label1;
 	/**
@@ -146,8 +134,7 @@ public class Extravaganza_047 extends JFrame {
 	 * @author jaeheunk (Jason(Jaeheun) Kim)
 	 * @author mjszymko (Michael Szymkowski)
 	 * @date 2015-APRIL-10
-	 * @return Returns an int value for a char that the method is getting
-	 * This method returns a score value of type int according to a letter of type Char
+	 * Boolean value that tells us whether a player's frame is empty or not.
 	 */
 	private boolean _isPlayerFrameStillEmpty = false;
 
@@ -158,6 +145,8 @@ public class Extravaganza_047 extends JFrame {
 	 * @author mjszymko (Michael Szymkowski)
 	 * @date 2015-APRIL-10
 	 * @param scrabble gets a reference for a class that instantiate essential classes
+	 * @param bf gets a reference for a class that holds JButtons for players to place tiles
+	 * @param 
 	 * Class constructor
 	 */
 	public Extravaganza_047(Scrabble_024_047 scrabble, BoardFrame_047 bf, Game_047 g, ArrayList<String> name, ArrayList<PlayerFrame_047> pf, String path) throws IOException {
