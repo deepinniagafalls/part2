@@ -146,7 +146,10 @@ public class Extravaganza_047 extends JFrame {
 	 * @date 2015-APRIL-10
 	 * @param scrabble gets a reference for a class that instantiate essential classes
 	 * @param bf gets a reference for a class that holds JButtons for players to place tiles
-	 * @param 
+	 * @param g gets a reference for the Game class
+	 * @param name gets an arraylist that holds every name for every player
+	 * @param pf gets an arraylist of player frame that holds a player's inventory
+	 * @param path a string that holds path to the dictionary
 	 * Class constructor
 	 */
 	public Extravaganza_047(Scrabble_024_047 scrabble, BoardFrame_047 bf, Game_047 g, ArrayList<String> name, ArrayList<PlayerFrame_047> pf, String path) throws IOException {
@@ -198,8 +201,7 @@ public class Extravaganza_047 extends JFrame {
 	 * @author jaeheunk (Jason(Jaeheun) Kim)
 	 * @author mjszymko (Michael Szymkowski)
 	 * @date 2015-APRIL-10
-	 * @return Returns an int value for a char that the method is getting
-	 * This method returns a score value of type int according to a letter of type Char
+	 * Class that holds codes that make open button work
 	 */
 	public class OpenL implements ActionListener {
 		/**
@@ -208,8 +210,7 @@ public class Extravaganza_047 extends JFrame {
 		 * @author jaeheunk (Jason(Jaeheun) Kim)
 		 * @author mjszymko (Michael Szymkowski)
 		 * @date 2015-APRIL-10
-		 * @return Returns an int value for a char that the method is getting
-		 * This method returns a score value of type int according to a letter of type Char
+		 * This method explains what would happen if the open button is clicked
 		 */
 		public void actionPerformed(ActionEvent e) {
 			/*
@@ -240,11 +241,18 @@ public class Extravaganza_047 extends JFrame {
 	 * @author jaeheunk (Jason(Jaeheun) Kim)
 	 * @author mjszymko (Michael Szymkowski)
 	 * @date 2015-APRIL-10
-	 * @return Returns an int value for a char that the method is getting
-	 * This method returns a score value of type int according to a letter of type Char
+	 * Class that holds codes that make save button work
 	 */
 	private class SaveL implements ActionListener {
 		
+		/**
+		 * @author tylerdie (Tyler Dietrich)
+		 * @author ceelman (Chris Elman)
+		 * @author jaeheunk (Jason(Jaeheun) Kim)
+		 * @author mjszymko (Michael Szymkowski)
+		 * @date 2015-APRIL-10
+		 * This method explains what would happen if the save button is clicked
+		 */
 		public void actionPerformed(ActionEvent e) {
 			
 			try {
@@ -270,8 +278,7 @@ public class Extravaganza_047 extends JFrame {
 	 * @author jaeheunk (Jason(Jaeheun) Kim)
 	 * @author mjszymko (Michael Szymkowski)
 	 * @date 2015-APRIL-10
-	 * @return Returns an int value for a char that the method is getting
-	 * This method returns a score value of type int according to a letter of type Char
+	 * This method sets details about a frame and make it visible
 	 */
 	private static void run(JFrame frame, int width, int height) {
 		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
@@ -284,8 +291,7 @@ public class Extravaganza_047 extends JFrame {
 	 * @author jaeheunk (Jason(Jaeheun) Kim)
 	 * @author mjszymko (Michael Szymkowski)
 	 * @date 2015-APRIL-10
-	 * @return Returns an int value for a char that the method is getting
-	 * This method returns a score value of type int according to a letter of type Char
+	 * This class holds codes that make the Pass button work
 	 */
 	private class PassT implements ActionListener {
 		private ArrayList<String> _name;
