@@ -13,6 +13,14 @@ import javax.swing.JOptionPane;
 
 import code.base.Player_024_047;
 
+/**
+ * @author tylerdie (Tyler Dietrich)
+ * @author ceelman (Chris Elman)
+ * @author jaeheun (Jason Kim)
+ * @author mjszymko (Michael Szymkowski)
+ * @date 2015-APRIL-10
+ * The HighScore class is responsible for saving the name of Players and their corresponding scores to a text file
+ */
 public class HighScore_047 {
 	ArrayList<Player_024_047> _p;
 	ArrayList<String> _words;
