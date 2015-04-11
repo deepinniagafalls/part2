@@ -24,6 +24,7 @@ import code.base.TileRack_024;
  * @author jaeheunk (Jason(Jaeheun) Kim)
  * @author mjszymko (Michael Szymkowski)
  * @date 2015-APRIL-10
+ * The PlayerFrame class is the graphical representation of the TileRack class. It contains 12 PlayerSpaces.
  */
 public class PlayerFrame_047 {
 	/**

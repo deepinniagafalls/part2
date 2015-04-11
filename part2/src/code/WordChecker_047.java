@@ -14,6 +14,7 @@ import code.util.ReaderTool_047;
  * @author jaeheunk (Jason(jaeheunk) Kim)
  * @author mjszymko (Michael Szymkowski)
  * @date 2015-APRIL-10
+ * The WordChecker class is responsible for checking the validity of a word placed on the Board/BoardFrame by the player. Invalid words are incorrectly spelled.
  */
 public class WordChecker_047 {
 	/**

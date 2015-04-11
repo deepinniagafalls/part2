@@ -20,6 +20,7 @@ import code.base.TileRack_024;
  * @author jaeheunk (Jason(Jaeheun) Kim)
  * @author mjszymko (Michael Szymkowski)
  * @date 2015-APRIL-10
+ * LoadGame is responsible for restoring a previously saved game state.
  */
 public class LoadGame_047 {
 	/**

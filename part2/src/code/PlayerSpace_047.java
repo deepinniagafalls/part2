@@ -16,6 +16,7 @@ import code.base.Tile_024;
  * @author jaeheunk (Jason(Jaeheun) Kim)
  * @author mjszymko (Michael Szymkowski)
  * @date 2015-APRIL-10
+ * The PlayerSpace class is the graphical representation of the tiles in a Player's Tile Rack.
  */
 public class PlayerSpace_047 extends JButton implements ActionListener {
 	/**

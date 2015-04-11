@@ -21,6 +21,7 @@ import code.base.Inventory_024;
  * @author jaeheunk (Jason(jaeheunk) Kim)
  * @author mjszymko (Michael Szymkowski)
  * @date 2015-APRIL-10
+ * The SaveGame class is responsible for saving the current state of the game in a text file.
  */
 @SuppressWarnings("unused")
 public class SaveGame_047 {
