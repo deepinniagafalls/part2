@@ -15,7 +15,7 @@ import code.base.Tile_024;
 /**
  * @author tylerdie (Tyler Dietrich)
  * @author ceelman (Chris Elman)
- * @author jaeheun (Jason Kim)
+ * @author jaeheunk (Jason(Jaeheun) Kim)
  * @author mjszymko (Michael Szymkowski)
  * @date 2015-APRIL-10
  */
@@ -23,7 +23,7 @@ public class TileSpace_047 extends JButton implements ActionListener {
 	/**
 	 * @author tylerdie (Tyler Dietrich)
 	 * @author ceelman (Chris Elman)
-	 * @author jaeheun (Jason Kim)
+	 * @author jaeheunk (Jason(Jaeheun) Kim)
 	 * @author mjszymko (Michael Szymkowski)
 	 * @date 2015-APRIL-10
 	 * Instance variable that holds reference to the TileSpace class
@@ -32,7 +32,7 @@ public class TileSpace_047 extends JButton implements ActionListener {
 	/**
 	 * @author tylerdie (Tyler Dietrich)
 	 * @author ceelman (Chris Elman)
-	 * @author jaeheun (Jason Kim)
+	 * @author jaeheunk (Jason(Jaeheun) Kim)
 	 * @author mjszymko (Michael Szymkowski)
 	 * @date 2015-APRIL-10
 	 * Instance variable that holds reference to a specific row
@@ -41,7 +41,7 @@ public class TileSpace_047 extends JButton implements ActionListener {
 	/**
 	 * @author tylerdie (Tyler Dietrich)
 	 * @author ceelman (Chris Elman)
-	 * @author jaeheun (Jason Kim)
+	 * @author jaeheunk (Jason(Jaeheun) Kim)
 	 * @author mjszymko (Michael Szymkowski)
 	 * @date 2015-APRIL-10
 	 * Instance variable that holds reference to a specific column
@@ -50,7 +50,7 @@ public class TileSpace_047 extends JButton implements ActionListener {
 	/**
 	 * @author tylerdie (Tyler Dietrich)
 	 * @author ceelman (Chris Elman)
-	 * @author jaeheun (Jason Kim)
+	 * @author jaeheunk (Jason(Jaeheun) Kim)
 	 * @author mjszymko (Michael Szymkowski)
 	 * @date 2015-APRIL-10
 	 * Instance variable that holds reference to the Board class
@@ -59,7 +59,7 @@ public class TileSpace_047 extends JButton implements ActionListener {
 	/**
 	 * @author tylerdie (Tyler Dietrich)
 	 * @author ceelman (Chris Elman)
-	 * @author jaeheun (Jason Kim)
+	 * @author jaeheunk (Jason(Jaeheun) Kim)
 	 * @author mjszymko (Michael Szymkowski)
 	 * @date 2015-APRIL-10
 	 * Instance variable that holds reference to the Tile class
@@ -68,7 +68,7 @@ public class TileSpace_047 extends JButton implements ActionListener {
 	/**
 	 * @author tylerdie (Tyler Dietrich)
 	 * @author ceelman (Chris Elman)
-	 * @author jaeheun (Jason Kim)
+	 * @author jaeheunk (Jason(Jaeheun) Kim)
 	 * @author mjszymko (Michael Szymkowski)
 	 * @date 2015-APRIL-10
 	 * Instance variable that holds reference to the Inventory class
@@ -77,7 +77,7 @@ public class TileSpace_047 extends JButton implements ActionListener {
 	/**
 	 * @author tylerdie (Tyler Dietrich)
 	 * @author ceelman (Chris Elman)
-	 * @author jaeheun (Jason Kim)
+	 * @author jaeheunk (Jason(Jaeheun) Kim)
 	 * @author mjszymko (Michael Szymkowski)
 	 * @date 2015-APRIL-10
 	 * Instance variable that holds reference to the ArrayList of Players
@@ -86,7 +86,7 @@ public class TileSpace_047 extends JButton implements ActionListener {
 	/**
 	 * @author tylerdie (Tyler Dietrich)
 	 * @author ceelman (Chris Elman)
-	 * @author jaeheun (Jason Kim)
+	 * @author jaeheunk (Jason(Jaeheun) Kim)
 	 * @author mjszymko (Michael Szymkowski)
 	 * @date 2015-APRIL-10
 	 * Instance variable that holds reference to the Scrabble class
@@ -95,7 +95,7 @@ public class TileSpace_047 extends JButton implements ActionListener {
 	/**
 	 * @author tylerdie (Tyler Dietrich)
 	 * @author ceelman (Chris Elman)
-	 * @author jaeheun (Jason Kim)
+	 * @author jaeheunk (Jason(Jaeheun) Kim)
 	 * @author mjszymko (Michael Szymkowski)
 	 * @date 2015-APRIL-10
 	 * Instance variable that holds reference to the BoardFrame class
@@ -104,7 +104,7 @@ public class TileSpace_047 extends JButton implements ActionListener {
 	/**
 	 * @author tylerdie (Tyler Dietrich)
 	 * @author ceelman (Chris Elman)
-	 * @author jaeheun (Jason Kim)
+	 * @author jaeheunk (Jason(Jaeheun) Kim)
 	 * @author mjszymko (Michael Szymkowski)
 	 * @date 2015-APRIL-10
 	 * Instance variable that holds reference to the String of a players text
@@ -113,7 +113,7 @@ public class TileSpace_047 extends JButton implements ActionListener {
 	/**
 	 * @author tylerdie (Tyler Dietrich)
 	 * @author ceelman (Chris Elman)
-	 * @author jaeheun (Jason Kim)
+	 * @author jaeheunk (Jason(Jaeheun) Kim)
 	 * @author mjszymko (Michael Szymkowski)
 	 * @date 2015-APRIL-10
 	 * Instance variable that holds reference to the Color class
@@ -123,7 +123,7 @@ public class TileSpace_047 extends JButton implements ActionListener {
 	/**
 	 * @author tylerdie (Tyler Dietrich)
 	 * @author ceelman (Chris Elman)
-	 * @author jaeheun (Jason Kim)
+	 * @author jaeheunk (Jason(Jaeheun) Kim)
 	 * @author mjszymko (Michael Szymkowski)
 	 * @date 2015-APRIL-10
 	 * Constructor for the TileSpace class
@@ -147,7 +147,7 @@ public class TileSpace_047 extends JButton implements ActionListener {
 			/**
 			 * @author tylerdie (Tyler Dietrich)
 			 * @author ceelman (Chris Elman)
-			 * @author jaeheun (Jason Kim)
+			 * @author jaeheunk (Jason(Jaeheun) Kim)
 			 * @author mjszymko (Michael Szymkowski)
 			 * @date 2015-APRIL-10
 			 */
@@ -190,7 +190,7 @@ public class TileSpace_047 extends JButton implements ActionListener {
 	/**
 	 * @author tylerdie (Tyler Dietrich)
 	 * @author ceelman (Chris Elman)
-	 * @author jaeheun (Jason Kim)
+	 * @author jaeheunk (Jason(Jaeheun) Kim)
 	 * @author mjszymko (Michael Szymkowski)
 	 * @date 2015-APRIL-10
 	 * Method that gets a specific row
@@ -202,7 +202,7 @@ public class TileSpace_047 extends JButton implements ActionListener {
 	/**
 	 * @author tylerdie (Tyler Dietrich)
 	 * @author ceelman (Chris Elman)
-	 * @author jaeheun (Jason Kim)
+	 * @author jaeheunk (Jason(Jaeheun) Kim)
 	 * @author mjszymko (Michael Szymkowski)
 	 * @date 2015-APRIL-10
 	 * Method that gets a specific column
@@ -214,7 +214,7 @@ public class TileSpace_047 extends JButton implements ActionListener {
 	/**
 	 * @author tylerdie (Tyler Dietrich)
 	 * @author ceelman (Chris Elman)
-	 * @author jaeheun (Jason Kim)
+	 * @author jaeheunk (Jason(Jaeheun) Kim)
 	 * @author mjszymko (Michael Szymkowski)
 	 * @date 2015-APRIL-10
 	 * Method that gets a specific tile
@@ -226,7 +226,7 @@ public class TileSpace_047 extends JButton implements ActionListener {
 	/**
 	 * @author tylerdie (Tyler Dietrich)
 	 * @author ceelman (Chris Elman)
-	 * @author jaeheun (Jason Kim)
+	 * @author jaeheunk (Jason(Jaeheun) Kim)
 	 * @author mjszymko (Michael Szymkowski)
 	 * @date 2015-APRIL-10
 	 * Method that gets a players text
@@ -239,7 +239,7 @@ public class TileSpace_047 extends JButton implements ActionListener {
 	/**
 	 * @author tylerdie (Tyler Dietrich)
 	 * @author ceelman (Chris Elman)
-	 * @author jaeheun (Jason Kim)
+	 * @author jaeheunk (Jason(Jaeheun) Kim)
 	 * @author mjszymko (Michael Szymkowski)
 	 * @date 2015-APRIL-10
 	 * Method that performs an action
@@ -252,7 +252,7 @@ public class TileSpace_047 extends JButton implements ActionListener {
 	/**
 	 * @author tylerdie (Tyler Dietrich)
 	 * @author ceelman (Chris Elman)
-	 * @author jaeheun (Jason Kim)
+	 * @author jaeheunk (Jason(Jaeheun) Kim)
 	 * @author mjszymko (Michael Szymkowski)
 	 * @date 2015-APRIL-10
 	 * Method that keeps track of tile placement on the board
@@ -325,7 +325,7 @@ public class TileSpace_047 extends JButton implements ActionListener {
 	/**
 	 * @author tylerdie (Tyler Dietrich)
 	 * @author ceelman (Chris Elman)
-	 * @author jaeheun (Jason Kim)
+	 * @author jaeheunk (Jason(Jaeheun) Kim)
 	 * @author mjszymko (Michael Szymkowski)
 	 * @date 2015-APRIL-10
 	 * Method that obtains a specific color

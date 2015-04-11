@@ -17,7 +17,7 @@ import code.base.TileRack_024;
 /**
  * @author tylerdie (Tyler Dietrich)
  * @author ceelman (Chris Elman)
- * @author jaeheun (Jason Kim)
+ * @author jaeheunk (Jason(Jaeheun) Kim)
  * @author mjszymko (Michael Szymkowski)
  * @date 2015-APRIL-10
  */
@@ -25,7 +25,7 @@ public class LoadGame_047 {
 	/**
 	 * @author tylerdie (Tyler Dietrich)
 	 * @author ceelman (Chris Elman)
-	 * @author jaeheun (Jason Kim)
+	 * @author jaeheunk (Jason(Jaeheun) Kim)
 	 * @author mjszymko (Michael Szymkowski)
 	 * @date 2015-APRIL-10
 	 * Instance variable that holds reference to the Board class
@@ -34,7 +34,7 @@ public class LoadGame_047 {
 	/**
 	 * @author tylerdie (Tyler Dietrich)
 	 * @author ceelman (Chris Elman)
-	 * @author jaeheun (Jason Kim)
+	 * @author jaeheunk (Jason(Jaeheun) Kim)
 	 * @author mjszymko (Michael Szymkowski)
 	 * @date 2015-APRIL-10
 	 * Instance variable that holds reference to the BoardFrame class
@@ -43,7 +43,7 @@ public class LoadGame_047 {
 	/**
 	 * @author tylerdie (Tyler Dietrich)
 	 * @author ceelman (Chris Elman)
-	 * @author jaeheun (Jason Kim)
+	 * @author jaeheunk (Jason(Jaeheun) Kim)
 	 * @author mjszymko (Michael Szymkowski)
 	 * @date 2015-APRIL-10
 	 * Instance variable that holds reference to the TileRack class
@@ -52,7 +52,7 @@ public class LoadGame_047 {
 	/**
 	 * @author tylerdie (Tyler Dietrich)
 	 * @author ceelman (Chris Elman)
-	 * @author jaeheun (Jason Kim)
+	 * @author jaeheunk (Jason(Jaeheun) Kim)
 	 * @author mjszymko (Michael Szymkowski)
 	 * @date 2015-APRIL-10
 	 * Instance variable that holds reference to the Scrabble class
@@ -61,7 +61,7 @@ public class LoadGame_047 {
 	/**
 	 * @author tylerdie (Tyler Dietrich)
 	 * @author ceelman (Chris Elman)
-	 * @author jaeheun (Jason Kim)
+	 * @author jaeheunk (Jason(Jaeheun) Kim)
 	 * @author mjszymko (Michael Szymkowski)
 	 * @date 2015-APRIL-10
 	 * Instance variable that holds reference to the String reading files
@@ -71,7 +71,7 @@ public class LoadGame_047 {
 	/**
 	 * @author tylerdie (Tyler Dietrich)
 	 * @author ceelman (Chris Elman)
-	 * @author jaeheun (Jason Kim)
+	 * @author jaeheunk (Jason(Jaeheun) Kim)
 	 * @author mjszymko (Michael Szymkowski)
 	 * @date 2015-APRIL-10
 	 * Constructor for the LoadGame class

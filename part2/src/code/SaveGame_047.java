@@ -18,7 +18,7 @@ import code.base.Inventory_024;
 /**
  * @author tylerdie (Tyler Dietrich)
  * @author ceelman (Chris Elman)
- * @author jaeheun (Jason Kim)
+ * @author jaeheunk (Jason(jaeheunk) Kim)
  * @author mjszymko (Michael Szymkowski)
  * @date 2015-APRIL-10
  */
@@ -27,7 +27,7 @@ public class SaveGame_047 {
 	/**
 	 * @author tylerdie (Tyler Dietrich)
 	 * @author ceelman (Chris Elman)
-	 * @author jaeheun (Jason Kim)
+	 * @author jaeheunk (Jason(jaeheunk) Kim)
 	 * @author mjszymko (Michael Szymkowski)
 	 * @date 2015-APRIL-10
 	 * Instance variable that holds reference to the Board class
@@ -36,7 +36,7 @@ public class SaveGame_047 {
 	/**
 	 * @author tylerdie (Tyler Dietrich)
 	 * @author ceelman (Chris Elman)
-	 * @author jaeheun (Jason Kim)
+	 * @author jaeheunk (Jason(jaeheunk) Kim)
 	 * @author mjszymko (Michael Szymkowski)
 	 * @date 2015-APRIL-10
 	 * Instance variable that holds reference to the BoardFrame class
@@ -45,7 +45,7 @@ public class SaveGame_047 {
 	/**
 	 * @author tylerdie (Tyler Dietrich)
 	 * @author ceelman (Chris Elman)
-	 * @author jaeheun (Jason Kim)
+	 * @author jaeheunk (Jason(jaeheunk) Kim)
 	 * @author mjszymko (Michael Szymkowski)
 	 * @date 2015-APRIL-10
 	 * Instance variable that holds reference to the TileRack class
@@ -54,7 +54,7 @@ public class SaveGame_047 {
 	/**
 	 * @author tylerdie (Tyler Dietrich)
 	 * @author ceelman (Chris Elman)
-	 * @author jaeheun (Jason Kim)
+	 * @author jaeheunk (Jason(jaeheunk) Kim)
 	 * @author mjszymko (Michael Szymkowski)
 	 * @date 2015-APRIL-10
 	 * Instance variable that holds reference to the Scrabble class
@@ -63,7 +63,7 @@ public class SaveGame_047 {
 	/**
 	 * @author tylerdie (Tyler Dietrich)
 	 * @author ceelman (Chris Elman)
-	 * @author jaeheun (Jason Kim)
+	 * @author jaeheunk (Jason(jaeheunk) Kim)
 	 * @author mjszymko (Michael Szymkowski)
 	 * @date 2015-APRIL-10
 	 * Instance variable that holds reference to a specidif file to write to
@@ -78,7 +78,7 @@ public class SaveGame_047 {
 	/**
 	 * @author tylerdie (Tyler Dietrich)
 	 * @author ceelman (Chris Elman)
-	 * @author jaeheun (Jason Kim)
+	 * @author jaeheunk (Jason(jaeheunk) Kim)
 	 * @author mjszymko (Michael Szymkowski)
 	 * @date 2015-APRIL-10
 	 * Constructor for the SaveGame class
@@ -170,7 +170,7 @@ public class SaveGame_047 {
 	/**
 	 * @author tylerdie (Tyler Dietrich)
 	 * @author ceelman (Chris Elman)
-	 * @author jaeheun (Jason Kim)
+	 * @author jaeheunk (Jason(jaeheunk) Kim)
 	 * @author mjszymko (Michael Szymkowski)
 	 * @date 2015-APRIL-10
 	 * Method that writes to a file

@@ -15,7 +15,7 @@ import code.base.Scrabble_024_047;
 /**
  * @author tylerdie (Tyler Dietrich)
  * @author ceelman (Chris Elman)
- * @author jaeheun (Jason Kim)
+ * @author jaeheunk (Jason(Jaeheun) Kim)
  * @author mjszymko (Michael Szymkowski)
  * @date 2015-APRIL-10
  * This class is the graphical representation of the Board class. Contains a 20x20 grid of TileSpaces.
@@ -24,7 +24,7 @@ public class BoardFrame_047 extends JFrame {
 	/**
 	 * @author tylerdie (Tyler Dietrich)
 	 * @author ceelman (Chris Elman)
-	 * @author jaeheun (Jason Kim)
+	 * @author jaeheunk (Jason(Jaeheun) Kim)
 	 * @author mjszymko (Michael Szymkowski)
 	 * @date 2015-APRIL-10
 	 * Instance variable that hold reference to the Scrabble class
@@ -33,7 +33,7 @@ public class BoardFrame_047 extends JFrame {
 	/**
 	 * @author tylerdie (Tyler Dietrich)
 	 * @author ceelman (Chris Elman)
-	 * @author jaeheun (Jason Kim)
+	 * @author jaeheunk (Jason(Jaeheun) Kim)
 	 * @author mjszymko (Michael Szymkowski)
 	 * @date 2015-APRIL-10
 	 * Instance variable that holds reference to the Inventory class
@@ -42,7 +42,7 @@ public class BoardFrame_047 extends JFrame {
     /**
      * @author tylerdie (Tyler Dietrich)
      * @author ceelman (Chris Elman)
-     * @author jaeheun (Jason Kim)
+     * @author jaeheunk (Jason(Jaeheun) Kim)
      * @author mjszymko (Michael Szymkowski)
      * @date 2015-APRIL-10
      * Instance variable that holds reference to the ArrayList of players
@@ -51,7 +51,7 @@ public class BoardFrame_047 extends JFrame {
     /**
      * @author tylerdie (Tyler Dietrich)
      * @author ceelman (Chris Elman)
-     * @author jaeheun (Jason Kim)
+     * @author jaeheunk (Jason(Jaeheun) Kim)
      * @author mjszymko (Michael Szymkowski)
      * @date 2015-APRIL-10
      * Instance variable that holds reference to the Board class
@@ -60,7 +60,7 @@ public class BoardFrame_047 extends JFrame {
 	/**
 	 * @author tylerdie (Tyler Dietrich)
 	 * @author ceelman (Chris Elman)
-	 * @author jaeheun (Jason Kim)
+	 * @author jaeheunk (Jason(Jaeheun) Kim)
 	 * @author mjszymko (Michael Szymkowski)
 	 * @date 2015-APRIL-10
 	 * Instance variable that holds reference to the int Number of players
@@ -69,7 +69,7 @@ public class BoardFrame_047 extends JFrame {
 	/**
 	 * @author tylerdie (Tyler Dietrich)
 	 * @author ceelman (Chris Elman)
-	 * @author jaeheun (Jason Kim)
+	 * @author jaeheunk (Jason(Jaeheun) Kim)
 	 * @author mjszymko (Michael Szymkowski)
 	 * @date 2015-APRIL-10
 	 * Instance variable that holds reference to the buttons on the Board in a 20x20 Frame
@@ -78,7 +78,7 @@ public class BoardFrame_047 extends JFrame {
 	/**
 	 * @author tylerdie (Tyler Dietrich)
 	 * @author ceelman (Chris Elman)
-	 * @author jaeheun (Jason Kim)
+	 * @author jaeheunk (Jason(Jaeheun) Kim)
 	 * @author mjszymko (Michael Szymkowski)
 	 * @date 2015-APRIL-10
 	 * Instance variable that holds reference to the Inventory class
@@ -87,7 +87,7 @@ public class BoardFrame_047 extends JFrame {
 	/**
 	 * @author tylerdie (Tyler Dietrich)
 	 * @author ceelman (Chris Elman)
-	 * @author jaeheun (Jason Kim)
+	 * @author jaeheunk (Jason(Jaeheun) Kim)
 	 * @author mjszymko (Michael Szymkowski)
 	 * @date 2015-APRIL-10
 	 * Instance variable that holds reference to the ArrayList of type PlayerFrame
@@ -96,7 +96,7 @@ public class BoardFrame_047 extends JFrame {
 	/**
 	 * @author tylerdie (Tyler Dietrich)
 	 * @author ceelman (Chris Elman)
-	 * @author jaeheun (Jason Kim)
+	 * @author jaeheunk (Jason(Jaeheun) Kim)
 	 * @author mjszymko (Michael Szymkowski)
 	 * @date 2015-APRIL-10
 	 * Instance variable that holds reference to the Game class
@@ -105,7 +105,7 @@ public class BoardFrame_047 extends JFrame {
 	/**
 	 * @author tylerdie (Tyler Dietrich)
 	 * @author ceelman (Chris Elman)
-	 * @author jaeheun (Jason Kim)
+	 * @author jaeheunk (Jason(Jaeheun) Kim)
 	 * @author mjszymko (Michael Szymkowski)
 	 * @date 2015-APRIL-10
 	 * Instance variable that holds reference to the Scrabble class
@@ -114,7 +114,7 @@ public class BoardFrame_047 extends JFrame {
 	/**
 	 * @author tylerdie (Tyler Dietrich)
 	 * @author ceelman (Chris Elman)
-	 * @author jaeheun (Jason Kim)
+	 * @author jaeheunk (Jason(Jaeheun) Kim)
 	 * @author mjszymko (Michael Szymkowski)
 	 * @date 2015-APRIL-10
 	 * Instance variable that holds reference to the BoardFrame class
@@ -123,7 +123,7 @@ public class BoardFrame_047 extends JFrame {
 	/**
 	 * @author tylerdie (Tyler Dietrich)
 	 * @author ceelman (Chris Elman)
-	 * @author jaeheun (Jason Kim)
+	 * @author jaeheunk (Jason(Jaeheun) Kim)
 	 * @author mjszymko (Michael Szymkowski)
 	 * @date 2015-APRIL-10
 	 * Instance variable that holds reference to the WordChecker class
@@ -132,7 +132,7 @@ public class BoardFrame_047 extends JFrame {
 	/**
 	 * @author tylerdie (Tyler Dietrich)
 	 * @author ceelman (Chris Elman)
-	 * @author jaeheun (Jason Kim)
+	 * @author jaeheunk (Jason(Jaeheun) Kim)
 	 * @author mjszymko (Michael Szymkowski)
 	 * @date 2015-APRIL-10
 	 * Constructor for the BoardFrame class that implements parts of the GUI
@@ -180,7 +180,7 @@ public class BoardFrame_047 extends JFrame {
 	/**
 	 * @author tylerdie (Tyler Dietrich)
 	 * @author ceelman (Chris Elman)
-	 * @author jaeheun (Jason Kim)
+	 * @author jaeheunk (Jason(Jaeheun) Kim)
 	 * @author mjszymko (Michael Szymkowski)
 	 * @date 2015-APRIL-10
 	 * Method to update the class accordingly
@@ -195,7 +195,7 @@ public class BoardFrame_047 extends JFrame {
 	/**
 	 * @author tylerdie (Tyler Dietrich)
 	 * @author ceelman (Chris Elman)
-	 * @author jaeheun (Jason Kim)
+	 * @author jaeheunk (Jason(Jaeheun) Kim)
 	 * @author mjszymko (Michael Szymkowski)
 	 * @date 2015-APRIL-10
 	 * Method to access the indec of the PlayerFrame class
@@ -207,7 +207,7 @@ public class BoardFrame_047 extends JFrame {
 	/**
 	 * @author tylerdie (Tyler Dietrich)
 	 * @author ceelman (Chris Elman)
-	 * @author jaeheun (Jason Kim)
+	 * @author jaeheunk (Jason(Jaeheun) Kim)
 	 * @author mjszymko (Michael Szymkowski)
 	 * @date 2015-APRIL-10
 	 * Method to get the content of the Game class
@@ -219,7 +219,7 @@ public class BoardFrame_047 extends JFrame {
 	/**
 	 * @author tylerdie (Tyler Dietrich)
 	 * @author ceelman (Chris Elman)
-	 * @author jaeheun (Jason Kim)
+	 * @author jaeheunk (Jason(Jaeheun) Kim)
 	 * @author mjszymko (Michael Szymkowski)
 	 * @date 2015-APRIL-10
 	 * Method that gets the content from the Scrabble class
@@ -231,7 +231,7 @@ public class BoardFrame_047 extends JFrame {
 	/**
 	 * @author tylerdie (Tyler Dietrich)
 	 * @author ceelman (Chris Elman)
-	 * @author jaeheun (Jason Kim)
+	 * @author jaeheunk (Jason(Jaeheun) Kim)
 	 * @author mjszymko (Michael Szymkowski)
 	 * @date 2015-APRIL-10
 	 * Method that sets the word from the WordChecker class to a temporary value
@@ -242,7 +242,7 @@ public class BoardFrame_047 extends JFrame {
 	/**
 	 * @author tylerdie (Tyler Dietrich)
 	 * @author ceelman (Chris Elman)
-	 * @author jaeheun (Jason Kim)
+	 * @author jaeheunk (Jason(Jaeheun) Kim)
 	 * @author mjszymko (Michael Szymkowski)
 	 * @date 2015-APRIL-10
 	 * Method that obtains the words from the WordChecker Class
@@ -256,7 +256,7 @@ public class BoardFrame_047 extends JFrame {
 	/**
 	 * @author tylerdie (Tyler Dietrich)
 	 * @author ceelman (Chris Elman)
-	 * @author jaeheun (Jason Kim)
+	 * @author jaeheunk (Jason(Jaeheun) Kim)
 	 * @author mjszymko (Michael Szymkowski)
 	 * @date 2015-APRIL-10
 	 * Method that gets the contents from the Board Class
@@ -268,7 +268,7 @@ public class BoardFrame_047 extends JFrame {
 	/**
 	 * @author tylerdie (Tyler Dietrich)
 	 * @author ceelman (Chris Elman)
-	 * @author jaeheun (Jason Kim)
+	 * @author jaeheunk (Jason(Jaeheun) Kim)
 	 * @author mjszymko (Michael Szymkowski)
 	 * @date 2015-APRIL-10
 	 * Method that gets the specific TileSpace  in a specific row and column
