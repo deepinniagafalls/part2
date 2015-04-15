@@ -279,5 +279,9 @@ public class BoardFrame_047 extends JFrame {
 	public TileSpace_047 getTileSpace(int row, int col){
 		return _boardOfButtons[row][col];
 	}
+	
+	public void setTileSpace(int row, int col, TileSpace_047 ts){
+		_boardOfButtons[row][col] = ts;
+	}
 }
 

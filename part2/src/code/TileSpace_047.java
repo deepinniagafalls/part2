@@ -157,7 +157,6 @@ public class TileSpace_047 extends JButton implements ActionListener {
 					if(_j.getTile()==null){
 						if(_b.getTempTile() != null && _b.getTile(_row, _col) == null){
 							_b.addTile(_b.getTempTile(),_row,_col);
-							//Chris just added this below!!!
 							_b.setTempTile(null);
 							_t = _b.getTile(_row,_col);
 							String temp = Character.toString(_t.getChar()) + ", " + _t.getValue();
@@ -167,7 +166,7 @@ public class TileSpace_047 extends JButton implements ActionListener {
 							_j.setBackground(_bf.getScrabble().returnPlayer(_bf.getGame().getCurrentTurn()).getColor());
 							_color = _bf.getScrabble().returnPlayer(_bf.getGame().getCurrentTurn()).getColor();
 							_bf.getWordChecker().addLetter(_j.getRow(), _j.getCol());
-							//_scrabble.setIsVeryFirstTurn(false);
+							_scrabble.setIsVeryFirstTurn(false);
 						}
 					}
 					else{
@@ -178,13 +177,11 @@ public class TileSpace_047 extends JButton implements ActionListener {
 					}
 				}
 				else{
-					//Chris changed 2 lines below to getTempTile instead of getTile
 					PlayerSpace_047 tempSpace = _bf.getPlayerFrame(_bf.getGame().getCurrentTurn()).getCurrentSpace();
 					tempSpace.setText(Character.toString(tempSpace.getTempTile().getChar()) + ", " + tempSpace.getTempTile().getValue());
 					tempSpace.setCurrentTile(_b.getTempTile());
 					_b.setTempTile(null);
 				}
-				//_scrabble.setIsVeryFirstTurn(false);
 			}
 		});
 	}

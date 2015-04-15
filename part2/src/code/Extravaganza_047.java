@@ -359,7 +359,6 @@ public class Extravaganza_047 extends JFrame {
 			
 			
 			if(wordToScore != null){
-				_scrabble.setIsVeryFirstTurn(false);
 				int sum = 0;
 				for(int i=0; i<wordToScore.length();i++){
 					sum = sum + scoreHelper(wordToScore.charAt(i));
@@ -370,7 +369,6 @@ public class Extravaganza_047 extends JFrame {
 			WordChecker_047 check = new WordChecker_047(_bf,_bf.getBoard(),_path);
 			_bf.setWord(check);
 			_bf.getPlayerFrame(tep).update();
-			
 			}
 			_bf.getWordChecker().clear();
 		}
