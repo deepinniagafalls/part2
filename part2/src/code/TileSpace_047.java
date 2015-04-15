@@ -167,7 +167,7 @@ public class TileSpace_047 extends JButton implements ActionListener {
 							_j.setBackground(_bf.getScrabble().returnPlayer(_bf.getGame().getCurrentTurn()).getColor());
 							_color = _bf.getScrabble().returnPlayer(_bf.getGame().getCurrentTurn()).getColor();
 							_bf.getWordChecker().addLetter(_j.getRow(), _j.getCol());
-							_scrabble.setIsVeryFirstTurn(false);
+							//_scrabble.setIsVeryFirstTurn(false);
 						}
 					}
 					else{
