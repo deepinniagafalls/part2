@@ -96,7 +96,7 @@ public class Game_047 {
 	
 	private ArrayList<String> _names = new ArrayList<>();
 	
-	public Game_047(String s) throws IOException{
+	public Game_047(String s, boolean mode) throws IOException{
 	       try {
 	            UIManager.setLookAndFeel(new javax.swing.plaf.metal.MetalLookAndFeel());
 	        } catch(Exception e) {
@@ -110,6 +110,7 @@ public class Game_047 {
 	       String path = "";
 	      // ArrayList<String> names = new ArrayList<>();
 		_currentGame = this;
+		if(mode){
 		if(s == "CUI"){
 			System.out.print("Please type in the path of the dictionary file. Press Enter instead to use the dictionary that is already provided with the code: ");
 		       Scanner ps = new Scanner(System.in);
@@ -218,6 +219,12 @@ public class Game_047 {
 		_names.add(e3);
 		_names.add(e4);
 		}
+		}
+		}
+		else{
+		_numberOfPlayers = 2;
+		_names.add("Frigg");
+		_names.add("Freya");
 		}
 		Scrabble_024_047 scrabble = new Scrabble_024_047(_numberOfPlayers, this);
 		Inventory_024 invent = scrabble.getInv();
