@@ -323,7 +323,7 @@ public class Extravaganza_047 extends JFrame {
 			}
 			else if(wordToScore == null){
 				//Chris changed stuff here
-				JOptionPane.showMessageDialog(null, "You're a Dumbass");
+				JOptionPane.showMessageDialog(null, "You have lost your turn");
 				_g.incrementTurn();	
 				if(_g.getCurrentTurn() == 0){label1.setText("Turn: "+ _name.get(0));}
 				if(_g.getCurrentTurn() == 1){label1.setText("Turn: "+ _name.get(1));}
